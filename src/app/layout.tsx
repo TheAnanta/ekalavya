@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
 export default function RootLayout({
@@ -27,7 +26,7 @@ export default function RootLayout({
           rel="shortcut icon"
           href="https://www.gstatic.com/devrel-devsite/prod/ve5ef9ac7b497e19ece9427facc78d0c59aaab7a2bc6a0f75fdae93f4ee589f67/android/images/favicon.svg"
         />
-        <title>Compose Camp | #NamastheAndroid</title>
+        <title>#Ekalavya</title>
         <meta
           name="description"
           content="#NamastheAndroid is a online self-study program to help developers to learn Android Development using the Compose. You will learn basic Android programming with best practices recommended by the Android team, including creating beautiful layouts, architecting navigations between screens and connecting to the internet.

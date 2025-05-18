@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
@@ -7,7 +6,7 @@ export default function Home() {
       <div className="h-screen flex flex-col">
         <div className="bg-black text-white w-full py-2 flex items-center text-sm uppercase">
           <Marquee>
-            {[0, 1, 2].map((_, i) => {
+            {[0, 1, 2].map(() => {
               return (
                 <>
                   <p className="mx-4">
