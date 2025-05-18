@@ -2,8 +2,8 @@ import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <div className="h-screen flex flex-col">
+    <div className="min-mobile-h-screen">
+      <div className="min-mobile-h-screen flex flex-col">
         <div className="bg-black text-white w-full py-2 flex items-center text-sm uppercase">
           <Marquee>
             {[0, 1, 2].map(() => {
