@@ -1,103 +1,74 @@
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      <div className="h-screen flex flex-col">
+        <div className="bg-black text-white w-full py-2 flex items-center text-sm uppercase">
+          <Marquee>
+            {[0, 1, 2].map((_, i) => {
+              return (
+                <>
+                  <p className="mx-4">
+                    Join the <b>WOW 2025 challenge</b> and bag a chance to win
+                    cool swags
+                  </p>
+                  <button className="py-1 px-4 text-[0.7rem] rounded-full border border-white uppercase font-bold">
+                    Participate Now
+                  </button>
+                </>
+              );
+            })}
+          </Marquee>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <nav className="p-4 flex justify-between">
+          <div className="flex gap-4 items-center flex-row-reverse w-max">
+            <span className="material-symbols-outlined !text-2xl">menu</span>
+            <span className="material-symbols-outlined !text-3xl">
+              account_circle
+            </span>
+          </div>
+          <img
+            src="https://wow.vizag.dev/images/sponsors/theananta.png"
+            className="h-8 mr-3"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </nav>
+        <main className="relative flex flex-col justify-end grow items-center overflow-hidden">
+          <img
+            src="badge.png"
+            className="max-w-[60px] md:max-w-[120px] absolute top-[4%] right-[8%]"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+
+          <img
+            src="cloud-left.png"
+            className="max-w-[80px] md:max-w-[120px] absolute top-[16%] left-0"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <img
+            src="cloud-right-top.png"
+            className="max-w-[90px] md:max-w-[140px] absolute top-[4%] left-[12%]"
+          />
+          <img
+            src="cloud-right-bottom.png"
+            className="max-w-[90px] md:max-w-[140px] absolute top-[24%] right-0"
+          />
+          <h1 className="text-2xl md:text-4xl font-bold !font-[Google_Sans_Display]">
+            Lorem Ipsum Dolor Amet
+          </h1>
+          {/* <h3 className="font-medium text-xl">Lorem ipsum dolor</h3> */}
+          <p className="text-sm md:text-base mt-2 mb-4 max-w-[32ch] text-center line-clamp-3">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+            tenetur cumque quisquam, laborum magnam quas nisi?
+          </p>
+          <button className="border-2 border-black py-2 px-6 rounded-full font-medium">
+            Register Now
+          </button>
+          <img
+            src="compose-world.png"
+            className="mt-12 w-full scale-120 -translate-x-2 -translate-y-2 md:scale-[unset] md:max-w-[800px] md:translate-y-1 object-bottom"
+          />
+        </main>
+      </div>
     </div>
   );
 }
