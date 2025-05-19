@@ -60,7 +60,7 @@ export default function Home() {
           />
           <img
             src="cloud-right-bottom.png"
-            className="max-w-[8 0px] md:max-w-[140px] absolute top-[24%] right-0"
+            className="max-w-[80px] md:max-w-[140px] absolute top-[24%] right-0"
           />
           <h1 className="text-2xl md:text-5xl font-bold !font-[Google_Sans_Display]">
             Let's Go Camping!
@@ -79,7 +79,7 @@ export default function Home() {
           />
         </main>
       </div>
-      <div className="bg-[#073042] text-white -translate-y-[1px] relative z-5 flex w-full">
+      <div className="bg-[#073042] text-white -translate-y-[1px] relative z-5 flex w-full flex-col md:flex-row">
         <div className="p-[32px] md:px-[64px] md:pb-[72px] md:pt-[56px]">
           <h3 className="text-2xl font-medium">Program Overview</h3>
           <div className="flex flex-col md:flex-row gap-y-8 md:gap-x-8 md:gap-y-[unset]">
@@ -144,20 +144,8 @@ export default function Home() {
           className="mt-auto ml-auto max-h-[400px]"
         />
       </div>
-      <div className="relative z-5 flex w-full">
-        <img
-          src="trees-bottom.png"
-          className="mt-auto max-h-[200px] -scale-x-100"
-        />
-        <img
-          src="camp-viewpoint.png"
-          className="mt-[200px] mr-auto max-h-[400px] -scale-x-100"
-        />
-        <img
-          src="mountains-bottom.png"
-          className="mt-auto ml-auto max-h-[300px] "
-        />
-        <div className="absolute top-4 left-4 p-8">
+      <div className="relative z-5 flex w-full flex-col md:flex-row">
+        <div className="md:absolute top-4 left-4 p-8">
           <h3 className="max-w-[16ch] text-2xl font-medium">
             Here's what our campers had to say
           </h3>
@@ -167,7 +155,7 @@ export default function Home() {
             fugiat.
           </p>
         </div>
-        <div className="absolute top-12 right-0 w-[75%] z-10">
+        <div className="md:absolute top-12 right-0 md:w-[75%] z-10">
           <div className="relative mt-6 lg:mt-12 group/swiper">
             <Swiper
               autoplay={{
@@ -175,7 +163,7 @@ export default function Home() {
               }}
               allowTouchMove={true}
               spaceBetween={16}
-              slidesPerView={3}
+              slidesPerView={1}
               initialSlide={0}
               modules={[Autoplay, Navigation, FreeMode]}
               freeMode={true}
@@ -189,7 +177,7 @@ export default function Home() {
               breakpoints={{
                 440: {
                   spaceBetween: 20,
-                  slidesPerView: 1.8,
+                  slidesPerView: 1,
                 },
                 1024: {
                   centeredSlidesBounds: false,
@@ -234,7 +222,7 @@ export default function Home() {
                       <div className="flex gap-4 items-center">
                         <img src={testimonial.image} className="h-20 mr-3" />
                         <div>
-                          <p className="text-xl font-medium">
+                          <p className="md:text-xl font-medium">
                             {testimonial.name}{" "}
                             <span className="text-sm mx-2 bg-[var(--android-primary-color)] p-2 text-white rounded-xl">
                               {testimonial.pronoun}
@@ -246,7 +234,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-sm max-w-[36ch] mt-4 line-clamp-5">
+                      <p className="text-sm max-w-[24ch] md:max-w-[36ch] mt-4 line-clamp-5">
                         {testimonial.content}
                       </p>
                     </div>
@@ -259,6 +247,20 @@ export default function Home() {
               <div className="swiper-button-next  bg-white border-black border-[2px] cursor-pointer !w-[3.5rem] !h-[3.5rem] rounded-full items-center justify-center flex !text-black font-bold group-hover/swiper:scale-100 scale-0 transition duration-300 translate-x-[150%] group-hover/swiper:translate-x-0 group-hover/swiper:!pointer-events-auto"></div>
             </div>
           </div>
+        </div>
+        <div className="flex w-full">
+          <img
+            src="trees-bottom.png"
+            className="mt-auto max-h-[200px] -scale-x-100"
+          />
+          <img
+            src="camp-viewpoint.png"
+            className="mt-4 md:mt-[200px] mr-auto max-h-[400px] md:-scale-x-100"
+          />
+          <img
+            src="mountains-bottom.png"
+            className="hidden md:block mt-auto ml-auto max-h-[300px] "
+          />
         </div>
       </div>
       <div className="bg-[var(--android-primary-color)] text-white p-[20px] md:pt-[60px] md:pb-[72px] md:px-[64px] relative z-5 flex justify-between flex-col-reverse md:flex-row gap-y-4 md:gap-y-[unset] w-full">
