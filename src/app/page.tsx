@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 // import Swiper JS
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, FreeMode } from "swiper/modules";
+import { Navigation, Autoplay, FreeMode } from "swiper/modules";
 
 // import Swiper and modules styles
 import "swiper/css";
@@ -17,9 +17,9 @@ export default function Home() {
       <div className="min-mobile-h-screen flex flex-col">
         <div className="bg-black text-white w-full py-2 flex items-center text-sm uppercase">
           <Marquee>
-            {[0, 1, 2].map(() => {
+            {[0, 1, 2].map((_, index) => {
               return (
-                <div className="flex items-center">
+                <div className="flex items-center" key={index}>
                   <p className="mx-4">
                     Join the <b>WOW 2025 challenge</b> and bag a chance to win
                     cool swags
@@ -63,7 +63,7 @@ export default function Home() {
             className="max-w-[80px] md:max-w-[140px] absolute top-[24%] right-0"
           />
           <h1 className="text-2xl md:text-5xl font-bold !font-[Google_Sans_Display]">
-            Let's Go Camping!
+            Let&apos;s Go Camping!
           </h1>
           {/* <h3 className="font-medium text-xl">Lorem ipsum dolor</h3> */}
           <p className="text-sm md:text-base mt-2 mb-4 max-w-[36ch] text-center line-clamp-3">
@@ -147,7 +147,7 @@ export default function Home() {
       <div className="relative z-5 flex w-full flex-col md:flex-row">
         <div className="md:absolute top-4 left-4 p-8">
           <h3 className="max-w-[16ch] text-2xl font-medium">
-            Here's what our campers had to say
+            Here&apos;s what our campers had to say
           </h3>
           <p className="text-sm max-w-[32ch] mt-2">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non fuga
