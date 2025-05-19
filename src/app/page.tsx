@@ -163,7 +163,6 @@ export default function Home() {
               }}
               allowTouchMove={true}
               spaceBetween={16}
-              slidesPerView={1}
               initialSlide={0}
               modules={[Autoplay, Navigation, FreeMode]}
               freeMode={true}
@@ -175,13 +174,18 @@ export default function Home() {
                 prevEl: ".swiper-button-prev",
               }}
               breakpoints={{
-                440: {
+                0: {
                   spaceBetween: 20,
                   slidesPerView: 1,
+                },
+                768: {
+                  spaceBetween: 20,
+                  slidesPerView: 3,
                 },
                 1024: {
                   centeredSlidesBounds: false,
                   centeredSlides: false,
+                  slidesPerView: 3,
                   spaceBetween: 32,
                 },
               }}
