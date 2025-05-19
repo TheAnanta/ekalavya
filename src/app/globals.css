@@ -10,6 +10,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --swiper-navigation-size: 16px !important;
 }
 
 @theme inline {
