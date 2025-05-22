@@ -1,0 +1,44 @@
+{
+    "courseName": "Namasthe Full-Stack",
+    "courseSubtitle": "Learn the fundamentals of web development from HTML to deployment phase.",
+    "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications. No prior experience needed!",
+    "duration": "6 weeks",
+    "difficulty": "Beginner",
+    "price": 0,
+    "language": "English",
+    "cover": "https://images.prismic.io/turing/652ec64dfbd9a45bcec819ff_Web_Development_Challenges_1a55626dcc.webp?auto=format,compress",
+    "campLeader": {
+        "name": "Varshita Palleti",
+        "communityTitle": "Web Technologies",
+        "designation": "Web developer, The Ananta Studio™",
+        "pronoun": "she/her",
+        "bio": [
+            "Varshita is a passionate web educator and developer with a mission to simplify learning has built projects, blending both design and development",
+            "Actively participated in hackathons, gaining real-world problem-solving experience through rapid prototyping and collaboration.",
+            "Currently leading this course to help beginners kickstart their journey in web development and build a solid project-ready foundation."
+        ],
+        "image": "/camp-leader-female.png"
+    },
+    "benefits": {
+        "text": "This course introduces the core technologies used to build websites and web applications. By the end of the course, you'll be able to create responsive, interactive, and real-world websites and host them live.",
+        "list": [
+            {
+                "title": "Complete Foundation",
+                "content": "From basic tags to responsive layouts, learn the building blocks of the web step by step."
+            },
+            {
+                "title": "Interactive Learning",
+                "content": "Hands-on codelabs and quizzes make it easier to grasp complex and tricky concepts quickly."
+            },
+            {
+                "title": "Modern Tools",
+                "content": "Get introduced to TailwindCSS, GitHub, Firebase, and Postman to build full-stack apps."
+            },
+            {
+                "title": "Project Ready",
+                "content": "By the end of the course, deploy your project online and build your web developer portfolio."
+            }
+        ]
+    },
+    "courseOutline": []
+}

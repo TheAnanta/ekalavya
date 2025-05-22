@@ -1,0 +1,797 @@
+{
+    "courseName": "Android Basics with Compose",
+    "courseSubtitle": "Master application development with Compose, the modern toolkit for building native Android UI.",
+    "courseDescription": "You will learn basic Android programming with best practices recommended by the Android team, including creating beautiful layouts, architecting navigations between screens and connecting to the internet. Get your exclusive and adorable <b>SWAG</b>!",
+    "duration": "8 weeks",
+    "difficulty": "Beginner",
+    "price": 0,
+    "language": "English",
+    "cover": "https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.57_mul_h_sub_0.57_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/ComposeCamp_AndroidBlogHeader_4209x1253-2.png",
+    "campLeader": {
+        "name": "Manas Malla",
+        "communityTitle": "Google Product Expert, Android™",
+        "designation": "Founder, The Ananta Studio™",
+        "pronoun": "he/him",
+        "bio": [
+            "As the Google Product Expert for Android, Manas has over 8+ year of experience building for the Android ecosystem. He has built over 30+ applications for the Android ecosystem and has won the WWDC20, the World Ocean Science Congress Competition for his applications. <a href=\"https: //www.deccanherald.com/specials/wwdc-2020-meet-indian-apple-swift-student-challenge-winners-850697.html\"><sup class=\"ml-1 mt-1 text-[#073042] font-medium\"> 1 </sup> </a> <sup class=\"text-[#073042]\">,</sup><a href=\"https://www.thehindu.com/sci-tech/technology/manas-malla-15-year-old-developer-from-visakhapatnam-on-his-app-ecofun-at-wwdc-2020-swift-student-winner-meet/article31914475.ece\"><sup class=\"ml-[2px] mt-1 text-[#073042] font-medium\">2</sup></a>",
+            "With over 65+ badges on the Google Developer Profile, Manas has been the Android Study Jams Facilitator in the past for Google Developer Groups Vizag, where he has taught over 350+ enthusiastic developers on how to build for Android. <a href=\"https://gdg.community.dev/events/details/google-gdg-vizag-presents-android-study-jams-session-2/\"><sup class=\"ml-[2px] text-[#073042] mt-1 font-medium\"> 5 </sup> </a>",
+            "<br /> He has been certified by The Cambridge Certification Authority with a whooping 99% in the Java Level 1-2 examinations when he was taking his Android Developer Program certification.<a href=\"https: //github.com/ManasMalla/MyAchievements/blob/master/CCA-Certificate-Java%20Level%201.pdf\"> <sup class=\"ml-1 mt-1 text-[#073042] font-medium\">3</sup></a> <sup class=\"text-[#073042]\">,</sup> <a href=\"https://github.com/ManasMalla/MyAchievements/blob/master/CCA-Certificate-Java%20Level%202.pdf\"> <sup class=\"ml-[2px] text-[#073042] mt-1 font-medium\"> 4 </sup></a>"
+        ],
+        "image": "/camp-leader.png"
+    },
+    "benefits": {
+        "text": "Jetpack Compose is the modern toolkit for building native user interfaces for Android apps. Compose makes it easier and faster to build UIs on Android.<br/><br/>Compose apps are written in the Kotlin programming language.<br/><br/>Kotlin™ is the language that the majority of professional Android developers use to build apps.",
+        "list": [
+            {
+                "title": "Less code",
+                "content": "Do more with less code and avoid entire classes of bugs. Code is simpler and easier to maintain."
+            },
+            {
+                "title": "Intuitive",
+                "content": "Just describe your UI, and Compose takes care of the rest. As app state changes, your UI automatically updates."
+            },
+            {
+                "title": "Accelerates Development",
+                "content": "Compatible with all your existing code so you can adopt when and where you want. Iterate fast with live previews and full Android Studio support."
+            },
+            {
+                "title": "Powerful",
+                "content": "Create beautiful apps with direct access to the Android platform APIs and built-in support for Material Design, Dark theme, animations, and more."
+            }
+        ]
+    },
+    "courseOutline": [
+        {
+            "title": "Your first Android app",
+            "pathways": [
+                {
+                    "title": "Introduction to Kotlin",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Before you begin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Welcome to Android Basics with Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Getting started with Kotlin",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Your first program in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Create and use variables in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Create and use functions in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Kotlin Basics",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Setup Android Studio",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Introduction to Android Studio",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Download and install Android Studio",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Create your first Android app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Run your first app on the Android Emulator",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "How to connect your Android Emulator",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Build a basic layout",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-3/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Intro to Jetpack Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Design a birthday card app",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Getting started with basic of Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Build a simple app with text composables",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Add images to your Android app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Compose Basics",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Project: Create a business card app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Building app UI",
+            "pathways": [
+                {
+                    "title": "Kotlin fundamentals",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Kotlin Fundamentals",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Deep dive into Kotlin",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Write conditionals in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Use nullability in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Use classes and objects in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Use function types and lambda expressions in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Kotlin Fundamentals",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Add a button to an app",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Intro to Dice Roller app",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Create an interactive Dice Roller app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Use the debugger in Android Studio",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Click behavior",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Interacting with UI and state",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-3/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Understanding state in Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Intro to tip calculator",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduction to declarative UI",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Intro to state in Compose",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Calculate a custom tip",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Introduction to testing",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Write automated tests",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Project: Create an Art Space app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Display lists and use Material Design",
+            "pathways": [
+                {
+                    "title": "More Kotlin fundamentals",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "More Kotlin fundamentals",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Up, up and above with Kotlin",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Generics, objects, and extensions",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Use collections in Kotlin",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Higher-order functions with collections",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Classes and Collections",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Build a scrollable list",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Intro to Affirmations app",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "More with Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Add a scrollable list",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Change the app icon",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Build a grid",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Build beautiful apps",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-3/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Intro to Material Design with Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Material Theming with Jetpack Compose",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Animations in Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Simple animation with Jetpack Compose",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Testing for Accessibility",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Build Superheroes app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Project: Create a 30 Days App",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Navigation and app architecture",
+            "pathways": [
+                {
+                    "title": "Architecture Components",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Welcome to Unit 4",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Stages of the Activity lifecycle",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Intro to App architecture",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Architecture: The UI Layer",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "ViewModel and State in Compose",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Write unit tests to test the ViewModel",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Add a ViewModel to Dessert Clicker",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Navigation in Jetpack Compose",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Introduction to Navigation and Cupcake App",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Adding navigation",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Navigate between screens with Compose",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Test the Cupcake app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Add navigation",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Adapt for different screen sizes",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-3/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Adaptive layouts",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Intro to Reply app",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Adapting the app",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Build an adaptive app with dynamic navigation",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Build an app with an adaptive layout",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Build Sports app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Project: Create a My City app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Connect to the internet",
+            "pathways": [
+                {
+                    "title": "Get data from the internet",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-5-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Connect to the internet",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Asynchronous programming",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduction to Coroutines in Kotlin Playground",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Introduction to Coroutines in Android Studio",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Introduction to HTTP/REST",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Get data from the internet",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Load and display images from the internet",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-5-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Architecture: The Data Layer",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Dependency injection",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Add repository and Manual Dependency Injection",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Images everywhere",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Load and display images from the internet",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Build amphibians app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Project: Create a Bookshelf app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Data persistence",
+            "pathways": [
+                {
+                    "title": "Introduction to SQL",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Introduction to Databases and SQL",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Use SQL to read and write to a database",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Use Room for data persistence",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Kotlin Flows in Practice",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Testing Flows",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Using Room Kotlin APIs",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Persist Data with Room",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Read and update data with Room",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Build Bus Schedule app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Store and access data using keys with DataStore",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-3/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Introduction to Datastore",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Preferences Datastore",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Save preferences locally with DataStore",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Project: Create a flight search app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "WorkManager",
+            "pathways": [
+                {
+                    "title": "Schedule tasks with WorkManager",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-7-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Introduction to WorkManager",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Implementing WorkManager",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Background work with WorkManager",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Advanced WorkManager and Testing",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Practice: Build Water Me app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Views and Compose",
+            "pathways": [
+                {
+                    "title": "Android Views and Compose in Views",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-8-pathway-1/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Android View System",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Build an Android app with Views",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Compose in Views",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Add Compose to a legacy app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Views in Compose",
+                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-8-pathway-2/badge.svg",
+                    "resources": [
+                        {
+                            "title": "Views in Compose",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "View Interoperability in Compose",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Add Compose to a legacy app",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

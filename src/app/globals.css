@@ -33,3 +33,58 @@ body {
 .min-mobile-h-screen {
   min-height: 100dvh;
 }
+
+.benefits .benefits-box {
+  border: #073042 1px solid;
+  padding: 16px 24px;
+  background-color: white;
+  color: #073042;
+  height: max-content;
+  border-radius: 12px;
+  aspect-ratio: 1.2;
+}
+
+.benefits :hover {
+  background-color: #f86734;
+  color: white;
+}
+
+.benefits .benefits-box p {
+  font-size: 86%;
+}
+
+.benefits .benefits-box h4 {
+  font-weight: 500;
+  line-height: 204%;
+  font-size: 116%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.devsite-playlist--item-top:before {
+  background: #dadce0;
+  content: "";
+  display: block;
+  height: calc(100%);
+  -webkit-margin-start: 15px;
+  -moz-margin-start: 15px;
+  margin-inline-start: 15px;
+  margin-top: 2px;
+  position: absolute;
+  top: 54px;
+  -webkit-transition: height 0.2s cubic-bezier(0.4, 0, 1, 1),
+    opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transition: height 0.2s cubic-bezier(0.4, 0, 1, 1),
+    opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
+  width: 1px;
+  z-index: 1;
+}

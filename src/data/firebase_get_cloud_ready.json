@@ -1,0 +1,44 @@
+{
+    "courseName": "Firebase: Get Cloud-Ready\n(Without the Cloudy Head)",
+    "courseSubtitle": "Unlock the power of cloud development using Firebase — build smarter, faster apps without the backend hassle.",
+    "courseDescription": "This course is designed for developers of all levels who want to build powerful applications without managing traditional backend infrastructure. Learn Firebase from the ground up — databases, hosting, analytics, AI, and more — all integrated with Google's ecosystem.",
+    "duration": "6 weeks",
+    "difficulty": "Beginner",
+    "price": 0,
+    "language": "English",
+    "cover": "https://firebase.google.com/images/social.png",
+    "campLeader": {
+        "name": "Jayadhar Ummadisingu",
+        "communityTitle": "Cloud & Firebase Developer",
+        "designation": "Full Stack Developer, The Ananta Studio™",
+        "pronoun": "he/him",
+        "bio": [
+            "Jayadhar,is a Computer Science student with a knack for building things. He is a full-stack developer at heart, comfortable working on everything from crafting intuitive user interfaces with React and Tailwind to building robust backends with Node.js, Express, and Firebase.",
+            "He is experienced includes developing websites for events and building innovative applications. He is particularly interested in leveraging technology to solve real-world problems and create positive user experiences. ",
+            "He is eager to contribute his skills to a team where he can learn and grow."
+        ],
+        "image": "/camp-leader.png"
+    },
+    "benefits": {
+        "text": "Firebase simplifies app development by providing real-time databases, authentication, hosting, analytics, and even AI tools—all without managing servers. By the end of this course, you’ll be equipped to build and launch full-featured applications at scale.",
+        "list": [
+            {
+                "title": "Zero to Cloud",
+                "content": "Learn Firebase from scratch — no prior backend experience needed."
+            },
+            {
+                "title": "Fast Development",
+                "content": "Get started quickly with integrated tools for building, deploying, and managing apps."
+            },
+            {
+                "title": "Analytics & AI",
+                "content": "Add deep analytics and intelligent features using Firebase’s analytics and ML tools."
+            },
+            {
+                "title": "Real-World Projects",
+                "content": "Deploy production-ready apps with authentication, databases, and cloud functions."
+            }
+        ]
+    },
+    "courseOutline": []
+}
