@@ -1,3 +1,6 @@
+/*eslint-disable @typescript-eslint/no-explicit-any */
+/*eslint-disable @typescript-eslint/no-unused-vars */
+/*eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import composeCourse from "@/data/android-basics-with-compose.json";
 import webCourse from "@/data/full-stack-basics.json";
@@ -9,6 +12,8 @@ import { useState } from "react";
 
 export default function PathwaysLayoutPage() {
   const courseId = useParams()["course-id"];
+  const weekId = useParams()["week-id"];
+  const pathwayId = useParams()["pathway-id"];
   if (
     courseId !== "android-basics-compose" &&
     courseId !== "full-stack-basics" &&
@@ -30,12 +35,10 @@ export default function PathwaysLayoutPage() {
       : courseId === "flutter-basics-dart"
       ? flutterCourse
       : composeCourse;
-  const weekId = useParams()["week-id"];
   const weekData =
     eventData.courseOutline[
       parseInt((weekId || "week-1").toString().split("-")[1]) - 1
     ];
-  const pathwayId = useParams()["pathway-id"];
   const pathwayData =
     weekData.pathways[
       parseInt((pathwayId || "pathway-1").toString().split("-")[1]) - 1

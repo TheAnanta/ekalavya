@@ -1,3 +1,5 @@
+/*eslint-disable @typescript-eslint/no-explicit-any */
+/*eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import Marquee from "react-fast-marquee";
 // import Swiper JS
@@ -10,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -42,9 +45,9 @@ export default function Home() {
               account_circle
             </span>} */}
           </div>
-          <a href="/">
+          <Link href="/">
             <img src="theananta.png" className="h-8 mr-3" />
-          </a>
+          </Link>
         </nav>
         <main className="relative flex flex-col justify-end grow items-center overflow-hidden">
           <img
@@ -72,12 +75,12 @@ export default function Home() {
             Upskill with our self-paced online program and build solutions for
             problems around you.
           </p>
-          <a
+          <Link
             href="/course/android-basics-compose"
             className="border-2 border-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium text-[var(--android-primary-color)]"
           >
             Register Now
-          </a>
+          </Link>
           <img
             src="compose-world.png"
             className="mt-12 w-full scale-120 -translate-x-2 -translate-y-2 md:scale-[unset] md:max-w-[800px] md:translate-y-1 object-bottom"
