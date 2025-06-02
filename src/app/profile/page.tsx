@@ -271,7 +271,7 @@ const ProfilePage: React.FC = () => {
             <div className="shrink-0">
               <img
                 className="size-32 rounded-full mb-4 bg-[var(--android-primary-color)]/20 object-cover object-top pt-4"
-                src="https://developer.android.com/static/images/home/charclaqueta-droid-promo.png"
+                src="/courses/images/charclaqueta-droid-promo_720.png"
               />
               <p className="text-xl font-semibold max-w-[12ch]">
                 Android Basics with Compose
@@ -286,8 +286,8 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="shrink-0">
               <img
-                className="size-32 rounded-full mb-4 bg-[#4285f4]/20 object-cover object-top pt-4"
-                src="https://public.rive.app/community/video-thumbnails/9201-17527-flutter-dash-watermark.png"
+                className="size-32 rounded-full mb-4 bg-[#4285f4]/20 object-contain object-top pt-8"
+                src="/courses/images/dash-search.png"
               />
               <p className="text-xl font-semibold max-w-[12ch]">
                 Flutter Basics with Dart
@@ -303,7 +303,7 @@ const ProfilePage: React.FC = () => {
             <div className="shrink-0">
               <img
                 className="size-32 rounded-full mb-4 bg-[#FBC005]/20 object-cover object-top pt-4"
-                src="https://improve-your-app-demo.web.app/sparky-shadow.png"
+                src="/courses/images/sparky-shadow.png"
               />
               <p className="text-xl font-semibold max-w-[12ch]">
                 Firebase: Get Cloud-Ready
@@ -318,7 +318,7 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="shrink-0">
               <img
-                className="size-32 rounded-full mb-4 bg-[#4285F4]/20 object-cover object-right pt-4"
+                className="size-32 rounded-full mb-4 bg-[#ea4335]/20 object-cover object-right pt-4"
                 src="https://developers.google.com/static/community/images/gdsc-solution-challenge/timeline-hero.webp"
               />
               <p className="text-xl font-semibold max-w-[10ch]">
@@ -333,10 +333,10 @@ const ProfilePage: React.FC = () => {
               </a>
             </div>
             <div className="shrink-0">
-              <div className="size-32 rounded-full mb-4 bg-[#ea4335]/20 object-contain object-top p-6">
+              <div className="size-32 rounded-full  bg-[#4285F4]/10 object-contain object-bottom flex pb-3 mb-4 overflow-hidden">
                 <img
-                  className="mix-blend-luminosity saturate-0"
-                  src="https://google.github.io/adk-docs/assets/agent-development-kit.png"
+                  className="mt-auto scale-[130%]"
+                  src="https://developers.google.com/static/search/images/check-help-community.png?hl=th"
                 />
               </div>
               <p className="text-xl font-semibold max-w-[12ch]">

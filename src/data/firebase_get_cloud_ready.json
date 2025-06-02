@@ -6,19 +6,25 @@
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "https://firebase.google.com/images/social.png",
-    "campLeader": {
-        "name": "Jayadhar Ummadisingu",
-        "communityTitle": "Cloud & Firebase Developer",
-        "designation": "Full Stack Developer, The Ananta Studio™",
-        "pronoun": "he/him",
-        "bio": [
-            "Jayadhar,is a Computer Science student with a knack for building things. He is a full-stack developer at heart, comfortable working on everything from crafting intuitive user interfaces with React and Tailwind to building robust backends with Node.js, Express, and Firebase.",
-            "He is experienced includes developing websites for events and building innovative applications. He is particularly interested in leveraging technology to solve real-world problems and create positive user experiences. ",
-            "He is eager to contribute his skills to a team where he can learn and grow."
-        ],
-        "image": "/camp-leader.png"
-    },
+    "cover": "/courses/images/firebase-summit-2021-feature-image.png",
+    "campLeaderCardColor": "#2348ac",
+    "campLeaderCardTextColor": "#FFF",
+    "benefitsCardColor": "#fdb604",
+    "benefitsCardTextColor": "#FFF",
+    "campLeader": [
+        {
+            "name": "Jayadhar Ummadisingu",
+            "communityTitle": "Cloud & Firebase Developer",
+            "designation": "Full Stack Developer, The Ananta Studio™",
+            "pronoun": "he/him",
+            "bio": [
+                "Jayadhar Ummadisingu is a Computer Science student with a knack for building things. He is a full-stack developer at heart, comfortable working on everything from crafting intuitive user interfaces with React and Tailwind to building robust backends with Node.js, Express, and Firebase.",
+                "He is experienced includes developing websites for events and building innovative applications. He is particularly interested in leveraging technology to solve real-world problems and create positive user experiences. ",
+                "He is eager to contribute his skills to a team where he can learn and grow."
+            ],
+            "image": "/camp-leader.png"
+        }
+    ],
     "benefits": {
         "text": "Firebase simplifies app development by providing real-time databases, authentication, hosting, analytics, and even AI tools—all without managing servers. By the end of this course, you’ll be equipped to build and launch full-featured applications at scale.",
         "list": [
@@ -40,5 +46,322 @@
             }
         ]
     },
-    "courseOutline": []
+    "courseOutline": [
+        {
+            "title": "Week-1: Firebase Foundations: Cloud & Console Essentials",
+            "pathways": [
+                {
+                    "title": "Understanding the Cloud: A Beginner's Guide",
+                    "resources": [
+                        {
+                            "title": "What is Cloud?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Google Cloud Storage",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Google Cloud Platform",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Firebase",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Cloud Concepts",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Introduction to Firebase: Core Concepts",
+                    "resources": [
+                        {
+                            "title": "What is Firebase?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Why Firebase?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Firebase Basics",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Firebase Console",
+                    "resources": [
+                        {
+                            "title": "Creating Your First Firebase Project",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Week-2: Mastering Firebase Build: Building Blocks for Your App",
+            "pathways": [
+                {
+                    "title": "Build Products Overview",
+                    "resources": [
+                        {
+                            "title": "What are Build products?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Analytics Products",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "AI Products",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        }
+                    ]
+                },
+                {
+                    "title": "Build Products in Action",
+                    "resources": [
+                        {
+                            "title": "App Hosting",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Authentication",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Functions",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Firestore Database",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Realtime Database",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Storage",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Hosting",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Build Products",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Week-3: Firebase Run: Deploy, Monitor, & Optimize Your Application",
+            "pathways": [
+                {
+                    "title": "Run Products Overview",
+                    "resources": [
+                        {
+                            "title": "What are Run products?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        }
+                    ]
+                },
+                {
+                    "title": "Run Products in Practice",
+                    "resources": [
+                        {
+                            "title": "A/B Testing",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "AdMob",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "App Distribution",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Crashlytics",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Messaging",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Performance",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Release Monitoring",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Remote Config",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Run Products Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Week-4: Unlocking Insights: Firebase Analytics for Data-Driven Development",
+            "pathways": [
+                {
+                    "title": "Analytics Products Overview",
+                    "resources": [
+                        {
+                            "title": "What are Analytics products?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        }
+                    ]
+                },
+                {
+                    "title": "Using Analytics Products",
+                    "resources": [
+                        {
+                            "title": "Dashboard",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Latest Release",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "DebugView",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Analytics Products Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Week-5: Firebase AI: Injecting Intelligence into Your Apps",
+            "pathways": [
+                {
+                    "title": "AI Products Overview",
+                    "resources": [
+                        {
+                            "title": "What are AI products?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        }
+                    ]
+                },
+                {
+                    "title": "Different AI Products",
+                    "resources": [
+                        {
+                            "title": "Genkit",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Vertex AI",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s Next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "AI Products Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Week-6: Firebase in Practice: Pricing, Billing & GCP Integration",
+            "pathways": [
+                {
+                    "title": "Pricing plans Explained",
+                    "resources": [
+                        {
+                            "title": "What are pricing plans?",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Which to choose when?",
+                            "type": "Article"
+                        }
+                    ]
+                },
+                {
+                    "title": "Billing Account Setup",
+                    "resources": [
+                        {
+                            "title": "Creating a cloud billing account",
+                            "type": "Codelab"
+                        }
+                    ]
+                },
+                {
+                    "title": "Google Cloud Platform",
+                    "resources": [
+                        {
+                            "title": "Some GCP Tools",
+                            "type": "Article"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

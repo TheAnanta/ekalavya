@@ -1,0 +1,664 @@
+{
+    "courseName": "Machine Learning with Generative AI",
+    "courseSubtitle": "Build and deploy generative AI and machine learning solutions using Genkit, BigQuery ML, and Vertex AI.",
+    "courseDescription": "Learn to build intelligent applications by mastering Genkit workflows, integrating with real-world data, utilizing BigQuery for data analysis and ML, and leveraging Vertex AI for training, tuning, and deploying models. Explore prompt engineering, architecture patterns, and practical use cases on Google Cloud.",
+    "duration": "8 weeks",
+    "difficulty": "Beginner",
+    "price": 0,
+    "language": "English",
+    "cover": "https://developers.google.com/static/search/blog/images/GoogleSearchCentral_AnnouncementGraphics_Blog1.png",
+    "campLeaderCardColor": "#3f83f2",
+    "campLeaderCardTextColor": "#FFF",
+    "benefitsCardColor": "var(--android-primary-color)",
+    "benefitsCardTextColor": "#FFF",
+    "campLeader": [
+        {
+            "name": "Chandan Khamitkar",
+            "email": "khamitkar.dev@gmail.com",
+            "communityTitle": "Full Stack Developer",
+            "designation": "CTO,\nThe Ananta Studio™",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/chandankhamitkar",
+                "twitter": "https://twitter.com/chandan_k_dev"
+            },
+            "pronoun": "he/him",
+            "bio": [
+                "Varshita is a passionate web educator and developer with a mission to simplify learning has built projects, blending both design and development",
+                "Actively participated in hackathons, gaining real-world problem-solving experience through rapid prototyping and collaboration.",
+                "Currently leading this course to help beginners kickstart their journey in web development and build a solid project-ready foundation."
+            ],
+            "image": "/camp-leader.png"
+        },
+        {
+            "name": "Revant Peethala",
+            "email": "revanth@gmail.com",
+            "communityTitle": "Machine Learning Engineer",
+            "designation": "Sr. ML Developer,\nThe Ananta Studio™",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/revanth",
+                "twitter": "https://twitter.com/--"
+            },
+            "pronoun": "he/him",
+            "bio": [
+                "Varshita is a passionate web educator and developer with a mission to simplify learning has built projects, blending both design and development",
+                "Actively participated in hackathons, gaining real-world problem-solving experience through rapid prototyping and collaboration.",
+                "Currently leading this course to help beginners kickstart their journey in web development and build a solid project-ready foundation."
+            ],
+            "image": "/camp-leader.png"
+        },
+        {
+            "name": "Manas Malla",
+            "communityTitle": "Google Product Expert, Android™",
+            "designation": "Founder, The Ananta Studio™",
+            "pronoun": "he/him",
+            "bio": [
+                "As the Google Product Expert for Android, Manas has over 8+ year of experience building for the Android ecosystem. He has built over 30+ applications for the Android ecosystem and has won the WWDC20, the World Ocean Science Congress Competition for his applications. <a href=\"https: //www.deccanherald.com/specials/wwdc-2020-meet-indian-apple-swift-student-challenge-winners-850697.html\"><sup class=\"ml-1 mt-1 text-[#073042] font-medium\"> 1 </sup> </a> <sup class=\"text-[#073042]\">,</sup><a href=\"https://www.thehindu.com/sci-tech/technology/manas-malla-15-year-old-developer-from-visakhapatnam-on-his-app-ecofun-at-wwdc-2020-swift-student-winner-meet/article31914475.ece\"><sup class=\"ml-[2px] mt-1 text-[#073042] font-medium\">2</sup></a>",
+                "With over 65+ badges on the Google Developer Profile, Manas has been the Android Study Jams Facilitator in the past for Google Developer Groups Vizag, where he has taught over 350+ enthusiastic developers on how to build for Android. <a href=\"https://gdg.community.dev/events/details/google-gdg-vizag-presents-android-study-jams-session-2/\"><sup class=\"ml-[2px] text-[#073042] mt-1 font-medium\"> 5 </sup> </a>",
+                ""
+            ],
+            "image": "/camp-leader.png"
+        }
+    ],
+    "benefits": {
+        "text": "This course provides practical skills in building and deploying machine learning and generative AI applications on Google Cloud Platform.",
+        "list": [
+            {
+                "title": "Build Gen AI Applications",
+                "content": "Learn to create intelligent applications and workflows using Genkit."
+            },
+            {
+                "title": "Analyze Data with BigQuery ML",
+                "content": "Utilize powerful data warehousing and in-database machine learning capabilities with BigQuery ML."
+            },
+            {
+                "title": "Master Cloud ML Platform",
+                "content": "Gain expertise in training, tuning, and deploying models using Vertex AI."
+            },
+            {
+                "title": "Develop Practical Skills",
+                "content": "Integrate AI solutions with APIs, handle data, and deploy projects to the cloud."
+            }
+        ]
+    },
+    "courseOutline": [
+        {
+            "title": "Getting Started with Genkit",
+            "pathways": [
+                {
+                    "title": "What is Genkit? Why use it?",
+                    "resources": [
+                        {
+                            "title": "Introduction to Generative AI",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduction to Generative AI",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Intro to Genkit",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "What are workflows and the role of Genkit in AI-powered applications?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Benefits of no-training AI workflows vs traditional ML models",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Understanding Genkit Purpose",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Genkit vs Traditional ML",
+                    "resources": [
+                        {
+                            "title": "What is model handling, pipelines, iteration?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Traditional ML pipelines vs Genkit’s flow-based approach",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Flows and Prompting",
+                    "resources": [
+                        {
+                            "title": "What are flows? What is actual Prompting? How does prompting work in Genkit?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Understanding Vector Embedding",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Creation of architecture of simple text-to-response Genkit Flow",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Topping it up with Tools",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Flow & prompt",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Project Setup & Prerequisites",
+                    "resources": [
+                        {
+                            "title": "Install Node.js, TypeScript, and set up Genkit CLI",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Initialize the Genkit project and run your first flow",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Basics of Project Setup",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Building Smart Flows",
+            "pathways": [
+                {
+                    "title": "Schemas and IO Design",
+                    "resources": [
+                        {
+                            "title": "What are schemas? What's the need of input/output definition formats?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Basics of Schema Validation : ZOD?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Create input and output schemas",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Schema Fundamentals",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Model Selection",
+                    "resources": [
+                        {
+                            "title": "Genkit supported models : What? Why? How?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "How to pick the right model for your project/task?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Purpose of Models",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Flow Debugging ( Logs )",
+                    "resources": [
+                        {
+                            "title": "Logs: What? Why? When do we need it?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduce an intentional error and fix it using debugging tools",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Importance of Logs",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Prompt Engineering & Role Logic",
+            "pathways": [
+                {
+                    "title": "Effective Prompt Design",
+                    "resources": [
+                        {
+                            "title": "What is dot-prompt? Prompt techniques for better AI responses",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Write prompts for a joke generator, hefty text summarizer",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Agents and Prompting with Context and Role",
+                    "resources": [
+                        {
+                            "title": "How to give AI a “role” or “personality”?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Add roles to an assistant flow",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "What are agents? How to use multiple agents",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Role-based prompting essentials",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Data Types and Integration",
+                    "resources": [
+                        {
+                            "title": "What types of data format does Genkit accept ( JSON, text, media )?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Data handling in Genkit Flows",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Build a flow that takes a name & image & returns a caption",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Data Types and input/output handling",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Real-world Integration",
+            "pathways": [
+                {
+                    "title": "REST APIs",
+                    "resources": [
+                        {
+                            "title": "Rest APIs : What? Why? When?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "REST API basics",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Write a Simple Express server",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Write a Simple Express server",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "How to link Genkit with Express backend ( which gets connected to your app )",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Download React Pre-built Repo & Hit Genkit",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "API Integration fundamentals",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Practical Example 1: Weather Forecast",
+                    "resources": [
+                        {
+                            "title": "Weather API integration demo",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Create a flow that fetches and formats weather data & Test it on Postman",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Practical Example 2: OneClick Emailer",
+                    "resources": [
+                        {
+                            "title": "Write flows, prompts and input/output schema?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Flow to take input text and send it via nodemailer & Test it on Postman",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Flow building",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Deploying with Firebase",
+                    "resources": [
+                        {
+                            "title": "Deploy your project using Firebase CLI",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Test Deployed Genkit Project URL",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Error Handling & Logs",
+                    "resources": [
+                        {
+                            "title": "How to add Error boundaries",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Best practices for Genkit error boundaries",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Working with BigQuery",
+            "pathways": [
+                {
+                    "title": "Introduction to BigQuery",
+                    "resources": [
+                        {
+                            "title": "Introduction to BigQuery and Data warehouse",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Working with BigQuery",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "BigQuery Architecture Overview",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Building a dataset in BigQuery",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Writing Standard SQL Queries in BigQuery: SELECT, FROM, WHERE, GROUP BY, ORDER BY, LIMIT",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Joining Tables (INNER JOIN, LEFT JOIN, etc.)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Subqueries and Common Table Expressions (CTEs)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "BigQuery Fundamentals",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Working with BigQueryML",
+                    "resources": [
+                        {
+                            "title": "Introduction to BigQuery ML",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Advantages and Use Cases of BQML (Speed, Simplicity, Data Proximity)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Supported Model Types (Focus on a few key ones: Linear Regression, Logistic Regression, K-Means)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "CREATE MODEL syntax and options (Specifying model type, target, features, options)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Training your first ML model in BigQuery",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Load or identify a dataset suitable for regression or classification (e.g., predicting housing prices, customer churn)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Evaluating Trained Models (ML.EVALUATE function)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Understanding Evaluation Metrics (RMSE, R2, Precision, Recall, AUC, etc.)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Making Predictions",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Exporting BQML Models",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Quiz",
+                            "type": "Quiz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Training with VertexAI",
+            "pathways": [
+                {
+                    "title": "Introduction to VertexAI",
+                    "resources": [
+                        {
+                            "title": "What is Google Cloud Vertex AI? (Unified ML Platform)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Key Services in Vertex AI (Workbench, Datasets, Training, Prediction, Pipelines, etc.)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Navigating the Vertex AI Console",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Navigating the Vertex AI Console",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Vertex AI Workbench / Managed Notebooks (Development environment setup)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Choosing Your Training Approach: AutoML vs. Custom Training vs. BQML",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "VertexAI Fundamentals",
+                            "type": "Quiz"
+                        }
+                    ]
+                },
+                {
+                    "title": "Working with ML Garden",
+                    "resources": [
+                        {
+                            "title": "Introduction to the Gemma Model Family (Open models from Google, 2B and 7B variants)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Accessing Gemma via Vertex AI Model Garden",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Deploying the pre-trained Gemma model to a Vertex AI Endpoint for prediction",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Understanding LLM Prediction Endpoints and instances",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Using the Vertex AI Client Libraries (Python SDK focus) to interact with deployed models",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Performing Text Generation with Gemma (Understanding input/output formats)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Configuring Generation Parameters (e.g., temperature, max_output_tokens, top_k, top_p)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Using the Chat API for conversational interactions",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Running code in Vertex AI Workbench notebooks",
+                            "type": "Video"
+                        }
+                    ]
+                },
+                {
+                    "title": "Fine tuning Gemma models",
+                    "resources": [
+                        {
+                            "title": "Why Tune Gemma? (Adapting to specific domains, tasks, styles)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduction to Supervised Tuning for LLMs",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Creating a Supervised Tuning Dataset in Vertex AI",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Creating and monitoring a Supervised Tuning job for Gemma via Console or SDK",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Evaluating Tuned LLMs (Challenges and approaches)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "(Optional) Using Vertex AI Evaluation services (if applicable to Gemma tuning)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Manual Evaluation and Qualitative Assessment",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Deploying a Tuned Gemma Model to a Vertex AI Endpoint",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Comparing performance/cost of Base vs. Tuned model deployments",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Responsible AI considerations when using and tuning Gemma",
+                            "type": "Video"
+                        }
+                    ]
+                },
+                {
+                    "title": "Advanced Vertex AI (optional)",
+                    "resources": [
+                        {
+                            "title": "(Optional) Introduction to Gemma 2B/7B variants (Instruct, fine-tuned)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "(Optional) Generating Embeddings with Vertex AI LLMs (for RAG use cases)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "(Optional) Overview of other LLM capabilities on Vertex AI (e.g., PaLM 2, Gemini - briefly mention difference from open models)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Cost management strategies for LLM endpoints",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Overview of Vertex AI Pipelines for MLOps automation (including LLM workflows)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Course Review, Q&A, and Next Steps in Learning LLMs on Google Cloud",
+                            "type": "Video"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

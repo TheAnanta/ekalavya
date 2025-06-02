@@ -42,7 +42,9 @@ export default function Home() {
               account_circle
             </span>} */}
           </div>
-          <img src="theananta.png" className="h-8 mr-3" />
+          <a href="/">
+            <img src="theananta.png" className="h-8 mr-3" />
+          </a>
         </nav>
         <main className="relative flex flex-col justify-end grow items-center overflow-hidden">
           <img
@@ -70,9 +72,12 @@ export default function Home() {
             Upskill with our self-paced online program and build solutions for
             problems around you.
           </p>
-          <button className="border-2 border-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium text-[var(--android-primary-color)]">
+          <a
+            href="/course/android-basics-compose"
+            className="border-2 border-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium text-[var(--android-primary-color)]"
+          >
             Register Now
-          </button>
+          </a>
           <img
             src="compose-world.png"
             className="mt-12 w-full scale-120 -translate-x-2 -translate-y-2 md:scale-[unset] md:max-w-[800px] md:translate-y-1 object-bottom"

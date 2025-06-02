@@ -1,24 +1,42 @@
 {
     "courseName": "Namasthe Full-Stack",
     "courseSubtitle": "Learn the fundamentals of web development from HTML to deployment phase.",
-    "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications. No prior experience needed!",
+    "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications.",
     "duration": "6 weeks",
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "https://images.prismic.io/turing/652ec64dfbd9a45bcec819ff_Web_Development_Challenges_1a55626dcc.webp?auto=format,compress",
-    "campLeader": {
-        "name": "Varshita Palleti",
-        "communityTitle": "Web Technologies",
-        "designation": "Web developer, The Ananta Studio™",
-        "pronoun": "she/her",
-        "bio": [
-            "Varshita is a passionate web educator and developer with a mission to simplify learning has built projects, blending both design and development",
-            "Actively participated in hackathons, gaining real-world problem-solving experience through rapid prototyping and collaboration.",
-            "Currently leading this course to help beginners kickstart their journey in web development and build a solid project-ready foundation."
-        ],
-        "image": "/camp-leader-female.png"
-    },
+    "cover": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Ai-1-banner.original.png",
+    "campLeaderCardColor": "#e39600",
+    "campLeaderCardTextColor": "#FFF",
+    "benefitsCardColor": "#fcd200",
+    "benefitsCardTextColor": "#000",
+    "campLeader": [
+        {
+            "name": "Varshita Palleti",
+            "communityTitle": "Full-Stack Developer",
+            "designation": "Sr. Web Developer,\nThe Ananta Studio™",
+            "pronoun": "she/her",
+            "bio": [
+                "Varshita is a passionate web educator and developer with a mission to simplify learning has built projects, blending both design and development",
+                "Actively participated in hackathons, gaining real-world problem-solving experience through rapid prototyping and collaboration.",
+                "Currently leading this course to help beginners kickstart their journey in web development and build a solid project-ready foundation."
+            ],
+            "image": "/camp-leader-female.png"
+        },
+        {
+            "name": "Kavya Chandana",
+            "communityTitle": "Project Manager",
+            "designation": "COO,\nThe Ananta Studio™",
+            "pronoun": "she/her",
+            "bio": [
+                "As the Google Product Expert for Android, Manas has over 8+ year of experience building for the Android ecosystem. He has built over 30+ applications for the Android ecosystem and has won the WWDC20, the World Ocean Science Congress Competition for his applications. <a href=\"https: //www.deccanherald.com/specials/wwdc-2020-meet-indian-apple-swift-student-challenge-winners-850697.html\"><sup class=\"ml-1 mt-1 text-[#073042] font-medium\"> 1 </sup> </a> <sup class=\"text-[#073042]\">,</sup><a href=\"https://www.thehindu.com/sci-tech/technology/manas-malla-15-year-old-developer-from-visakhapatnam-on-his-app-ecofun-at-wwdc-2020-swift-student-winner-meet/article31914475.ece\"><sup class=\"ml-[2px] mt-1 text-[#073042] font-medium\">2</sup></a>",
+                "With over 65+ badges on the Google Developer Profile, Manas has been the Android Study Jams Facilitator in the past for Google Developer Groups Vizag, where he has taught over 350+ enthusiastic developers on how to build for Android. <a href=\"https://gdg.community.dev/events/details/google-gdg-vizag-presents-android-study-jams-session-2/\"><sup class=\"ml-[2px] text-[#073042] mt-1 font-medium\"> 5 </sup> </a>",
+                "<br /> He has been certified by The Cambridge Certification Authority with a whooping 99% in the Java Level 1-2 examinations when he was taking his Android Developer Program certification.<a href=\"https: //github.com/ManasMalla/MyAchievements/blob/master/CCA-Certificate-Java%20Level%201.pdf\"> <sup class=\"ml-1 mt-1 text-[#073042] font-medium\">3</sup></a> <sup class=\"text-[#073042]\">,</sup> <a href=\"https://github.com/ManasMalla/MyAchievements/blob/master/CCA-Certificate-Java%20Level%202.pdf\"> <sup class=\"ml-[2px] text-[#073042] mt-1 font-medium\"> 4 </sup></a>"
+            ],
+            "image": "/camp-leader-female.png"
+        }
+    ],
     "benefits": {
         "text": "This course introduces the core technologies used to build websites and web applications. By the end of the course, you'll be able to create responsive, interactive, and real-world websites and host them live.",
         "list": [
@@ -40,5 +58,516 @@
             }
         ]
     },
-    "courseOutline": []
+    "courseOutline": [
+        {
+            "title": "Introduction to the Web",
+            "pathways": [
+                {
+                    "title": "What is the Web, a Webpage, and a Website",
+                    "resources": [
+                        {
+                            "title": "What is the Internet & the Web?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "What are Web Pages and Websites?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Differences: Webpage vs Website vs Web App",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Understanding the Web",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Vanilla HTML – Structure, Elements, and Tags",
+                    "resources": [
+                        {
+                            "title": "HTML Basics: Structure & Tags",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Explore HTML",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Build: My First Webpage (Headings, Paragraphs, Links)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What's next? Basic HTML Formatting & Lists",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "HTML Fundamentals",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "HTML Semantics and Best Practices",
+                    "resources": [
+                        {
+                            "title": "Semantic HTML: What and Why?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "HTML5 Semantic Tags Overview",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Build: Personal Bio Page with Semantic Tags",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Build: Blog Layout using Header, Section, Footer",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Semantic HTML & Page Structure",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                }
+            ]
+        },
+        {
+            "title": "Styling with CSS and Tailwind CSS",
+            "pathways": [
+                {
+                    "title": "Introduction to CSS – Syntax, Selectors, and Properties",
+                    "resources": [
+                        {
+                            "title": "What is CSS?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "How CSS Works With HTML",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Types of Selectors and Properties",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Style your personal bio page from Week 1",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Apply colors, padding, borders using class and ID selectors",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "CSS Basics",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "CSS Layouts – Flexbox, Grid, Positioning",
+                    "resources": [
+                        {
+                            "title": "Introduction to the CSS Box Model",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Layout with Flexbox and Grid",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Create a formal profile card using vanilla CSS",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Add hover effects, box shadows, and visual structure",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Use Flex/Grid to create a two-column layout",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "CSS Layouts",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Tailwind CSS – Utility-first approach, setup and usage",
+                    "resources": [
+                        {
+                            "title": "What is Tailwind CSS?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Setting up Tailwind with CDN and CLI",
+                            "type": "Article + Demo"
+                        },
+                        {
+                            "title": "Tailwind Utility Classes Overview",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Tailwind Playground Exploration (Tailwind Play)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Create a responsive navbar using Tailwind CSS",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Tailwind CSS Fundamentals",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                }
+            ]
+        },
+        {
+            "title": "JavaScript Fundamentals and Async/Await : Making Pages Interactive",
+            "pathways": [
+                {
+                    "title": "Basics of JavaScript – Variables, Functions, Events",
+                    "resources": [
+                        {
+                            "title": "What is JavaScript and how does it run in the browser?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduction to variables, data types, and functions",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Event listeners and basic interactivity (click, input, etc.)",
+                            "type": "Article + Demo"
+                        },
+                        {
+                            "title": "Build a calculator using JavaScript",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "JavaScript Basics",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "DOM Manipulation – Handling User Input",
+                    "resources": [
+                        {
+                            "title": "What is the DOM? How does JavaScript interact with HTML?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Selecting and modifying elements using getElementById, querySelector",
+                            "type": "Demo"
+                        },
+                        {
+                            "title": "Handling forms and user input",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Form validation and event handling (e.g., sign-up form)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "DOM and Events",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Asynchronous JS – Promises and async/await",
+                    "resources": [
+                        {
+                            "title": "Synchronous vs Asynchronous JavaScript",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "What are Promises?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Using fetch() to get data from an API",
+                            "type": "Demo"
+                        },
+                        {
+                            "title": "Fetch data from a public API using fetch() and async/await",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Async and Promises",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                }
+            ]
+        },
+        {
+            "title": "Frameworks and Client-Side Rendering",
+            "pathways": [
+                {
+                    "title": "What is a Framework? Difference Between Vanilla and Frameworks",
+                    "resources": [
+                        {
+                            "title": "What is a JavaScript Framework?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Difference between Vanilla JS and Frameworks",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Overview of Popular Frameworks: React, Angular, Vue",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Setting up a simple React or Vue app (Demo)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Frameworks Basics",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Client-Side Rendering and State Management",
+                    "resources": [
+                        {
+                            "title": "What is Client-Side Rendering (CSR)?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Understanding State and State Management in Web Apps",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Intro to State Management in React (useState) or Vue (reactive data)",
+                            "type": "Demo"
+                        },
+                        {
+                            "title": "Build a simple interactive To-Do list with state management",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Client-Side Rendering and State",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                }
+            ]
+        },
+        {
+            "title": "Databases and Middleware (Servlets)",
+            "pathways": [
+                {
+                    "title": "Introduction to Databases",
+                    "resources": [
+                        {
+                            "title": "What is a Database? Types of Databases (SQL vs NoSQL)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Basic SQL Queries: SELECT, INSERT, UPDATE, DELETE",
+                            "type": "Demo"
+                        },
+                        {
+                            "title": "Setting up a simple database (e.g., SQLite or PostgreSQL)",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Connecting a web app to a database (overview)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Database Fundamentals",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Middleware and Servlets",
+                    "resources": [
+                        {
+                            "title": "What is Middleware? Role in Web Applications",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Introduction to Servlets and how they work",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Building a basic Servlet to handle requests and responses",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Middleware in Express.js or Java Servlet Container overview",
+                            "type": "Demo"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Middleware and Servlets",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                }
+            ]
+        },
+        {
+            "title": "Deployment, Tools, and Collaboration",
+            "pathways": [
+                {
+                    "title": "Firebase, Vercel, and Postman",
+                    "resources": [
+                        {
+                            "title": "What is Firebase? Features and Use Cases",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Set up Firebase Hosting and Deploy a Static Site",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What is Vercel? How to deploy with Vercel",
+                            "type": "Video + Codelab"
+                        },
+                        {
+                            "title": "API Testing with Postman – Basics and Use",
+                            "type": "Demo"
+                        },
+                        {
+                            "title": "Test a public API with Postman and inspect responses",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Deployment and API Tools",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Testing (Optional)",
+                    "resources": [
+                        {
+                            "title": "Why Testing Matters in Web Development",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Types of Testing: Unit, Integration, UI",
+                            "type": "Article"
+                        },
+                        {
+                            "title": "Write a simple JavaScript test using console/assert",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Intro to Testing Libraries (e.g., Jest or Vitest)",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Basics of Testing",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                },
+                {
+                    "title": "Version Control and GitHub",
+                    "resources": [
+                        {
+                            "title": "What is Version Control? Why use Git?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Git Basics: init, add, commit, push, pull",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Connect your project to GitHub and push code",
+                            "type": "Codelab"
+                        },
+                        {
+                            "title": "Collaborate on GitHub: Forks, Pull Requests, Branches",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "What’s next?",
+                            "type": "Video"
+                        },
+                        {
+                            "title": "Git and GitHub",
+                            "type": "Quiz"
+                        }
+                    ],
+                    "badge": null
+                }
+            ]
+        }
+    ]
 }

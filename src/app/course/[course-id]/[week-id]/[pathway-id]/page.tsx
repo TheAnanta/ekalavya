@@ -1,7 +1,45 @@
 "use client";
+import composeCourse from "@/data/android-basics-with-compose.json";
+import webCourse from "@/data/full-stack-basics.json";
+import firebaseCourse from "@/data/firebase_get_cloud_ready.json";
+import genkitCourse from "@/data/machine-learning-genai.json";
+import flutterCourse from "@/data/flutter-basics-with-dart.json";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 
 export default function PathwaysLayoutPage() {
+  const courseId = useParams()["course-id"];
+  if (
+    courseId !== "android-basics-compose" &&
+    courseId !== "full-stack-basics" &&
+    courseId !== "firebase-get-cloud-ready" &&
+    courseId !== "machine-learning-genai" &&
+    courseId !== "flutter-basics-dart"
+  ) {
+    return <div>Invalid course ID</div>;
+  }
+  const eventData =
+    courseId === "android-basics-compose"
+      ? composeCourse
+      : courseId === "full-stack-basics"
+      ? webCourse
+      : courseId === "firebase-get-cloud-ready"
+      ? firebaseCourse
+      : courseId === "machine-learning-genai"
+      ? genkitCourse
+      : courseId === "flutter-basics-dart"
+      ? flutterCourse
+      : composeCourse;
+  const weekId = useParams()["week-id"];
+  const weekData =
+    eventData.courseOutline[
+      parseInt((weekId || "week-1").toString().split("-")[1]) - 1
+    ];
+  const pathwayId = useParams()["pathway-id"];
+  const pathwayData =
+    weekData.pathways[
+      parseInt((pathwayId || "pathway-1").toString().split("-")[1]) - 1
+    ];
   const [activeStep, setActiveStep] = useState(0);
   return (
     <div className="mx-auto">
@@ -32,24 +70,31 @@ export default function PathwaysLayoutPage() {
             />
             <div className="w-1/2 max-w-[468px]">
               <p className="flex items-center mb-4 uppercase font-semibold tracking-[0.8px]">
-                <a href="" className="shrink-0 hover:opacity-70 duration-300">
-                  Android Basics with Compose
+                <a
+                  href={`/course/${courseId}`}
+                  className="shrink-0 hover:opacity-70 duration-300"
+                >
+                  {eventData.courseName}
                 </a>{" "}
                 <span className="material-symbols-outlined mx-2 hover:opacity-70 duration-300 cursor-default">
                   chevron_right
                 </span>
-                <a href="" className="shrink-0 hover:opacity-70 duration-300">
-                  First Android app
+                <a
+                  href={`/course/${courseId}/${weekId}`}
+                  className="shrink-0 hover:opacity-70 duration-300"
+                >
+                  {weekData.title}
                 </a>
                 <span className="material-symbols-outlined mx-2 hover:opacity-70 duration-300 cursor-default">
                   chevron_right
                 </span>
                 <a href="" className="shrink-0 hover:opacity-70 duration-300">
-                  Intro to Kotlin
+                  {(pathwayData as any).navigationTitle ||
+                    (pathwayId as string).split("-").join(" ")}
                 </a>
               </p>
               <h3 className="text-4xl font-bold mt-3 mb-4">
-                Introduction to programming in Kotlin
+                {pathwayData.title}
               </h3>
               <p className="material-symbols-outlined p-2 pr-1 border border-white/50 hover:bg-[#DBDBE1]/24 hover:border-transparent cursor-pointer active:scale-95 duration-300 rounded-lg mb-4">
                 bookmark
@@ -57,55 +102,26 @@ export default function PathwaysLayoutPage() {
                   arrow_drop_down
                 </span>
               </p>
-              <p>
-                Learn introductory programming concepts in Kotlin to prepare for
-                building Android apps in Kotlin.
-              </p>
+              <p>{(pathwayData as any).description || ""}</p>
               <p className="text-sm font-semibold mt-4">
-                7 activities • 1 quiz
+                {
+                  pathwayData.resources.filter(
+                    (resource) => resource.type !== "Quiz"
+                  ).length
+                }{" "}
+                activities • 
+                {
+                  pathwayData.resources.filter(
+                    (resource) => resource.type === "Quiz"
+                  ).length
+                }{" "}
+                quiz
               </p>
             </div>
           </div>
         </div>
         <div className=" mx-auto">
-          {[
-            {
-              title: "Before you begin",
-              type: "Codelab",
-            },
-            {
-              title: "Welcome to Android Basics with Compose",
-              type: "Video",
-            },
-            {
-              title: "Getting started with Kotlin",
-              type: "Video",
-            },
-            {
-              title: "Your first program in Kotlin",
-              type: "Codelab",
-            },
-            {
-              title: "Create and use variables in Kotlin",
-              type: "Codelab",
-            },
-            {
-              title: "Create and use functions in Kotlin",
-              type: "Codelab",
-            },
-            {
-              title: "Practice: Kotlin Basics",
-              type: "Codelab",
-            },
-            {
-              title: "What's next?",
-              type: "Video",
-            },
-            {
-              title: "Quiz",
-              type: "Quiz",
-            },
-          ].map((resource, index) => {
+          {pathwayData.resources.map((resource, index) => {
             return resource.type != "Quiz" ? (
               <div
                 className={`p-7 relative`}
@@ -185,18 +201,16 @@ export default function PathwaysLayoutPage() {
                           width="740"
                           height="420"
                           className="mb-3"
-                          src={`https://www.youtube.com/embed/${"lNKk-RSL7wg"}`}
-                          title="Introduction to the SDK Runtime"
+                          src={`https://www.youtube.com/embed/${
+                            (resource as any).videoId || "lNKk-RSL7wg"
+                          }`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
                         ></iframe>
                       )}
-                      <p>
-                        Test what you’ve learned and earn your Introduction to
-                        Programming in Kotlin badge.
-                      </p>
+                      <p>{(resource as any).description || ""}</p>
                       {resource.type != "Video" ? (
                         <div className="w-max cursor-pointer ml-auto hover:bg-[#dadce0] hover:text-black duration-300 bg-black text-white py-3 px-6 rounded-full flex items-center justify-center font-medium">
                           Take {resource.type.toLowerCase()}
@@ -215,10 +229,7 @@ export default function PathwaysLayoutPage() {
                 <div className="max-w-[1260px] mx-auto">
                   <div className="flex flex-col gap-4 w-full">
                     <p className="text-3xl font-semibold">{resource.title}</p>
-                    <p>
-                      Test what you’ve learned and earn your Introduction to
-                      Programming in Kotlin badge.
-                    </p>
+                    <p>{(resource as any).description || ""}</p>
                     <div className="ml-auto bg-black cursor-pointer duration-300 hover:bg-[#dadce0] hover:text-black text-white py-3 px-6 rounded-full flex items-center justify-center font-medium">
                       Take the quiz
                     </div>

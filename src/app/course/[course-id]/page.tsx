@@ -2,6 +2,8 @@
 import composeCourse from "@/data/android-basics-with-compose.json";
 import webCourse from "@/data/full-stack-basics.json";
 import firebaseCourse from "@/data/firebase_get_cloud_ready.json";
+import genkitCourse from "@/data/machine-learning-genai.json";
+import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
@@ -10,7 +12,9 @@ export default function CoursePage() {
   if (
     courseId !== "android-basics-compose" &&
     courseId !== "full-stack-basics" &&
-    courseId !== "firebase-get-cloud-ready"
+    courseId !== "firebase-get-cloud-ready" &&
+    courseId !== "machine-learning-genai" &&
+    courseId !== "flutter-basics-dart"
   ) {
     return <div>Invalid course ID</div>;
   }
@@ -21,6 +25,10 @@ export default function CoursePage() {
       ? webCourse
       : courseId === "firebase-get-cloud-ready"
       ? firebaseCourse
+      : courseId === "machine-learning-genai"
+      ? genkitCourse
+      : courseId === "flutter-basics-dart"
+      ? flutterCourse
       : composeCourse;
   return (
     <div className="px-12 py-6">
@@ -34,7 +42,9 @@ export default function CoursePage() {
               account_circle
             </span>} */}
         </div>
-        <img src="/theananta.png" className="h-8 mr-3" />
+        <a href="/">
+          <img src="/theananta.png" className="h-8 mr-3" />
+        </a>
       </nav>
       <main className="mt-2 px-4 gap-8 relative flex grow items-start overflow-hidden">
         <div className="w-[60%] aspect-[3.6] shrink-0">
@@ -58,9 +68,11 @@ export default function CoursePage() {
               return (
                 <div key={index}>
                   <div className="ml-8 my-8">
-                    <h4 className="text-xl font-semibold">
-                      Week {index + 1}: {item.title}
-                    </h4>
+                    <a href={`/course/${courseId}/week-${index + 1}`}>
+                      <h4 className="text-xl font-semibold hover:text-[#3ddc84]">
+                        Week {index + 1}: {item.title}
+                      </h4>
+                    </a>
                     <p className="opacity-50">
                       {item.pathways.length} pathways | Duration: 10 hours
                     </p>
@@ -80,9 +92,18 @@ export default function CoursePage() {
                           >
                             <img className="size-24" src={pathway.badge} />
                             <div>
-                              <p key={index} className="text-xl font-medium">
-                                {pathway.title}
-                              </p>
+                              <a
+                                href={`/course/${courseId}/week-${
+                                  index + 1
+                                }/pathway-${index + 1}`}
+                              >
+                                <p
+                                  key={index}
+                                  className="text-xl font-medium hover:text-[#3ddc84]"
+                                >
+                                  {pathway.title}
+                                </p>
+                              </a>
                               <p>Pathway {index + 1} | Duration: 3 hours</p>
                             </div>
                             <p className="material-symbols-outlined ml-auto mr-4">
@@ -147,46 +168,72 @@ export default function CoursePage() {
           </div>
         </div>
         <div className="grow">
-          <div className="rounded-2xl bg-[var(--android-primary-color)] text-white -translate-y-[1px] relative z-5 p-[32px] md:px-[64px] md:pb-[72px] md:pt-[56px]">
-            <h3 className="text-2xl font-medium">Camp Leader</h3>
-            <div className="shrink-0 flex items-center gap-8">
-              <img
-                src={eventData.campLeader.image}
-                className="w-32 h-32 mt-10"
-              />
-              <div>
-                <h4 className="text-xl font-semibold mt-6">
-                  {eventData.campLeader.name}
-                </h4>
-                <p className="font-medium text-lg">
-                  {eventData.campLeader.communityTitle}
-                </p>
-                <p className="">{eventData.campLeader.designation}</p>
-              </div>
-            </div>
-            <div className="flex md:justify-between flex-col md:flex-row">
-              <div>
-                <p
-                  className="max-w-[400px] mt-4"
-                  dangerouslySetInnerHTML={{
-                    __html: eventData.campLeader.bio[0],
-                  }}
-                ></p>
-              </div>
-              <div>
-                <p
-                  className="max-w-[400px] mt-4"
-                  dangerouslySetInnerHTML={{
-                    __html: eventData.campLeader.bio[1],
-                  }}
-                ></p>
-              </div>
-            </div>
-            <p
-              dangerouslySetInnerHTML={{ __html: eventData.campLeader.bio[2] }}
-            ></p>
+          <div
+            className={`rounded-2xl -translate-y-[1px] relative z-5 p-[32px] md:px-[64px] md:pb-[72px] md:pt-[56px]`}
+            style={{
+              backgroundColor:
+                (eventData as any).campLeaderCardColor ??
+                "var(--android-primary-color)",
+              color: (eventData as any).campLeaderCardTextColor ?? "#FFF",
+            }}
+          >
+            <h3 className="text-2xl font-medium">
+              Camp Leader{eventData.campLeader.length > 1 ? "s" : ""}
+            </h3>
+            {eventData.campLeader.map((leader: any, index: number) => {
+              return (
+                <>
+                  <div className="shrink-0 flex items-center gap-8">
+                    <img src={leader.image} className="w-32 h-32 mt-10" />
+                    <div>
+                      <h4 className="text-xl font-semibold mt-6">
+                        {leader.name}
+                      </h4>
+                      <p className="font-medium text-lg">
+                        {leader.communityTitle}
+                      </p>
+                      <p className="">{leader.designation}</p>
+                    </div>
+                  </div>
+                  <div className="flex md:justify-between flex-col md:flex-row">
+                    <div>
+                      <p
+                        className="max-w-[400px] mt-4"
+                        dangerouslySetInnerHTML={{
+                          __html: leader.bio[0],
+                        }}
+                      ></p>
+                    </div>
+                    <div>
+                      <p
+                        className="max-w-[400px] mt-4"
+                        dangerouslySetInnerHTML={{
+                          __html: leader.bio[1],
+                        }}
+                      ></p>
+                    </div>
+                  </div>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: leader.bio[2],
+                    }}
+                  ></p>
+                  {eventData.campLeader.length > 0 &&
+                    index + 1 != eventData.campLeader.length && (
+                      <div className="w-full h-[1.5px] mt-6 bg-black/12"></div>
+                    )}
+                </>
+              );
+            })}
           </div>
-          <div className="bg-[#4285F4] text-white -translate-y-[1px] relative z-5 p-[32px] md:px-[64px] md:py-[56px] rounded-2xl mt-4">
+          <div
+            className=" -translate-y-[1px] relative z-5 p-[32px] md:px-[64px] md:py-[56px] rounded-2xl mt-4"
+            style={{
+              backgroundColor:
+                (eventData as any).benefitsCardColor ?? "#4285f4",
+              color: (eventData as any).benefitsCardTextColor ?? "#FFF",
+            }}
+          >
             <h3 className="font-medium text-4xl mb-8">Benefits</h3>
 
             <div className="flex gap-y-4 md:gap-y-[unset] gap-x-8 flex-col">
