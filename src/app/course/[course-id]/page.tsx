@@ -10,6 +10,7 @@ import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import SignInButton from "@/components/sign_in_button";
 
 export default function CoursePage() {
   const courseId = useParams()["course-id"];
@@ -35,25 +36,20 @@ export default function CoursePage() {
       ? flutterCourse
       : composeCourse;
   return (
-    <div className="px-12 py-6">
+    <div className="px-6 md:px-12 py-6">
       <nav className="p-4 flex justify-between">
         <div className="flex gap-4 items-center flex-row-reverse w-max">
           <span className="material-symbols-outlined !text-2xl">menu</span>
-          <button className="border-2 border-black py-2 px-8 rounded-full font-medium text-sm">
-            sign in
-          </button>
-          {/* {<span className="material-symbols-outlined !text-3xl">
-              account_circle
-            </span>} */}
+          <SignInButton />
         </div>
         <Link href="/">
           <img src="/theananta.png" className="h-8 mr-3" />
         </Link>
       </nav>
-      <main className="mt-2 px-4 gap-8 relative flex grow items-start overflow-hidden">
-        <div className="w-[60%] aspect-[3.6] shrink-0">
+      <main className="mt-2 md:px-4 gap-8 relative flex flex-col md:flex-row grow items-start overflow-hidden">
+        <div className="md:w-[60%] w-full md:aspect-[3.6] shrink-0">
           <img
-            className="object-cover rounded-2xl w-full h-full object-bottom"
+            className="aspect-[2.4] md:aspect-auto object-cover rounded-2xl w-full h-full object-bottom"
             src={eventData.cover}
           />
           <h1 className="mt-8 text-5xl font-bold whitespace-pre-wrap leading-[150%]">

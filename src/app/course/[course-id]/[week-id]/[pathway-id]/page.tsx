@@ -9,6 +9,7 @@ import genkitCourse from "@/data/machine-learning-genai.json";
 import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import SignInButton from "@/components/sign_in_button";
 
 export default function PathwaysLayoutPage() {
   const courseId = useParams()["course-id"];
@@ -50,12 +51,7 @@ export default function PathwaysLayoutPage() {
         <div className="max-w-[1260px] mx-auto flex justify-between">
           <div className="flex gap-4 items-center flex-row-reverse w-max">
             <span className="material-symbols-outlined !text-2xl">menu</span>
-            <button className="border-2 border-white py-2 px-8 rounded-full font-medium text-sm">
-              sign in
-            </button>
-            {/* {<span className="material-symbols-outlined !text-3xl">
-                  account_circle
-                </span>} */}
+            <SignInButton />
           </div>
           <img
             src="/theananta.png"

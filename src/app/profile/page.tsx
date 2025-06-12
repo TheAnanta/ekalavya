@@ -2,7 +2,12 @@
 /*eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { useState } from "react";
+import SignInButton from "@/components/sign_in_button";
+import { useAuthContext } from "@/context/AuthContext";
+import { auth } from "@/lib/firebase";
+import moment from "moment";
+import { join } from "path";
+import { useEffect, useState } from "react";
 
 function ProfileCard({ userDetails }: { userDetails: any }) {
   const [showEditor, setShowEditor] = useState(false);
@@ -38,7 +43,7 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
               <img
                 referrerPolicy="no-referrer"
                 src={
-                  userDetails.photoURL ||
+                  userDetails.photoURL.replaceAll("=s96-c", "") ||
                   "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
                 }
                 alt="Profile Picture"
@@ -55,29 +60,14 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
               <div className="h-20"></div>{" "}
               <div className="flex items-center gap-2 text-xl">
                 <p className="text-gray-900 text-xl">
-                  Manas Malla
-                  {/* {user.displayName} */}
+                  {userDetails.displayName}
                 </p>{" "}
-                <span
-                  className={`text-xs px-3 py-1.5 rounded border ${getRoleChipColor(
-                    userDetails.role
-                  )}`}
-                >
-                  {" "}
-                  {userDetails.role || "Attendee"}
-                </span>
               </div>
               {userDetails.company &&
                 userDetails.company.designation &&
                 userDetails.company.name && (
-                  <p className="mt-2 text-gray-700">
-                    {userDetails.company.designation},{" "}
-                    {userDetails.company.name}
-                  </p>
+                  <p className="text-gray-500">{userDetails.email}</p>
                 )}
-              {userDetails.communityTitle && (
-                <p className="text-gray-700">{userDetails.communityTitle}</p>
-              )}
               {userDetails.username && (
                 <a
                   href={`https://devfest.vizag.dev/p/${userDetails.username}`}
@@ -85,30 +75,12 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 mt-3 border border-[#dadce0] text-[#1a73e8] px-3 py-1.5 rounded-full text-sm no-underline hover:bg-gray-50" // display: flex, align-items: center, column-gap: 4px, margin-top: 12px, border: 1px solid #dadce0, color: #1a73e8, padding: 6px 12px, border-radius: 48px, text-decoration:none;
                 >
-                  devfest.vizag.dev/p/{userDetails.username}{" "}
+                  ekalavya.theananta.in/p/{userDetails.username}{" "}
                 </a>
               )}
               <div className="w-full border-t border-gray-300 my-3 opacity-100"></div>{" "}
               {userDetails && !showEditor && (
                 <div className="flex flex-col items-start w-full text-sm text-gray-800">
-                  {userDetails.speaker && (
-                    <>
-                      <p className="font-semibold mt-2 mb-1">Talk Title</p>{" "}
-                      <p>{userDetails.speaker.talk || "N/a"}</p>
-                    </>
-                  )}
-                  {userDetails.city && userDetails.city !== "" && (
-                    <>
-                      <p className="font-semibold mt-2 mb-1">City/Town</p>{" "}
-                      <p>{userDetails.city}</p>
-                    </>
-                  )}
-                  {userDetails.bio && userDetails.bio !== "" && (
-                    <>
-                      <p className="font-semibold mt-2 mb-1">Bio</p>{" "}
-                      <p>{userDetails.bio}</p>
-                    </>
-                  )}
                   {userDetails.domainsInterested &&
                     userDetails.domainsInterested.length > 0 && (
                       <>
@@ -121,7 +93,7 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
                             (domain: any, index: any) => (
                               <span
                                 key={index}
-                                className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 m-1"
+                                className="inline-flex items-center rounded-full bg-[#000000]/9 px-3 min-h-8 text-sm m-1"
                               >
                                 {" "}
                                 {domain}
@@ -139,39 +111,6 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
                     </span>
                     {[].length} • Badges earned
                   </p>{" "}
-                  {(userDetails.socials?.length ?? 0) > 0 && (
-                    <>
-                      <p className="font-semibold mt-2 mb-1">Links</p>{" "}
-                      <ul className="list-none p-0 w-full">
-                        {" "}
-                        {userDetails.socials?.map((item: any, index: any) => (
-                          <li
-                            key={index}
-                            className="flex items-center gap-3 my-2"
-                          >
-                            <a
-                              href={
-                                item.provider === "instagram"
-                                  ? `https://instagram.com/${item.name}`
-                                  : item.provider === "github"
-                                  ? `https://github.com/${item.name}`
-                                  : item.provider === "linkedin"
-                                  ? `https://linkedin.com/in/${item.name}`
-                                  : item.name.startsWith("http")
-                                  ? item.name
-                                  : `https://${item.name}`
-                              }
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#202023] no-underline hover:underline"
-                            >
-                              {item.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
                 </div>
               )}
               {userDetails && (
@@ -179,19 +118,12 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
               )}{" "}
               <div className="flex gap-3 mt-3">
                 {" "}
-                {userDetails && !showEditor && (
-                  <button
-                    onClick={() => {}}
-                    className="border border-[#202023] px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-gray-100" // border: 1.5px solid #202023, padding: 6px 16px, margin-top: 12px, border-radius: 40px, font-size: 14px
-                  >
-                    Update Profile
-                  </button>
-                )}
                 <button
                   onClick={() => {
+                    auth.signOut();
                     window.location.href = "/";
                   }}
-                  className="bg-[#1a73e8] text-white border border-[#1a73e8] px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-blue-700" // background-color: #1a73e8, color: white, border: 1.5px solid #1a73e8, padding: 6px 16px, margin-top: 12px, border-radius: 40px, font-size: 14px
+                  className="cursor-pointer bg-[#1a73e8] text-white border border-[#1a73e8] px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-blue-700" // background-color: #1a73e8, color: white, border: 1.5px solid #1a73e8, padding: 6px 16px, margin-top: 12px, border-radius: 40px, font-size: 14px
                 >
                   Sign Out
                 </button>
@@ -205,27 +137,65 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
 }
 
 const ProfilePage: React.FC = () => {
-  const [userDetails, setUserDetails] = useState<any | null>({
-    uid: "some_firebase_user_id_12345",
-    email: "johndoe@example.com",
-    displayName: "John Doe",
-    username: "john.doe",
-    bio: "Full-stack developer with a passion for community building and open source.",
-    city: "Visakhapatnam",
-    domainsInterested: ["Web", "Cloud", "AI"],
-    company: {
-      name: "Innovate Solutions",
-      designation: "Senior Software Engineer",
-    },
-    communityTitle: "Lead Volunteer",
-    role: "Volunteer",
-    photoURL: "https://github.com/ManasMalla.png",
-    socials: [
-      { provider: "linkedin", name: "in/johndoe", icon: "mdi-linkedin" },
-      { provider: "github", name: "johndoe-dev", icon: "mdi-github" },
-      { provider: "website", name: "https://johndoe.dev", icon: "mdi-globe" },
-    ],
-  });
+  const user = useAuthContext();
+  const [userDetails, setUserDetails] = useState<any | null>();
+  useEffect(() => {
+    user
+      ?.getIdTokenResult()
+      .then((token) => {
+        return {
+          courses: token.claims.courses as string[],
+          joinedOn: user.metadata.creationTime,
+        };
+      })
+      .then(({ courses, joinedOn }: { courses: string[]; joinedOn: any }) => {
+        console.log(joinedOn);
+        const data = JSON.parse(
+          window.localStorage.getItem("userData") || "{}"
+        );
+        if (data && Object.keys(data).length > 0) {
+          setUserDetails({
+            uid: user?.uid || data.uid,
+            email: user?.email || "",
+            displayName: user?.displayName,
+            username: window.localStorage.getItem("username") ?? "john.doe",
+            domainsInterested: [
+              courses.includes("android-basics-compose") ||
+              courses.includes("flutter-basics-dart")
+                ? "Mobile"
+                : courses.includes("firebase-get-cloud-ready")
+                ? "Cloud"
+                : courses.includes("full-stack-basics")
+                ? "Web"
+                : "AI",
+            ],
+            photoURL: user?.photoURL,
+            courses: courses || data.courses || [],
+            joinedOn: joinedOn || data.joinedOn,
+          });
+        } else {
+          setUserDetails({
+            uid: user?.uid,
+            email: user?.email || "",
+            displayName: user?.displayName,
+            username: window.localStorage.getItem("username") || "john.doe",
+            domainsInterested: [
+              courses.includes("android-basics-compose") ||
+              courses.includes("flutter-basics-dart")
+                ? "Mobile"
+                : courses.includes("firebase-get-cloud-ready")
+                ? "Cloud"
+                : courses.includes("full-stack-basics")
+                ? "Web"
+                : "AI",
+            ],
+            photoURL: user?.photoURL,
+            courses: courses || [],
+            joinedOn: joinedOn || new Date().toISOString(),
+          });
+        }
+      });
+  }, [user]);
 
   const [badgeModalOpen, setBadgeModalOpen] = useState(false);
   const [selectedBadge, setSelectedBadge] = useState<any | null>(null);
@@ -237,34 +207,10 @@ const ProfilePage: React.FC = () => {
       <nav className="pb-12 flex justify-between px-4">
         <div className="flex gap-4 items-center flex-row-reverse w-max">
           <span className="material-symbols-outlined !text-2xl">menu</span>
-          <button className="border-2 border-black py-2 px-8 rounded-full font-medium text-sm">
-            sign in
-          </button>
-          {/* {<span className="material-symbols-outlined !text-3xl">
-              account_circle
-            </span>} */}
+          <SignInButton />
         </div>
         <img src="theananta.png" className="h-8 mr-3" />
       </nav>
-      {/* <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={mainData.seo.keywords} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={mainData.seo.hostUrl} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="author" content="Manas Malla" />
-        <meta name="creator" content="Manas Malla" />
-      </Head> */}
       <div className="flex flex-col md:flex-row gap-12 p-4">
         <ProfileCard userDetails={userDetails} />
         <div className="grow">
@@ -278,13 +224,39 @@ const ProfilePage: React.FC = () => {
               <p className="text-xl font-semibold max-w-[12ch]">
                 Android Basics with Compose
               </p>
-              <p>Started Oct 2022</p>
-              <a className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2">
-                Continue{" "}
-                <span className="material-symbols-outlined !text-sm">
-                  arrow_forward
-                </span>
-              </a>
+              {userDetails?.courses.includes("android-basics-compose") ? (
+                <p>
+                  Started{" "}
+                  {moment(
+                    userDetails?.joinedOn || user?.metadata.creationTime
+                  ).format("MMM YYYY")}
+                </p>
+              ) : (
+                <p>
+                  <br />
+                </p>
+              )}
+              {userDetails?.courses.includes("android-basics-compose") ? (
+                <a
+                  href={`/course/android-basics-compose`}
+                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
+                >
+                  Continue{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              ) : (
+                <a
+                  href={`/course/android-basics-compose`}
+                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
+                >
+                  Join Now{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              )}
             </div>
             <div className="shrink-0">
               <img
@@ -294,13 +266,45 @@ const ProfilePage: React.FC = () => {
               <p className="text-xl font-semibold max-w-[12ch]">
                 Flutter Basics with Dart
               </p>
-              <p>Started Dec 2020</p>
-              <a className="flex items-center gap-2 w-max text-[#4285F4] font-semibold mt-2">
+              {userDetails?.courses.includes("flutter-basics-dart") ? (
+                <p>
+                  Started{" "}
+                  {moment(
+                    userDetails?.joinedOn || user?.metadata.creationTime
+                  ).format("MMM YYYY")}
+                </p>
+              ) : (
+                <p>
+                  <br />
+                </p>
+              )}
+              {userDetails?.courses.includes("flutter-basics-dart") ? (
+                <a
+                  href={`/course/flutter-basics-dart`}
+                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
+                >
+                  Continue{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              ) : (
+                <a
+                  href={`/course/flutter-basics-dart`}
+                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
+                >
+                  Join Now{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              )}
+              {/* <a className="flex items-center gap-2 w-max text-[#4285F4] font-semibold mt-2">
                 View Certificate{" "}
                 <span className="material-symbols-outlined !text-sm">
                   arrow_forward
                 </span>
-              </a>
+              </a> */}
             </div>
             <div className="shrink-0">
               <img
@@ -310,13 +314,39 @@ const ProfilePage: React.FC = () => {
               <p className="text-xl font-semibold max-w-[12ch]">
                 Firebase: Get Cloud-Ready
               </p>
-              <p>Started Dec 2020</p>
-              <a className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2">
-                Join Now{" "}
-                <span className="material-symbols-outlined !text-sm">
-                  arrow_forward
-                </span>
-              </a>
+              {userDetails?.courses.includes("firebase-get-cloud-ready") ? (
+                <p>
+                  Started{" "}
+                  {moment(
+                    userDetails?.joinedOn || user?.metadata.creationTime
+                  ).format("MMM YYYY")}
+                </p>
+              ) : (
+                <p>
+                  <br />
+                </p>
+              )}
+              {userDetails?.courses.includes("firebase-get-cloud-ready") ? (
+                <a
+                  href={`/course/firebase-get-cloud-ready`}
+                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
+                >
+                  Continue{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              ) : (
+                <a
+                  href={`/course/firebase-get-cloud-ready`}
+                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
+                >
+                  Join Now{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              )}
             </div>
             <div className="shrink-0">
               <img
@@ -326,13 +356,39 @@ const ProfilePage: React.FC = () => {
               <p className="text-xl font-semibold max-w-[10ch]">
                 Namasthe Full-Stack
               </p>
-              <p>Started Dec 2020</p>
-              <a className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2">
-                Join Now{" "}
-                <span className="material-symbols-outlined !text-sm">
-                  arrow_forward
-                </span>
-              </a>
+              {userDetails?.courses.includes("full-stack-basics") ? (
+                <p>
+                  Started{" "}
+                  {moment(
+                    userDetails?.joinedOn || user?.metadata.creationTime
+                  ).format("MMM YYYY")}
+                </p>
+              ) : (
+                <p>
+                  <br />
+                </p>
+              )}
+              {userDetails?.courses.includes("full-stack-basics") ? (
+                <a
+                  href={`/course/full-stack-basics`}
+                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
+                >
+                  Continue{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              ) : (
+                <a
+                  href={`/course/full-stack-basics`}
+                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
+                >
+                  Join Now{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              )}
             </div>
             <div className="shrink-0">
               <div className="size-32 rounded-full  bg-[#4285F4]/10 object-contain object-bottom flex pb-3 mb-4 overflow-hidden">
@@ -345,13 +401,39 @@ const ProfilePage: React.FC = () => {
                 Building for <br />
                 the AI Era
               </p>
-              <p>Started Dec 2020</p>
-              <a className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2">
-                Join Now{" "}
-                <span className="material-symbols-outlined !text-sm">
-                  arrow_forward
-                </span>
-              </a>
+              {userDetails?.courses.includes("machine-learning-genai") ? (
+                <p>
+                  Started{" "}
+                  {moment(
+                    userDetails?.joinedOn || user?.metadata.creationTime
+                  ).format("MMM YYYY")}
+                </p>
+              ) : (
+                <p>
+                  <br />
+                </p>
+              )}
+              {userDetails?.courses.includes("machine-learning-genai") ? (
+                <a
+                  href={`/course/machine-learning-genai`}
+                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
+                >
+                  Continue{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              ) : (
+                <a
+                  href={`/course/machine-learning-genai`}
+                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2 cursor-pointer"
+                >
+                  Join Now{" "}
+                  <span className="material-symbols-outlined !text-sm">
+                    arrow_forward
+                  </span>
+                </a>
+              )}
             </div>
           </div>
         </div>

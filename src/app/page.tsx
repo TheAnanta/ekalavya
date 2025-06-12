@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Link from "next/link";
+import SignInButton from "@/components/sign_in_button";
 
 export default function Home() {
   return (
@@ -38,12 +39,7 @@ export default function Home() {
         <nav className="p-4 flex justify-between">
           <div className="flex gap-4 items-center flex-row-reverse w-max">
             <span className="material-symbols-outlined !text-2xl">menu</span>
-            <button className="border-2 border-black py-2 px-8 rounded-full font-medium text-sm">
-              sign in
-            </button>
-            {/* {<span className="material-symbols-outlined !text-3xl">
-              account_circle
-            </span>} */}
+            <SignInButton />
           </div>
           <Link href="/">
             <img src="theananta.png" className="h-8 mr-3" />
@@ -301,7 +297,7 @@ export default function Home() {
             <span className="material-symbols-outlined text-white font-normal mr-4">
               alternate_email
             </span>
-            <a href="mailto:me@manasmalla.dev">me@manasmalla.dev</a>
+            <a href="mailto:ekalavya@theananta.in">ekalavya@theananta.in</a>
           </div>
           <div className="flex items-center">
             <span className="material-symbols-outlined text-white font-normal mr-4">
@@ -313,10 +309,9 @@ export default function Home() {
             <span className="material-symbols-outlined text-white font-normal mr-4">
               apartment
             </span>
-            <span className="text-white font text-sm md:text-base">
-              Uma Sivam Residency, T.P.T Colony,
-              <br />
-              Seethammadhara, Visakhpatnam, AP - 530013
+            <span className="text-white font text-sm md:text-base max-w-[32ch]">
+              <b>The Ananta Studio</b>, Uma Sivam Residency, T.P.T Colony,
+              Seethammadhara, Visakhpatnam, Andhra Pradesh - 530013
             </span>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { AuthContextProvider } from "@/context/AuthContext";
 import "./globals.css";
 
 export default function RootLayout({
@@ -38,7 +39,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <AuthContextProvider>
+          <>{children}</>
+        </AuthContextProvider>
+      </body>
     </html>
   );
 }
