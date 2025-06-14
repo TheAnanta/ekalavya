@@ -8,10 +8,11 @@ import firebaseCourse from "@/data/firebase_get_cloud_ready.json";
 import genkitCourse from "@/data/machine-learning-genai.json";
 import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SignInButton from "@/components/sign_in_button";
 
 export default function PathwaysLayoutPage() {
+  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/us-central1/api/get-progress"
   const courseId = useParams()["course-id"];
   const weekId = useParams()["week-id"];
   const pathwayId = useParams()["pathway-id"];
@@ -24,27 +25,49 @@ export default function PathwaysLayoutPage() {
   ) {
     return <div>Invalid course ID</div>;
   }
+  const [progressData, setProgressData] = useState<any>({});
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function fetchProgress() {
+      try {
+        const response = await fetch(
+          `${apiHost}/${courseId}/${weekId}/${pathwayId}`
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch progress data");
+        }
+        const data = await response.json();
+        setProgressData(data);
+      } catch (error) {
+        console.error("Error fetching progress data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProgress();
+  }, [apiHost, courseId, weekId, pathwayId]);
   const eventData =
     courseId === "android-basics-compose"
       ? composeCourse
       : courseId === "full-stack-basics"
-      ? webCourse
-      : courseId === "firebase-get-cloud-ready"
-      ? firebaseCourse
-      : courseId === "machine-learning-genai"
-      ? genkitCourse
-      : courseId === "flutter-basics-dart"
-      ? flutterCourse
-      : composeCourse;
+        ? webCourse
+        : courseId === "firebase-get-cloud-ready"
+          ? firebaseCourse
+          : courseId === "machine-learning-genai"
+            ? genkitCourse
+            : courseId === "flutter-basics-dart"
+              ? flutterCourse
+              : composeCourse;
   const weekData =
     eventData.courseOutline[
-      parseInt((weekId || "week-1").toString().split("-")[1]) - 1
+    parseInt((weekId || "week-1").toString().split("-")[1]) - 1
     ];
   const pathwayData =
     weekData.pathways[
-      parseInt((pathwayId || "pathway-1").toString().split("-")[1]) - 1
+    parseInt((pathwayId || "pathway-1").toString().split("-")[1]) - 1
     ];
   const [activeStep, setActiveStep] = useState(0);
+  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
   return (
     <div className="mx-auto">
       <nav className="py-6 px-12 bg-black text-white">
@@ -108,7 +131,7 @@ export default function PathwaysLayoutPage() {
                     (resource) => resource.type !== "Quiz"
                   ).length
                 }{" "}
-                activities • 
+                activities •
                 {
                   pathwayData.resources.filter(
                     (resource) => resource.type === "Quiz"
@@ -127,18 +150,17 @@ export default function PathwaysLayoutPage() {
                 style={
                   activeStep === index
                     ? {
-                        background:
-                          "#f1f3f4 url(https://www.gstatic.com/devrel-devsite/prod/v6dc4611c4232bd02b2b914c4948f523846f90835f230654af18f87f75fe9f73c/android/images/playlist_active.svg) repeat-x top",
-                      }
+                      background:
+                        "#f1f3f4 url(https://www.gstatic.com/devrel-devsite/prod/v6dc4611c4232bd02b2b914c4948f523846f90835f230654af18f87f75fe9f73c/android/images/playlist_active.svg) repeat-x top",
+                    }
                     : {}
                 }
               >
                 {/* #f1f3f4 url(../images/playlist_active.svg) repeat-x top */}
                 <div className={`max-w-[1260px] mx-auto`}>
                   <div
-                    className={`pb-4 ${
-                      activeStep === index ? "bg-[#F5F5F7]" : ""
-                    }`}
+                    className={`pb-4 ${activeStep === index ? "bg-[#F5F5F7]" : ""
+                      }`}
                   >
                     <div
                       className="flex gap-4 items-center w-full cursor-pointer devsite-playlist--item-top"
@@ -151,36 +173,32 @@ export default function PathwaysLayoutPage() {
                       <div
                         className={`relative size-[30px] text-white rounded-full flex items-center justify-center z-10`}
                         style={{
-                          background:
-                            activeStep > index
-                              ? "#0d652d"
-                              : activeStep === index
+                          background: completedSteps.includes(index)
+                            ? "#0d652d"
+                            : activeStep === index
                               ? "rgb(63, 81, 181)"
                               : "#000",
                         }}
                       >
-                        {activeStep > index ? (
-                          <p className="material-symbols-outlined !font-semibold">
+                        {completedSteps.includes(index) ? (
+                          <span className="material-symbols-outlined !font-semibold text-white">
                             check
-                          </p>
+                          </span>
                         ) : (
-                          <p>{index + 1}</p>
+                          <span>{index + 1}</span>
                         )}
                       </div>
                       <p className="text-3xl font-semibold">{resource.title}</p>
                       <div
-                        className={`ml-auto size-[30px] duration-300 hover:bg-black hover:text-white border-black ${
-                          activeStep === index ? "bg-black text-white" : ""
-                        } border-2 rounded-full flex items-center justify-center`}
+                        className={`ml-auto size-[30px] duration-300 hover:bg-black hover:text-white border-black ${activeStep === index ? "bg-black text-white" : ""
+                          } border-2 rounded-full flex items-center justify-center`}
                         style={{
                           boxShadow:
                             "0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15)",
                         }}
                       >
                         <p className="material-symbols-outlined font-bold">
-                          {activeStep === index
-                            ? "keyboard_arrow_up"
-                            : "keyboard_arrow_down"}
+                          {activeStep === index ? "keyboard_arrow_up" : "keyboard_arrow_down"}
                         </p>
                       </div>
                     </div>
@@ -200,9 +218,8 @@ export default function PathwaysLayoutPage() {
                           width="740"
                           height="420"
                           className="mb-3"
-                          src={`https://www.youtube.com/embed/${
-                            (resource as any).videoId || "lNKk-RSL7wg"
-                          }`}
+                          src={`https://www.youtube.com/embed/${(resource as any).videoId || "lNKk-RSL7wg"
+                            }`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           referrerPolicy="strict-origin-when-cross-origin"
@@ -211,13 +228,39 @@ export default function PathwaysLayoutPage() {
                       )}
                       <p>{(resource as any).description || ""}</p>
                       {resource.type != "Video" ? (
-                        <div className="w-max cursor-pointer ml-auto hover:bg-[#dadce0] hover:text-black duration-300 bg-black text-white py-3 px-6 rounded-full flex items-center justify-center font-medium">
+                        <button
+                          onClick={() => {
+                            setCompletedSteps((prev) =>
+                              prev.includes(index) ? prev : [...prev, index]
+                            );
+                            setActiveStep(index + 1);
+                          }}
+                          className="w-max cursor-pointer ml-auto hover:bg-[#dadce0] hover:text-black duration-300 bg-black text-white py-3 px-6 rounded-full flex items-center justify-center font-medium"
+                        >
                           Take {resource.type.toLowerCase()}
-                        </div>
+                        </button>
                       ) : (
-                        <div className="w-max cursor-pointer ml-auto hover:bg-black hover:text-white border-black duration-300 border-2 py-3 px-8 rounded-full flex items-center justify-center font-medium">
-                          Skip
-                        </div>
+                        <div
+                          className="flex flex-col sm:flex-row sm:justify-end sm:items-center gap-3 mt-4 w-full"
+                        ><button
+                          onClick={() => {
+                            setCompletedSteps((prev) => prev.includes(index) ? prev : [...prev, index]
+                            );
+                            setActiveStep(index + 1);
+                          }}
+                          className="w-max cursor-pointer ml-auto hover:bg-black hover:text-white border-black duration-300 border-2 py-3 px-8 rounded-full font-medium"
+                        >
+                            Next
+                          </button><button
+                            onClick={() => {
+                              setCompletedSteps((prev) => prev.includes(index) ? prev : [...prev, index]
+                              );
+                              setActiveStep(index + 1);
+                            }}
+                            className="w-max cursor-pointer hover:bg-black hover:text-white border-black duration-300 border-2 py-3 px-8 rounded-full font-medium"
+                          >
+                            Skip
+                          </button></div>
                       )}
                     </div>
                   )}
@@ -229,9 +272,17 @@ export default function PathwaysLayoutPage() {
                   <div className="flex flex-col gap-4 w-full">
                     <p className="text-3xl font-semibold">{resource.title}</p>
                     <p>{(resource as any).description || ""}</p>
-                    <div className="ml-auto bg-black cursor-pointer duration-300 hover:bg-[#dadce0] hover:text-black text-white py-3 px-6 rounded-full flex items-center justify-center font-medium">
+                    <button
+                      onClick={() => {
+                        setCompletedSteps((prev) =>
+                          prev.includes(index) ? prev : [...prev, index]
+                        );
+                        setActiveStep(index + 1);
+                      }}
+                      className="ml-auto bg-black cursor-pointer duration-300 hover:bg-[#dadce0] hover:text-black text-white py-3 px-6 rounded-full flex items-center justify-center font-medium"
+                    >
                       Take the quiz
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>

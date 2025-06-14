@@ -1,18 +1,19 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
 /*eslint-disable @typescript-eslint/no-unused-vars */
 /*eslint-disable react-hooks/rules-of-hooks */
-"use client";
+"use client"; 
 import composeCourse from "@/data/android-basics-with-compose.json";
 import webCourse from "@/data/full-stack-basics.json";
 import firebaseCourse from "@/data/firebase_get_cloud_ready.json";
 import genkitCourse from "@/data/machine-learning-genai.json";
 import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import SignInButton from "@/components/sign_in_button";
 
 export default function CoursePage() {
+  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/us-central1/api/get-progress";
   const courseId = useParams()["course-id"];
   if (
     courseId !== "android-basics-compose" &&
@@ -68,7 +69,7 @@ export default function CoursePage() {
               return (
                 <div key={index}>
                   <div className="ml-8 my-8">
-                    <a href={`/course/${courseId}/week-${index + 1}`}>
+                      <a href={`/course/${courseId}/week-${index + 1}`}>
                       <h4 className="text-xl font-semibold hover:text-[#3ddc84]">
                         Week {index + 1}: {item.title}
                       </h4>

@@ -7,10 +7,12 @@ import webCourse from "@/data/full-stack-basics.json";
 import firebaseCourse from "@/data/firebase_get_cloud_ready.json";
 import genkitCourse from "@/data/machine-learning-genai.json";
 import flutterCourse from "@/data/flutter-basics-with-dart.json";
+import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import SignInButton from "@/components/sign_in_button";
 
 export default function UnitLayoutPage() {
+  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/us-central1/api/get-progress";
   const courseId = useParams()["course-id"];
   if (
     courseId !== "android-basics-compose" &&
@@ -25,19 +27,40 @@ export default function UnitLayoutPage() {
     courseId === "android-basics-compose"
       ? composeCourse
       : courseId === "full-stack-basics"
-      ? webCourse
-      : courseId === "firebase-get-cloud-ready"
-      ? firebaseCourse
-      : courseId === "machine-learning-genai"
-      ? genkitCourse
-      : courseId === "flutter-basics-dart"
-      ? flutterCourse
-      : composeCourse;
+        ? webCourse
+        : courseId === "firebase-get-cloud-ready"
+          ? firebaseCourse
+          : courseId === "machine-learning-genai"
+            ? genkitCourse
+            : courseId === "flutter-basics-dart"
+              ? flutterCourse
+              : composeCourse;
   const weekId = useParams()["week-id"];
   const weekData =
     eventData.courseOutline[
-      parseInt((weekId || "week-1").toString().split("-")[1]) - 1
+    parseInt((weekId || "week-1").toString().split("-")[1]) - 1
     ];
+  const [progressData, setProgressData] = useState<any>({});
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function fetchProgress() {
+      try {
+        const response = await fetch(
+          `${apiHost}/${courseId}/${weekId}/pathway-1`
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch progress data");
+        }
+        const data = await response.json();
+        setProgressData(data);
+      } catch (error) {
+        console.error("Error fetching progress data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProgress();
+  }, [courseId, weekId, apiHost]);
   return (
     <div className="mx-auto pb-0">
       <nav className="py-6 px-12 bg-black text-white">
@@ -92,22 +115,25 @@ export default function UnitLayoutPage() {
                   className="size-48 mb-8 mx-auto"
                 />
                 <div className="mb-6">
-                  <p className="uppercase font-medium mb-4 text-sm tracking-[0.8px]">
-                    {pathway.resources.length - 3}/{pathway.resources.length}{" "}
-                    Activities remaining
-                  </p>
-                  <div className="bg-[#eee] h-2 rounded-full overflow-hidden">
-                    <div
-                      className="bg-[#3ddc84] h-full rounded-full"
-                      style={{
-                        width: `${
-                          ((pathway.resources.length - 3) /
-                            (pathway.resources.length - 1)) *
-                          100
-                        }%`,
-                      }}
-                    ></div>
-                  </div>
+                  {(() => {
+                    const weekValue = `${weekId}`;
+                    const pathwayValue = `pathway-${index + 1}`;
+                    const progress = progressData?.[weekValue]?.[pathwayValue]?.progress ?? 0;
+
+                    return (
+                      <>
+                        <p className="uppercase font-medium mb-4 text-sm tracking-[0.8px]">
+                          {progress}% completed
+                        </p>
+                        <div className="bg-[#eee] h-2 rounded-full overflow-hidden">
+                          <div
+                            className="bg-[#3ddc84] h-full rounded-full transition-all duration-300"
+                            style={{ width: `${progress}%` }}
+                          ></div>
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
                 <p className="font-semibold text-3xl mr-8">{pathway.title}</p>
                 <p className="my-4">{(pathway as any).description || ""}</p>
