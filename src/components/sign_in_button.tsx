@@ -40,17 +40,15 @@ export default function SignInButton() {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
-                      body: JSON.stringify({
-                        email: user.email,
-                        userName: (
-                          user.displayName || user.email!.split("@")[0]
-                        )
-                          .split(" ")
-                          .join("")
-                          .toLowerCase(),
-                        uid: user.uid,
-                      }),
                     },
+                    body: JSON.stringify({
+                      emailId: user.email,
+                      userName: (user.displayName || user.email!.split("@")[0])
+                        .split(" ")
+                        .join("")
+                        .toLowerCase(),
+                      uid: user.uid,
+                    }),
                   });
                   if (signupResponse.ok) {
                     // Handle successful login

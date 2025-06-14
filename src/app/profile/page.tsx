@@ -168,7 +168,7 @@ const ProfilePage: React.FC = () => {
                 : courses.includes("full-stack-basics")
                 ? "Web"
                 : "AI",
-            ],
+            ],  
             photoURL: user?.photoURL,
             courses: courses || data.courses || [],
             joinedOn: joinedOn || data.joinedOn,
