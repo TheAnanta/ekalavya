@@ -10,9 +10,10 @@ import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import SignInButton from "@/components/sign_in_button";
+import { useAuthContext } from "@/context/AuthContext";
 
 export default function UnitLayoutPage() {
-  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/us-central1/api/get-progress";
+  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
   const courseId = useParams()["course-id"];
   if (
     courseId !== "android-basics-compose" &&
@@ -42,24 +43,36 @@ export default function UnitLayoutPage() {
     ];
   const [progressData, setProgressData] = useState<any>({});
   const [loading, setLoading] = useState(true);
+  const user = useAuthContext();
   useEffect(() => {
-    async function fetchProgress() {
-      try {
-        const response = await fetch(
-          `${apiHost}/${courseId}/${weekId}/pathway-1`
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch progress data");
+    user?.getIdToken().then((userIdToken) => {
+      console.log(userIdToken);
+      async function fetchProgress() {
+        try {
+          const response = await fetch(
+            `${apiHost}/get-progress/${courseId}?unitId=${weekId}`,
+            {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${userIdToken}`,
+              },
+            }
+          );
+          if (!response.ok) {
+            throw new Error("Failed to fetch progress data");
+          }
+          const data = await response.json();
+          setProgressData(data);
+        } catch (error) {
+          console.error("Error fetching progress data:", error);
+        } finally {
+          setLoading(false);
         }
-        const data = await response.json();
-        setProgressData(data);
-      } catch (error) {
-        console.error("Error fetching progress data:", error);
-      } finally {
-        setLoading(false);
       }
-    }
-    fetchProgress();
+      fetchProgress();
+    });
+
   }, [courseId, weekId, apiHost]);
   return (
     <div className="mx-auto pb-0">

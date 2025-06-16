@@ -13,7 +13,7 @@ import Link from "next/link";
 import SignInButton from "@/components/sign_in_button";
 
 export default function CoursePage() {
-  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/us-central1/api/get-progress";
+  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
   const courseId = useParams()["course-id"];
   if (
     courseId !== "android-basics-compose" &&
@@ -36,6 +36,34 @@ export default function CoursePage() {
       : courseId === "flutter-basics-dart"
       ? flutterCourse
       : composeCourse;
+  const [getCourse, setGetCourse] = useState<any>(null);
+  const [loadingCourse, setLoadingCourse] = useState(true);
+  useEffect(() => {
+    async function fetchCourse() {
+      try {
+        const response = await fetch(
+          `${apiHost}/fetch-all-courses?id=${courseId}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (response.ok) {
+          const data = await response.json();
+          setGetCourse(data);
+        } else {
+          console.error("Failed to fetch course data");
+        }
+      } catch (error) {
+        console.error("Error fetching course data:", error);
+      } finally {
+        setLoadingCourse(false);
+      }
+    }
+    fetchCourse();
+  }, [courseId, apiHost]);
   return (
     <div className="px-6 md:px-12 py-6">
       <nav className="p-4 flex justify-between">
@@ -49,126 +77,121 @@ export default function CoursePage() {
       </nav>
       <main className="mt-2 md:px-4 gap-8 relative flex flex-col md:flex-row grow items-start overflow-hidden">
         <div className="md:w-[60%] w-full md:aspect-[3.6] shrink-0">
-          <img
-            className="aspect-[2.4] md:aspect-auto object-cover rounded-2xl w-full h-full object-bottom"
-            src={eventData.cover}
-          />
-          <h1 className="mt-8 text-5xl font-bold whitespace-pre-wrap leading-[150%]">
-            {eventData.courseName}
-          </h1>
-          <h3 className="mt-2 text-xl max-w-[42ch] font-medium">
-            {eventData.courseSubtitle}
-          </h3>
-          <p
-            className="max-w-[48ch] mt-4"
-            dangerouslySetInnerHTML={{ __html: eventData.courseDescription }}
-          ></p>
-          <p className="mt-4 font-medium text-xl">Course Outline</p>
-          <div className="gap-x-8 gap-y-4 mt-4">
-            {eventData.courseOutline.map((item: any, index: number) => {
-              return (
-                <div key={index}>
-                  <div className="ml-8 my-8">
-                      <a href={`/course/${courseId}/week-${index + 1}`}>
-                      <h4 className="text-xl font-semibold hover:text-[#3ddc84]">
-                        Week {index + 1}: {item.title}
-                      </h4>
-                    </a>
-                    <p className="opacity-50">
-                      {item.pathways.length} pathways | Duration: 10 hours
-                    </p>
-                  </div>
-                  <ul className="bg-blue-50 w-full my-4 rounded-2xl border-stone-200 border">
-                    {item.pathways.map((pathway: any, index: number) => {
-                      const [isExpanded, setExpand] = useState(false);
-                      return (
-                        <div key={index} className="p-6 w-full">
-                          <div
-                            onClick={() => {
-                              setExpand(!isExpanded);
-                            }}
-                            className={`flex gap-4 items-center cursor-pointer ${
-                              isExpanded ? "border-b pb-6" : ""
-                            }  border-stone-200`}
-                          >
-                            <img className="size-24" src={pathway.badge} />
-                            <div>
-                              <a
-                                href={`/course/${courseId}/week-${
-                                  index + 1
-                                }/pathway-${index + 1}`}
+          {!loadingCourse && getCourse ? (
+            <><img
+              className="aspect-[2.4] md:aspect-auto object-cover rounded-2xl w-full h-full object-bottom"
+              src={eventData.cover} /><h1 className="mt-8 text-5xl font-bold whitespace-pre-wrap leading-[150%]">
+                {eventData.courseName}
+              </h1><h3 className="mt-2 text-xl max-w-[42ch] font-medium">
+                {eventData.courseSubtitle}
+              </h3><p
+                className="max-w-[48ch] mt-4"
+                dangerouslySetInnerHTML={{ __html: eventData.courseDescription }}
+              ></p><p className="mt-4 font-medium text-xl">Course Outline</p><div className="gap-x-8 gap-y-4 mt-4">
+                {eventData.courseOutline.map((item: any, index: number) => {
+                  return (
+                    <div key={index}>
+                      <div className="ml-8 my-8">
+                        <a href={`/course/${courseId}/week-${index + 1}`}>
+                          <h4 className="text-xl font-semibold hover:text-[#3ddc84]">
+                            Week {index + 1}: {item.title}
+                          </h4>
+                        </a>
+                        <p className="opacity-50">
+                          {item.pathways.length} pathways | Duration: 10 hours
+                        </p>
+                      </div>
+                      <ul className="bg-blue-50 w-full my-4 rounded-2xl border-stone-200 border">
+                        {item.pathways.map((pathway: any, index: number) => {
+                          const [isExpanded, setExpand] = useState(false);
+                          return (
+                            <div key={index} className="p-6 w-full">
+                              <div
+                                onClick={() => {
+                                  setExpand(!isExpanded);
+                                } }
+                                className={`flex gap-4 items-center cursor-pointer ${isExpanded ? "border-b pb-6" : ""}  border-stone-200`}
                               >
-                                <p
-                                  key={index}
-                                  className="text-xl font-medium hover:text-[#3ddc84]"
-                                >
-                                  {pathway.title}
-                                </p>
-                              </a>
-                              <p>Pathway {index + 1} | Duration: 3 hours</p>
-                            </div>
-                            <p className="material-symbols-outlined ml-auto mr-4">
-                              {isExpanded
-                                ? "keyboard_arrow_up"
-                                : "keyboard_arrow_down"}
-                            </p>
-                          </div>
-                          {isExpanded && (
-                            <ul className="list-inside ml-8 mt-8">
-                              {pathway.resources.map(
-                                (content: any, index: number) => {
-                                  return (
-                                    <li
+                                <img className="size-24" src={pathway.badge} />
+                                <div>
+                                  <a
+                                    href={`/course/${courseId}/week-${index + 1}/pathway-${index + 1}`}
+                                  >
+                                    <p
                                       key={index}
-                                      className="flex gap-4 items-center my-4"
+                                      className="text-xl font-medium hover:text-[#3ddc84]"
                                     >
-                                      <span className="material-symbols-outlined">
-                                        {content.type === "video"
-                                          ? "video_library"
-                                          : content.type === "article"
-                                          ? "subject"
-                                          : content.type === "quiz"
-                                          ? "quiz"
-                                          : content.type === "assignment"
-                                          ? "assignment"
-                                          : content.type === "project"
-                                          ? "code"
-                                          : content.type === "discussion"
-                                          ? "forum"
-                                          : content.type === "assessment"
-                                          ? "assessment"
-                                          : content.type === "Codelab"
-                                          ? "code"
-                                          : content.type === "webinar"
-                                          ? "live_tv"
-                                          : content.type === "event"
-                                          ? "event_note"
-                                          : ""}
-                                      </span>
-                                      <div>
-                                        <p className="font-medium">
-                                          {content.title}
-                                        </p>
-                                        <p className="opacity-60 text-sm">
-                                          {content.type}
-                                        </p>
-                                      </div>
-                                    </li>
-                                  );
-                                }
+                                      {pathway.title}
+                                    </p>
+                                  </a>
+                                  <p>Pathway {index + 1} | Duration: 3 hours</p>
+                                </div>
+                                <p className="material-symbols-outlined ml-auto mr-4">
+                                  {isExpanded
+                                    ? "keyboard_arrow_up"
+                                    : "keyboard_arrow_down"}
+                                </p>
+                              </div>
+                              {isExpanded && (
+                                <ul className="list-inside ml-8 mt-8">
+                                  {pathway.resources.map(
+                                    (content: any, index: number) => {
+                                      return (
+                                        <li
+                                          key={index}
+                                          className="flex gap-4 items-center my-4"
+                                        >
+                                          <span className="material-symbols-outlined">
+                                            {content.type === "video"
+                                              ? "video_library"
+                                              : content.type === "article"
+                                                ? "subject"
+                                                : content.type === "quiz"
+                                                  ? "quiz"
+                                                  : content.type === "assignment"
+                                                    ? "assignment"
+                                                    : content.type === "project"
+                                                      ? "code"
+                                                      : content.type === "discussion"
+                                                        ? "forum"
+                                                        : content.type === "assessment"
+                                                          ? "assessment"
+                                                          : content.type === "Codelab"
+                                                            ? "code"
+                                                            : content.type === "webinar"
+                                                              ? "live_tv"
+                                                              : content.type === "event"
+                                                                ? "event_note"
+                                                                : ""}
+                                          </span>
+                                          <div>
+                                            <p className="font-medium">
+                                              {content.title}
+                                            </p>
+                                            <p className="opacity-60 text-sm">
+                                              {content.type}
+                                            </p>
+                                          </div>
+                                        </li>
+                                      );
+                                    }
+                                  )}
+                                </ul>
                               )}
-                            </ul>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
+                            </div>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div></>) : (
+            <div className="flex items-center justify-center h-full">
+              <p className="text-lg font-medium">Loading course data...</p>
+            </div>
+          )}  
         </div>
-        <div className="grow">
+        <div className="grow"> 
           <div
             className={`rounded-2xl -translate-y-[1px] relative z-5 p-[32px] md:px-[64px] md:pb-[72px] md:pt-[56px]`}
             style={{
