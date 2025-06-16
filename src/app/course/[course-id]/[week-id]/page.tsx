@@ -15,6 +15,7 @@ import { useAuthContext } from "@/context/AuthContext";
 export default function UnitLayoutPage() {
   const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
   const courseId = useParams()["course-id"];
+  const weekId = useParams()["week-id"];
   if (
     courseId !== "android-basics-compose" &&
     courseId !== "full-stack-basics" &&
@@ -24,23 +25,6 @@ export default function UnitLayoutPage() {
   ) {
     return <div>Invalid course ID</div>;
   }
-  const eventData =
-    courseId === "android-basics-compose"
-      ? composeCourse
-      : courseId === "full-stack-basics"
-        ? webCourse
-        : courseId === "firebase-get-cloud-ready"
-          ? firebaseCourse
-          : courseId === "machine-learning-genai"
-            ? genkitCourse
-            : courseId === "flutter-basics-dart"
-              ? flutterCourse
-              : composeCourse;
-  const weekId = useParams()["week-id"];
-  const weekData =
-    eventData.courseOutline[
-    parseInt((weekId || "week-1").toString().split("-")[1]) - 1
-    ];
   const [progressData, setProgressData] = useState<any>({});
   const [loading, setLoading] = useState(true);
   const user = useAuthContext();
@@ -50,7 +34,7 @@ export default function UnitLayoutPage() {
       async function fetchProgress() {
         try {
           const response = await fetch(
-            `${apiHost}/get-progress/${courseId}?unitId=${weekId}`,
+            `${apiHost}/get-user-progress/${courseId}?unitId=${weekId}`,
             {
               method: "GET",
               headers: {
@@ -73,6 +57,38 @@ export default function UnitLayoutPage() {
       fetchProgress();
     });
 
+  }, [courseId, weekId, apiHost, user]);
+
+  const [getUnit, setGetUnit] = useState<any>(null);
+  const eventData = getUnit?.data
+  const weekData =
+    eventData.courseOutline.pathways[
+    parseInt((weekId || "week-1").toString().split("-")[1]) - 1
+    ];
+  useEffect(() => {
+    async function fetchUnit() {
+      try {
+        const response = await fetch(
+          `${apiHost}/get-unit/${courseId}?unitId=${weekId}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch unit data");
+        }
+        const data = await response.json();
+        setGetUnit(data);
+      } catch (error) {
+        console.error("Error fetching unit data:", error);
+      }
+    }
+    if (courseId && weekId) {
+      fetchUnit();
+    }
   }, [courseId, weekId, apiHost]);
   return (
     <div className="mx-auto pb-0">
@@ -114,7 +130,7 @@ export default function UnitLayoutPage() {
           </div>
         </div>
         <div className="pt-16 max-w-[1260px] mx-auto items-center justify-between grid grid-cols-3 gap-6">
-          {weekData.pathways.map((pathway, index) => {
+          {weekData.pathways.map((pathway: any, index: number) => {
             return (
               <div key={pathway.title} className="p-7 bg-white">
                 <p className="text-[11px] bg-stone-100 py-1 px-2 w-max rounded-md font-medium tracking-[0.8px]">

@@ -10,6 +10,7 @@ import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Loader from "@/components/LoadingAnimation/page";
 import SignInButton from "@/components/sign_in_button";
 
 export default function CoursePage() {
@@ -101,13 +102,13 @@ export default function CoursePage() {
               ></p>
               <p className="mt-4 font-medium text-xl">Course Outline</p>
               <div className="gap-x-8 gap-y-4 mt-4">
-                {eventData.courseOutline.map((item: any, index: number) => {
+                {eventData.courseOutline.map((item: any, weekindex: number) => {
                   return (
-                    <div key={index}>
+                    <div key={weekindex}>
                       <div className="ml-8 my-8">
-                        <a href={`/course/${courseId}/week-${index + 1}`}>
+                        <a href={`/course/${courseId}/week-${weekindex + 1}`}>
                           <h4 className="text-xl font-semibold hover:text-[#3ddc84]">
-                            Week {index + 1}: {item.unitName}
+                            Week {weekindex + 1}: {item.unitName}
                           </h4>
                         </a>
                         <p className="opacity-50">
@@ -126,24 +127,22 @@ export default function CoursePage() {
                                     ...prev,
                                     [`week-${index + 1}-pathway-${index + 1}`]:
                                       !prev[
-                                        `week-${index + 1}-pathway-${index + 1}`
+                                      `week-${index + 1}-pathway-${index + 1}`
                                       ],
                                   }));
                                 }}
-                                className={`flex gap-4 items-center cursor-pointer ${
-                                  expandedStates[
-                                    `week-${index + 1}-pathway-${index + 1}`
-                                  ]
-                                    ? "border-b pb-6"
-                                    : ""
-                                }  border-stone-200`}
+                                className={`flex gap-4 items-center cursor-pointer ${expandedStates[
+                                  `week-${index + 1}-pathway-${index + 1}`
+                                ]
+                                  ? "border-b pb-6"
+                                  : ""
+                                  }  border-stone-200`}
                               >
                                 <img className="size-24" src={pathway.badge} />
                                 <div>
                                   <a
-                                    href={`/course/${courseId}/week-${
-                                      index + 1
-                                    }/pathway-${index + 1}`}
+                                    href={`/course/${courseId}/week-${index + 1
+                                      }/pathway-${index + 1}`}
                                   >
                                     <p
                                       key={index}
@@ -165,51 +164,51 @@ export default function CoursePage() {
                               {expandedStates[
                                 `week-${index + 1}-pathway-${index + 1}`
                               ] && (
-                                <ul className="list-inside ml-8 mt-8">
-                                  {pathway.resources.map(
-                                    (content: any, index: number) => {
-                                      return (
-                                        <li
-                                          key={index}
-                                          className="flex gap-4 items-center my-4"
-                                        >
-                                          <span className="material-symbols-outlined">
-                                            {content.type === "video"
-                                              ? "video_library"
-                                              : content.type === "article"
-                                              ? "subject"
-                                              : content.type === "quiz"
-                                              ? "quiz"
-                                              : content.type === "assignment"
-                                              ? "assignment"
-                                              : content.type === "project"
-                                              ? "code"
-                                              : content.type === "discussion"
-                                              ? "forum"
-                                              : content.type === "assessment"
-                                              ? "assessment"
-                                              : content.type === "Codelab"
-                                              ? "code"
-                                              : content.type === "webinar"
-                                              ? "live_tv"
-                                              : content.type === "event"
-                                              ? "event_note"
-                                              : ""}
-                                          </span>
-                                          <div>
-                                            <p className="font-medium">
-                                              {content.title}
-                                            </p>
-                                            <p className="opacity-60 text-sm">
-                                              {content.type}
-                                            </p>
-                                          </div>
-                                        </li>
-                                      );
-                                    }
-                                  )}
-                                </ul>
-                              )}
+                                  <ul className="list-inside ml-8 mt-8">
+                                    {pathway.resources.map(
+                                      (content: any, index: number) => {
+                                        return (
+                                          <li
+                                            key={index}
+                                            className="flex gap-4 items-center my-4"
+                                          >
+                                            <span className="material-symbols-outlined">
+                                              {content.type === "video"
+                                                ? "video_library"
+                                                : content.type === "article"
+                                                  ? "subject"
+                                                  : content.type === "quiz"
+                                                    ? "quiz"
+                                                    : content.type === "assignment"
+                                                      ? "assignment"
+                                                      : content.type === "project"
+                                                        ? "code"
+                                                        : content.type === "discussion"
+                                                          ? "forum"
+                                                          : content.type === "assessment"
+                                                            ? "assessment"
+                                                            : content.type === "Codelab"
+                                                              ? "code"
+                                                              : content.type === "webinar"
+                                                                ? "live_tv"
+                                                                : content.type === "event"
+                                                                  ? "event_note"
+                                                                  : ""}
+                                            </span>
+                                            <div>
+                                              <p className="font-medium">
+                                                {content.title}
+                                              </p>
+                                              <p className="opacity-60 text-sm">
+                                                {content.type}
+                                              </p>
+                                            </div>
+                                          </li>
+                                        );
+                                      }
+                                    )}
+                                  </ul>
+                                )}
                             </div>
                           );
                         })}
@@ -310,8 +309,8 @@ export default function CoursePage() {
             </div>
           </>
         ) : (
-          <div className="flex items-center justify-center h-full">
-            <p className="text-lg font-medium">Loading course data...</p>
+          <div className="flex flex-col place-items-center place-content-center h-[80vh] m-0">
+            <Loader />
           </div>
         )}
       </main>
