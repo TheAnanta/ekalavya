@@ -56,20 +56,19 @@ export default function UnitLayoutPage() {
       }
       fetchProgress();
     });
-
   }, [courseId, weekId, apiHost, user]);
 
   const [getUnit, setGetUnit] = useState<any>(null);
-  const eventData = getUnit?.data
+  const eventData = getUnit;
   const weekData =
-    eventData.courseOutline.pathways[
-    parseInt((weekId || "week-1").toString().split("-")[1]) - 1
-    ];
+    eventData?.courseOutline[
+      parseInt((weekId || "week-1").toString().split("-")[1]) - 1
+    ] ?? [];
   useEffect(() => {
     async function fetchUnit() {
       try {
         const response = await fetch(
-          `${apiHost}/get-unit/${courseId}?unitId=${weekId}`,
+          `${apiHost}/fetch-unit/${courseId}/${weekId}`,
           {
             method: "GET",
             headers: {
@@ -81,7 +80,17 @@ export default function UnitLayoutPage() {
           throw new Error("Failed to fetch unit data");
         }
         const data = await response.json();
-        setGetUnit(data);
+        setGetUnit({
+          courseName: "Sample",
+          courseOutline: [
+            {
+              title: data.data.unitName,
+              description: data.data.unitDescription,
+              pathways: data.data.pathways,
+            },
+          ],
+        });
+        console.log("Unit data fetched successfully:", getUnit);
       } catch (error) {
         console.error("Error fetching unit data:", error);
       }
@@ -105,81 +114,87 @@ export default function UnitLayoutPage() {
           />
         </div>
       </nav>
-      <section className="bg-stone-100 pb-16 min-h-screen">
-        <div className="bg-black w-full py-14 text-white">
-          <div className="max-w-[1260px] mx-auto flex flex-row-reverse items-center justify-between">
-            <img
-              alt=""
-              className="size-40"
-              src="https://developer.android.com/static/courses/android-basics-compose/images/hero-assets/unit-logo.svg"
-            />
-            <div>
-              <a
-                className="text-sm font-medium uppercase tracking-[0.8px]"
-                href="https://developer.android.com/courses/android-basics-compose/course"
-              >
-                {eventData.courseName}
-              </a>
-              <h3 className="text-3xl font-bold mt-3 mb-4">
-                Unit 1: {weekData.title}
-              </h3>
-              {(weekData as any).description && (
-                <p>{(weekData as any).description}</p>
-              )}
+      {eventData != null && (
+        <section className="bg-stone-100 pb-16 min-h-screen">
+          <div className="bg-black w-full py-14 text-white">
+            <div className="max-w-[1260px] mx-auto flex flex-row-reverse items-center justify-between">
+              <img
+                alt=""
+                className="size-40"
+                src="https://developer.android.com/static/courses/android-basics-compose/images/hero-assets/unit-logo.svg"
+              />
+              <div>
+                <a
+                  className="text-sm font-medium uppercase tracking-[0.8px]"
+                  href="https://developer.android.com/courses/android-basics-compose/course"
+                >
+                  {eventData.courseName}
+                </a>
+                <h3 className="text-3xl font-bold mt-3 mb-4">
+                  Unit 1: {weekData.title}
+                </h3>
+                {(weekData as any).description && (
+                  <p>{(weekData as any).description}</p>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="pt-16 max-w-[1260px] mx-auto items-center justify-between grid grid-cols-3 gap-6">
-          {weekData.pathways.map((pathway: any, index: number) => {
-            return (
-              <div key={pathway.title} className="p-7 bg-white">
-                <p className="text-[11px] bg-stone-100 py-1 px-2 w-max rounded-md font-medium tracking-[0.8px]">
-                  PATHWAY {index + 1}
-                </p>
-                <img
-                  src={
-                    (pathway as any).badge ||
-                    "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-1/badge.svg"
-                  }
-                  className="size-48 mb-8 mx-auto"
-                />
-                <div className="mb-6">
-                  {(() => {
-                    const weekValue = `${weekId}`;
-                    const pathwayValue = `pathway-${index + 1}`;
-                    const progress = progressData?.[weekValue]?.[pathwayValue]?.progress ?? 0;
+          <div className="pt-16 max-w-[1260px] mx-auto items-center justify-between grid grid-cols-3 gap-6">
+            {weekData.pathways.map((pathway: any, index: number) => {
+              return (
+                <div key={pathway.title} className="p-7 bg-white">
+                  <p className="text-[11px] bg-stone-100 py-1 px-2 w-max rounded-md font-medium tracking-[0.8px]">
+                    PATHWAY {index + 1}
+                  </p>
+                  <img
+                    src={
+                      (pathway as any).badge ||
+                      "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-1/badge.svg"
+                    }
+                    className="size-48 mb-8 mx-auto"
+                  />
+                  <div className="mb-6">
+                    {(() => {
+                      const weekValue = `${weekId}`;
+                      const pathwayValue = `pathway-${index + 1}`;
+                      const progress =
+                        progressData?.[weekValue]?.[pathwayValue]?.progress ??
+                        0;
 
-                    return (
-                      <>
-                        <p className="uppercase font-medium mb-4 text-sm tracking-[0.8px]">
-                          {progress}% completed
-                        </p>
-                        <div className="bg-[#eee] h-2 rounded-full overflow-hidden">
-                          <div
-                            className="bg-[#3ddc84] h-full rounded-full transition-all duration-300"
-                            style={{ width: `${progress}%` }}
-                          ></div>
-                        </div>
-                      </>
-                    );
-                  })()}
+                      return (
+                        <>
+                          <p className="uppercase font-medium mb-4 text-sm tracking-[0.8px]">
+                            {progress}% completed
+                          </p>
+                          <div className="bg-[#eee] h-2 rounded-full overflow-hidden">
+                            <div
+                              className="bg-[#3ddc84] h-full rounded-full transition-all duration-300"
+                              style={{ width: `${progress}%` }}
+                            ></div>
+                          </div>
+                        </>
+                      );
+                    })()}
+                  </div>
+                  <p className="font-semibold text-3xl mr-8">{pathway.title}</p>
+                  <p className="my-4">{(pathway as any).description || ""}</p>
+                  <p className="text-[#666666]">May 2025</p>
+                  <div className="pt-4 flex">
+                    <a
+                      href={`/course/${courseId}/${weekId}/pathway-${
+                        index + 1
+                      }`}
+                      className="font-medium py-3 px-6 rounded-full border-2"
+                    >
+                      Explore
+                    </a>
+                  </div>
                 </div>
-                <p className="font-semibold text-3xl mr-8">{pathway.title}</p>
-                <p className="my-4">{(pathway as any).description || ""}</p>
-                <p className="text-[#666666]">May 2025</p>
-                <div className="pt-4 flex">
-                  <a
-                    href={`/course/${courseId}/${weekId}/pathway-${index + 1}`}
-                    className="font-medium py-3 px-6 rounded-full border-2"
-                  >
-                    Explore
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
