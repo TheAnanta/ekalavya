@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import SignInButton from "@/components/sign_in_button";
 import { useAuthContext } from "@/context/AuthContext";
+import Link from "next/link";
 
 export default function UnitLayoutPage() {
   const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
@@ -106,9 +107,9 @@ export default function UnitLayoutPage() {
             <SignInButton />
           </div>
           <div className="flex items-center">
-            <a href="/" className="absolute right-40">
+            <Link href="/" className="absolute right-40">
               <img src="/badge.png" className="h-16" />
-            </a>
+            </Link>
             <img src="/theananta.png" className="h-8 mr-3" />
           </div>
         </div>

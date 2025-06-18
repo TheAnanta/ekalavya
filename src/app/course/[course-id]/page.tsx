@@ -77,9 +77,9 @@ export default function CoursePage() {
           <SignInButton />
         </div>
         <div className="flex items-center">
-          <a href="/" className="absolute right-40">
+          <Link href="/" className="absolute right-40">
             <img src="/badge.png" className="h-16" />
-          </a>
+          </Link>
           <img src="/theananta.png" className="h-8 mr-3" />
         </div>
       </nav>
@@ -182,7 +182,7 @@ export default function CoursePage() {
                               ] && (
                                 <ul className="list-inside ml-8 mt-8">
                                   {pathway.resources.map(
-                                    (contentJSON: Object, index: number) => {
+                                    (contentJSON: object, index: number) => {
                                       const content = {
                                         title: Object.entries(contentJSON)
                                           ?.find(([k, v]) =>

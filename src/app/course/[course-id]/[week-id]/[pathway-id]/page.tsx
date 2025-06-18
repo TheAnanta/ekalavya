@@ -10,6 +10,7 @@ import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SignInButton from "@/components/sign_in_button";
+import Link from "next/link";
 
 export default function PathwaysLayoutPage() {
   const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
@@ -87,9 +88,9 @@ export default function PathwaysLayoutPage() {
             <SignInButton />
           </div>
           <div className="flex items-center">
-            <a href="/" className="absolute right-40">
+            <Link href="/" className="absolute right-40">
               <img src="/badge.png" className="h-16" />
-            </a>
+            </Link>
             <img src="/theananta.png" className="h-8 mr-3" />
           </div>
         </div>

@@ -6,6 +6,7 @@ import SignInButton from "@/components/sign_in_button";
 import { useAuthContext } from "@/context/AuthContext";
 import { auth } from "@/lib/firebase";
 import moment from "moment";
+import Link from "next/link";
 import { join } from "path";
 import { useEffect, useState } from "react";
 
@@ -210,9 +211,9 @@ const ProfilePage: React.FC = () => {
           <SignInButton />
         </div>
         <div className="flex items-center">
-          <a href="/" className="absolute right-40">
+          <Link href="/" className="absolute right-40">
             <img src="/badge.png" className="h-16" />
-          </a>
+          </Link>
           <img src="/theananta.png" className="h-8 mr-3" />
         </div>
       </nav>
