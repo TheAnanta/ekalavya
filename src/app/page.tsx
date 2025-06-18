@@ -71,11 +71,40 @@ export default function Home() {
             Upskill with our self-paced online program and build solutions for
             problems around you.
           </p>
+          <div className="flex flex-wrap gap-4 justify-center mb-6 max-w-[600px]">
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Android
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Generative AI
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Cloud
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Machine Learning
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Backend
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Firebase
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Flutter
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Frontend
+            </p>
+            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+              Vertex AI
+            </p>
+          </div>
           <Link
-            href="/course/android-basics-compose"
-            className="border-2 border-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium text-[var(--android-primary-color)]"
+            href="/courses"
+            className="border-2 border-[#073042] bg-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium text-white"
           >
-            Register Now
+            Enroll Now
           </Link>
           <img
             src="compose-world.png"
@@ -154,9 +183,9 @@ export default function Home() {
             Here&apos;s what our campers had to say
           </h3>
           <p className="text-sm max-w-[32ch] mt-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non fuga
-            omnis dolore natus, cum, quam quibusdam eum accusantium, quo eius
-            fugiat.
+            Our campers are the best part of the camp, they are the ones making
+            the camp a better place to learn and grow. Here&apos;s what they had
+            to say about their experience at the Ekalavya Camp.
           </p>
         </div>
         <div className="md:absolute top-12 right-0 md:w-[75%] z-10">
@@ -196,32 +225,32 @@ export default function Home() {
             >
               {[
                 {
-                  name: "Michalenga Verylongname",
-                  designation: "Lorem ipsum",
+                  name: "Nilanjana",
+                  designation: "SWE Intern",
                   pronoun: "she/her",
                   image: "camp-leader-female.png",
-                  content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium harum quisquam voluptates at, reiciendis similique ut saepe minus, consequatur cumque beatae dignissimos eum eligendi. Dolorem possimus vero facilis nobis quidem.`,
+                  content: `Ekalavya helped me to become serious about my coding skills, it made me realise how far behind I am, and the networking helped me practice my dsa and plan out my projects. You have also networked with us and guided us on projects`,
                 },
                 {
                   name: "Gautam",
                   designation: "SWE Intern",
                   pronoun: "he/him",
                   image: "camp-leader.png",
-                  content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium harum quisquam voluptates at, reiciendis similique ut saepe minus, consequatur cumque beatae dignissimos eum eligendi. Dolorem possimus vero facilis nobis quidem.`,
+                  content: `Unlike passive video lectures, Ekalavya made me think. Solving problems together, peer reviews, and community sprints pushed me to actually learn, not just complete tasks.`,
                 },
                 {
                   name: "Kimish Choudhary",
                   designation: "Frontend Intern",
                   pronoun: "she/her",
                   image: "camp-leader-female.png",
-                  content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium harum quisquam voluptates at, reiciendis similique ut saepe minus, consequatur cumque beatae dignissimos eum eligendi. Dolorem possimus vero facilis nobis quidem.`,
+                  content: `I never thought learning could be this collaborative. Ekalavya’s peer-driven sessions gave me the confidence to speak up, ask questions, and actually enjoy studying. It’s not just a platform—it’s a movement.`,
                 },
                 {
                   name: "Vijay Kagupati",
                   designation: "VP, E-Club GITAM",
-                  pronoun: "she/her",
+                  pronoun: "her/him",
                   image: "camp-leader.png",
-                  content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium harum quisquam voluptates at, reiciendis similique ut saepe minus, consequatur cumque beatae dignissimos eum eligendi. Dolorem possimus vero facilis nobis quidem.`,
+                  content: `It is a great community for developers of all kinds! It has been my go-to place for random chats, sharing stuff about all things computer science. The people here are extremely fun and knowledgeable which made the experience all the much better!`,
                 },
               ].map((testimonial, index) => {
                 return (

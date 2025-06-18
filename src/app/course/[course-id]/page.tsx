@@ -18,7 +18,7 @@ export default function CoursePage() {
   const courseId = useParams()["course-id"];
   if (
     courseId !== "android-basics-compose" &&
-    courseId !== "full-stack-basics" &&
+    courseId !== "namasthe-full-stack" &&
     courseId !== "firebase-get-cloud-ready" &&
     courseId !== "machine-learning-genai" &&
     courseId !== "flutter-basics-dart"
@@ -76,9 +76,12 @@ export default function CoursePage() {
           <span className="material-symbols-outlined !text-2xl">menu</span>
           <SignInButton />
         </div>
-        <Link href="/">
+        <div className="flex items-center">
+          <a href="/" className="absolute right-40">
+            <img src="/badge.png" className="h-16" />
+          </a>
           <img src="/theananta.png" className="h-8 mr-3" />
-        </Link>
+        </div>
       </nav>
       <main className="mt-2 md:px-4 gap-8 relative flex flex-col md:flex-row grow items-start overflow-hidden">
         {!loadingCourse && getCourse ? (
@@ -106,13 +109,19 @@ export default function CoursePage() {
                   return (
                     <div key={weekindex}>
                       <div className="ml-8 my-8">
-                        <a href={`/course/${courseId}/week-${weekindex + 1}`}>
+                        <a href={`/course/${courseId}/${item.unitId}`}>
                           <h4 className="text-xl font-semibold hover:text-[#3ddc84]">
-                            Week {weekindex + 1}: {item.unitName}
+                            Unit {weekindex + 1}: {item.unitName}
                           </h4>
                         </a>
                         <p className="opacity-50">
-                          {item.pathways.length} pathways | Duration: 10 hours
+                          {item.pathways.length} pathways | Duration:{" "}
+                          {item.pathways.reduce(
+                            (acc: number, curr: any) =>
+                              acc + Math.ceil(curr.pathwayDuration / 60),
+                            0
+                          )}{" "}
+                          hours
                         </p>
                       </div>
                       <ul className="bg-blue-50 w-full my-4 rounded-2xl border-stone-200 border">
@@ -127,22 +136,25 @@ export default function CoursePage() {
                                     ...prev,
                                     [`week-${index + 1}-pathway-${index + 1}`]:
                                       !prev[
-                                      `week-${index + 1}-pathway-${index + 1}`
+                                        `week-${index + 1}-pathway-${index + 1}`
                                       ],
                                   }));
                                 }}
-                                className={`flex gap-4 items-center cursor-pointer ${expandedStates[
-                                  `week-${index + 1}-pathway-${index + 1}`
-                                ]
-                                  ? "border-b pb-6"
-                                  : ""
-                                  }  border-stone-200`}
+                                className={`flex gap-4 items-center cursor-pointer ${
+                                  expandedStates[
+                                    `week-${index + 1}-pathway-${index + 1}`
+                                  ]
+                                    ? "border-b pb-6"
+                                    : ""
+                                }  border-stone-200`}
                               >
-                                <img className="size-24" src={pathway.badge} />
+                                <img
+                                  className="size-24"
+                                  src={pathway.pathwayBadge}
+                                />
                                 <div>
                                   <a
-                                    href={`/course/${courseId}/week-${index + 1
-                                      }/pathway-${index + 1}`}
+                                    href={`/course/${courseId}/${item.unitId}/${pathway.pathwayId}`}
                                   >
                                     <p
                                       key={index}
@@ -151,7 +163,11 @@ export default function CoursePage() {
                                       {pathway.pathwayName}
                                     </p>
                                   </a>
-                                  <p>Pathway {index + 1} | Duration: 3 hours</p>
+                                  <p>
+                                    Pathway {index + 1} | Duration:{" "}
+                                    {Math.ceil(pathway.pathwayDuration / 60)}{" "}
+                                    hours
+                                  </p>
                                 </div>
                                 <p className="material-symbols-outlined ml-auto mr-4">
                                   {expandedStates[
@@ -164,51 +180,67 @@ export default function CoursePage() {
                               {expandedStates[
                                 `week-${index + 1}-pathway-${index + 1}`
                               ] && (
-                                  <ul className="list-inside ml-8 mt-8">
-                                    {pathway.resources.map(
-                                      (content: any, index: number) => {
-                                        return (
-                                          <li
-                                            key={index}
-                                            className="flex gap-4 items-center my-4"
-                                          >
-                                            <span className="material-symbols-outlined">
-                                              {content.type === "video"
-                                                ? "video_library"
-                                                : content.type === "article"
-                                                  ? "subject"
-                                                  : content.type === "quiz"
-                                                    ? "quiz"
-                                                    : content.type === "assignment"
-                                                      ? "assignment"
-                                                      : content.type === "project"
-                                                        ? "code"
-                                                        : content.type === "discussion"
-                                                          ? "forum"
-                                                          : content.type === "assessment"
-                                                            ? "assessment"
-                                                            : content.type === "Codelab"
-                                                              ? "code"
-                                                              : content.type === "webinar"
-                                                                ? "live_tv"
-                                                                : content.type === "event"
-                                                                  ? "event_note"
-                                                                  : ""}
-                                            </span>
-                                            <div>
-                                              <p className="font-medium">
-                                                {content.title}
-                                              </p>
-                                              <p className="opacity-60 text-sm">
-                                                {content.type}
-                                              </p>
-                                            </div>
-                                          </li>
-                                        );
-                                      }
-                                    )}
-                                  </ul>
-                                )}
+                                <ul className="list-inside ml-8 mt-8">
+                                  {pathway.resources.map(
+                                    (contentJSON: Object, index: number) => {
+                                      const content = {
+                                        title: Object.entries(contentJSON)
+                                          ?.find(([k, v]) =>
+                                            k.includes("Name")
+                                          )?.[1]
+                                          .toString(),
+                                        type: Object.entries(contentJSON)
+                                          ?.find(([k, v]) =>
+                                            k.includes("Id")
+                                          )?.[1]
+                                          .toString()
+                                          .split("-")[0],
+                                      };
+                                      return (
+                                        <li
+                                          key={index}
+                                          className="flex gap-4 items-center my-4"
+                                        >
+                                          <span className="material-symbols-outlined">
+                                            {content.type === "video"
+                                              ? "video_library"
+                                              : content.type === "article"
+                                              ? "subject"
+                                              : content.type === "quiz"
+                                              ? "quiz"
+                                              : content.type === "assignment"
+                                              ? "assignment"
+                                              : content.type === "project"
+                                              ? "code"
+                                              : content.type === "discussion"
+                                              ? "forum"
+                                              : content.type === "assessment"
+                                              ? "assessment"
+                                              : content.type === "codelab"
+                                              ? "code"
+                                              : content.type === "webinar"
+                                              ? "live_tv"
+                                              : content.type === "event"
+                                              ? "event_note"
+                                              : ""}
+                                          </span>
+                                          <div>
+                                            <p className="font-medium">
+                                              {content.title}
+                                            </p>
+                                            <p className="opacity-60 text-sm">
+                                              {content.type
+                                                .split("")[0]
+                                                .toUpperCase() +
+                                                content.type.slice(1)}
+                                            </p>
+                                          </div>
+                                        </li>
+                                      );
+                                    }
+                                  )}
+                                </ul>
+                              )}
                             </div>
                           );
                         })}
@@ -309,7 +341,7 @@ export default function CoursePage() {
             </div>
           </>
         ) : (
-          <div className="flex flex-col place-items-center place-content-center h-[80vh] m-0">
+          <div className="flex flex-col place-items-center place-content-center h-[80vh] m-0 w-full">
             <Loader />
           </div>
         )}

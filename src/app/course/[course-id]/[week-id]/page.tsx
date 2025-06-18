@@ -60,10 +60,7 @@ export default function UnitLayoutPage() {
 
   const [getUnit, setGetUnit] = useState<any>(null);
   const eventData = getUnit;
-  const weekData =
-    eventData?.courseOutline[
-      parseInt((weekId || "week-1").toString().split("-")[1]) - 1
-    ] ?? [];
+  const weekData = eventData?.courseOutline[0] ?? [];
   useEffect(() => {
     async function fetchUnit() {
       try {
@@ -81,11 +78,11 @@ export default function UnitLayoutPage() {
         }
         const data = await response.json();
         setGetUnit({
-          courseName: "Sample",
+          courseName: data.data.courseName,
           courseOutline: [
             {
-              title: data.data.unitName,
-              description: data.data.unitDescription,
+              title: data.data.unit.unitName,
+              description: data.data.unit.unitDescription,
               pathways: data.data.pathways,
             },
           ],
@@ -108,10 +105,12 @@ export default function UnitLayoutPage() {
 
             <SignInButton />
           </div>
-          <img
-            src="/theananta.png"
-            className="h-8 mr-3 invert object-contain"
-          />
+          <div className="flex items-center">
+            <a href="/" className="absolute right-40">
+              <img src="/badge.png" className="h-16" />
+            </a>
+            <img src="/theananta.png" className="h-8 mr-3" />
+          </div>
         </div>
       </nav>
       {eventData != null && (
@@ -126,7 +125,7 @@ export default function UnitLayoutPage() {
               <div>
                 <a
                   className="text-sm font-medium uppercase tracking-[0.8px]"
-                  href="https://developer.android.com/courses/android-basics-compose/course"
+                  href={`/course/${courseId}`}
                 >
                   {eventData.courseName}
                 </a>
@@ -149,7 +148,7 @@ export default function UnitLayoutPage() {
                   <img
                     src={
                       (pathway as any).badge ||
-                      "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-1/badge.svg"
+                      "https://developers.google.com/static/profile/badges/community/gde/badge.svg"
                     }
                     className="size-48 mb-8 mx-auto"
                   />
@@ -164,7 +163,8 @@ export default function UnitLayoutPage() {
                       return (
                         <>
                           <p className="uppercase font-medium mb-4 text-sm tracking-[0.8px]">
-                            {progress}% completed
+                            {progress}/{pathway.resources.length} Activities
+                            remaining
                           </p>
                           <div className="bg-[#eee] h-2 rounded-full overflow-hidden">
                             <div
@@ -176,14 +176,16 @@ export default function UnitLayoutPage() {
                       );
                     })()}
                   </div>
-                  <p className="font-semibold text-3xl mr-8">{pathway.title}</p>
-                  <p className="my-4">{(pathway as any).description || ""}</p>
-                  <p className="text-[#666666]">May 2025</p>
+                  <p className="font-semibold text-3xl mr-8">
+                    {pathway.pathwayName}
+                  </p>
+                  <p className="my-4">
+                    {(pathway as any).pathwayDescription || ""}
+                  </p>
+                  <p className="text-[#666666]">June 2025</p>
                   <div className="pt-4 flex">
                     <a
-                      href={`/course/${courseId}/${weekId}/pathway-${
-                        index + 1
-                      }`}
+                      href={`/course/${courseId}/${weekId}/${pathway.pathwayId}`}
                       className="font-medium py-3 px-6 rounded-full border-2"
                     >
                       Explore

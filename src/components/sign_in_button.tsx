@@ -14,9 +14,17 @@ export default function SignInButton() {
     <>
       {user ? (
         <a href="/profile">
-          <span className="material-symbols-outlined !text-3xl">
-            account_circle
-          </span>
+          {user.photoURL ? (
+            <img
+              src={user.photoURL}
+              referrerPolicy="no-referrer"
+              className="w-10 rounded-full h-10 object-cover"
+            />
+          ) : (
+            <span className="material-symbols-outlined !text-3xl">
+              account_circle
+            </span>
+          )}
         </a>
       ) : (
         <button

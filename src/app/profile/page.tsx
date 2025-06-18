@@ -70,7 +70,7 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
                 )}
               {userDetails.username && (
                 <a
-                  href={`https://devfest.vizag.dev/p/${userDetails.username}`}
+                  href={`https://ekalavya.theananta.in/p/${userDetails.username}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 mt-3 border border-[#dadce0] text-[#1a73e8] px-3 py-1.5 rounded-full text-sm no-underline hover:bg-gray-50" // display: flex, align-items: center, column-gap: 4px, margin-top: 12px, border: 1px solid #dadce0, color: #1a73e8, padding: 6px 12px, border-radius: 48px, text-decoration:none;
@@ -168,7 +168,7 @@ const ProfilePage: React.FC = () => {
                 : courses.includes("full-stack-basics")
                 ? "Web"
                 : "AI",
-            ],  
+            ],
             photoURL: user?.photoURL,
             courses: courses || data.courses || [],
             joinedOn: joinedOn || data.joinedOn,
@@ -209,16 +209,21 @@ const ProfilePage: React.FC = () => {
           <span className="material-symbols-outlined !text-2xl">menu</span>
           <SignInButton />
         </div>
-        <img src="theananta.png" className="h-8 mr-3" />
+        <div className="flex items-center">
+          <a href="/" className="absolute right-40">
+            <img src="/badge.png" className="h-16" />
+          </a>
+          <img src="/theananta.png" className="h-8 mr-3" />
+        </div>
       </nav>
-      <div className="flex flex-col md:flex-row gap-12 p-4">
+      <div className="flex flex-col md:flex-row gap-24 p-4">
         <ProfileCard userDetails={userDetails} />
         <div className="grow">
           {<h2 className="text-2xl font-bold mb-8">My Courses</h2>}
-          <div className="bg-white p-8 px-12 rounded-xl shadow flex gap-8 overflow-x-scroll no-scrollbar">
+          <div className="flex gap-8 overflow-x-scroll no-scrollbar">
             <div className="shrink-0">
               <img
-                className="size-32 rounded-full mb-4 bg-[var(--android-primary-color)]/20 object-cover object-top pt-4"
+                className="size-32 rounded-full mb-4 border-2 object-cover object-top pt-4 saturate-0"
                 src="/courses/images/charclaqueta-droid-promo_720.png"
               />
               <p className="text-xl font-semibold max-w-[12ch]">
@@ -260,7 +265,7 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="shrink-0">
               <img
-                className="size-32 rounded-full mb-4 bg-[#4285f4]/20 object-contain object-top pt-8"
+                className="size-32 rounded-full mb-4 border-2 saturate-0 object-contain object-top pt-8"
                 src="/courses/images/dash-search.png"
               />
               <p className="text-xl font-semibold max-w-[12ch]">
@@ -308,7 +313,7 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="shrink-0">
               <img
-                className="size-32 rounded-full mb-4 bg-[#FBC005]/20 object-cover object-top pt-4"
+                className="size-32 rounded-full mb-4 border-2 saturate-0 object-cover object-top pt-4"
                 src="/courses/images/sparky-shadow.png"
               />
               <p className="text-xl font-semibold max-w-[12ch]">
@@ -350,7 +355,7 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="shrink-0">
               <img
-                className="size-32 rounded-full mb-4 bg-[#ea4335]/20 object-cover object-right pt-4"
+                className="size-32 rounded-full mb-4 border-2 saturate-0 object-cover object-right pt-4"
                 src="https://developers.google.com/static/community/images/gdsc-solution-challenge/timeline-hero.webp"
               />
               <p className="text-xl font-semibold max-w-[10ch]">
@@ -391,7 +396,7 @@ const ProfilePage: React.FC = () => {
               )}
             </div>
             <div className="shrink-0">
-              <div className="size-32 rounded-full  bg-[#4285F4]/10 object-contain object-bottom flex pb-3 mb-4 overflow-hidden">
+              <div className="size-32 rounded-full  border-2 saturate-0 object-contain object-bottom flex pb-3 mb-4 overflow-hidden">
                 <img
                   className="mt-auto scale-[130%]"
                   src="https://developers.google.com/static/search/images/check-help-community.png?hl=th"
@@ -436,6 +441,8 @@ const ProfilePage: React.FC = () => {
               )}
             </div>
           </div>
+          {/* <div className="my-8 mx-24 h-[1px] bg-black/30" /> */}
+          <div>{<h2 className="text-2xl font-bold mt-8 mb-8">Badges</h2>}</div>
         </div>
       </div>
     </div>
