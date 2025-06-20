@@ -1,4 +1,5 @@
 {
+    "courseId": "flutter-basics-dart",
     "courseName": "Flutter Basics with Dart",
     "courseSubtitle": "Master application development with Flutter, Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
     "courseDescription": "You will learn basic Flutter programming with best practices, including creating beautiful layouts, architecting navigations between screens, connecting to the internet, handling data persistence, and using device features like location.",
@@ -6,11 +7,11 @@
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "/courses/covers/flutter-cover.png",
+    "coverImage": "/courses/covers/flutter-cover.png",
     "campLeaderCardColor": "#a5d4ed",
     "campLeaderCardTextColor": "#001c3d",
     "benefitsCardColor": "#013674",
-    "campLeader": [
+    "campLeaders": [
         {
             "name": "Manas Malla",
             "communityTitle": "Google Product Expert, Android™",
@@ -47,651 +48,1033 @@
     },
     "courseOutline": [
         {
-            "title": "Your first Flutter app",
+            "unitId": "your-first-flutter-app",
+            "unitName": "Your first Flutter app",
+            "unitDescription": "Unit covering: Your first Flutter app",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Introduction to Dart",
+                    "pathwayId": "introduction-to-dart",
+                    "pathwayName": "Introduction to Dart",
+                    "pathwayDescription": "Pathway covering: Introduction to Dart",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Before you begin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ff9e7a55-73ff-4095-b536-151a59f70f4e",
+                            "codelabName": "Before you begin",
+                            "codelabDescription": "Description for \"Before you begin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/before-you-begin"
                         },
                         {
-                            "title": "Welcome to Flutter Basics",
-                            "type": "Video"
+                            "videoId": "video-4a25c4f6-6eb8-4308-beeb-1edbc69ec1fe",
+                            "videoName": "Welcome to Flutter Basics",
+                            "videoDescription": "Description for \"Welcome to Flutter Basics\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/welcome-to-flutter-basics.mp4"
                         },
                         {
-                            "title": "Getting started with Dart",
-                            "type": "Video"
+                            "videoId": "video-6d7e538e-b727-4bdb-a555-0d718efef347",
+                            "videoName": "Getting started with Dart",
+                            "videoDescription": "Description for \"Getting started with Dart\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/getting-started-with-dart.mp4"
                         },
                         {
-                            "title": "Your first program in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-29699429-bea9-48a0-93e0-fcb8e8059297",
+                            "codelabName": "Your first program in Dart",
+                            "codelabDescription": "Description for \"Your first program in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/your-first-program-in-dart"
                         },
                         {
-                            "title": "Create and use variables in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e3ebfc73-9bc0-4f00-b207-ed7e83bfc9bb",
+                            "codelabName": "Create and use variables in Dart",
+                            "codelabDescription": "Description for \"Create and use variables in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-and-use-variables-in-dart"
                         },
                         {
-                            "title": "Create and use functions in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-175dea13-f182-4be2-86a9-aa0a756e09ba",
+                            "codelabName": "Create and use functions in Dart",
+                            "codelabDescription": "Description for \"Create and use functions in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-and-use-functions-in-dart"
                         },
                         {
-                            "title": "Practice: Dart Basics",
-                            "type": "Codelab"
+                            "codelabId": "codelab-699ee0b9-52a3-452c-a1d7-84cc0b6cd14f",
+                            "codelabName": "Practice: Dart Basics",
+                            "codelabDescription": "Description for \"Practice: Dart Basics\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-dart-basics"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-725de79a-56db-4d9f-88c4-f55a2e96b3e1",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Setup Visual Studio Code",
+                    "pathwayId": "setup-visual-studio-code",
+                    "pathwayName": "Setup Visual Studio Code",
+                    "pathwayDescription": "Pathway covering: Setup Visual Studio Code",
+                    "pathwayDuration": 110,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Visual Studio Code",
-                            "type": "Video"
+                            "videoId": "video-3e448296-2e4e-4aa4-aafa-3bc7c825b936",
+                            "videoName": "Introduction to Visual Studio Code",
+                            "videoDescription": "Description for \"Introduction to Visual Studio Code\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-visual-studio-code.mp4"
                         },
                         {
-                            "title": "Download and install Visual Studio Code",
-                            "type": "Codelab"
+                            "codelabId": "codelab-af7de978-a091-415b-bdd8-6fc7f21172c0",
+                            "codelabName": "Download and install Visual Studio Code",
+                            "codelabDescription": "Description for \"Download and install Visual Studio Code\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/download-and-install-visual-studio-code"
                         },
                         {
-                            "title": "Install the Flutter SDK",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d18b0b93-4b3b-438f-b48a-117ee54c6499",
+                            "codelabName": "Install the Flutter SDK",
+                            "codelabDescription": "Description for \"Install the Flutter SDK\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/install-the-flutter-sdk"
                         },
                         {
-                            "title": "Understanding the Flutter Architecture",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4300f2aa-a8cc-496b-93f8-0323d4175e45",
+                            "codelabName": "Understanding the Flutter Architecture",
+                            "codelabDescription": "Description for \"Understanding the Flutter Architecture\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/understanding-the-flutter-architecture"
                         },
                         {
-                            "title": "Introduction to the Flutter Engine",
-                            "type": "Codelab"
+                            "codelabId": "codelab-87d95927-e4ae-4f43-b3dc-de232a67df99",
+                            "codelabName": "Introduction to the Flutter Engine",
+                            "codelabDescription": "Description for \"Introduction to the Flutter Engine\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduction-to-the-flutter-engine"
                         },
                         {
-                            "title": "Create your first Flutter app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c6b1de38-b713-448c-8216-8b92853fa047",
+                            "codelabName": "Create your first Flutter app",
+                            "codelabDescription": "Description for \"Create your first Flutter app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-your-first-flutter-app"
                         },
                         {
-                            "title": "Run your first app on the Android Emulator",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d725123d-fd16-474c-81a9-22a2c29d1be7",
+                            "codelabName": "Run your first app on the Android Emulator",
+                            "codelabDescription": "Description for \"Run your first app on the Android Emulator\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/run-your-first-app-on-the-android-emulator"
                         },
                         {
-                            "title": "How to connect your Android Emulator",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f74fd192-79ef-4771-b261-8acc034bec85",
+                            "codelabName": "How to connect your Android Emulator",
+                            "codelabDescription": "Description for \"How to connect your Android Emulator\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/how-to-connect-your-android-emulator"
                         },
                         {
-                            "title": "Run your first app on the Web",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4c3d2235-9442-4820-815b-59dd6bffd8ba",
+                            "codelabName": "Run your first app on the Web",
+                            "codelabDescription": "Description for \"Run your first app on the Web\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/run-your-first-app-on-the-web"
                         },
                         {
-                            "title": "Run your first app on the desktop",
-                            "type": "Codelab"
+                            "codelabId": "codelab-07652606-8b02-41c2-baa7-3e3c62ff817b",
+                            "codelabName": "Run your first app on the desktop",
+                            "codelabDescription": "Description for \"Run your first app on the desktop\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/run-your-first-app-on-the-desktop"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-955f5bb2-618f-4ed0-a6db-cf0448c30929",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Build a basic layout",
+                    "pathwayId": "flutter-build-a-basic-layout",
+                    "pathwayName": "Build a basic layout",
+                    "pathwayDescription": "Pathway covering: Build a basic layout",
+                    "pathwayDuration": 90,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Flutter framework",
-                            "type": "Video"
+                            "videoId": "video-cf39d1b4-eb4e-4fff-a416-0b84bf44661e",
+                            "videoName": "Intro to Flutter framework",
+                            "videoDescription": "Description for \"Intro to Flutter framework\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-flutter-framework.mp4"
                         },
                         {
-                            "title": "Design a birthday card app",
-                            "type": "Video"
+                            "videoId": "video-26f5a69a-6b60-474f-b8ea-6e79fe9afd0c",
+                            "videoName": "Design a birthday card app",
+                            "videoDescription": "Description for \"Design a birthday card app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/design-a-birthday-card-app.mp4"
                         },
                         {
-                            "title": "Understanding widgets",
-                            "type": "Codelab"
+                            "codelabId": "codelab-6ff47a23-81be-42a3-a9f3-a038dea31c88",
+                            "codelabName": "Understanding widgets",
+                            "codelabDescription": "Description for \"Understanding widgets\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/understanding-widgets"
                         },
                         {
-                            "title": "Getting started with basic of Flutter",
-                            "type": "Video"
+                            "videoId": "video-0b4469a9-6e8e-4854-81d6-01169533a181",
+                            "videoName": "Getting started with basic of Flutter",
+                            "videoDescription": "Description for \"Getting started with basic of Flutter\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/getting-started-with-basic-of-flutter.mp4"
                         },
                         {
-                            "title": "Build a simple app with text widget",
-                            "type": "Codelab"
+                            "codelabId": "codelab-61f03aca-1dd6-4693-8f74-1d9501d30c27",
+                            "codelabName": "Build a simple app with text widget",
+                            "codelabDescription": "Description for \"Build a simple app with text widget\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-a-simple-app-with-text-widget"
                         },
                         {
-                            "title": "Add images to your Flutter",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f62553d8-605e-4b6a-b600-b721324feefd",
+                            "codelabName": "Add images to your Flutter",
+                            "codelabDescription": "Description for \"Add images to your Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-images-to-your-flutter"
                         },
                         {
-                            "title": "Practice: Flutter Basics",
-                            "type": "Codelab"
+                            "codelabId": "codelab-05c14b63-4365-496e-b36e-875806b4a0d7",
+                            "codelabName": "Practice: Flutter Basics",
+                            "codelabDescription": "Description for \"Practice: Flutter Basics\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-flutter-basics"
                         },
                         {
-                            "title": "Project: Create a business card app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e45e86ca-7faf-4754-8b65-120d8417e001",
+                            "codelabName": "Project: Create a business card app",
+                            "codelabDescription": "Description for \"Project: Create a business card app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-business-card-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-baae4020-8921-45e6-8054-eb270f1e658a",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Building app UI",
+            "unitId": "google-maps-and-location",
+            "unitName": "Google Maps and Location",
+            "unitDescription": "Unit covering: Google Maps and Location",
+            "unitDuration": 60,
             "pathways": [
                 {
-                    "title": "Dart fundamentals",
+                    "pathwayId": "google-maps-and-location",
+                    "pathwayName": "Google Maps and Location",
+                    "pathwayDescription": "Pathway covering: Google Maps and Location",
+                    "pathwayDuration": 70,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Dart Fundamentals",
-                            "type": "Video"
+                            "videoId": "video-e87a7a99-9591-4695-9284-29acd58640e8",
+                            "videoName": "Introduction to Google Maps API",
+                            "videoDescription": "Description for \"Introduction to Google Maps API\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-google-maps-api.mp4"
                         },
                         {
-                            "title": "Deep dive into Dart",
-                            "type": "Video"
+                            "codelabId": "codelab-22b01111-8b6b-4aec-a3fc-8b6e583c75d3",
+                            "codelabName": "Getting the API Key",
+                            "codelabDescription": "Description for \"Getting the API Key\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/getting-the-api-key"
                         },
                         {
-                            "title": "Write conditionals in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-bfccbc7e-886b-43e2-a44d-6c816bfb55ad",
+                            "codelabName": "Introduction to PermissionManager",
+                            "codelabDescription": "Description for \"Introduction to PermissionManager\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduction-to-permissionmanager"
                         },
                         {
-                            "title": "Use nullability in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4c5eb6b9-0e90-40c3-a01b-9462ff961226",
+                            "codelabName": "Accessing user-location",
+                            "codelabDescription": "Description for \"Accessing user-location\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/accessing-user-location"
                         },
                         {
-                            "title": "Use classes and objects in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d31eeee6-942a-42c3-bbff-1f77f0c53ca6",
+                            "codelabName": "Testing Google APIs",
+                            "codelabDescription": "Description for \"Testing Google APIs\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/testing-google-apis"
                         },
                         {
-                            "title": "Use function types and lambda expressions in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-1fa88dca-174e-41da-96b8-8ab394955984",
+                            "codelabName": "Accessing System APIs",
+                            "codelabDescription": "Description for \"Accessing System APIs\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/accessing-system-apis"
                         },
                         {
-                            "title": "Practice: Dart Fundamentals",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
-                        }
-                    ]
-                },
-                {
-                    "title": "Add a button to an app",
-                    "resources": [
-                        {
-                            "title": "Intro to Dice Roller app",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Create an interactive Dice Roller app",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Use the debugger in Visual Studio Code",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Practice: Click behavior",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
-                        }
-                    ]
-                },
-                {
-                    "title": "Interacting with UI and state",
-                    "resources": [
-                        {
-                            "title": "Understanding state in Flutter",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Intro to tip calculator",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Introduction to declarative UI",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Intro to state in Flutter",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Calculate a custom tip",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Introduction to testing",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Write automated tests",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Project: Create an Art Space app",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-129f9a04-4372-4548-9822-7e10dde60c7a",
+                            "codelabName": "Project: Create a Uber clone",
+                            "codelabDescription": "Description for \"Project: Create a Uber clone\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-uber-clone"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Display lists and use Material Design",
+            "unitId": "flutter-building-app-ui",
+            "unitName": "Building app UI",
+            "unitDescription": "Unit covering: Building app UI",
+            "unitDuration": 60,
             "pathways": [
                 {
-                    "title": "More Dart fundamentals",
+                    "pathwayId": "dart-fundamentals",
+                    "pathwayName": "Dart fundamentals",
+                    "pathwayDescription": "Pathway covering: Dart fundamentals",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "More Dart fundamentals",
-                            "type": "Video"
+                            "videoId": "video-916bb9fc-228c-4f84-a43d-709a9e938b3f",
+                            "videoName": "Dart Fundamentals",
+                            "videoDescription": "Description for \"Dart Fundamentals\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/dart-fundamentals.mp4"
                         },
                         {
-                            "title": "Up, up and above with Dart",
-                            "type": "Video"
+                            "videoId": "video-d39e5165-0395-48ca-ab79-31c7c8e83005",
+                            "videoName": "Deep dive into Dart",
+                            "videoDescription": "Description for \"Deep dive into Dart\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/deep-dive-into-dart.mp4"
                         },
                         {
-                            "title": "Generics, objects, and extensions",
-                            "type": "Codelab"
+                            "codelabId": "codelab-dbdda598-be89-4dab-8f4a-a9618202465e",
+                            "codelabName": "Write conditionals in Dart",
+                            "codelabDescription": "Description for \"Write conditionals in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-conditionals-in-dart"
                         },
                         {
-                            "title": "Use collections in Dart",
-                            "type": "Codelab"
+                            "codelabId": "codelab-164fe027-5495-472c-8794-07d8cd2ee62a",
+                            "codelabName": "Use nullability in Dart",
+                            "codelabDescription": "Description for \"Use nullability in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-nullability-in-dart"
                         },
                         {
-                            "title": "Higher-order functions with collections",
-                            "type": "Codelab"
+                            "codelabId": "codelab-b979317f-e4b6-4734-ad25-8125a78728f4",
+                            "codelabName": "Use classes and objects in Dart",
+                            "codelabDescription": "Description for \"Use classes and objects in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-classes-and-objects-in-dart"
                         },
                         {
-                            "title": "Practice: Classes and Collections",
-                            "type": "Codelab"
+                            "codelabId": "codelab-a2a4a075-6453-465e-9504-acaec0b9f755",
+                            "codelabName": "Use function types and lambda expressions in Dart",
+                            "codelabDescription": "Description for \"Use function types and lambda expressions in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-function-types-and-lambda-expressions-in-dart"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-11323465-ae2c-42c9-9c20-50c5fbb4f4e3",
+                            "codelabName": "Practice: Dart Fundamentals",
+                            "codelabDescription": "Description for \"Practice: Dart Fundamentals\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-dart-fundamentals"
+                        },
+                        {
+                            "videoId": "video-30ab4274-4e47-4513-b420-30b50b6c799e",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Build a scrollable list",
+                    "pathwayId": "flutter-add-a-button-to-an-app",
+                    "pathwayName": "Add a button to an app",
+                    "pathwayDescription": "Pathway covering: Add a button to an app",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Affirmations app",
-                            "type": "Video"
+                            "videoId": "video-a0f53b48-c2fc-4d36-9917-60bb79b1ed2d",
+                            "videoName": "Intro to Dice Roller app",
+                            "videoDescription": "Description for \"Intro to Dice Roller app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-dice-roller-app.mp4"
                         },
                         {
-                            "title": "More with Flutter",
-                            "type": "Video"
+                            "codelabId": "codelab-27682338-ef7a-4ce8-9a9b-1aadd72bb8e1",
+                            "codelabName": "Create an interactive Dice Roller app",
+                            "codelabDescription": "Description for \"Create an interactive Dice Roller app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-an-interactive-dice-roller-app"
                         },
                         {
-                            "title": "Add a scrollable list",
-                            "type": "Codelab"
+                            "codelabId": "codelab-dbb3c006-5409-4c4e-99aa-7edc74b3f706",
+                            "codelabName": "Use the debugger in Visual Studio Code",
+                            "codelabDescription": "Description for \"Use the debugger in Visual Studio Code\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-the-debugger-in-visual-studio-code"
                         },
                         {
-                            "title": "Change the app icon",
-                            "type": "Codelab"
+                            "codelabId": "codelab-33f45022-707c-4beb-88de-c028c2be592a",
+                            "codelabName": "Practice: Click behavior",
+                            "codelabDescription": "Description for \"Practice: Click behavior\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-click-behavior"
                         },
                         {
-                            "title": "Practice: Build a grid",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-8b8e9cec-ffeb-4bfc-8f6b-f7ffe36786c7",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Build beautiful apps",
+                    "pathwayId": "flutter-interacting-with-ui-and-state",
+                    "pathwayName": "Interacting with UI and state",
+                    "pathwayDescription": "Pathway covering: Interacting with UI and state",
+                    "pathwayDuration": 90,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Material Design with Flutter",
-                            "type": "Video"
+                            "videoId": "video-016796ff-e24a-4cd4-9150-3d2e2d2dcd0e",
+                            "videoName": "Understanding state in Flutter",
+                            "videoDescription": "Description for \"Understanding state in Flutter\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/understanding-state-in-flutter.mp4"
                         },
                         {
-                            "title": "Material Theming with Flutter",
-                            "type": "Codelab"
+                            "videoId": "video-8d9b8376-35bc-49c9-b519-684336a5a1b7",
+                            "videoName": "Intro to tip calculator",
+                            "videoDescription": "Description for \"Intro to tip calculator\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-tip-calculator.mp4"
                         },
                         {
-                            "title": "Animations in Flutter",
-                            "type": "Video"
+                            "videoId": "video-d6f82141-aeba-41a9-af01-f4fb3fc314c2",
+                            "videoName": "Introduction to declarative UI",
+                            "videoDescription": "Description for \"Introduction to declarative UI\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-declarative-ui.mp4"
                         },
                         {
-                            "title": "Simple animation with Flutter",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2d28b75b-6283-4efe-b4cc-f5818d13b7f8",
+                            "codelabName": "Intro to state in Flutter",
+                            "codelabDescription": "Description for \"Intro to state in Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/intro-to-state-in-flutter"
                         },
                         {
-                            "title": "Testing for Accessibility",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ffdf4417-d28c-455e-9a39-a6eaad7e15cf",
+                            "codelabName": "Calculate a custom tip",
+                            "codelabDescription": "Description for \"Calculate a custom tip\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/calculate-a-custom-tip"
                         },
                         {
-                            "title": "Practice: Build Superheroes app",
-                            "type": "Codelab"
+                            "videoId": "video-9ed4ea5a-fb63-49af-9df8-fad49868d7af",
+                            "videoName": "Introduction to testing",
+                            "videoDescription": "Description for \"Introduction to testing\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-testing.mp4"
                         },
                         {
-                            "title": "Project: Create a 30 Days App",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3d948cdc-8db6-4a89-a014-f36f737807ea",
+                            "codelabName": "Write automated tests",
+                            "codelabDescription": "Description for \"Write automated tests\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-automated-tests"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
+                            "codelabId": "codelab-4d34806c-7c16-4f53-978f-63bcb0524ebf",
+                            "codelabName": "Project: Create an Art Space app",
+                            "codelabDescription": "Description for \"Project: Create an Art Space app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-an-art-space-app"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-69d9291b-4b36-444c-b299-dce39dfbdc03",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Navigation and app architecture",
+            "unitId": "flutter-display-lists-and-use-material-design",
+            "unitName": "Display lists and use Material Design",
+            "unitDescription": "Unit covering: Display lists and use Material Design",
+            "unitDuration": 60,
             "pathways": [
                 {
-                    "title": "Architecture Components",
+                    "pathwayId": "more-dart-fundamentals",
+                    "pathwayName": "More Dart fundamentals",
+                    "pathwayDescription": "Pathway covering: More Dart fundamentals",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Welcome to Unit 4",
-                            "type": "Video"
+                            "videoId": "video-a7f04204-4a8a-4223-b9db-30fe59529415",
+                            "videoName": "More Dart fundamentals",
+                            "videoDescription": "Description for \"More Dart fundamentals\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/more-dart-fundamentals.mp4"
                         },
                         {
-                            "title": "Stages of the Widget lifecycle",
-                            "type": "Codelab"
+                            "videoId": "video-063e9696-025b-4649-8085-6fd67326ce0e",
+                            "videoName": "Up, up and above with Dart",
+                            "videoDescription": "Description for \"Up, up and above with Dart\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/up,-up-and-above-with-dart.mp4"
                         },
                         {
-                            "title": "Intro to App architecture",
-                            "type": "Video"
+                            "codelabId": "codelab-22375c1a-7cb5-4ea9-81eb-3c827a35ea53",
+                            "codelabName": "Generics, objects, and extensions",
+                            "codelabDescription": "Description for \"Generics, objects, and extensions\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/generics,-objects,-and-extensions"
                         },
                         {
-                            "title": "Architecture: The UI Layer",
-                            "type": "Video"
+                            "codelabId": "codelab-ab222503-82c7-4fc2-acbc-5b28c512af17",
+                            "codelabName": "Use collections in Dart",
+                            "codelabDescription": "Description for \"Use collections in Dart\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-collections-in-dart"
                         },
                         {
-                            "title": "Provider, ViewModel, Controller and State in Flutter",
-                            "type": "Codelab"
+                            "codelabId": "codelab-209ed3c7-4322-4d8e-8646-601b1901a14e",
+                            "codelabName": "Higher-order functions with collections",
+                            "codelabDescription": "Description for \"Higher-order functions with collections\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/higher-order-functions-with-collections"
                         },
                         {
-                            "title": "Write unit tests to test the Controller",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Practice: Add a Controller to Dessert Clicker",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-c9b96e26-9f97-45ee-b3ea-f755dbc2a01d",
+                            "codelabName": "Practice: Classes and Collections",
+                            "codelabDescription": "Description for \"Practice: Classes and Collections\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-classes-and-collections"
                         }
                     ]
                 },
                 {
-                    "title": "Navigation in Flutter",
+                    "pathwayId": "flutter-build-a-scrollable-list",
+                    "pathwayName": "Build a scrollable list",
+                    "pathwayDescription": "Pathway covering: Build a scrollable list",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Navigation and Cupcake App",
-                            "type": "Video"
+                            "videoId": "video-2e359761-3eed-496a-8f2c-519b5913fd33",
+                            "videoName": "Intro to Affirmations app",
+                            "videoDescription": "Description for \"Intro to Affirmations app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-affirmations-app.mp4"
                         },
                         {
-                            "title": "Adding navigation",
-                            "type": "Video"
+                            "videoId": "video-dffa707a-d755-4340-ae08-0ad690cfc5cf",
+                            "videoName": "More with Flutter",
+                            "videoDescription": "Description for \"More with Flutter\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/more-with-flutter.mp4"
                         },
                         {
-                            "title": "Navigate between screens with Flutter",
-                            "type": "Codelab"
+                            "codelabId": "codelab-87690fe0-3b75-485c-9bac-2260f9b1da55",
+                            "codelabName": "Add a scrollable list",
+                            "codelabDescription": "Description for \"Add a scrollable list\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-a-scrollable-list"
                         },
                         {
-                            "title": "Test the Cupcake app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d4bcbe90-aedd-4294-bf69-3a7759a3a6c7",
+                            "codelabName": "Change the app icon",
+                            "codelabDescription": "Description for \"Change the app icon\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/change-the-app-icon"
                         },
                         {
-                            "title": "Practice: Add navigation",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5afe2acd-0401-4f44-b41d-f7240897a670",
+                            "codelabName": "Practice: Build a grid",
+                            "codelabDescription": "Description for \"Practice: Build a grid\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-a-grid"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-f986ed39-5242-408e-a46b-8bbd98acb8c9",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Adapt for different screen sizes",
+                    "pathwayId": "build-beautiful-flutter-apps",
+                    "pathwayName": "Build beautiful apps",
+                    "pathwayDescription": "Pathway covering: Build beautiful apps",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Adaptive layouts",
-                            "type": "Video"
+                            "videoId": "video-3ec292d5-d8e3-495b-b5ac-a7a1fe6c3d4e",
+                            "videoName": "Intro to Material Design with Flutter",
+                            "videoDescription": "Description for \"Intro to Material Design with Flutter\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-material-design-with-flutter.mp4"
                         },
                         {
-                            "title": "Intro to Reply app",
-                            "type": "Video"
+                            "codelabId": "codelab-bade432b-e53a-4dd9-878e-d69cc0f76d7f",
+                            "codelabName": "Material Theming with Flutter",
+                            "codelabDescription": "Description for \"Material Theming with Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/material-theming-with-flutter"
                         },
                         {
-                            "title": "Adapting the app",
-                            "type": "Video"
+                            "videoId": "video-15d2a89c-c81e-48f4-a62e-001fc64adc28",
+                            "videoName": "Animations in Flutter",
+                            "videoDescription": "Description for \"Animations in Flutter\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/animations-in-flutter.mp4"
                         },
                         {
-                            "title": "Build an adaptive app with dynamic navigation",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5d891753-3664-40d2-b0ae-f78f6ee7bf23",
+                            "codelabName": "Simple animation with Flutter",
+                            "codelabDescription": "Description for \"Simple animation with Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/simple-animation-with-flutter"
                         },
                         {
-                            "title": "Build an app with an adaptive layout",
-                            "type": "Codelab"
+                            "codelabId": "codelab-70d5167e-2537-4225-9e3a-f233e0d69275",
+                            "codelabName": "Testing for Accessibility",
+                            "codelabDescription": "Description for \"Testing for Accessibility\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/testing-for-accessibility"
                         },
                         {
-                            "title": "Practice: Build Sports app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e564c5d3-bcf6-42e0-a20d-8856ddc44b76",
+                            "codelabName": "Practice: Build Superheroes app",
+                            "codelabDescription": "Description for \"Practice: Build Superheroes app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-superheroes-app"
                         },
                         {
-                            "title": "Project: Create a My City app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-36de00fa-7a4c-4711-923c-26a9efac43a4",
+                            "codelabName": "Project: Create a 30 Days App",
+                            "codelabDescription": "Description for \"Project: Create a 30 Days App\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-30-days-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-dc956881-6ee7-45d6-b61f-4930455cc03f",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Connect to the internet",
+            "unitId": "flutter-navigation-and-app-architecture",
+            "unitName": "Navigation and app architecture",
+            "unitDescription": "Unit covering: Navigation and app architecture",
+            "unitDuration": 60,
             "pathways": [
                 {
-                    "title": "Get data from the internet",
+                    "pathwayId": "navigation-in-flutter",
+                    "pathwayName": "Navigation in Flutter",
+                    "pathwayDescription": "Pathway covering: Navigation in Flutter",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Connect to the internet",
-                            "type": "Video"
+                            "videoId": "video-3ce64fe8-6dc7-448e-9364-921ac3a52dc8",
+                            "videoName": "Introduction to Navigation and Cupcake App",
+                            "videoDescription": "Description for \"Introduction to Navigation and Cupcake App\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-navigation-and-cupcake-app.mp4"
                         },
                         {
-                            "title": "Asynchronous programming",
-                            "type": "Video"
+                            "videoId": "video-b508e400-2b99-4059-a441-c3461a5163d8",
+                            "videoName": "Adding navigation",
+                            "videoDescription": "Description for \"Adding navigation\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/adding-navigation.mp4"
                         },
                         {
-                            "title": "Introduction to asynchronous programming in Dartpad",
-                            "type": "Codelab"
+                            "codelabId": "codelab-116bfa6e-7048-4597-925d-30f938de9a5e",
+                            "codelabName": "Navigate between screens with Flutter",
+                            "codelabDescription": "Description for \"Navigate between screens with Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/navigate-between-screens-with-flutter"
                         },
                         {
-                            "title": "Introduction to asynchronous programming in Flutter",
-                            "type": "Codelab"
+                            "codelabId": "codelab-6d5688db-186e-4cf4-bcdf-98c07e569e67",
+                            "codelabName": "Test the Cupcake app",
+                            "codelabDescription": "Description for \"Test the Cupcake app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/test-the-cupcake-app"
                         },
                         {
-                            "title": "Introduction to HTTP/REST",
-                            "type": "Video"
+                            "codelabId": "codelab-d37feae0-7dd3-475f-91e8-5256adcf746d",
+                            "codelabName": "Practice: Add navigation",
+                            "codelabDescription": "Description for \"Practice: Add navigation\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-add-navigation"
                         },
                         {
-                            "title": "Get data from the internet",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-9dd73bd0-4609-40dd-928b-ed492e2130a3",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Load and display images from the internet",
+                    "pathwayId": "flutter-adapt-for-different-screen-sizes",
+                    "pathwayName": "Adapt for different screen sizes",
+                    "pathwayDescription": "Pathway covering: Adapt for different screen sizes",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Architecture: The Data Layer",
-                            "type": "Video"
+                            "videoId": "video-7733b47d-46b6-40ce-bfaf-1e8dad9f8039",
+                            "videoName": "Adaptive layouts",
+                            "videoDescription": "Description for \"Adaptive layouts\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/adaptive-layouts.mp4"
                         },
                         {
-                            "title": "Dependency injection",
-                            "type": "Video"
+                            "videoId": "video-534ea858-28b5-4490-ab69-3463a099065e",
+                            "videoName": "Intro to Reply app",
+                            "videoDescription": "Description for \"Intro to Reply app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-reply-app.mp4"
                         },
                         {
-                            "title": "Add repository and Manual Dependency Injection",
-                            "type": "Codelab"
+                            "videoId": "video-c476cfad-d311-4013-8f3e-6c0ba69fd0ce",
+                            "videoName": "Adapting the app",
+                            "videoDescription": "Description for \"Adapting the app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/adapting-the-app.mp4"
                         },
                         {
-                            "title": "Images everywhere",
-                            "type": "Video"
+                            "codelabId": "codelab-016e2645-9d25-4ca3-b963-782d91645f63",
+                            "codelabName": "Build an adaptive app with dynamic navigation",
+                            "codelabDescription": "Description for \"Build an adaptive app with dynamic navigation\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-an-adaptive-app-with-dynamic-navigation"
                         },
                         {
-                            "title": "Load and display images from the internet",
-                            "type": "Codelab"
+                            "codelabId": "codelab-44c14930-37c2-4ef6-9294-bb32d889267b",
+                            "codelabName": "Build an app with an adaptive layout",
+                            "codelabDescription": "Description for \"Build an app with an adaptive layout\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-an-app-with-an-adaptive-layout"
                         },
                         {
-                            "title": "Practice: Build amphibians app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-599c63b1-9523-40c4-badb-07609bc70b0e",
+                            "codelabName": "Practice: Build Sports app",
+                            "codelabDescription": "Description for \"Practice: Build Sports app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-sports-app"
                         },
                         {
-                            "title": "Project: Create a Bookshelf app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e863db5c-d9e2-4e3a-bbab-97254bf87141",
+                            "codelabName": "Project: Create a My City app",
+                            "codelabDescription": "Description for \"Project: Create a My City app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-my-city-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
+                            "videoId": "video-b0a51eb3-a31a-4921-99fb-95025fa6fecf",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
+                        }
+                    ]
+                },
+                {
+                    "pathwayId": "flutter-architecture-components",
+                    "pathwayName": "Architecture Components",
+                    "pathwayDescription": "Pathway covering: Architecture Components",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
+                    "resources": [
+                        {
+                            "videoId": "video-82be6c5d-e659-4445-b336-8fd0a853c20e",
+                            "videoName": "Welcome to Unit 4",
+                            "videoDescription": "Description for \"Welcome to Unit 4\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/welcome-to-unit-4.mp4"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-17990cdd-7b24-4019-a7d2-43cb9ab0f9b9",
+                            "codelabName": "Stages of the Widget lifecycle",
+                            "codelabDescription": "Description for \"Stages of the Widget lifecycle\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/stages-of-the-widget-lifecycle"
+                        },
+                        {
+                            "videoId": "video-078672fb-456a-4baf-be8e-f7652cc48971",
+                            "videoName": "Intro to App architecture",
+                            "videoDescription": "Description for \"Intro to App architecture\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-app-architecture.mp4"
+                        },
+                        {
+                            "videoId": "video-c2b4eee7-94ac-4a76-b643-42eea793d733",
+                            "videoName": "Architecture: The UI Layer",
+                            "videoDescription": "Description for \"Architecture: The UI Layer\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/architecture:-the-ui-layer.mp4"
+                        },
+                        {
+                            "codelabId": "codelab-cee3d342-7e35-4767-9755-557bb7d95946",
+                            "codelabName": "Provider, ViewModel, Controller and State in Flutter",
+                            "codelabDescription": "Description for \"Provider, ViewModel, Controller and State in Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/provider,-viewmodel,-controller-and-state-in-flutter"
+                        },
+                        {
+                            "codelabId": "codelab-1ca5029d-f8b7-4722-9ce0-2b2f876985da",
+                            "codelabName": "Write unit tests to test the Controller",
+                            "codelabDescription": "Description for \"Write unit tests to test the Controller\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-unit-tests-to-test-the-controller"
+                        },
+                        {
+                            "codelabId": "codelab-af88b1db-cc70-4212-ada1-b6bce1a4b136",
+                            "codelabName": "Practice: Add a Controller to Dessert Clicker",
+                            "codelabDescription": "Description for \"Practice: Add a Controller to Dessert Clicker\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-add-a-controller-to-dessert-clicker"
+                        },
+                        {
+                            "videoId": "video-c214dcd5-89cc-441d-8bff-f434b5486d72",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Data persistence",
+            "unitId": "flutter-connect-to-the-internet",
+            "unitName": "Connect to the internet",
+            "unitDescription": "Unit covering: Connect to the internet",
+            "unitDuration": 0,
             "pathways": [
                 {
-                    "title": "Data persistence",
+                    "pathwayId": "flutter-get-data-from-the-internet",
+                    "pathwayName": "Get data from the internet",
+                    "pathwayDescription": "Pathway covering: Get data from the internet",
+                    "pathwayDuration": 70,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Shared Preferences",
-                            "type": "Video"
+                            "videoId": "video-67040014-3cc1-4011-8dd6-c3f97736da14",
+                            "videoName": "Connect to the internet",
+                            "videoDescription": "Description for \"Connect to the internet\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/connect-to-the-internet.mp4"
                         },
                         {
-                            "title": "Preferences Datastore",
-                            "type": "Video"
+                            "videoId": "video-f4b48dbf-4823-4b56-90ba-587a375cc925",
+                            "videoName": "Asynchronous programming",
+                            "videoDescription": "Description for \"Asynchronous programming\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/asynchronous-programming.mp4"
                         },
                         {
-                            "title": "Save preferences locally with SharedPreferences",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d4df44f9-80ed-4085-855e-de7fe254ac8e",
+                            "codelabName": "Introduction to asynchronous programming in Dartpad",
+                            "codelabDescription": "Description for \"Introduction to asynchronous programming in Dartpad\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduction-to-asynchronous-programming-in-dartpad"
                         },
                         {
-                            "title": "Project: Create a flight search app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-513ebdf4-b1a2-4f80-8362-4a33d6388479",
+                            "codelabName": "Introduction to asynchronous programming in Flutter",
+                            "codelabDescription": "Description for \"Introduction to asynchronous programming in Flutter\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduction-to-asynchronous-programming-in-flutter"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
+                            "videoId": "video-2bf82de4-6a89-4fda-9d88-31b65e2bbdcc",
+                            "videoName": "Introduction to HTTP/REST",
+                            "videoDescription": "Description for \"Introduction to HTTP/REST\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-http/rest.mp4"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-e2d120ba-9ded-46aa-8990-7c4d93937e41",
+                            "codelabName": "Get data from the internet",
+                            "codelabDescription": "Description for \"Get data from the internet\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/get-data-from-the-internet"
+                        },
+                        {
+                            "videoId": "video-5dbef533-8423-4601-81b9-0c13f728ce73",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
+                        }
+                    ]
+                },
+                {
+                    "pathwayId": "flutter-load-and-display-images-from-the-internet",
+                    "pathwayName": "Load and display images from the internet",
+                    "pathwayDescription": "Pathway covering: Load and display images from the internet",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
+                    "resources": [
+                        {
+                            "videoId": "video-37221bc1-314d-4a09-8768-5762ed06d270",
+                            "videoName": "Architecture: The Data Layer",
+                            "videoDescription": "Description for \"Architecture: The Data Layer\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/architecture:-the-data-layer.mp4"
+                        },
+                        {
+                            "videoId": "video-c596b431-8481-4a8b-b7bc-d51ef02541ed",
+                            "videoName": "Dependency injection",
+                            "videoDescription": "Description for \"Dependency injection\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/dependency-injection.mp4"
+                        },
+                        {
+                            "codelabId": "codelab-9ba3f526-a5d0-4fc7-9aac-ef1714408d32",
+                            "codelabName": "Add repository and Manual Dependency Injection",
+                            "codelabDescription": "Description for \"Add repository and Manual Dependency Injection\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-repository-and-manual-dependency-injection"
+                        },
+                        {
+                            "videoId": "video-54668cd3-d6f0-45a2-b745-032825a1c717",
+                            "videoName": "Images everywhere",
+                            "videoDescription": "Description for \"Images everywhere\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/images-everywhere.mp4"
+                        },
+                        {
+                            "codelabId": "codelab-d5dab349-d608-44ba-9529-f41f15984c29",
+                            "codelabName": "Load and display images from the internet",
+                            "codelabDescription": "Description for \"Load and display images from the internet\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/load-and-display-images-from-the-internet"
+                        },
+                        {
+                            "codelabId": "codelab-8fd65466-2605-4fe1-9550-539defb512b1",
+                            "codelabName": "Practice: Build amphibians app",
+                            "codelabDescription": "Description for \"Practice: Build amphibians app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-amphibians-app"
+                        },
+                        {
+                            "codelabId": "codelab-0cf259b1-ce76-4d59-8088-6cd441ac7e28",
+                            "codelabName": "Project: Create a Bookshelf app",
+                            "codelabDescription": "Description for \"Project: Create a Bookshelf app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-bookshelf-app"
+                        },
+                        {
+                            "videoId": "video-a43ba914-fffc-4b9b-8bc2-149b85fb4b8d",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Google Maps and Location",
+            "unitId": "flutter-data-persistence",
+            "unitName": "Data persistence",
+            "unitDescription": "Unit covering: Data persistence",
+            "unitDuration": 60,
             "pathways": [
                 {
-                    "title": "Google Maps and Location",
+                    "pathwayId": "data-persistence",
+                    "pathwayName": "Data persistence",
+                    "pathwayDescription": "Pathway covering: Data persistence",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Google Maps API",
-                            "type": "Video"
+                            "videoId": "video-db31f1c4-cd4a-472d-8923-b7bc28b6b2a1",
+                            "videoName": "Introduction to Shared Preferences",
+                            "videoDescription": "Description for \"Introduction to Shared Preferences\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-shared-preferences.mp4"
                         },
                         {
-                            "title": "Getting the API Key",
-                            "type": "Codelab"
+                            "videoId": "video-73b63020-fb63-4b3b-868d-8983ac71754d",
+                            "videoName": "Preferences Datastore",
+                            "videoDescription": "Description for \"Preferences Datastore\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/preferences-datastore.mp4"
                         },
                         {
-                            "title": "Introduction to PermissionManager",
-                            "type": "Codelab"
+                            "codelabId": "codelab-19a9f3a1-0d45-4c15-9cb3-841638379e5e",
+                            "codelabName": "Save preferences locally with SharedPreferences",
+                            "codelabDescription": "Description for \"Save preferences locally with SharedPreferences\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/save-preferences-locally-with-sharedpreferences"
                         },
                         {
-                            "title": "Accessing user-location",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f2c4a8aa-4668-405e-8c12-00047c5ddf3b",
+                            "codelabName": "Project: Create a flight search app",
+                            "codelabDescription": "Description for \"Project: Create a flight search app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-flight-search-app"
                         },
                         {
-                            "title": "Testing Google APIs",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Accessing System APIs",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Project: Create a Uber clone",
-                            "type": "Codelab"
+                            "videoId": "video-bbc522ec-da4b-4c75-b2fa-95d96b82c066",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }

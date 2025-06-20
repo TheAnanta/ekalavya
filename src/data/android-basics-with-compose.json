@@ -1,4 +1,5 @@
 {
+    "courseId": "android-basics-compose",
     "courseName": "Android Basics with Compose",
     "courseSubtitle": "Master application development with Compose, the modern toolkit for building native Android UI.",
     "courseDescription": "You will learn basic Android programming with best practices recommended by the Android team, including creating beautiful layouts, architecting navigations between screens and connecting to the internet. Get your exclusive and adorable <b>SWAG</b>!",
@@ -6,8 +7,8 @@
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.57_mul_h_sub_0.57_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/ComposeCamp_AndroidBlogHeader_4209x1253-2.png",
-    "campLeader": [
+    "coverImage": "https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.57_mul_h_sub_0.57_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/ComposeCamp_AndroidBlogHeader_4209x1253-2.png",
+    "campLeaders": [
         {
             "name": "Manas Malla",
             "communityTitle": "Google Product Expert, Android™",
@@ -44,752 +45,1140 @@
     },
     "courseOutline": [
         {
-            "title": "Your first Android app",
+            "unitId": "your-first-android-app",
+            "unitName": "Your first Android app",
+            "unitDescription": "Unit covering: Your first Android app",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Introduction to Kotlin",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-1/badge.svg",
+                    "pathwayId": "introduction-to-kotlin",
+                    "pathwayName": "Introduction to Kotlin",
+                    "pathwayDescription": "Pathway covering: Introduction to Kotlin",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Before you begin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-685f22d9-8413-400a-b203-6228f1782613",
+                            "codelabName": "Before you begin",
+                            "codelabDescription": "Description for \"Before you begin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/before-you-begin"
                         },
                         {
-                            "title": "Welcome to Android Basics with Compose",
-                            "type": "Video"
+                            "videoId": "video-ff9a15df-7bd4-480a-8c2d-0d7d73317814",
+                            "videoName": "Welcome to Android Basics with Compose",
+                            "videoDescription": "Description for \"Welcome to Android Basics with Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/welcome-to-android-basics-with-compose.mp4"
                         },
                         {
-                            "title": "Getting started with Kotlin",
-                            "type": "Video"
+                            "videoId": "video-d7a6e8b4-1ded-4738-9814-39c657bc609b",
+                            "videoName": "Getting started with Kotlin",
+                            "videoDescription": "Description for \"Getting started with Kotlin\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/getting-started-with-kotlin.mp4"
                         },
                         {
-                            "title": "Your first program in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-0b2d759b-9165-4965-a552-b73b8022e37a",
+                            "codelabName": "Your first program in Kotlin",
+                            "codelabDescription": "Description for \"Your first program in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/your-first-program-in-kotlin"
                         },
                         {
-                            "title": "Create and use variables in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3d6b8dae-3c8e-43d3-8255-a8801e1e8cc6",
+                            "codelabName": "Create and use variables in Kotlin",
+                            "codelabDescription": "Description for \"Create and use variables in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-and-use-variables-in-kotlin"
                         },
                         {
-                            "title": "Create and use functions in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-35a15a5b-0d08-4fc1-89cb-a18352150fe3",
+                            "codelabName": "Create and use functions in Kotlin",
+                            "codelabDescription": "Description for \"Create and use functions in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-and-use-functions-in-kotlin"
                         },
                         {
-                            "title": "Practice: Kotlin Basics",
-                            "type": "Codelab"
+                            "codelabId": "codelab-7ce11735-9d43-4490-8f3b-179d4d439c88",
+                            "codelabName": "Practice: Kotlin Basics",
+                            "codelabDescription": "Description for \"Practice: Kotlin Basics\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-kotlin-basics"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-920b5b69-4685-4076-9d93-e2e364c6eae0",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Setup Android Studio",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-2/badge.svg",
+                    "pathwayId": "setup-android-studio",
+                    "pathwayName": "Setup Android Studio",
+                    "pathwayDescription": "Pathway covering: Setup Android Studio",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Android Studio",
-                            "type": "Video"
+                            "videoId": "video-1699e185-a774-4390-b0ee-12095c2ac101",
+                            "videoName": "Introduction to Android Studio",
+                            "videoDescription": "Description for \"Introduction to Android Studio\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-android-studio.mp4"
                         },
                         {
-                            "title": "Download and install Android Studio",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5317a407-5ff7-4f0c-853c-896fc965efd6",
+                            "codelabName": "Download and install Android Studio",
+                            "codelabDescription": "Description for \"Download and install Android Studio\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/download-and-install-android-studio"
                         },
                         {
-                            "title": "Create your first Android app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-63346962-95f9-4c69-aff5-c5e04025a146",
+                            "codelabName": "Create your first Android app",
+                            "codelabDescription": "Description for \"Create your first Android app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-your-first-android-app"
                         },
                         {
-                            "title": "Run your first app on the Android Emulator",
-                            "type": "Codelab"
+                            "codelabId": "codelab-57c3651f-ecbb-493f-b48e-d1b42ab83be1",
+                            "codelabName": "Run your first app on the Android Emulator",
+                            "codelabDescription": "Description for \"Run your first app on the Android Emulator\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/run-your-first-app-on-the-android-emulator"
                         },
                         {
-                            "title": "How to connect your Android Emulator",
-                            "type": "Codelab"
+                            "codelabId": "codelab-b08c5481-9abe-45a3-a8ee-96c15218b80d",
+                            "codelabName": "How to connect your Android Emulator",
+                            "codelabDescription": "Description for \"How to connect your Android Emulator\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/how-to-connect-your-android-emulator"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-1a40c0a0-9912-4136-80d0-92c88215727e",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Build a basic layout",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-3/badge.svg",
+                    "pathwayId": "build-a-basic-layout",
+                    "pathwayName": "Build a basic layout",
+                    "pathwayDescription": "Pathway covering: Build a basic layout",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-1-pathway-3/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Jetpack Compose",
-                            "type": "Video"
+                            "videoId": "video-72e6fcc4-7dd3-48b9-bffb-9265eb910324",
+                            "videoName": "Intro to Jetpack Compose",
+                            "videoDescription": "Description for \"Intro to Jetpack Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-jetpack-compose.mp4"
                         },
                         {
-                            "title": "Design a birthday card app",
-                            "type": "Video"
+                            "videoId": "video-1c61e36e-4a2c-49f3-956d-f1b3028904c5",
+                            "videoName": "Design a birthday card app",
+                            "videoDescription": "Description for \"Design a birthday card app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/design-a-birthday-card-app.mp4"
                         },
                         {
-                            "title": "Getting started with basic of Compose",
-                            "type": "Video"
+                            "videoId": "video-4238bc38-261d-490e-af4b-74d46bf120a1",
+                            "videoName": "Getting started with basic of Compose",
+                            "videoDescription": "Description for \"Getting started with basic of Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/getting-started-with-basic-of-compose.mp4"
                         },
                         {
-                            "title": "Build a simple app with text composables",
-                            "type": "Codelab"
+                            "codelabId": "codelab-79e8a5ed-5d01-467a-9e8d-bfe7f418d9cd",
+                            "codelabName": "Build a simple app with text composables",
+                            "codelabDescription": "Description for \"Build a simple app with text composables\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-a-simple-app-with-text-composables"
                         },
                         {
-                            "title": "Add images to your Android app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-a57721ce-3501-44ce-81ad-39a191f1ab16",
+                            "codelabName": "Add images to your Android app",
+                            "codelabDescription": "Description for \"Add images to your Android app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-images-to-your-android-app"
                         },
                         {
-                            "title": "Practice: Compose Basics",
-                            "type": "Codelab"
+                            "codelabId": "codelab-19c595fa-bb83-46c3-a3a3-df19c9d2d330",
+                            "codelabName": "Practice: Compose Basics",
+                            "codelabDescription": "Description for \"Practice: Compose Basics\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-compose-basics"
                         },
                         {
-                            "title": "Project: Create a business card app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-eff7b9ad-ed4b-42bc-842c-6be327da715d",
+                            "codelabName": "Project: Create a business card app",
+                            "codelabDescription": "Description for \"Project: Create a business card app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-business-card-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-01d85f64-13cd-44ca-a2ff-ec3c0199a842",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Building app UI",
+            "unitId": "building-app-ui",
+            "unitName": "Building app UI",
+            "unitDescription": "Unit covering: Building app UI",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Kotlin fundamentals",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-1/badge.svg",
+                    "pathwayId": "kotlin-fundamentals",
+                    "pathwayName": "Kotlin fundamentals",
+                    "pathwayDescription": "Pathway covering: Kotlin fundamentals",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Kotlin Fundamentals",
-                            "type": "Video"
+                            "videoId": "video-f7629d96-6080-4073-bdc4-d44c36d4aa27",
+                            "videoName": "Kotlin Fundamentals",
+                            "videoDescription": "Description for \"Kotlin Fundamentals\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/kotlin-fundamentals.mp4"
                         },
                         {
-                            "title": "Deep dive into Kotlin",
-                            "type": "Video"
+                            "videoId": "video-94a267f2-9d47-4cc0-9c88-59a570555540",
+                            "videoName": "Deep dive into Kotlin",
+                            "videoDescription": "Description for \"Deep dive into Kotlin\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/deep-dive-into-kotlin.mp4"
                         },
                         {
-                            "title": "Write conditionals in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f19b3500-6d79-4938-a894-5777b2a3f9ee",
+                            "codelabName": "Write conditionals in Kotlin",
+                            "codelabDescription": "Description for \"Write conditionals in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-conditionals-in-kotlin"
                         },
                         {
-                            "title": "Use nullability in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-39f5ef72-4216-4a24-8b76-b76da26348f4",
+                            "codelabName": "Use nullability in Kotlin",
+                            "codelabDescription": "Description for \"Use nullability in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-nullability-in-kotlin"
                         },
                         {
-                            "title": "Use classes and objects in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f2bae0c6-3ea1-4b6c-8cd3-5a51d325fb1b",
+                            "codelabName": "Use classes and objects in Kotlin",
+                            "codelabDescription": "Description for \"Use classes and objects in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-classes-and-objects-in-kotlin"
                         },
                         {
-                            "title": "Use function types and lambda expressions in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-8f827bcb-b174-4ff5-b529-4bb97727c95f",
+                            "codelabName": "Use function types and lambda expressions in Kotlin",
+                            "codelabDescription": "Description for \"Use function types and lambda expressions in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-function-types-and-lambda-expressions-in-kotlin"
                         },
                         {
-                            "title": "Practice: Kotlin Fundamentals",
-                            "type": "Codelab"
+                            "codelabId": "codelab-72dc5bc0-14a7-402a-87ae-84f5cb1606e0",
+                            "codelabName": "Practice: Kotlin Fundamentals",
+                            "codelabDescription": "Description for \"Practice: Kotlin Fundamentals\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-kotlin-fundamentals"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-a3b091f9-8844-41b9-9092-976c987eab36",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Add a button to an app",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-2/badge.svg",
+                    "pathwayId": "add-a-button-to-an-app",
+                    "pathwayName": "Add a button to an app",
+                    "pathwayDescription": "Pathway covering: Add a button to an app",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Dice Roller app",
-                            "type": "Video"
+                            "videoId": "video-72419a30-ade7-42a6-b6e8-6c391d13e20c",
+                            "videoName": "Intro to Dice Roller app",
+                            "videoDescription": "Description for \"Intro to Dice Roller app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-dice-roller-app.mp4"
                         },
                         {
-                            "title": "Create an interactive Dice Roller app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-abd0b9f0-d227-49aa-b00b-9d0dd9c3370a",
+                            "codelabName": "Create an interactive Dice Roller app",
+                            "codelabDescription": "Description for \"Create an interactive Dice Roller app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-an-interactive-dice-roller-app"
                         },
                         {
-                            "title": "Use the debugger in Android Studio",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5ab8e2fe-cf1c-4e3d-a07b-1b01a0705d8d",
+                            "codelabName": "Use the debugger in Android Studio",
+                            "codelabDescription": "Description for \"Use the debugger in Android Studio\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-the-debugger-in-android-studio"
                         },
                         {
-                            "title": "Practice: Click behavior",
-                            "type": "Codelab"
+                            "codelabId": "codelab-633ab4bd-4b27-4223-82b4-a3315a670cd2",
+                            "codelabName": "Practice: Click behavior",
+                            "codelabDescription": "Description for \"Practice: Click behavior\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-click-behavior"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-500e5567-c936-4c18-836e-d3fdd341cf35",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Interacting with UI and state",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-3/badge.svg",
+                    "pathwayId": "interacting-with-ui-and-state",
+                    "pathwayName": "Interacting with UI and state",
+                    "pathwayDescription": "Pathway covering: Interacting with UI and state",
+                    "pathwayDuration": 90,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-2-pathway-3/badge.svg",
                     "resources": [
                         {
-                            "title": "Understanding state in Compose",
-                            "type": "Video"
+                            "videoId": "video-9f81ed29-23f7-487d-b52a-a44c38dddfc8",
+                            "videoName": "Understanding state in Compose",
+                            "videoDescription": "Description for \"Understanding state in Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/understanding-state-in-compose.mp4"
                         },
                         {
-                            "title": "Intro to tip calculator",
-                            "type": "Video"
+                            "videoId": "video-8add1274-9ea0-4cf3-846f-708da259b7d5",
+                            "videoName": "Intro to tip calculator",
+                            "videoDescription": "Description for \"Intro to tip calculator\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-tip-calculator.mp4"
                         },
                         {
-                            "title": "Introduction to declarative UI",
-                            "type": "Video"
+                            "videoId": "video-6eff952f-fc7b-4c07-963c-923790b23b15",
+                            "videoName": "Introduction to declarative UI",
+                            "videoDescription": "Description for \"Introduction to declarative UI\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-declarative-ui.mp4"
                         },
                         {
-                            "title": "Intro to state in Compose",
-                            "type": "Codelab"
+                            "codelabId": "codelab-504a612e-bcd2-4f8a-a3f7-70327f1919b7",
+                            "codelabName": "Intro to state in Compose",
+                            "codelabDescription": "Description for \"Intro to state in Compose\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/intro-to-state-in-compose"
                         },
                         {
-                            "title": "Calculate a custom tip",
-                            "type": "Codelab"
+                            "codelabId": "codelab-8f2b3ac2-234e-4982-b7f1-a957b5709214",
+                            "codelabName": "Calculate a custom tip",
+                            "codelabDescription": "Description for \"Calculate a custom tip\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/calculate-a-custom-tip"
                         },
                         {
-                            "title": "Introduction to testing",
-                            "type": "Video"
+                            "videoId": "video-f537e876-9803-4021-90a6-3b9c191be554",
+                            "videoName": "Introduction to testing",
+                            "videoDescription": "Description for \"Introduction to testing\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-testing.mp4"
                         },
                         {
-                            "title": "Write automated tests",
-                            "type": "Codelab"
+                            "codelabId": "codelab-88a8b1d6-b62b-47d0-87a2-7de8f6a33451",
+                            "codelabName": "Write automated tests",
+                            "codelabDescription": "Description for \"Write automated tests\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-automated-tests"
                         },
                         {
-                            "title": "Project: Create an Art Space app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e2f6862c-a831-4393-81e1-8d21eb294fc7",
+                            "codelabName": "Project: Create an Art Space app",
+                            "codelabDescription": "Description for \"Project: Create an Art Space app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-an-art-space-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-974bcfa8-4a11-4509-81da-9f6f0276b02c",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Display lists and use Material Design",
+            "unitId": "display-lists-and-use-material-design",
+            "unitName": "Display lists and use Material Design",
+            "unitDescription": "Unit covering: Display lists and use Material Design",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "More Kotlin fundamentals",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-1/badge.svg",
+                    "pathwayId": "more-kotlin-fundamentals",
+                    "pathwayName": "More Kotlin fundamentals",
+                    "pathwayDescription": "Pathway covering: More Kotlin fundamentals",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "More Kotlin fundamentals",
-                            "type": "Video"
+                            "videoId": "video-d1cd299d-db68-4175-a346-1a144dd42236",
+                            "videoName": "More Kotlin fundamentals",
+                            "videoDescription": "Description for \"More Kotlin fundamentals\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/more-kotlin-fundamentals.mp4"
                         },
                         {
-                            "title": "Up, up and above with Kotlin",
-                            "type": "Video"
+                            "videoId": "video-a9d55fb3-72da-4386-90f7-e4db1583f6e4",
+                            "videoName": "Up, up and above with Kotlin",
+                            "videoDescription": "Description for \"Up, up and above with Kotlin\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/up,-up-and-above-with-kotlin.mp4"
                         },
                         {
-                            "title": "Generics, objects, and extensions",
-                            "type": "Codelab"
+                            "codelabId": "codelab-db2fa517-7f38-4485-a39d-a75747996b69",
+                            "codelabName": "Generics, objects, and extensions",
+                            "codelabDescription": "Description for \"Generics, objects, and extensions\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/generics,-objects,-and-extensions"
                         },
                         {
-                            "title": "Use collections in Kotlin",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2049b219-4bed-4a25-bf5d-e626e382ecda",
+                            "codelabName": "Use collections in Kotlin",
+                            "codelabDescription": "Description for \"Use collections in Kotlin\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-collections-in-kotlin"
                         },
                         {
-                            "title": "Higher-order functions with collections",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d11552fa-bb4c-421d-ac69-19eec4757b4a",
+                            "codelabName": "Higher-order functions with collections",
+                            "codelabDescription": "Description for \"Higher-order functions with collections\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/higher-order-functions-with-collections"
                         },
                         {
-                            "title": "Practice: Classes and Collections",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-64136d63-01e6-4328-b7f1-e3eb894d38b6",
+                            "codelabName": "Practice: Classes and Collections",
+                            "codelabDescription": "Description for \"Practice: Classes and Collections\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-classes-and-collections"
                         }
                     ]
                 },
                 {
-                    "title": "Build a scrollable list",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-2/badge.svg",
+                    "pathwayId": "build-a-scrollable-list",
+                    "pathwayName": "Build a scrollable list",
+                    "pathwayDescription": "Pathway covering: Build a scrollable list",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Affirmations app",
-                            "type": "Video"
+                            "videoId": "video-b527cc14-9dad-4e87-876f-337ab62e51e4",
+                            "videoName": "Intro to Affirmations app",
+                            "videoDescription": "Description for \"Intro to Affirmations app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-affirmations-app.mp4"
                         },
                         {
-                            "title": "More with Compose",
-                            "type": "Video"
+                            "videoId": "video-ca5cadc5-d1e5-493d-8adf-b8b8de9f7789",
+                            "videoName": "More with Compose",
+                            "videoDescription": "Description for \"More with Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/more-with-compose.mp4"
                         },
                         {
-                            "title": "Add a scrollable list",
-                            "type": "Codelab"
+                            "codelabId": "codelab-eb17424d-fae9-4b87-94a8-40c2d8bb24b4",
+                            "codelabName": "Add a scrollable list",
+                            "codelabDescription": "Description for \"Add a scrollable list\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-a-scrollable-list"
                         },
                         {
-                            "title": "Change the app icon",
-                            "type": "Codelab"
+                            "codelabId": "codelab-43d23853-82f9-44a3-9f6d-6eab2be74043",
+                            "codelabName": "Change the app icon",
+                            "codelabDescription": "Description for \"Change the app icon\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/change-the-app-icon"
                         },
                         {
-                            "title": "Practice: Build a grid",
-                            "type": "Codelab"
+                            "codelabId": "codelab-01f65cb4-5e7b-49cb-824d-8456d7e08c1d",
+                            "codelabName": "Practice: Build a grid",
+                            "codelabDescription": "Description for \"Practice: Build a grid\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-a-grid"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-769c8c4b-fe3c-4628-a925-ca5b75782570",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Build beautiful apps",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-3/badge.svg",
+                    "pathwayId": "build-beautiful-apps",
+                    "pathwayName": "Build beautiful apps",
+                    "pathwayDescription": "Pathway covering: Build beautiful apps",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-3-pathway-3/badge.svg",
                     "resources": [
                         {
-                            "title": "Intro to Material Design with Compose",
-                            "type": "Video"
+                            "videoId": "video-cd09d96a-e1eb-4598-a062-6dc5bb932caa",
+                            "videoName": "Intro to Material Design with Compose",
+                            "videoDescription": "Description for \"Intro to Material Design with Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-material-design-with-compose.mp4"
                         },
                         {
-                            "title": "Material Theming with Jetpack Compose",
-                            "type": "Codelab"
+                            "codelabId": "codelab-60aff2ca-8086-48bc-b684-ba27c8019bb2",
+                            "codelabName": "Material Theming with Jetpack Compose",
+                            "codelabDescription": "Description for \"Material Theming with Jetpack Compose\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/material-theming-with-jetpack-compose"
                         },
                         {
-                            "title": "Animations in Compose",
-                            "type": "Video"
+                            "videoId": "video-2b18e3ab-0923-463c-a918-2dcb7ccc85ae",
+                            "videoName": "Animations in Compose",
+                            "videoDescription": "Description for \"Animations in Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/animations-in-compose.mp4"
                         },
                         {
-                            "title": "Simple animation with Jetpack Compose",
-                            "type": "Codelab"
+                            "codelabId": "codelab-7bedde17-d9c9-4d0a-af01-f0b0ffcd19f1",
+                            "codelabName": "Simple animation with Jetpack Compose",
+                            "codelabDescription": "Description for \"Simple animation with Jetpack Compose\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/simple-animation-with-jetpack-compose"
                         },
                         {
-                            "title": "Testing for Accessibility",
-                            "type": "Codelab"
+                            "codelabId": "codelab-a6937d58-4a08-42cf-b99c-9ec2f9126c20",
+                            "codelabName": "Testing for Accessibility",
+                            "codelabDescription": "Description for \"Testing for Accessibility\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/testing-for-accessibility"
                         },
                         {
-                            "title": "Practice: Build Superheroes app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-75df3b07-6e3e-4c7e-bc83-180c5447cced",
+                            "codelabName": "Practice: Build Superheroes app",
+                            "codelabDescription": "Description for \"Practice: Build Superheroes app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-superheroes-app"
                         },
                         {
-                            "title": "Project: Create a 30 Days App",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2a9402eb-0853-428c-9a77-22ec14b9e970",
+                            "codelabName": "Project: Create a 30 Days App",
+                            "codelabDescription": "Description for \"Project: Create a 30 Days App\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-30-days-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-be84617b-879d-42f0-a1ed-465b48bc7c19",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Navigation and app architecture",
+            "unitId": "navigation-and-app-architecture",
+            "unitName": "Navigation and app architecture",
+            "unitDescription": "Unit covering: Navigation and app architecture",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Architecture Components",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-1/badge.svg",
+                    "pathwayId": "architecture-components",
+                    "pathwayName": "Architecture Components",
+                    "pathwayDescription": "Pathway covering: Architecture Components",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Welcome to Unit 4",
-                            "type": "Video"
+                            "videoId": "video-7ca1acc3-8e32-4a16-b091-042ecd151e7d",
+                            "videoName": "Welcome to Unit 4",
+                            "videoDescription": "Description for \"Welcome to Unit 4\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/welcome-to-unit-4.mp4"
                         },
                         {
-                            "title": "Stages of the Activity lifecycle",
-                            "type": "Codelab"
+                            "codelabId": "codelab-288b2e2f-708e-42b2-be6d-f469d64f59fd",
+                            "codelabName": "Stages of the Activity lifecycle",
+                            "codelabDescription": "Description for \"Stages of the Activity lifecycle\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/stages-of-the-activity-lifecycle"
                         },
                         {
-                            "title": "Intro to App architecture",
-                            "type": "Video"
+                            "videoId": "video-08fb734a-4339-44f3-8816-3f77f4784be6",
+                            "videoName": "Intro to App architecture",
+                            "videoDescription": "Description for \"Intro to App architecture\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-app-architecture.mp4"
                         },
                         {
-                            "title": "Architecture: The UI Layer",
-                            "type": "Video"
+                            "videoId": "video-5a777981-bea0-4c16-adda-cb719e9ff1b2",
+                            "videoName": "Architecture: The UI Layer",
+                            "videoDescription": "Description for \"Architecture: The UI Layer\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/architecture:-the-ui-layer.mp4"
                         },
                         {
-                            "title": "ViewModel and State in Compose",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2ba03a13-5dc1-41bd-81fd-49022e228983",
+                            "codelabName": "ViewModel and State in Compose",
+                            "codelabDescription": "Description for \"ViewModel and State in Compose\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/viewmodel-and-state-in-compose"
                         },
                         {
-                            "title": "Write unit tests to test the ViewModel",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ef9c98e2-8a9b-42fa-9f73-080ea74862fc",
+                            "codelabName": "Write unit tests to test the ViewModel",
+                            "codelabDescription": "Description for \"Write unit tests to test the ViewModel\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-unit-tests-to-test-the-viewmodel"
                         },
                         {
-                            "title": "Practice: Add a ViewModel to Dessert Clicker",
-                            "type": "Codelab"
+                            "codelabId": "codelab-691acb23-9bd8-452f-abb9-5237b3193a0c",
+                            "codelabName": "Practice: Add a ViewModel to Dessert Clicker",
+                            "codelabDescription": "Description for \"Practice: Add a ViewModel to Dessert Clicker\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-add-a-viewmodel-to-dessert-clicker"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-245c1d08-8eb3-4cfe-99bd-9770775afdf9",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Navigation in Jetpack Compose",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-2/badge.svg",
+                    "pathwayId": "navigation-in-jetpack-compose",
+                    "pathwayName": "Navigation in Jetpack Compose",
+                    "pathwayDescription": "Pathway covering: Navigation in Jetpack Compose",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Navigation and Cupcake App",
-                            "type": "Video"
+                            "videoId": "video-97494783-dee9-4cdc-a615-a1649c130c1a",
+                            "videoName": "Introduction to Navigation and Cupcake App",
+                            "videoDescription": "Description for \"Introduction to Navigation and Cupcake App\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-navigation-and-cupcake-app.mp4"
                         },
                         {
-                            "title": "Adding navigation",
-                            "type": "Video"
+                            "videoId": "video-796f359c-0c49-4ff5-afc4-2c5a8faa2398",
+                            "videoName": "Adding navigation",
+                            "videoDescription": "Description for \"Adding navigation\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/adding-navigation.mp4"
                         },
                         {
-                            "title": "Navigate between screens with Compose",
-                            "type": "Codelab"
+                            "codelabId": "codelab-46b45f14-d031-477a-a1e5-3e8c3900ebb1",
+                            "codelabName": "Navigate between screens with Compose",
+                            "codelabDescription": "Description for \"Navigate between screens with Compose\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/navigate-between-screens-with-compose"
                         },
                         {
-                            "title": "Test the Cupcake app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-6305447e-2c86-4568-90f2-020e47a9e235",
+                            "codelabName": "Test the Cupcake app",
+                            "codelabDescription": "Description for \"Test the Cupcake app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/test-the-cupcake-app"
                         },
                         {
-                            "title": "Practice: Add navigation",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4d790c83-3348-4e98-bb3a-2d21e811d444",
+                            "codelabName": "Practice: Add navigation",
+                            "codelabDescription": "Description for \"Practice: Add navigation\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-add-navigation"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-d6cc0357-f502-4e06-b19f-40a001924492",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Adapt for different screen sizes",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-3/badge.svg",
+                    "pathwayId": "adapt-for-different-screen-sizes",
+                    "pathwayName": "Adapt for different screen sizes",
+                    "pathwayDescription": "Pathway covering: Adapt for different screen sizes",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-4-pathway-3/badge.svg",
                     "resources": [
                         {
-                            "title": "Adaptive layouts",
-                            "type": "Video"
+                            "videoId": "video-4fbfac03-c00b-4d80-91e5-047961db8a25",
+                            "videoName": "Adaptive layouts",
+                            "videoDescription": "Description for \"Adaptive layouts\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/adaptive-layouts.mp4"
                         },
                         {
-                            "title": "Intro to Reply app",
-                            "type": "Video"
+                            "videoId": "video-b712bec5-3364-4d25-a88d-1f396d4924d9",
+                            "videoName": "Intro to Reply app",
+                            "videoDescription": "Description for \"Intro to Reply app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-reply-app.mp4"
                         },
                         {
-                            "title": "Adapting the app",
-                            "type": "Video"
+                            "videoId": "video-9526c5fa-749c-449b-9bc8-7c2a003c386f",
+                            "videoName": "Adapting the app",
+                            "videoDescription": "Description for \"Adapting the app\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/adapting-the-app.mp4"
                         },
                         {
-                            "title": "Build an adaptive app with dynamic navigation",
-                            "type": "Codelab"
+                            "codelabId": "codelab-531dc041-0d58-4e01-bbe4-b67796ce07f1",
+                            "codelabName": "Build an adaptive app with dynamic navigation",
+                            "codelabDescription": "Description for \"Build an adaptive app with dynamic navigation\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-an-adaptive-app-with-dynamic-navigation"
                         },
                         {
-                            "title": "Build an app with an adaptive layout",
-                            "type": "Codelab"
+                            "codelabId": "codelab-79b6d835-9170-4a06-85fb-495b7bcad9fe",
+                            "codelabName": "Build an app with an adaptive layout",
+                            "codelabDescription": "Description for \"Build an app with an adaptive layout\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-an-app-with-an-adaptive-layout"
                         },
                         {
-                            "title": "Practice: Build Sports app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2b751d8e-47de-465d-9455-56a0ab1626b2",
+                            "codelabName": "Practice: Build Sports app",
+                            "codelabDescription": "Description for \"Practice: Build Sports app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-sports-app"
                         },
                         {
-                            "title": "Project: Create a My City app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-938bb30e-0698-4cd3-bf73-10293b9bb421",
+                            "codelabName": "Project: Create a My City app",
+                            "codelabDescription": "Description for \"Project: Create a My City app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-my-city-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-4f8fc6a3-1261-48d6-b531-008235b2d2a1",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Connect to the internet",
+            "unitId": "connect-to-the-internet",
+            "unitName": "Connect to the internet",
+            "unitDescription": "Unit covering: Connect to the internet",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Get data from the internet",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-5-pathway-1/badge.svg",
+                    "pathwayId": "get-data-from-the-internet",
+                    "pathwayName": "Get data from the internet",
+                    "pathwayDescription": "Pathway covering: Get data from the internet",
+                    "pathwayDuration": 70,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-5-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Connect to the internet",
-                            "type": "Video"
+                            "videoId": "video-1f4ed6a9-b467-4e94-93e7-a3f359080f2f",
+                            "videoName": "Connect to the internet",
+                            "videoDescription": "Description for \"Connect to the internet\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/connect-to-the-internet.mp4"
                         },
                         {
-                            "title": "Asynchronous programming",
-                            "type": "Video"
+                            "videoId": "video-6345f247-f8c2-4979-a306-8bef642ca3fc",
+                            "videoName": "Asynchronous programming",
+                            "videoDescription": "Description for \"Asynchronous programming\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/asynchronous-programming.mp4"
                         },
                         {
-                            "title": "Introduction to Coroutines in Kotlin Playground",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4fca76de-8b70-4ac0-891c-b00428220128",
+                            "codelabName": "Introduction to Coroutines in Kotlin Playground",
+                            "codelabDescription": "Description for \"Introduction to Coroutines in Kotlin Playground\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduction-to-coroutines-in-kotlin-playground"
                         },
                         {
-                            "title": "Introduction to Coroutines in Android Studio",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2c87a21c-4b68-47bc-804b-183e22235097",
+                            "codelabName": "Introduction to Coroutines in Android Studio",
+                            "codelabDescription": "Description for \"Introduction to Coroutines in Android Studio\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduction-to-coroutines-in-android-studio"
                         },
                         {
-                            "title": "Introduction to HTTP/REST",
-                            "type": "Video"
+                            "videoId": "video-11ea5a3d-cb2d-43e2-85dd-28057ef54eef",
+                            "videoName": "Introduction to HTTP/REST",
+                            "videoDescription": "Description for \"Introduction to HTTP/REST\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-http/rest.mp4"
                         },
                         {
-                            "title": "Get data from the internet",
-                            "type": "Codelab"
+                            "codelabId": "codelab-a413ebc2-3c99-4649-8ce2-7fefbac3f297",
+                            "codelabName": "Get data from the internet",
+                            "codelabDescription": "Description for \"Get data from the internet\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/get-data-from-the-internet"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-79ebc9d6-ae1a-4eb1-9599-515865ece376",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Load and display images from the internet",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-5-pathway-2/badge.svg",
+                    "pathwayId": "load-and-display-images-from-the-internet",
+                    "pathwayName": "Load and display images from the internet",
+                    "pathwayDescription": "Pathway covering: Load and display images from the internet",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-5-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Architecture: The Data Layer",
-                            "type": "Video"
+                            "videoId": "video-6b87e959-a988-4560-8052-925ed8cdbff3",
+                            "videoName": "Architecture: The Data Layer",
+                            "videoDescription": "Description for \"Architecture: The Data Layer\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/architecture:-the-data-layer.mp4"
                         },
                         {
-                            "title": "Dependency injection",
-                            "type": "Video"
+                            "videoId": "video-56d719b3-88a2-4cbe-8917-245549213999",
+                            "videoName": "Dependency injection",
+                            "videoDescription": "Description for \"Dependency injection\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/dependency-injection.mp4"
                         },
                         {
-                            "title": "Add repository and Manual Dependency Injection",
-                            "type": "Codelab"
+                            "codelabId": "codelab-094af3dc-597a-4e84-b934-a4baf1d09e57",
+                            "codelabName": "Add repository and Manual Dependency Injection",
+                            "codelabDescription": "Description for \"Add repository and Manual Dependency Injection\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-repository-and-manual-dependency-injection"
                         },
                         {
-                            "title": "Images everywhere",
-                            "type": "Video"
+                            "videoId": "video-94af9d6d-7886-4063-b967-5ba007042ea0",
+                            "videoName": "Images everywhere",
+                            "videoDescription": "Description for \"Images everywhere\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/images-everywhere.mp4"
                         },
                         {
-                            "title": "Load and display images from the internet",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c8d9ee1b-e292-4091-8959-a2f20f067556",
+                            "codelabName": "Load and display images from the internet",
+                            "codelabDescription": "Description for \"Load and display images from the internet\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/load-and-display-images-from-the-internet"
                         },
                         {
-                            "title": "Practice: Build amphibians app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-b87763e6-055c-461b-8796-ef8d47fb87e5",
+                            "codelabName": "Practice: Build amphibians app",
+                            "codelabDescription": "Description for \"Practice: Build amphibians app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-amphibians-app"
                         },
                         {
-                            "title": "Project: Create a Bookshelf app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-8f674204-c80e-400c-b378-4d167a1a8575",
+                            "codelabName": "Project: Create a Bookshelf app",
+                            "codelabDescription": "Description for \"Project: Create a Bookshelf app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-bookshelf-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-65c40dd4-d47c-44a2-bdbe-3e383a9716e9",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Data persistence",
+            "unitId": "data-persistence",
+            "unitName": "Data persistence",
+            "unitDescription": "Unit covering: Data persistence",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Introduction to SQL",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-1/badge.svg",
+                    "pathwayId": "introduction-to-sql",
+                    "pathwayName": "Introduction to SQL",
+                    "pathwayDescription": "Pathway covering: Introduction to SQL",
+                    "pathwayDuration": 30,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Databases and SQL",
-                            "type": "Video"
+                            "videoId": "video-e7297428-36e9-44d7-8776-2925ec1fa448",
+                            "videoName": "Introduction to Databases and SQL",
+                            "videoDescription": "Description for \"Introduction to Databases and SQL\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-databases-and-sql.mp4"
                         },
                         {
-                            "title": "Use SQL to read and write to a database",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5e2af10a-8835-4041-83f2-1b5751de634a",
+                            "codelabName": "Use SQL to read and write to a database",
+                            "codelabDescription": "Description for \"Use SQL to read and write to a database\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-sql-to-read-and-write-to-a-database"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-ec12db30-9844-4b11-a246-7457be118697",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Use Room for data persistence",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-2/badge.svg",
+                    "pathwayId": "use-room-for-data-persistence",
+                    "pathwayName": "Use Room for data persistence",
+                    "pathwayDescription": "Pathway covering: Use Room for data persistence",
+                    "pathwayDuration": 70,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Kotlin Flows in Practice",
-                            "type": "Video"
+                            "videoId": "video-aa2332c5-7c69-4875-9209-4fac66b3573f",
+                            "videoName": "Kotlin Flows in Practice",
+                            "videoDescription": "Description for \"Kotlin Flows in Practice\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/kotlin-flows-in-practice.mp4"
                         },
                         {
-                            "title": "Testing Flows",
-                            "type": "Article"
+                            "noteId": "note-f1e0111e-40ae-43d2-b0da-22a19d407f0d",
+                            "noteTopic": "Testing Flows",
+                            "url": "https://example.com/note/testing-flows.html",
+                            "noteDescription": "Description for \"Testing Flows\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Using Room Kotlin APIs",
-                            "type": "Video"
+                            "videoId": "video-1207a3c9-5bdc-4e83-b1d3-d47515a562d0",
+                            "videoName": "Using Room Kotlin APIs",
+                            "videoDescription": "Description for \"Using Room Kotlin APIs\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/using-room-kotlin-apis.mp4"
                         },
                         {
-                            "title": "Persist Data with Room",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f02c2b99-1239-48e8-9af3-b09754bbbaba",
+                            "codelabName": "Persist Data with Room",
+                            "codelabDescription": "Description for \"Persist Data with Room\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/persist-data-with-room"
                         },
                         {
-                            "title": "Read and update data with Room",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f8dafe8b-11d3-435c-9dc1-9a256c775e8a",
+                            "codelabName": "Read and update data with Room",
+                            "codelabDescription": "Description for \"Read and update data with Room\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/read-and-update-data-with-room"
                         },
                         {
-                            "title": "Practice: Build Bus Schedule app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5e649e53-4854-4716-89cb-fa6a0be6a9bf",
+                            "codelabName": "Practice: Build Bus Schedule app",
+                            "codelabDescription": "Description for \"Practice: Build Bus Schedule app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-bus-schedule-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-93a92208-1e6f-496d-850d-357d4edb9aa6",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Store and access data using keys with DataStore",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-3/badge.svg",
+                    "pathwayId": "store-and-access-data-using-keys-with-datastore",
+                    "pathwayName": "Store and access data using keys with DataStore",
+                    "pathwayDescription": "Pathway covering: Store and access data using keys with DataStore",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-6-pathway-3/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to Datastore",
-                            "type": "Video"
+                            "videoId": "video-5f060b78-54be-4fab-abfd-2ab5cb3c2c98",
+                            "videoName": "Introduction to Datastore",
+                            "videoDescription": "Description for \"Introduction to Datastore\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-datastore.mp4"
                         },
                         {
-                            "title": "Preferences Datastore",
-                            "type": "Video"
+                            "videoId": "video-956c3996-0cf2-45ee-921d-bc165167fe78",
+                            "videoName": "Preferences Datastore",
+                            "videoDescription": "Description for \"Preferences Datastore\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/preferences-datastore.mp4"
                         },
                         {
-                            "title": "Save preferences locally with DataStore",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2de693a8-2ad2-4513-abe2-07341be102bb",
+                            "codelabName": "Save preferences locally with DataStore",
+                            "codelabDescription": "Description for \"Save preferences locally with DataStore\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/save-preferences-locally-with-datastore"
                         },
                         {
-                            "title": "Project: Create a flight search app",
-                            "type": "Codelab"
+                            "codelabId": "codelab-dbb04cc8-deff-4e34-b584-821b6ab21f3a",
+                            "codelabName": "Project: Create a flight search app",
+                            "codelabDescription": "Description for \"Project: Create a flight search app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/project:-create-a-flight-search-app"
                         },
                         {
-                            "title": "What's next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-697ca470-2f12-4e73-9743-3e274011e7f0",
+                            "videoName": "What's next?",
+                            "videoDescription": "Description for \"What's next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "WorkManager",
+            "unitId": "workmanager",
+            "unitName": "WorkManager",
+            "unitDescription": "Unit covering: WorkManager",
+            "unitDuration": 60,
             "pathways": [
                 {
-                    "title": "Schedule tasks with WorkManager",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-7-pathway-1/badge.svg",
+                    "pathwayId": "schedule-tasks-with-workmanager",
+                    "pathwayName": "Schedule tasks with WorkManager",
+                    "pathwayDescription": "Pathway covering: Schedule tasks with WorkManager",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-7-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to WorkManager",
-                            "type": "Video"
+                            "videoId": "video-af46503d-b50d-47bf-b0cf-550f4f1ce9fa",
+                            "videoName": "Introduction to WorkManager",
+                            "videoDescription": "Description for \"Introduction to WorkManager\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-workmanager.mp4"
                         },
                         {
-                            "title": "Implementing WorkManager",
-                            "type": "Video"
+                            "videoId": "video-ea5bb3e7-8043-4c97-8eae-fe9e0c03aa08",
+                            "videoName": "Implementing WorkManager",
+                            "videoDescription": "Description for \"Implementing WorkManager\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/implementing-workmanager.mp4"
                         },
                         {
-                            "title": "Background work with WorkManager",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f798563c-c987-43bb-bc0a-3f091d55f767",
+                            "codelabName": "Background work with WorkManager",
+                            "codelabDescription": "Description for \"Background work with WorkManager\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/background-work-with-workmanager"
                         },
                         {
-                            "title": "Advanced WorkManager and Testing",
-                            "type": "Codelab"
+                            "codelabId": "codelab-01232a88-623f-4f03-931a-0d44f7738ea8",
+                            "codelabName": "Advanced WorkManager and Testing",
+                            "codelabDescription": "Description for \"Advanced WorkManager and Testing\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/advanced-workmanager-and-testing"
                         },
                         {
-                            "title": "Practice: Build Water Me app",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-1de75e0a-643e-4db3-bd68-74fc2df2a8be",
+                            "codelabName": "Practice: Build Water Me app",
+                            "codelabDescription": "Description for \"Practice: Build Water Me app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/practice:-build-water-me-app"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Views and Compose",
+            "unitId": "views-and-compose",
+            "unitName": "Views and Compose",
+            "unitDescription": "Unit covering: Views and Compose",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Android Views and Compose in Views",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-8-pathway-1/badge.svg",
+                    "pathwayId": "android-views-and-compose-in-views",
+                    "pathwayName": "Android Views and Compose in Views",
+                    "pathwayDescription": "Pathway covering: Android Views and Compose in Views",
+                    "pathwayDuration": 40,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-8-pathway-1/badge.svg",
                     "resources": [
                         {
-                            "title": "Android View System",
-                            "type": "Video"
+                            "videoId": "video-28d1b5b4-f040-476e-bc8c-9d5e5d9a528e",
+                            "videoName": "Android View System",
+                            "videoDescription": "Description for \"Android View System\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/android-view-system.mp4"
                         },
                         {
-                            "title": "Build an Android app with Views",
-                            "type": "Codelab"
+                            "codelabId": "codelab-99940690-db21-4784-bdcf-c7418d507015",
+                            "codelabName": "Build an Android app with Views",
+                            "codelabDescription": "Description for \"Build an Android app with Views\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-an-android-app-with-views"
                         },
                         {
-                            "title": "Compose in Views",
-                            "type": "Video"
+                            "videoId": "video-1db49865-b639-4f7b-b254-5dd78b641738",
+                            "videoName": "Compose in Views",
+                            "videoDescription": "Description for \"Compose in Views\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/compose-in-views.mp4"
                         },
                         {
-                            "title": "Add Compose to a legacy app",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-7c506f74-3313-468c-87cf-5a0815d46c86",
+                            "codelabName": "Add Compose to a legacy app",
+                            "codelabDescription": "Description for \"Add Compose to a legacy app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-compose-to-a-legacy-app"
                         }
                     ]
                 },
                 {
-                    "title": "Views in Compose",
-                    "badge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-8-pathway-2/badge.svg",
+                    "pathwayId": "views-in-compose",
+                    "pathwayName": "Views in Compose",
+                    "pathwayDescription": "Pathway covering: Views in Compose",
+                    "pathwayDuration": 30,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/playlists/android/android-basics-compose-unit-8-pathway-2/badge.svg",
                     "resources": [
                         {
-                            "title": "Views in Compose",
-                            "type": "Video"
+                            "videoId": "video-6cf3ffb0-ec27-4de9-8c7f-3d2e0c9ac747",
+                            "videoName": "Views in Compose",
+                            "videoDescription": "Description for \"Views in Compose\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/views-in-compose.mp4"
                         },
                         {
-                            "title": "View Interoperability in Compose",
-                            "type": "Codelab"
+                            "codelabId": "codelab-639f32f3-9838-499e-9436-0f327cf62ad5",
+                            "codelabName": "View Interoperability in Compose",
+                            "codelabDescription": "Description for \"View Interoperability in Compose\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/view-interoperability-in-compose"
                         },
                         {
-                            "title": "Add Compose to a legacy app",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "codelabId": "codelab-ef7d2f52-adfa-46e1-b62c-2c01b6800ccd",
+                            "codelabName": "Add Compose to a legacy app",
+                            "codelabDescription": "Description for \"Add Compose to a legacy app\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-compose-to-a-legacy-app"
                         }
                     ]
                 }

@@ -1,4 +1,5 @@
 {
+    "courseId": "firebase-get-cloud-ready",
     "courseName": "Firebase: Get Cloud-Ready\n(Without the Cloudy Head)",
     "courseSubtitle": "Unlock the power of cloud development using Firebase — build smarter, faster apps without the backend hassle.",
     "courseDescription": "This course is designed for developers of all levels who want to build powerful applications without managing traditional backend infrastructure. Learn Firebase from the ground up — databases, hosting, analytics, AI, and more — all integrated with Google's ecosystem.",
@@ -6,12 +7,12 @@
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "/courses/images/firebase-summit-2021-feature-image.png",
+    "coverImage": "/courses/images/firebase-summit-2021-feature-image.png",
     "campLeaderCardColor": "#2348ac",
     "campLeaderCardTextColor": "#FFF",
     "benefitsCardColor": "#fdb604",
     "benefitsCardTextColor": "#FFF",
-    "campLeader": [
+    "campLeaders": [
         {
             "name": "Jayadhar Ummadisingu",
             "communityTitle": "Cloud & Firebase Developer",
@@ -48,316 +49,510 @@
     },
     "courseOutline": [
         {
-            "title": "Week-1: Firebase Foundations: Cloud & Console Essentials",
+            "unitId": "firebase-foundations:-cloud-&-console-essentials",
+            "unitName": "Firebase Foundations: Cloud & Console Essentials",
+            "unitDescription": "Unit covering: Firebase Foundations: Cloud & Console Essentials",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Understanding the Cloud: A Beginner's Guide",
+                    "pathwayId": "understanding-the-cloud:-a-beginner's-guide",
+                    "pathwayName": "Understanding the Cloud: A Beginner's Guide",
+                    "pathwayDescription": "Pathway covering: Understanding the Cloud: A Beginner's Guide",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Cloud?",
-                            "type": "Article"
+                            "noteId": "note-78d27ca3-a3b9-4c07-ba30-a49c1ce6bab8",
+                            "noteTopic": "What is Cloud?",
+                            "url": "https://example.com/note/what-is-cloud?.html",
+                            "noteDescription": "Description for \"What is Cloud?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Google Cloud Storage",
-                            "type": "Article"
+                            "noteId": "note-b0312f80-9716-4c0a-86e7-2d80cd129612",
+                            "noteTopic": "Google Cloud Storage",
+                            "url": "https://example.com/note/google-cloud-storage.html",
+                            "noteDescription": "Description for \"Google Cloud Storage\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Google Cloud Platform",
-                            "type": "Article"
+                            "noteId": "note-e435cd58-3c28-46e2-8b85-6d63b63ee1c0",
+                            "noteTopic": "Google Cloud Platform",
+                            "url": "https://example.com/note/google-cloud-platform.html",
+                            "noteDescription": "Description for \"Google Cloud Platform\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Firebase",
-                            "type": "Article"
+                            "noteId": "note-7b1bdb27-50c2-4594-b3df-821853042e3b",
+                            "noteTopic": "Firebase",
+                            "url": "https://example.com/note/firebase.html",
+                            "noteDescription": "Description for \"Firebase\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Cloud Concepts",
-                            "type": "Quiz"
+                            "videoId": "video-d11396fe-3330-428d-b928-4a91f6a5744b",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Introduction to Firebase: Core Concepts",
+                    "pathwayId": "introduction-to-firebase:-core-concepts",
+                    "pathwayName": "Introduction to Firebase: Core Concepts",
+                    "pathwayDescription": "Pathway covering: Introduction to Firebase: Core Concepts",
+                    "pathwayDuration": 30,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Firebase?",
-                            "type": "Article"
+                            "noteId": "note-fa630b5f-42b0-426f-be02-87ecc332afc8",
+                            "noteTopic": "What is Firebase?",
+                            "url": "https://example.com/note/what-is-firebase?.html",
+                            "noteDescription": "Description for \"What is Firebase?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Why Firebase?",
-                            "type": "Article"
+                            "noteId": "note-75032bfb-19b3-4260-98d9-cdcea44aba18",
+                            "noteTopic": "Why Firebase?",
+                            "url": "https://example.com/note/why-firebase?.html",
+                            "noteDescription": "Description for \"Why Firebase?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Firebase Basics",
-                            "type": "Quiz"
+                            "videoId": "video-d537c9e7-51e2-46c5-9abb-7bfce45ede4f",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Firebase Console",
+                    "pathwayId": "firebase-console",
+                    "pathwayName": "Firebase Console",
+                    "pathwayDescription": "Pathway covering: Firebase Console",
+                    "pathwayDuration": 20,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Creating Your First Firebase Project",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c04633ea-f47e-47db-aeda-fd3a56db969c",
+                            "codelabName": "Creating Your First Firebase Project",
+                            "codelabDescription": "Description for \"Creating Your First Firebase Project\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/creating-your-first-firebase-project"
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
+                            "videoId": "video-4753c0e9-e16c-47ee-8ed8-36c123760238",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Week-2: Mastering Firebase Build: Building Blocks for Your App",
+            "unitId": "mastering-firebase-build:-building-blocks-for-your-app",
+            "unitName": "Mastering Firebase Build: Building Blocks for Your App",
+            "unitDescription": "Unit covering: Mastering Firebase Build: Building Blocks for Your App",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Build Products Overview",
+                    "pathwayId": "build-products-overview",
+                    "pathwayName": "Build Products Overview",
+                    "pathwayDescription": "Pathway covering: Build Products Overview",
+                    "pathwayDuration": 40,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What are Build products?",
-                            "type": "Article"
+                            "noteId": "note-d1c12fc7-5fbf-4204-a019-9aef5bb7ed4f",
+                            "noteTopic": "What are Build products?",
+                            "url": "https://example.com/note/what-are-build-products?.html",
+                            "noteDescription": "Description for \"What are Build products?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Analytics Products",
-                            "type": "Article"
+                            "noteId": "note-3b7a2af3-c1bc-4e69-8167-f81b3a9d7dea",
+                            "noteTopic": "Analytics Products",
+                            "url": "https://example.com/note/analytics-products.html",
+                            "noteDescription": "Description for \"Analytics Products\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "AI Products",
-                            "type": "Article"
+                            "noteId": "note-ab1ab390-f327-4de3-a0d3-93e4e6b2a67f",
+                            "noteTopic": "AI Products",
+                            "url": "https://example.com/note/ai-products.html",
+                            "noteDescription": "Description for \"AI Products\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
+                            "videoId": "video-e76f3b2d-53b0-4cf8-bb0f-2ee485a88b52",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Build Products in Action",
+                    "pathwayId": "build-products-in-action",
+                    "pathwayName": "Build Products in Action",
+                    "pathwayDescription": "Pathway covering: Build Products in Action",
+                    "pathwayDuration": 80,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "App Hosting",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4fdbfbb1-5455-4b26-af4b-138033cdce8c",
+                            "codelabName": "App Hosting",
+                            "codelabDescription": "Description for \"App Hosting\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/app-hosting"
                         },
                         {
-                            "title": "Authentication",
-                            "type": "Codelab"
+                            "codelabId": "codelab-1e252d92-20c4-4c1d-abcb-c0c7e44c5bdd",
+                            "codelabName": "Authentication",
+                            "codelabDescription": "Description for \"Authentication\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/authentication"
                         },
                         {
-                            "title": "Functions",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f889c114-168c-4a6c-89ef-22dc6ded4b98",
+                            "codelabName": "Functions",
+                            "codelabDescription": "Description for \"Functions\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/functions"
                         },
                         {
-                            "title": "Firestore Database",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f7e535c2-b90b-4733-9bc6-994b00ff343a",
+                            "codelabName": "Firestore Database",
+                            "codelabDescription": "Description for \"Firestore Database\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/firestore-database"
                         },
                         {
-                            "title": "Realtime Database",
-                            "type": "Codelab"
+                            "codelabId": "codelab-cd049031-1b11-4a4b-8c0a-8578c0e9d015",
+                            "codelabName": "Realtime Database",
+                            "codelabDescription": "Description for \"Realtime Database\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/realtime-database"
                         },
                         {
-                            "title": "Storage",
-                            "type": "Codelab"
+                            "codelabId": "codelab-eff5a9b7-ea5d-45df-91e8-dd7d6385e443",
+                            "codelabName": "Storage",
+                            "codelabDescription": "Description for \"Storage\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/storage"
                         },
                         {
-                            "title": "Hosting",
-                            "type": "Codelab"
+                            "codelabId": "codelab-4aac2cd9-aff4-46df-86d3-36a5f7a47a7b",
+                            "codelabName": "Hosting",
+                            "codelabDescription": "Description for \"Hosting\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/hosting"
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Build Products",
-                            "type": "Quiz"
+                            "videoId": "video-961a858a-4938-4e7f-a7fa-a3e1a4c74d23",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Week-3: Firebase Run: Deploy, Monitor, & Optimize Your Application",
+            "unitId": "firebase-run:-deploy,-monitor,-&-optimize-your-application",
+            "unitName": "Firebase Run: Deploy, Monitor, & Optimize Your Application",
+            "unitDescription": "Unit covering: Firebase Run: Deploy, Monitor, & Optimize Your Application",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Run Products Overview",
+                    "pathwayId": "run-products-overview",
+                    "pathwayName": "Run Products Overview",
+                    "pathwayDescription": "Pathway covering: Run Products Overview",
+                    "pathwayDuration": 20,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What are Run products?",
-                            "type": "Article"
+                            "noteId": "note-4d2eccff-5943-405c-83b0-0ceb537acb57",
+                            "noteTopic": "What are Run products?",
+                            "url": "https://example.com/note/what-are-run-products?.html",
+                            "noteDescription": "Description for \"What are Run products?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
+                            "videoId": "video-1132e4b5-6bef-4a4c-8ef9-aa935889aaab",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Run Products in Practice",
+                    "pathwayId": "run-products-in-practice",
+                    "pathwayName": "Run Products in Practice",
+                    "pathwayDescription": "Pathway covering: Run Products in Practice",
+                    "pathwayDuration": 90,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "A/B Testing",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5fea7c31-7458-42a1-9fda-dba4bf006f7b",
+                            "codelabName": "A/B Testing",
+                            "codelabDescription": "Description for \"A/B Testing\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/a/b-testing"
                         },
                         {
-                            "title": "AdMob",
-                            "type": "Codelab"
+                            "codelabId": "codelab-96027776-67d4-41b4-a631-cdf7c1b9011d",
+                            "codelabName": "AdMob",
+                            "codelabDescription": "Description for \"AdMob\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/admob"
                         },
                         {
-                            "title": "App Distribution",
-                            "type": "Codelab"
+                            "codelabId": "codelab-045e6a7b-ff08-4100-ae07-030157b9babc",
+                            "codelabName": "App Distribution",
+                            "codelabDescription": "Description for \"App Distribution\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/app-distribution"
                         },
                         {
-                            "title": "Crashlytics",
-                            "type": "Codelab"
+                            "codelabId": "codelab-b1d1ab86-6e14-4f75-9495-3cb711743108",
+                            "codelabName": "Crashlytics",
+                            "codelabDescription": "Description for \"Crashlytics\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/crashlytics"
                         },
                         {
-                            "title": "Messaging",
-                            "type": "Codelab"
+                            "codelabId": "codelab-6a8b5fd8-554f-45d2-ad76-e7cdf1e0198d",
+                            "codelabName": "Messaging",
+                            "codelabDescription": "Description for \"Messaging\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/messaging"
                         },
                         {
-                            "title": "Performance",
-                            "type": "Codelab"
+                            "codelabId": "codelab-2105edde-f0ae-44ca-b69f-9ec62177dad4",
+                            "codelabName": "Performance",
+                            "codelabDescription": "Description for \"Performance\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/performance"
                         },
                         {
-                            "title": "Release Monitoring",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3ba1d370-d553-42e3-962a-5eae614d8b3a",
+                            "codelabName": "Release Monitoring",
+                            "codelabDescription": "Description for \"Release Monitoring\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/release-monitoring"
                         },
                         {
-                            "title": "Remote Config",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c4834f4d-e63e-4616-ab88-428dd9d33186",
+                            "codelabName": "Remote Config",
+                            "codelabDescription": "Description for \"Remote Config\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/remote-config"
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Run Products Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-17f17e1c-c964-4d4a-bda0-980f0ab27bbb",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Week-4: Unlocking Insights: Firebase Analytics for Data-Driven Development",
+            "unitId": "unlocking-insights:-firebase-analytics-for-data-driven-development",
+            "unitName": "Unlocking Insights: Firebase Analytics for Data-Driven Development",
+            "unitDescription": "Unit covering: Unlocking Insights: Firebase Analytics for Data-Driven Development",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Analytics Products Overview",
+                    "pathwayId": "analytics-products-overview",
+                    "pathwayName": "Analytics Products Overview",
+                    "pathwayDescription": "Pathway covering: Analytics Products Overview",
+                    "pathwayDuration": 20,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What are Analytics products?",
-                            "type": "Article"
+                            "noteId": "note-17584a11-8f87-4690-a27d-caaa0f4b6acf",
+                            "noteTopic": "What are Analytics products?",
+                            "url": "https://example.com/note/what-are-analytics-products?.html",
+                            "noteDescription": "Description for \"What are Analytics products?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
+                            "videoId": "video-a299be68-ede2-46ff-9067-7ab98dfc35b0",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Using Analytics Products",
+                    "pathwayId": "using-analytics-products",
+                    "pathwayName": "Using Analytics Products",
+                    "pathwayDescription": "Pathway covering: Using Analytics Products",
+                    "pathwayDuration": 40,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Dashboard",
-                            "type": "Codelab"
+                            "codelabId": "codelab-0f098fc7-46f9-42f6-ae48-6392084d0e76",
+                            "codelabName": "Dashboard",
+                            "codelabDescription": "Description for \"Dashboard\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/dashboard"
                         },
                         {
-                            "title": "Latest Release",
-                            "type": "Codelab"
+                            "codelabId": "codelab-5115f9b0-a68a-46f6-9dc3-0f12410d1093",
+                            "codelabName": "Latest Release",
+                            "codelabDescription": "Description for \"Latest Release\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/latest-release"
                         },
                         {
-                            "title": "DebugView",
-                            "type": "Codelab"
+                            "codelabId": "codelab-27889e3d-382b-45be-9e96-73cb0f1d18dd",
+                            "codelabName": "DebugView",
+                            "codelabDescription": "Description for \"DebugView\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/debugview"
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Analytics Products Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-7f30d56c-a3bb-4a8b-ad3b-e8d9434a7551",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Week-5: Firebase AI: Injecting Intelligence into Your Apps",
+            "unitId": "firebase-ai:-injecting-intelligence-into-your-apps",
+            "unitName": "Firebase AI: Injecting Intelligence into Your Apps",
+            "unitDescription": "Unit covering: Firebase AI: Injecting Intelligence into Your Apps",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "AI Products Overview",
+                    "pathwayId": "ai-products-overview",
+                    "pathwayName": "AI Products Overview",
+                    "pathwayDescription": "Pathway covering: AI Products Overview",
+                    "pathwayDuration": 20,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What are AI products?",
-                            "type": "Article"
+                            "noteId": "note-23da0db3-2958-4dd1-96bd-6b595ba57943",
+                            "noteTopic": "What are AI products?",
+                            "url": "https://example.com/note/what-are-ai-products?.html",
+                            "noteDescription": "Description for \"What are AI products?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
+                            "videoId": "video-4a4b0c1c-123b-4a7f-969c-ba288b8cf9d3",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Different AI Products",
+                    "pathwayId": "different-ai-products",
+                    "pathwayName": "Different AI Products",
+                    "pathwayDescription": "Pathway covering: Different AI Products",
+                    "pathwayDuration": 30,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Genkit",
-                            "type": "Codelab"
+                            "codelabId": "codelab-a926332a-e057-485e-8126-91549b9abf35",
+                            "codelabName": "Genkit",
+                            "codelabDescription": "Description for \"Genkit\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/genkit"
                         },
                         {
-                            "title": "Vertex AI",
-                            "type": "Codelab"
+                            "codelabId": "codelab-9fce9969-c5a1-4f01-91c0-7ae2624d6f74",
+                            "codelabName": "Vertex AI",
+                            "codelabDescription": "Description for \"Vertex AI\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/vertex-ai"
                         },
                         {
-                            "title": "What’s Next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "AI Products Quiz",
-                            "type": "Quiz"
+                            "videoId": "video-2a935b6f-19f9-4d1e-9494-a50fea478655",
+                            "videoName": "What’s Next?",
+                            "videoDescription": "Description for \"What’s Next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Week-6: Firebase in Practice: Pricing, Billing & GCP Integration",
+            "unitId": "firebase-in-practice:-pricing,-billing-&-gcp-integration",
+            "unitName": "Firebase in Practice: Pricing, Billing & GCP Integration",
+            "unitDescription": "Unit covering: Firebase in Practice: Pricing, Billing & GCP Integration",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Pricing plans Explained",
+                    "pathwayId": "billing-account-setup",
+                    "pathwayName": "Billing Account Setup",
+                    "pathwayDescription": "Pathway covering: Billing Account Setup",
+                    "pathwayDuration": 10,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What are pricing plans?",
-                            "type": "Article"
+                            "codelabId": "codelab-3db03709-c36d-4b3c-85ac-343cd0d7fa32",
+                            "codelabName": "Creating a cloud billing account",
+                            "codelabDescription": "Description for \"Creating a cloud billing account\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/creating-a-cloud-billing-account"
+                        }
+                    ]
+                },
+                {
+                    "pathwayId": "pricing-plans-explained",
+                    "pathwayName": "Pricing plans Explained",
+                    "pathwayDescription": "Pathway covering: Pricing plans Explained",
+                    "pathwayDuration": 20,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
+                    "resources": [
+                        {
+                            "noteId": "note-c86a4003-dd7d-4a59-83c7-dcab8cba70d9",
+                            "noteTopic": "What are pricing plans?",
+                            "url": "https://example.com/note/what-are-pricing-plans?.html",
+                            "noteDescription": "Description for \"What are pricing plans?\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Which to choose when?",
-                            "type": "Article"
+                            "noteId": "note-58c14a04-5586-4079-8736-901baa316c67",
+                            "noteTopic": "Which to choose when?",
+                            "url": "https://example.com/note/which-to-choose-when?.html",
+                            "noteDescription": "Description for \"Which to choose when?\" (Note).",
+                            "noteDuration": 2
                         }
                     ]
                 },
                 {
-                    "title": "Billing Account Setup",
+                    "pathwayId": "google-cloud-platform",
+                    "pathwayName": "Google Cloud Platform",
+                    "pathwayDescription": "Pathway covering: Google Cloud Platform",
+                    "pathwayDuration": 10,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Creating a cloud billing account",
-                            "type": "Codelab"
-                        }
-                    ]
-                },
-                {
-                    "title": "Google Cloud Platform",
-                    "resources": [
-                        {
-                            "title": "Some GCP Tools",
-                            "type": "Article"
+                            "noteId": "note-6fa993b0-a9ff-46d7-af1b-8ce766f3b6a9",
+                            "noteTopic": "Some GCP Tools",
+                            "url": "https://example.com/note/some-gcp-tools.html",
+                            "noteDescription": "Description for \"Some GCP Tools\" (Note).",
+                            "noteDuration": 2
                         }
                     ]
                 }

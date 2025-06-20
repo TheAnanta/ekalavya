@@ -12,29 +12,18 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Loader from "@/components/LoadingAnimation/page";
 import SignInButton from "@/components/sign_in_button";
+import MockApiProvider from "@/lib/api_hoster";
 
 export default function CoursesPage() {
-  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
-
   const [allCourses, setCourses] = useState<any>(null);
   const [loadingCourse, setLoadingCourse] = useState(true);
 
   useEffect(() => {
     async function fetchCourses() {
       try {
-        const response = await fetch(`${apiHost}/fetch-all-courses`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        if (response.ok) {
-          const data = await response.json();
-          console.log("Course data fetched successfully:", data);
-          setCourses(data.data);
-        } else {
-          console.error("Failed to fetch course data");
-        }
+        const data = await MockApiProvider.fetchAllCourses();
+        console.log("Course data fetched successfully:", data);
+        setCourses(data);
       } catch (error) {
         console.error("Error fetching course data:", error);
       } finally {
@@ -42,7 +31,7 @@ export default function CoursesPage() {
       }
     }
     fetchCourses();
-  }, [apiHost]);
+  });
   return (
     <div className="px-6 md:px-12 py-6">
       <nav className="p-4 flex justify-between">

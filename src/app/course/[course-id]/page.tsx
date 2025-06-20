@@ -12,22 +12,26 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Loader from "@/components/LoadingAnimation/page";
 import SignInButton from "@/components/sign_in_button";
+import { useAuthContext } from "@/context/AuthContext";
+import MockApiProvider from "@/lib/api_hoster";
 
 export default function CoursePage() {
   const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
   const courseId = useParams()["course-id"];
-  if (
-    courseId !== "android-basics-compose" &&
-    courseId !== "namasthe-full-stack" &&
-    courseId !== "firebase-get-cloud-ready" &&
-    courseId !== "machine-learning-genai" &&
-    courseId !== "flutter-basics-dart"
-  ) {
-    return <div>Invalid course ID</div>;
-  }
 
-  const [getCourse, setGetCourse] = useState<any>(null);
-  const eventData = getCourse?.data;
+  const user = useAuthContext();
+  const [isEnrolled, setIsEnrolled] = useState(false);
+  useEffect(() => {
+    if (user) {
+      user?.getIdTokenResult().then((token) => {
+        setIsEnrolled(
+          (token.claims.courses as string[]).includes(courseId as string)
+        );
+      });
+    }
+  }, [user]);
+
+  const [eventData, setGetCourse] = useState<any>(null);
   const [loadingCourse, setLoadingCourse] = useState(true);
   const [expandedStates, setExpandedStates] = useState<{
     [key: string]: boolean;
@@ -35,34 +39,27 @@ export default function CoursePage() {
   useEffect(() => {
     async function fetchCourse() {
       try {
-        const response = await fetch(`${apiHost}/fetch-course/${courseId}`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        if (response.ok) {
-          const data = await response.json();
-          console.log("Course data fetched successfully:", data);
-          setGetCourse(data);
+        const data = await MockApiProvider.fetchCourseById(
+          courseId?.toString() || ""
+        );
+        console.log("Course data fetched successfully:", data);
+        setGetCourse(data);
 
-          setExpandedStates(
-            (data.data.courseOutline || []).reduce(
-              (acc: { [key: string]: boolean }, item: any, index: number) => {
-                acc[`week-${index + 1}`] = false; // Initialize all weeks as collapsed
-                item.pathways.forEach((pathway: any, pathwayIndex: number) => {
-                  acc[`week-${index + 1}-pathway-${pathwayIndex + 1}`] = false; // Initialize all pathways as collapsed
-                });
-                return acc;
-              },
-              {}
-            )
-          ); // Reset expanded states when loading is complete
-        } else {
-          console.error("Failed to fetch course data");
-        }
+        setExpandedStates(
+          (data.courseOutline || []).reduce(
+            (acc: { [key: string]: boolean }, item: any, index: number) => {
+              acc[`week-${index + 1}`] = false; // Initialize all weeks as collapsed
+              item.pathways.forEach((pathway: any, pathwayIndex: number) => {
+                acc[`week-${index + 1}-pathway-${pathwayIndex + 1}`] = false; // Initialize all pathways as collapsed
+              });
+              return acc;
+            },
+            {}
+          )
+        ); // Reset expanded states when loading is complete
       } catch (error) {
         console.error("Error fetching course data:", error);
+        alert("Error fetching course data. Please try again later.");
       } finally {
         setLoadingCourse(false);
       }
@@ -84,25 +81,56 @@ export default function CoursePage() {
         </div>
       </nav>
       <main className="mt-2 md:px-4 gap-8 relative flex flex-col md:flex-row grow items-start overflow-hidden">
-        {!loadingCourse && getCourse ? (
+        {!loadingCourse && eventData ? (
           <>
             <div className="md:w-[60%] w-full md:aspect-[3.6] shrink-0">
               <img
                 className="aspect-[2.4] md:aspect-auto object-cover rounded-2xl w-full h-full object-bottom"
                 src={eventData.coverImage}
               />
-              <h1 className="mt-8 text-5xl font-bold whitespace-pre-wrap leading-[150%]">
-                {eventData.courseName}
-              </h1>
-              <h3 className="mt-2 text-xl max-w-[42ch] font-medium">
-                {eventData.courseSubtitle}
-              </h3>
-              <p
-                className="max-w-[48ch] mt-4"
-                dangerouslySetInnerHTML={{
-                  __html: eventData.courseDescription,
-                }}
-              ></p>
+              <div className="flex items-end">
+                <div className="grow">
+                  <h1 className="mt-8 text-5xl font-bold whitespace-pre-wrap leading-[150%]">
+                    {eventData.courseName}
+                  </h1>
+                  <h3 className="mt-2 text-xl max-w-[42ch] font-medium">
+                    {eventData.courseSubtitle}
+                  </h3>
+                  <p
+                    className="max-w-[48ch] mt-4"
+                    dangerouslySetInnerHTML={{
+                      __html: eventData.courseDescription,
+                    }}
+                  ></p>
+                </div>
+                {!isEnrolled ? (
+                  <Link
+                    href={"/checkout?courseId=" + courseId}
+                    className="border-2 border-[var(--android-primary-color)] hover:bg-[var(--android-primary-color)] hover:text-white text-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium"
+                  >
+                    Enroll Now
+                  </Link>
+                ) : (
+                  <div className="flex flex-col h-full">
+                    <div className="text-end mb-28">
+                      <p className="text-5xl  text-[var(--android-primary-color)]">
+                        0%
+                      </p>
+                      <p className="text-sm opacity-60">completed</p>
+                    </div>
+                    <div className="grow" />
+                    <Link
+                      href={`/course/${courseId}/${eventData.courseOutline[0].unitId}`}
+                      className="flex text-sm gap-2 items-center border-2 hover:bg-[var(--android-primary-color)] hover:text-white border-[var(--android-primary-color)] px-4 text-[var(--android-primary-color)] py-2 rounded-full font-bold"
+                    >
+                      Resume{" "}
+                      <span className="material-symbols-outlined !font-bold !text-[16px]">
+                        arrow_forward
+                      </span>
+                    </Link>
+                  </div>
+                )}
+              </div>
               <p className="mt-4 font-medium text-xl">Course Outline</p>
               <div className="gap-x-8 gap-y-4 mt-4">
                 {eventData.courseOutline.map((item: any, weekindex: number) => {
@@ -323,11 +351,11 @@ export default function CoursePage() {
                   <p
                     className="max-w-[480px] mb-8"
                     dangerouslySetInnerHTML={{
-                      __html: eventData.benefitsText,
+                      __html: eventData.benefits.text,
                     }}
                   ></p>
                   <div className="grid md:grid-cols-2 gap-y-4 max-w-[640px] benefits gap-x-4">
-                    {eventData.benefitItems.map((item: any, index: number) => {
+                    {eventData.benefits.list.map((item: any, index: number) => {
                       return (
                         <div key={index} className="benefits-box">
                           <h4>{item.title}</h4>

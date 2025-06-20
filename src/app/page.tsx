@@ -28,9 +28,12 @@ export default function Home() {
                     Join the <b>WOW 2025 challenge</b> and bag a chance to win
                     cool swags
                   </p>
-                  <button className="py-1 px-4 text-[0.7rem] rounded-full border border-white uppercase font-bold">
+                  <a
+                    href="/wow-campaign"
+                    className="py-1 px-4 text-[0.7rem] rounded-full border border-white uppercase font-bold"
+                  >
                     Participate Now
-                  </button>
+                  </a>
                 </div>
               );
             })}

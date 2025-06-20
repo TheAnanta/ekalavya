@@ -5,14 +5,33 @@ import {
 } from "@/lib/firebase";
 import { User } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function SignInButton() {
-  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/us-central1/api";
+  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
   const user = useAuthContext();
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [customClaims, setCustomClaims] = useState<any>(undefined);
+  useEffect(() => {
+    async function fetchCustomClaims() {
+      if (user) {
+        try {
+          const token = await user.getIdTokenResult();
+          setCustomClaims(token.claims);
+          setLoading(false);
+        } catch (error) {
+          console.error("Error fetching custom claims:", error);
+          setLoading(false);
+        }
+      }
+    }
+    fetchCustomClaims();
+  }, [user]);
+
   return (
     <>
-      {user ? (
+      {user && customClaims ? (
         <a href="/profile">
           {user.photoURL ? (
             <img
@@ -26,9 +45,12 @@ export default function SignInButton() {
             </span>
           )}
         </a>
+      ) : loading ? (
+        <progress className="w-10 h-10 rounded-full animate-spin border-4 border-t-transparent border-blue-500" />
       ) : (
         <button
           onClick={() => {
+            setLoading(true);
             signInWithGoogleAsPopup(
               async (user: User | null) => {
                 if (!user) {
@@ -62,24 +84,9 @@ export default function SignInButton() {
                     // Handle successful login
                     const signUpResult = await signupResponse.json();
                     console.log("Registration successful:", signupResponse);
+                    alert("Signed in successfully.");
                     // Optionally, you can store user data in context or local storage
                     // For example, you can set user data in context
-                    signInWithEkalavyaCustomCredential(
-                      signUpResult.token,
-                      () => {
-                        router.refresh();
-                        window.localStorage.setItem(
-                          "username",
-                          (user.displayName || user.email!.split("@")[0])
-                            .split(" ")
-                            .join("")
-                            .toLowerCase()
-                        );
-                      },
-                      (failure: string) => {
-                        alert("Error signin in: " + failure);
-                      }
-                    );
                   } else {
                     // Handle error
                     alert(

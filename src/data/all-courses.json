@@ -1,0 +1,161 @@
+[
+    {
+        "id": "machine-learning-genai",
+        "courseName": "Machine Learning with Generative AI",
+        "courseSubtitle": "Build and deploy generative AI and machine learning solutions using Genkit, BigQuery ML, and Vertex AI.",
+        "courseDescription": "Learn to build intelligent applications by mastering Genkit workflows, integrating with real-world data, utilizing BigQuery for data analysis and ML, and leveraging Vertex AI for training, tuning, and deploying models. Explore prompt engineering, architecture patterns, and practical use cases on Google Cloud.",
+        "duration": 8,
+        "difficulty": "Beginner",
+        "price": "0",
+        "language": "English",
+        "coverImage": "https://developers.google.com/static/search/blog/images/GoogleSearchCentral_AnnouncementGraphics_Blog1.png",
+        "badgeId": 5,
+        "campLeaders": [
+            "chandan-khamitkar",
+            "revanth-peethala",
+            "manas-malla"
+        ],
+        "benefitsText": "This course provides practical skills in building and deploying machine learning and generative AI applications on Google Cloud Platform.",
+        "benefitItems": [
+            17,
+            18,
+            19,
+            20
+        ],
+        "units": [],
+        "createdAt": "2025-06-15T09:44:17.100Z",
+        "updatedAt": "2025-06-15T09:44:17.100Z"
+    },
+    {
+        "id": "android-basics-compose",
+        "courseName": "Android Basics with Compose",
+        "courseSubtitle": "Master application development with Compose, the modern toolkit for building native Android UI.",
+        "courseDescription": "You will learn basic Android programming with best practices recommended by the Android team, including creating beautiful layouts, architecting navigations between screens and connecting to the internet. Get your exclusive and adorable <b>SWAG</b>!",
+        "duration": 8,
+        "difficulty": "Beginner",
+        "price": "0",
+        "language": "English",
+        "coverImage": "https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.57_mul_h_sub_0.57_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/ComposeCamp_AndroidBlogHeader_4209x1253-2.png",
+        "badgeId": 1,
+        "campLeaders": [
+            "manas-malla"
+        ],
+        "benefitsText": "Jetpack Compose is the modern toolkit for building native user interfaces for Android apps. Compose makes it easier and faster to build UIs on Android.<br/><br/>Compose apps are written in the Kotlin programming language.<br/><br/>Kotlin™ is the language that the majority of professional Android developers use to build apps.",
+        "benefitItems": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "units": [
+            "your-first-android-app",
+            "building-app-ui",
+            "display-lists-and-use-material-design",
+            "navigation-and-app-architecture",
+            "connect-to-the-internet",
+            "data-persistence",
+            "workmanager",
+            "views-and-compose"
+        ],
+        "createdAt": "2025-06-15T08:42:06.916Z",
+        "updatedAt": "2025-06-15T08:42:06.916Z"
+    },
+    {
+        "id": "namasthe-full-stack",
+        "courseName": "Namasthe Full-Stack",
+        "courseSubtitle": "Learn the fundamentals of web development from HTML to deployment phase.",
+        "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications.",
+        "duration": 6,
+        "difficulty": "Beginner",
+        "price": "0",
+        "language": "English",
+        "coverImage": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Ai-1-banner.original.png",
+        "badgeId": 2,
+        "campLeaders": [
+            "kavya-chandana",
+            "varshita-palleti"
+        ],
+        "benefitsText": "This course introduces the core technologies used to build websites and web applications. By the end of the course, you'll be able to create responsive, interactive, and real-world websites and host them live.",
+        "benefitItems": [
+            5,
+            6,
+            7,
+            8
+        ],
+        "units": [
+            "introduction-to-the-web",
+            "styling-with-css-and-tailwind-css",
+            "javascript-fundamentals-and-async/await-:-making-pages-interactive",
+            "frameworks-and-client-side-rendering",
+            "databases-and-middleware-(servlets)",
+            "deployment,-tools,-and-collaboration"
+        ],
+        "createdAt": "2025-06-15T08:47:40.288Z",
+        "updatedAt": "2025-06-15T08:47:40.288Z"
+    },
+    {
+        "id": "flutter-basics-dart",
+        "courseName": "Flutter Basics with Dart",
+        "courseSubtitle": "Master application development with Flutter, Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
+        "courseDescription": "You will learn basic Flutter programming with best practices, including creating beautiful layouts, architecting navigations between screens, connecting to the internet, handling data persistence, and using device features like location.",
+        "duration": 8,
+        "difficulty": "Beginner",
+        "price": "0",
+        "language": "English",
+        "coverImage": "/courses/covers/flutter-cover.png",
+        "badgeId": 3,
+        "campLeaders": [
+            "manas-malla"
+        ],
+        "benefitsText": "Flutter is Google's UI toolkit for building beautiful, natively compiled applications from a single codebase. It enables fast development and expressive, flexible UIs.",
+        "benefitItems": [
+            9,
+            10,
+            11,
+            12
+        ],
+        "units": [
+            "your-first-flutter-app",
+            "flutter-building-app-ui",
+            "flutter-display-lists-and-use-material-design",
+            "flutter-navigation-and-app-architecture",
+            "flutter-connect-to-the-internet",
+            "flutter-data-persistence",
+            "google-maps-and-location"
+        ],
+        "createdAt": "2025-06-15T08:52:17.237Z",
+        "updatedAt": "2025-06-15T08:52:17.237Z"
+    },
+    {
+        "id": "firebase-get-cloud-ready",
+        "courseName": "Firebase: Get Cloud-Ready\n(Without the Cloudy Head)",
+        "courseSubtitle": "Unlock the power of cloud development using Firebase — build smarter, faster apps without the backend hassle.",
+        "courseDescription": "This course is designed for developers of all levels who want to build powerful applications without managing traditional backend infrastructure. Learn Firebase from the ground up — databases, hosting, analytics, AI, and more — all integrated with Google's ecosystem.",
+        "duration": 6,
+        "difficulty": "Beginner",
+        "price": "0",
+        "language": "English",
+        "coverImage": "/courses/images/firebase-summit-2021-feature-image.png",
+        "badgeId": 4,
+        "campLeaders": [
+            "jayadhar-ummadisingu"
+        ],
+        "benefitsText": "Firebase simplifies app development by providing real-time databases, authentication, hosting, analytics, and even AI tools—all without managing servers. By the end of this course, you’ll be equipped to build and launch full-featured applications at scale.",
+        "benefitItems": [
+            13,
+            14,
+            15,
+            16
+        ],
+        "units": [
+            "week-1:-firebase-foundations:-cloud-&-console-essentials",
+            "week-2:-mastering-firebase-build:-building-blocks-for-your-app",
+            "week-3:-firebase-run:-deploy,-monitor,-&-optimize-your-application",
+            "week-4:-unlocking-insights:-firebase-analytics-for-data-driven-development",
+            "week-5:-firebase-ai:-injecting-intelligence-into-your-apps",
+            "week-6:-firebase-in-practice:-pricing,-billing-&-gcp-integration"
+        ],
+        "createdAt": "2025-06-15T09:44:17.100Z",
+        "updatedAt": "2025-06-15T09:44:17.100Z"
+    }
+]

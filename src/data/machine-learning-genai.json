@@ -1,4 +1,5 @@
 {
+    "courseId": "machine-learning-genai",
     "courseName": "Machine Learning with Generative AI",
     "courseSubtitle": "Build and deploy generative AI and machine learning solutions using Genkit, BigQuery ML, and Vertex AI.",
     "courseDescription": "Learn to build intelligent applications by mastering Genkit workflows, integrating with real-world data, utilizing BigQuery for data analysis and ML, and leveraging Vertex AI for training, tuning, and deploying models. Explore prompt engineering, architecture patterns, and practical use cases on Google Cloud.",
@@ -6,12 +7,12 @@
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "https://developers.google.com/static/search/blog/images/GoogleSearchCentral_AnnouncementGraphics_Blog1.png",
+    "coverImage": "https://developers.google.com/static/search/blog/images/GoogleSearchCentral_AnnouncementGraphics_Blog1.png",
     "campLeaderCardColor": "#3f83f2",
     "campLeaderCardTextColor": "#FFF",
     "benefitsCardColor": "var(--android-primary-color)",
     "benefitsCardTextColor": "#FFF",
-    "campLeader": [
+    "campLeaders": [
         {
             "name": "Chandan Khamitkar",
             "email": "khamitkar.dev@gmail.com",
@@ -82,579 +83,1014 @@
     },
     "courseOutline": [
         {
-            "title": "Getting Started with Genkit",
+            "unitId": "getting-started-with-genkit",
+            "unitName": "Getting Started with Genkit",
+            "unitDescription": "Unit covering: Getting Started with Genkit",
+            "unitDuration": 150,
             "pathways": [
                 {
-                    "title": "What is Genkit? Why use it?",
+                    "pathwayId": "what-is-genkit-why-use-it",
+                    "pathwayName": "What is Genkit? Why use it?",
+                    "pathwayDescription": "Pathway covering: What is Genkit? Why use it?",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-1-pathway-1/badge.svg",
+                    "pathwayDuration": 30,
                     "resources": [
                         {
-                            "title": "Introduction to Generative AI",
-                            "type": "Video"
+                            "videoId": "video-9d89291b-1d7c-47e9-a477-805fc49c336b",
+                            "videoName": "Introduction to Generative AI",
+                            "videoDescription": "Description for \"Introduction to Generative AI\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-generative-ai.mp4"
                         },
                         {
-                            "title": "Introduction to Generative AI",
-                            "type": "Article"
+                            "articleId": "article-8c819266-419b-4497-b040-57121287c2b5",
+                            "articleName": "Introduction to Generative AI",
+                            "articleDescription": "Description for \"Introduction to Generative AI\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/introduction-to-generative-ai.html"
                         },
                         {
-                            "title": "Intro to Genkit",
-                            "type": "Video"
+                            "videoId": "video-4a8ac1a1-9430-4e31-bb96-6e54019a6b6d",
+                            "videoName": "Intro to Genkit",
+                            "videoDescription": "Description for \"Intro to Genkit\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-genkit.mp4"
                         },
                         {
-                            "title": "What are workflows and the role of Genkit in AI-powered applications?",
-                            "type": "Video"
+                            "videoId": "video-8053a483-e18e-4f0e-b79e-c8038b584985",
+                            "videoName": "What are workflows and the role of Genkit in AI-powered applications?",
+                            "videoDescription": "Description for \"What are workflows and the role of Genkit in AI-powered applications?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-are-workflows-and-the-role-of-genkit-in-ai-powered-applications.mp4"
                         },
                         {
-                            "title": "Benefits of no-training AI workflows vs traditional ML models",
-                            "type": "Article"
+                            "articleId": "article-18e001c4-54c3-4f96-b09e-711100570b58",
+                            "articleName": "Benefits of no-training AI workflows vs traditional ML models",
+                            "articleDescription": "Description for \"Benefits of no-training AI workflows vs traditional ML models\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/benefits-of-no-training-ai-workflows-vs-traditional-ml-models.html"
                         },
                         {
-                            "title": "Understanding Genkit Purpose",
-                            "type": "Quiz"
+                            "quizId": "quiz-0487373f-c600-4b8c-a111-d1f506048d08",
+                            "quizName": "Understanding Genkit Purpose",
+                            "quizDescription": "Description for \"Understanding Genkit Purpose\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/understanding-genkit-purpose.html"
                         }
                     ]
                 },
                 {
-                    "title": "Genkit vs Traditional ML",
+                    "pathwayId": "genkit-vs-traditional-ml",
+                    "pathwayName": "Genkit vs Traditional ML",
+                    "pathwayDescription": "Pathway covering: Genkit vs Traditional ML",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-1-pathway-2/badge.svg",
+                    "pathwayDuration": 15,
                     "resources": [
                         {
-                            "title": "What is model handling, pipelines, iteration?",
-                            "type": "Video"
+                            "videoId": "video-39d1b730-244e-4f9a-b44e-a19f2a24d5e8",
+                            "videoName": "What is model handling, pipelines, iteration?",
+                            "videoDescription": "Description for \"What is model handling, pipelines, iteration?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-model-handling-pipelines-iteration.mp4"
                         },
                         {
-                            "title": "Traditional ML pipelines vs Genkit’s flow-based approach",
-                            "type": "Article"
+                            "articleId": "article-fefeaed9-d58d-4e94-ae70-5b59a4b3f86e",
+                            "articleName": "Traditional ML pipelines vs Genkit’s flow-based approach",
+                            "articleDescription": "Description for \"Traditional ML pipelines vs Genkit\u2019s flow-based approach\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/traditional-ml-pipelines-vs-genkits-flow-based-approach.html"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "quizId": "quiz-c62e55d7-130a-4a69-9529-652a8a86df7c",
+                            "quizName": "Quiz: Genkit vs Traditional ML",
+                            "quizDescription": "Description for \"Quiz: Genkit vs Traditional ML\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/quiz-genkit-vs-traditional-ml.html"
                         }
                     ]
                 },
                 {
-                    "title": "Flows and Prompting",
+                    "pathwayId": "flows-and-prompting",
+                    "pathwayName": "Flows and Prompting",
+                    "pathwayDescription": "Pathway covering: Flows and Prompting",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-1-pathway-3/badge.svg",
+                    "pathwayDuration": 35,
                     "resources": [
                         {
-                            "title": "What are flows? What is actual Prompting? How does prompting work in Genkit?",
-                            "type": "Video"
+                            "videoId": "video-94e8a8b1-3962-43ce-9457-37c227572d4c",
+                            "videoName": "What are flows? What is actual Prompting? How does prompting work in Genkit?",
+                            "videoDescription": "Description for \"What are flows? What is actual Prompting? How does prompting work in Genkit?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-are-flows-what-is-actual-prompting-how-does-prompting-work-in-genkit.mp4"
                         },
                         {
-                            "title": "Understanding Vector Embedding",
-                            "type": "Article"
+                            "articleId": "article-7d5267d3-ffac-4e6f-be67-0c7f21d37446",
+                            "articleName": "Understanding Vector Embedding",
+                            "articleDescription": "Description for \"Understanding Vector Embedding\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/understanding-vector-embedding.html"
                         },
                         {
-                            "title": "Creation of architecture of simple text-to-response Genkit Flow",
-                            "type": "Article"
+                            "articleId": "article-d1e0d376-79ef-4c8d-8a58-52ab5b6b1076",
+                            "articleName": "Creation of architecture of simple text-to-response Genkit Flow",
+                            "articleDescription": "Description for \"Creation of architecture of simple text-to-response Genkit Flow\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/creation-of-architecture-of-simple-text-to-response-genkit-flow.html"
                         },
                         {
-                            "title": "Topping it up with Tools",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f06b6b90-1e5b-4395-8857-e68fefc06f15",
+                            "codelabName": "Topping it up with Tools",
+                            "codelabDescription": "Description for \"Topping it up with Tools\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/topping-it-up-with-tools"
                         },
                         {
-                            "title": "Flow & prompt",
-                            "type": "Quiz"
+                            "quizId": "quiz-3b552382-7bdc-462f-ae2f-870094052fbd",
+                            "quizName": "Flow & prompt",
+                            "quizDescription": "Description for \"Flow & prompt\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/flow-prompt.html"
                         }
                     ]
                 },
                 {
-                    "title": "Project Setup & Prerequisites",
+                    "pathwayId": "project-setup-prerequisites",
+                    "pathwayName": "Project Setup & Prerequisites",
+                    "pathwayDescription": "Pathway covering: Project Setup & Prerequisites",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-1-pathway-4/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "Install Node.js, TypeScript, and set up Genkit CLI",
-                            "type": "Video"
+                            "videoId": "video-58ebf4b6-397a-43c9-9430-84a8647c0b06",
+                            "videoName": "Install Node.js, TypeScript, and set up Genkit CLI",
+                            "videoDescription": "Description for \"Install Node.js, TypeScript, and set up Genkit CLI\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/install-nodejs-typescript-and-set-up-genkit-cli.mp4"
                         },
                         {
-                            "title": "Initialize the Genkit project and run your first flow",
-                            "type": "Codelab"
+                            "codelabId": "codelab-74279313-b54c-474c-87d2-97216a69894e",
+                            "codelabName": "Initialize the Genkit project and run your first flow",
+                            "codelabDescription": "Description for \"Initialize the Genkit project and run your first flow\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/initialize-the-genkit-project-and-run-your-first-flow"
                         },
                         {
-                            "title": "Basics of Project Setup",
-                            "type": "Quiz"
+                            "quizId": "quiz-9e32a690-362c-46c9-b7b2-73060c1d1a89",
+                            "quizName": "Basics of Project Setup",
+                            "quizDescription": "Description for \"Basics of Project Setup\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/basics-of-project-setup.html"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Building Smart Flows",
+            "unitId": "building-smart-flows",
+            "unitName": "Building Smart Flows",
+            "unitDescription": "Unit covering: Building Smart Flows",
+            "unitDuration": 75,
             "pathways": [
                 {
-                    "title": "Schemas and IO Design",
+                    "pathwayId": "schemas-and-io-design",
+                    "pathwayName": "Schemas and IO Design",
+                    "pathwayDescription": "Pathway covering: Schemas and IO Design",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-2-pathway-1/badge.svg",
+                    "pathwayDuration": 25,
                     "resources": [
                         {
-                            "title": "What are schemas? What's the need of input/output definition formats?",
-                            "type": "Video"
+                            "videoId": "video-0a8a6192-3837-43ca-a6c3-982c478a1a36",
+                            "videoName": "What are schemas? What's the need of input/output definition formats?",
+                            "videoDescription": "Description for \"What are schemas? What's the need of input/output definition formats?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-are-schemas-whats-the-need-of-inputoutput-definition-formats.mp4"
                         },
                         {
-                            "title": "Basics of Schema Validation : ZOD?",
-                            "type": "Video"
+                            "videoId": "video-05d03e54-5a67-4632-bc32-9c1240c4974f",
+                            "videoName": "Basics of Schema Validation : ZOD?",
+                            "videoDescription": "Description for \"Basics of Schema Validation : ZOD?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/basics-of-schema-validation-zod.mp4"
                         },
                         {
-                            "title": "Create input and output schemas",
-                            "type": "Codelab"
+                            "codelabId": "codelab-10906cd5-4e3f-4277-b95a-ac25ac70605a",
+                            "codelabName": "Create input and output schemas",
+                            "codelabDescription": "Description for \"Create input and output schemas\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-input-and-output-schemas"
                         },
                         {
-                            "title": "Schema Fundamentals",
-                            "type": "Quiz"
+                            "quizId": "quiz-c8c7f766-419b-449e-b9e7-4dd34cc0470d",
+                            "quizName": "Schema Fundamentals",
+                            "quizDescription": "Description for \"Schema Fundamentals\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/schema-fundamentals.html"
                         }
                     ]
                 },
                 {
-                    "title": "Model Selection",
+                    "pathwayId": "model-selection",
+                    "pathwayName": "Model Selection",
+                    "pathwayDescription": "Pathway covering: Model Selection",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-2-pathway-2/badge.svg",
+                    "pathwayDuration": 15,
                     "resources": [
                         {
-                            "title": "Genkit supported models : What? Why? How?",
-                            "type": "Video"
+                            "videoId": "video-3957263b-6f4e-4fbe-a080-692ab8f7e2c9",
+                            "videoName": "Genkit supported models : What? Why? How?",
+                            "videoDescription": "Description for \"Genkit supported models : What? Why? How?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/genkit-supported-models-what-why-how.mp4"
                         },
                         {
-                            "title": "How to pick the right model for your project/task?",
-                            "type": "Video"
+                            "videoId": "video-07775986-79a0-4a8b-af16-ec47ab61ccf3",
+                            "videoName": "How to pick the right model for your project/task?",
+                            "videoDescription": "Description for \"How to pick the right model for your project/task?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/how-to-pick-the-right-model-for-your-projecttask.mp4"
                         },
                         {
-                            "title": "Purpose of Models",
-                            "type": "Quiz"
+                            "quizId": "quiz-c116035f-141d-4074-b778-9e678a63273e",
+                            "quizName": "Purpose of Models",
+                            "quizDescription": "Description for \"Purpose of Models\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/purpose-of-models.html"
                         }
                     ]
                 },
                 {
-                    "title": "Flow Debugging ( Logs )",
+                    "pathwayId": "flow-debugging-logs",
+                    "pathwayName": "Flow Debugging ( Logs )",
+                    "pathwayDescription": "Pathway covering: Flow Debugging ( Logs )",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-2-pathway-3/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "Logs: What? Why? When do we need it?",
-                            "type": "Video"
+                            "videoId": "video-f7c11d61-80a5-48b8-b40b-044237d1d293",
+                            "videoName": "Logs: What? Why? When do we need it?",
+                            "videoDescription": "Description for \"Logs: What? Why? When do we need it?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/logs-what-why-when-do-we-need-it.mp4"
                         },
                         {
-                            "title": "Introduce an intentional error and fix it using debugging tools",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d298150c-e2f7-41a9-b3a1-2d7c49b6574f",
+                            "codelabName": "Introduce an intentional error and fix it using debugging tools",
+                            "codelabDescription": "Description for \"Introduce an intentional error and fix it using debugging tools\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/introduce-an-intentional-error-and-fix-it-using-debugging-tools"
                         },
                         {
-                            "title": "Importance of Logs",
-                            "type": "Quiz"
+                            "quizId": "quiz-08e1da45-6677-47ab-9c5c-7d312dd06169",
+                            "quizName": "Importance of Logs",
+                            "quizDescription": "Description for \"Importance of Logs\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/importance-of-logs.html"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Prompt Engineering & Role Logic",
+            "unitId": "prompt-engineering-role-logic",
+            "unitName": "Prompt Engineering & Role Logic",
+            "unitDescription": "Unit covering: Prompt Engineering & Role Logic",
+            "unitDuration": 80,
             "pathways": [
                 {
-                    "title": "Effective Prompt Design",
+                    "pathwayId": "effective-prompt-design",
+                    "pathwayName": "Effective Prompt Design",
+                    "pathwayDescription": "Pathway covering: Effective Prompt Design",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-3-pathway-1/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "What is dot-prompt? Prompt techniques for better AI responses",
-                            "type": "Video"
+                            "videoId": "video-7d52a792-c4ad-4780-9941-a1288c1c5a2c",
+                            "videoName": "What is dot-prompt? Prompt techniques for better AI responses",
+                            "videoDescription": "Description for \"What is dot-prompt? Prompt techniques for better AI responses\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-dot-prompt-prompt-techniques-for-better-ai-responses.mp4"
                         },
                         {
-                            "title": "Write prompts for a joke generator, hefty text summarizer",
-                            "type": "Codelab"
+                            "codelabId": "codelab-10903bb4-01ec-43c2-809c-e36b8015cf01",
+                            "codelabName": "Write prompts for a joke generator, hefty text summarizer",
+                            "codelabDescription": "Description for \"Write prompts for a joke generator, hefty text summarizer\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-prompts-for-a-joke-generator-hefty-text-summarizer"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "quizId": "quiz-a10df768-e4b5-4017-94a2-23c2a688a2e5",
+                            "quizName": "Quiz: Effective Prompt Design",
+                            "quizDescription": "Description for \"Quiz: Effective Prompt Design\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/quiz-effective-prompt-design.html"
                         }
                     ]
                 },
                 {
-                    "title": "Agents and Prompting with Context and Role",
+                    "pathwayId": "agents-and-prompting-with-context-and-role",
+                    "pathwayName": "Agents and Prompting with Context and Role",
+                    "pathwayDescription": "Pathway covering: Agents and Prompting with Context and Role",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-3-pathway-2/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "How to give AI a “role” or “personality”?",
-                            "type": "Video"
+                            "videoId": "video-91e7724a-7ed8-47c3-8ff4-bb230fd29e84",
+                            "videoName": "How to give AI a \u201crole\u201d or \u201cpersonality\u201d?",
+                            "videoDescription": "Description for \"How to give AI a \u201crole\u201d or \u201cpersonality\u201d?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/how-to-give-ai-a-role-or-personality.mp4"
                         },
                         {
-                            "title": "Add roles to an assistant flow",
-                            "type": "Article"
+                            "articleId": "article-65dd0034-7935-430c-8069-b425b0fcc986",
+                            "articleName": "Add roles to an assistant flow",
+                            "articleDescription": "Description for \"Add roles to an assistant flow\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/add-roles-to-an-assistant-flow.html"
                         },
                         {
-                            "title": "What are agents? How to use multiple agents",
-                            "type": "Article"
+                            "articleId": "article-d13d7d76-591a-4299-a96c-ed639e731bb3",
+                            "articleName": "What are agents? How to use multiple agents",
+                            "articleDescription": "Description for \"What are agents? How to use multiple agents\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/what-are-agents-how-to-use-multiple-agents.html"
                         },
                         {
-                            "title": "Role-based prompting essentials",
-                            "type": "Quiz"
+                            "quizId": "quiz-3f56b5ce-615f-4613-8b77-3e11f0a28f41",
+                            "quizName": "Role-based prompting essentials",
+                            "quizDescription": "Description for \"Role-based prompting essentials\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/role-based-prompting-essentials.html"
                         }
                     ]
                 },
                 {
-                    "title": "Data Types and Integration",
+                    "pathwayId": "data-types-and-integration",
+                    "pathwayName": "Data Types and Integration",
+                    "pathwayDescription": "Pathway covering: Data Types and Integration",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-3-pathway-3/badge.svg",
+                    "pathwayDuration": 25,
                     "resources": [
                         {
-                            "title": "What types of data format does Genkit accept ( JSON, text, media )?",
-                            "type": "Video"
+                            "videoId": "video-a6f987f1-5f2c-47fc-b12e-c3577fd15fc8",
+                            "videoName": "What types of data format does Genkit accept ( JSON, text, media )?",
+                            "videoDescription": "Description for \"What types of data format does Genkit accept ( JSON, text, media )?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-types-of-data-format-does-genkit-accept-json-text-media.mp4"
                         },
                         {
-                            "title": "Data handling in Genkit Flows",
-                            "type": "Video"
+                            "videoId": "video-8e5f8f8b-3d60-47b8-b52f-15555d4c2299",
+                            "videoName": "Data handling in Genkit Flows",
+                            "videoDescription": "Description for \"Data handling in Genkit Flows\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/data-handling-in-genkit-flows.mp4"
                         },
                         {
-                            "title": "Build a flow that takes a name & image & returns a caption",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3b2d1847-f709-41e9-974a-471a93b44b82",
+                            "codelabName": "Build a flow that takes a name & image & returns a caption",
+                            "codelabDescription": "Description for \"Build a flow that takes a name & image & returns a caption\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-a-flow-that-takes-a-name-image-returns-a-caption"
                         },
                         {
-                            "title": "Data Types and input/output handling",
-                            "type": "Quiz"
+                            "quizId": "quiz-fd32551a-5f33-4f93-b6c8-5491104e1c2b",
+                            "quizName": "Data Types and input/output handling",
+                            "quizDescription": "Description for \"Data Types and input/output handling\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/data-types-and-inputoutput-handling.html"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Real-world Integration",
+            "unitId": "real-world-integration",
+            "unitName": "Real-world Integration",
+            "unitDescription": "Unit covering: Real-world Integration",
+            "unitDuration": 115,
             "pathways": [
                 {
-                    "title": "REST APIs",
+                    "pathwayId": "rest-apis",
+                    "pathwayName": "REST APIs",
+                    "pathwayDescription": "Pathway covering: REST APIs",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-4-pathway-1/badge.svg",
+                    "pathwayDuration": 45,
                     "resources": [
                         {
-                            "title": "Rest APIs : What? Why? When?",
-                            "type": "Video"
+                            "videoId": "video-5867a57a-115f-463d-82b5-e01d894b9015",
+                            "videoName": "Rest APIs : What? Why? When?",
+                            "videoDescription": "Description for \"Rest APIs : What? Why? When?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/rest-apis-what-why-when.mp4"
                         },
                         {
-                            "title": "REST API basics",
-                            "type": "Article"
+                            "articleId": "article-6f8e7920-5c65-4d2d-944a-f3c051525a77",
+                            "articleName": "REST API basics",
+                            "articleDescription": "Description for \"REST API basics\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/rest-api-basics.html"
                         },
                         {
-                            "title": "Write a Simple Express server",
-                            "type": "Video"
+                            "videoId": "video-39d48b79-5835-42d3-92f7-e7e221319224",
+                            "videoName": "Write a Simple Express server",
+                            "videoDescription": "Description for \"Write a Simple Express server\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/write-a-simple-express-server.mp4"
                         },
                         {
-                            "title": "Write a Simple Express server",
-                            "type": "Codelab"
+                            "codelabId": "codelab-b0b9a695-090a-4ac6-b6b8-6c8411b4352e",
+                            "codelabName": "Write a Simple Express server",
+                            "codelabDescription": "Description for \"Write a Simple Express server\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-a-simple-express-server"
                         },
                         {
-                            "title": "How to link Genkit with Express backend ( which gets connected to your app )",
-                            "type": "Codelab"
+                            "codelabId": "codelab-10330ec9-d102-4752-9659-3a3f01b0f5b8",
+                            "codelabName": "How to link Genkit with Express backend ( which gets connected to your app )",
+                            "codelabDescription": "Description for \"How to link Genkit with Express backend ( which gets connected to your app )\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/how-to-link-genkit-with-express-backend-which-gets-connected-to-your-app-"
                         },
                         {
-                            "title": "Download React Pre-built Repo & Hit Genkit",
-                            "type": "Video"
+                            "videoId": "video-d8438259-e932-4710-8b17-75e1176b6b7a",
+                            "videoName": "Download React Pre-built Repo & Hit Genkit",
+                            "videoDescription": "Description for \"Download React Pre-built Repo & Hit Genkit\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/download-react-pre-built-repo-hit-genkit.mp4"
                         },
                         {
-                            "title": "API Integration fundamentals",
-                            "type": "Quiz"
+                            "quizId": "quiz-c6be952c-bdc0-482a-a035-7ff17094d48d",
+                            "quizName": "API Integration fundamentals",
+                            "quizDescription": "Description for \"API Integration fundamentals\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/api-integration-fundamentals.html"
                         }
                     ]
                 },
                 {
-                    "title": "Practical Example 1: Weather Forecast",
+                    "pathwayId": "practical-example-1-weather-forecast",
+                    "pathwayName": "Practical Example 1: Weather Forecast",
+                    "pathwayDescription": "Pathway covering: Practical Example 1: Weather Forecast",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-4-pathway-2/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "Weather API integration demo",
-                            "type": "Video"
+                            "videoId": "video-c5112185-1815-467d-9333-e009cf0283bd",
+                            "videoName": "Weather API integration demo",
+                            "videoDescription": "Description for \"Weather API integration demo\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/weather-api-integration-demo.mp4"
                         },
                         {
-                            "title": "Create a flow that fetches and formats weather data & Test it on Postman",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e63d6b0e-d1b4-48ac-a798-2509170e5b88",
+                            "codelabName": "Create a flow that fetches and formats weather data & Test it on Postman",
+                            "codelabDescription": "Description for \"Create a flow that fetches and formats weather data & Test it on Postman\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-a-flow-that-fetches-and-formats-weather-data-test-it-on-postman"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "quizId": "quiz-24c6de8f-7634-440f-902c-4b68e4c702f3",
+                            "quizName": "Quiz: Practical Example 1: Weather Forecast",
+                            "quizDescription": "Description for \"Quiz: Practical Example 1: Weather Forecast\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/quiz-practical-example-1-weather-forecast.html"
                         }
                     ]
                 },
                 {
-                    "title": "Practical Example 2: OneClick Emailer",
+                    "pathwayId": "practical-example-2-oneclick-emailer",
+                    "pathwayName": "Practical Example 2: OneClick Emailer",
+                    "pathwayDescription": "Pathway covering: Practical Example 2: OneClick Emailer",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-4-pathway-3/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "Write flows, prompts and input/output schema?",
-                            "type": "Video"
+                            "videoId": "video-376dd65d-59d9-4d32-95f7-87cf73574d6f",
+                            "videoName": "Write flows, prompts and input/output schema?",
+                            "videoDescription": "Description for \"Write flows, prompts and input/output schema?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/write-flows-prompts-and-inputoutput-schema.mp4"
                         },
                         {
-                            "title": "Flow to take input text and send it via nodemailer & Test it on Postman",
-                            "type": "Codelab"
+                            "codelabId": "codelab-1004a3e8-54c3-4217-a1fd-c46648e58f01",
+                            "codelabName": "Flow to take input text and send it via nodemailer & Test it on Postman",
+                            "codelabDescription": "Description for \"Flow to take input text and send it via nodemailer & Test it on Postman\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/flow-to-take-input-text-and-send-it-via-nodemailer-test-it-on-postman"
                         },
                         {
-                            "title": "Flow building",
-                            "type": "Quiz"
+                            "quizId": "quiz-c8c1e285-b1a1-4354-9430-81f1807d9282",
+                            "quizName": "Flow building",
+                            "quizDescription": "Description for \"Flow building\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/flow-building.html"
                         }
                     ]
                 },
                 {
-                    "title": "Deploying with Firebase",
+                    "pathwayId": "deploying-with-firebase",
+                    "pathwayName": "Deploying with Firebase",
+                    "pathwayDescription": "Pathway covering: Deploying with Firebase",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-4-pathway-4/badge.svg",
+                    "pathwayDuration": 20,
                     "resources": [
                         {
-                            "title": "Deploy your project using Firebase CLI",
-                            "type": "Video"
+                            "videoId": "video-1865a9ef-9273-41bb-9ab6-2009228801d0",
+                            "videoName": "Deploy your project using Firebase CLI",
+                            "videoDescription": "Description for \"Deploy your project using Firebase CLI\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/deploy-your-project-using-firebase-cli.mp4"
                         },
                         {
-                            "title": "Test Deployed Genkit Project URL",
-                            "type": "Codelab"
+                            "codelabId": "codelab-7eb3e218-c02c-47b8-80f2-e5c707d89047",
+                            "codelabName": "Test Deployed Genkit Project URL",
+                            "codelabDescription": "Description for \"Test Deployed Genkit Project URL\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/test-deployed-genkit-project-url"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "quizId": "quiz-6cd6d82e-e3dd-47e1-953e-52f01f2f8152",
+                            "quizName": "Quiz: Deploying with Firebase",
+                            "quizDescription": "Description for \"Quiz: Deploying with Firebase\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/quiz-deploying-with-firebase.html"
                         }
                     ]
                 },
                 {
-                    "title": "Error Handling & Logs",
+                    "pathwayId": "error-handling-logs",
+                    "pathwayName": "Error Handling & Logs",
+                    "pathwayDescription": "Pathway covering: Error Handling & Logs",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-4-pathway-5/badge.svg",
+                    "pathwayDuration": 15,
                     "resources": [
                         {
-                            "title": "How to add Error boundaries",
-                            "type": "Video"
+                            "videoId": "video-0683a3da-a25e-49b0-8c29-dd82eb4e55e8",
+                            "videoName": "How to add Error boundaries",
+                            "videoDescription": "Description for \"How to add Error boundaries\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/how-to-add-error-boundaries.mp4"
                         },
                         {
-                            "title": "Best practices for Genkit error boundaries",
-                            "type": "Article"
+                            "articleId": "article-79354016-5b4d-44cc-bc39-38b8c5e9f168",
+                            "articleName": "Best practices for Genkit error boundaries",
+                            "articleDescription": "Description for \"Best practices for Genkit error boundaries\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/best-practices-for-genkit-error-boundaries.html"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "quizId": "quiz-0672e35b-11c5-442b-b6d4-8d451295982e",
+                            "quizName": "Quiz: Error Handling & Logs",
+                            "quizDescription": "Description for \"Quiz: Error Handling & Logs\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/quiz-error-handling-logs.html"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Working with BigQuery",
+            "unitId": "working-with-bigquery",
+            "unitName": "Working with BigQuery",
+            "unitDescription": "Unit covering: Working with BigQuery",
+            "unitDuration": 160,
             "pathways": [
                 {
-                    "title": "Introduction to BigQuery",
+                    "pathwayId": "introduction-to-bigquery",
+                    "pathwayName": "Introduction to BigQuery",
+                    "pathwayDescription": "Pathway covering: Introduction to BigQuery",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-5-pathway-1/badge.svg",
+                    "pathwayDuration": 70,
                     "resources": [
                         {
-                            "title": "Introduction to BigQuery and Data warehouse",
-                            "type": "Video"
+                            "videoId": "video-5867a57a-115f-463d-82b5-e01d894b9015",
+                            "videoName": "Introduction to BigQuery and Data warehouse",
+                            "videoDescription": "Description for \"Introduction to BigQuery and Data warehouse\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-bigquery-and-data-warehouse.mp4"
                         },
                         {
-                            "title": "Working with BigQuery",
-                            "type": "Video"
+                            "videoId": "video-39d48b79-5835-42d3-92f7-e7e221319224",
+                            "videoName": "Working with BigQuery",
+                            "videoDescription": "Description for \"Working with BigQuery\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/working-with-bigquery.mp4"
                         },
                         {
-                            "title": "BigQuery Architecture Overview",
-                            "type": "Article"
+                            "articleId": "article-b0b9a695-090a-4ac6-b6b8-6c8411b4352e",
+                            "articleName": "BigQuery Architecture Overview",
+                            "articleDescription": "Description for \"BigQuery Architecture Overview\" (Article).",
+                            "articleDuration": 5,
+                            "articleUrl": "https://example.com/article/bigquery-architecture-overview.html"
                         },
                         {
-                            "title": "Building a dataset in BigQuery",
-                            "type": "Codelab"
+                            "codelabId": "codelab-10330ec9-d102-4752-9659-3a3f01b0f5b8",
+                            "codelabName": "Building a dataset in BigQuery",
+                            "codelabDescription": "Description for \"Building a dataset in BigQuery\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/building-a-dataset-in-bigquery"
                         },
                         {
-                            "title": "Writing Standard SQL Queries in BigQuery: SELECT, FROM, WHERE, GROUP BY, ORDER BY, LIMIT",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d8438259-e932-4710-8b17-75e1176b6b7a",
+                            "codelabName": "Writing Standard SQL Queries in BigQuery: SELECT, FROM, WHERE, GROUP BY, ORDER BY, LIMIT",
+                            "codelabDescription": "Description for \"Writing Standard SQL Queries in BigQuery: SELECT, FROM, WHERE, GROUP BY, ORDER BY, LIMIT\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/writing-standard-sql-queries-in-bigquery-select-from-where-group-by-order-by-limit"
                         },
                         {
-                            "title": "Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c6be952c-bdc0-482a-a035-7ff17094d48d",
+                            "codelabName": "Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)",
+                            "codelabDescription": "Description for \"Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/aggregate-functions-count-sum-avg-min-max"
                         },
                         {
-                            "title": "Joining Tables (INNER JOIN, LEFT JOIN, etc.)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c5112185-1815-467d-9333-e009cf0283bd",
+                            "codelabName": "Joining Tables (INNER JOIN, LEFT JOIN, etc.)",
+                            "codelabDescription": "Description for \"Joining Tables (INNER JOIN, LEFT JOIN, etc.)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/joining-tables-inner-join-left-join-etc"
                         },
                         {
-                            "title": "Subqueries and Common Table Expressions (CTEs)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e63d6b0e-d1b4-48ac-a798-2509170e5b88",
+                            "codelabName": "Subqueries and Common Table Expressions (CTEs)",
+                            "codelabDescription": "Description for \"Subqueries and Common Table Expressions (CTEs)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/subqueries-and-common-table-expressions-ctes"
                         },
                         {
-                            "title": "BigQuery Fundamentals",
-                            "type": "Quiz"
+                            "quizId": "quiz-24c6de8f-7634-440f-902c-4b68e4c702f3",
+                            "quizName": "BigQuery Fundamentals",
+                            "quizDescription": "Description for \"BigQuery Fundamentals\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/bigquery-fundamentals.html"
                         }
                     ]
                 },
                 {
-                    "title": "Working with BigQueryML",
+                    "pathwayId": "working-with-bigqueryml",
+                    "pathwayName": "Working with BigQueryML",
+                    "pathwayDescription": "Pathway covering: Working with BigQueryML",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-5-pathway-2/badge.svg",
+                    "pathwayDuration": 90,
                     "resources": [
                         {
-                            "title": "Introduction to BigQuery ML",
-                            "type": "Video"
+                            "videoId": "video-376dd65d-59d9-4d32-95f7-87cf73574d6f",
+                            "videoName": "Introduction to BigQuery ML",
+                            "videoDescription": "Description for \"Introduction to BigQuery ML\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-bigquery-ml.mp4"
                         },
                         {
-                            "title": "Advantages and Use Cases of BQML (Speed, Simplicity, Data Proximity)",
-                            "type": "Video"
+                            "videoId": "video-1004a3e8-54c3-4217-a1fd-c46648e58f01",
+                            "videoName": "Advantages and Use Cases of BQML (Speed, Simplicity, Data Proximity)",
+                            "videoDescription": "Description for \"Advantages and Use Cases of BQML (Speed, Simplicity, Data Proximity)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/advantages-and-use-cases-of-bqml-speed-simplicity-data-proximity.mp4"
                         },
                         {
-                            "title": "Supported Model Types (Focus on a few key ones: Linear Regression, Logistic Regression, K-Means)",
-                            "type": "Video"
+                            "videoId": "video-c8c1e285-b1a1-4354-9430-81f1807d9282",
+                            "videoName": "Supported Model Types (Focus on a few key ones: Linear Regression, Logistic Regression, K-Means)",
+                            "videoDescription": "Description for \"Supported Model Types (Focus on a few key ones: Linear Regression, Logistic Regression, K-Means)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/supported-model-types-focus-on-a-few-key-ones-linear-regression-logistic-regression-k-means.mp4"
                         },
                         {
-                            "title": "CREATE MODEL syntax and options (Specifying model type, target, features, options)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-1865a9ef-9273-41bb-9ab6-2009228801d0",
+                            "codelabName": "CREATE MODEL syntax and options (Specifying model type, target, features, options)",
+                            "codelabDescription": "Description for \"CREATE MODEL syntax and options (Specifying model type, target, features, options)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-model-syntax-and-options-specifying-model-type-target-features-options"
                         },
                         {
-                            "title": "Training your first ML model in BigQuery",
-                            "type": "Codelab"
+                            "codelabId": "codelab-7eb3e218-c02c-47b8-80f2-e5c707d89047",
+                            "codelabName": "Training your first ML model in BigQuery",
+                            "codelabDescription": "Description for \"Training your first ML model in BigQuery\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/training-your-first-ml-model-in-bigquery"
                         },
                         {
-                            "title": "Load or identify a dataset suitable for regression or classification (e.g., predicting housing prices, customer churn)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-6cd6d82e-e3dd-47e1-953e-52f01f2f8152",
+                            "codelabName": "Load or identify a dataset suitable for regression or classification (e.g., predicting housing prices, customer churn)",
+                            "codelabDescription": "Description for \"Load or identify a dataset suitable for regression or classification (e.g., predicting housing prices, customer churn)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/load-or-identify-a-dataset-suitable-for-regression-or-classification-eg-predicting-housing-prices-customer-churn"
                         },
                         {
-                            "title": "Evaluating Trained Models (ML.EVALUATE function)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-0683a3da-a25e-49b0-8c29-dd82eb4e55e8",
+                            "codelabName": "Evaluating Trained Models (ML.EVALUATE function)",
+                            "codelabDescription": "Description for \"Evaluating Trained Models (ML.EVALUATE function)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/evaluating-trained-models-mlevaluate-function"
                         },
                         {
-                            "title": "Understanding Evaluation Metrics (RMSE, R2, Precision, Recall, AUC, etc.)",
-                            "type": "Video"
+                            "videoId": "video-79354016-5b4d-44cc-bc39-38b8c5e9f168",
+                            "videoName": "Understanding Evaluation Metrics (RMSE, R2, Precision, Recall, AUC, etc.)",
+                            "videoDescription": "Description for \"Understanding Evaluation Metrics (RMSE, R2, Precision, Recall, AUC, etc.)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/understanding-evaluation-metrics-rmse-r2-precision-recall-auc-etc.mp4"
                         },
                         {
-                            "title": "Making Predictions",
-                            "type": "Codelab"
+                            "codelabId": "codelab-0672e35b-11c5-442b-b6d4-8d451295982e",
+                            "codelabName": "Making Predictions",
+                            "codelabDescription": "Description for \"Making Predictions\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/making-predictions"
                         },
                         {
-                            "title": "Exporting BQML Models",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3e3d9321-c5da-48eb-b461-a1ac0b522066",
+                            "codelabName": "Exporting BQML Models",
+                            "codelabDescription": "Description for \"Exporting BQML Models\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/exporting-bqml-models"
                         },
                         {
-                            "title": "Quiz",
-                            "type": "Quiz"
+                            "quizId": "quiz-049830da-e7b3-40f4-90aa-e300a7b483be",
+                            "quizName": "Quiz: Working with BigQueryML",
+                            "quizDescription": "Description for \"Quiz: Working with BigQueryML\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/quiz-working-with-bigqueryml.html"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Training with VertexAI",
+            "unitId": "training-with-vertexai",
+            "unitName": "Training with VertexAI",
+            "unitDescription": "Unit covering: Training with VertexAI",
+            "unitDuration": 215,
             "pathways": [
                 {
-                    "title": "Introduction to VertexAI",
+                    "pathwayId": "introduction-to-vertexai",
+                    "pathwayName": "Introduction to VertexAI",
+                    "pathwayDescription": "Pathway covering: Introduction to VertexAI",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-6-pathway-1/badge.svg",
+                    "pathwayDuration": 45,
                     "resources": [
                         {
-                            "title": "What is Google Cloud Vertex AI? (Unified ML Platform)",
-                            "type": "Video"
+                            "videoId": "video-17c49e7e-8c6c-4b68-80e9-b54201be7a19",
+                            "videoName": "What is Google Cloud Vertex AI? (Unified ML Platform)",
+                            "videoDescription": "Description for \"What is Google Cloud Vertex AI? (Unified ML Platform)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-google-cloud-vertex-ai-unified-ml-platform.mp4"
                         },
                         {
-                            "title": "Key Services in Vertex AI (Workbench, Datasets, Training, Prediction, Pipelines, etc.)",
-                            "type": "Video"
+                            "videoId": "video-5d7629b3-ac38-4e89-a29d-42ac4a3b836d",
+                            "videoName": "Key Services in Vertex AI (Workbench, Datasets, Training, Prediction, Pipelines, etc.)",
+                            "videoDescription": "Description for \"Key Services in Vertex AI (Workbench, Datasets, Training, Prediction, Pipelines, etc.)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/key-services-in-vertex-ai-workbench-datasets-training-prediction-pipelines-etc.mp4"
                         },
                         {
-                            "title": "Navigating the Vertex AI Console",
-                            "type": "Codelab"
+                            "codelabId": "codelab-10e34c26-5389-49dd-a019-35c24e6c9893",
+                            "codelabName": "Navigating the Vertex AI Console",
+                            "codelabDescription": "Description for \"Navigating the Vertex AI Console\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/navigating-the-vertex-ai-console"
                         },
                         {
-                            "title": "Navigating the Vertex AI Console",
-                            "type": "Video"
+                            "videoId": "video-18454555-5f5c-42b7-a367-4a11f2a33c2a",
+                            "videoName": "Navigating the Vertex AI Console",
+                            "videoDescription": "Description for \"Navigating the Vertex AI Console\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/navigating-the-vertex-ai-console.mp4"
                         },
                         {
-                            "title": "Vertex AI Workbench / Managed Notebooks (Development environment setup)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-6c78759d-647d-4c31-8930-80164c483a91",
+                            "codelabName": "Vertex AI Workbench / Managed Notebooks (Development environment setup)",
+                            "codelabDescription": "Description for \"Vertex AI Workbench / Managed Notebooks (Development environment setup)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/vertex-ai-workbench-managed-notebooks-development-environment-setup"
                         },
                         {
-                            "title": "Choosing Your Training Approach: AutoML vs. Custom Training vs. BQML",
-                            "type": "Video"
+                            "videoId": "video-4c281e05-64de-4d43-a612-bb2d8293780a",
+                            "videoName": "Choosing Your Training Approach: AutoML vs. Custom Training vs. BQML",
+                            "videoDescription": "Description for \"Choosing Your Training Approach: AutoML vs. Custom Training vs. BQML\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/choosing-your-training-approach-automl-vs-custom-training-vs-bqml.mp4"
                         },
                         {
-                            "title": "VertexAI Fundamentals",
-                            "type": "Quiz"
+                            "quizId": "quiz-660c1d2e-0968-45e5-ab35-31fcf6c8d76d",
+                            "quizName": "VertexAI Fundamentals",
+                            "quizDescription": "Description for \"VertexAI Fundamentals\" (Quiz).",
+                            "quizDuration": 5,
+                            "quizUrl": "https://example.com/quiz/vertexai-fundamentals.html"
                         }
                     ]
                 },
                 {
-                    "title": "Working with ML Garden",
+                    "pathwayId": "working-with-ml-garden",
+                    "pathwayName": "Working with ML Garden",
+                    "pathwayDescription": "Pathway covering: Working with ML Garden",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-6-pathway-2/badge.svg",
+                    "pathwayDuration": 50,
                     "resources": [
                         {
-                            "title": "Introduction to the Gemma Model Family (Open models from Google, 2B and 7B variants)",
-                            "type": "Video"
+                            "videoId": "video-319a288c-7f55-4424-aa61-e0cd2a2d4862",
+                            "videoName": "Introduction to the Gemma Model Family (Open models from Google, 2B and 7B variants)",
+                            "videoDescription": "Description for \"Introduction to the Gemma Model Family (Open models from Google, 2B and 7B variants)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-the-gemma-model-family-open-models-from-google-2b-and-7b-variants.mp4"
                         },
                         {
-                            "title": "Accessing Gemma via Vertex AI Model Garden",
-                            "type": "Video"
+                            "videoId": "video-62325ab6-963a-4933-875f-2b23a54a7374",
+                            "videoName": "Accessing Gemma via Vertex AI Model Garden",
+                            "videoDescription": "Description for \"Accessing Gemma via Vertex AI Model Garden\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/accessing-gemma-via-vertex-ai-model-garden.mp4"
                         },
                         {
-                            "title": "Deploying the pre-trained Gemma model to a Vertex AI Endpoint for prediction",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f0c13637-8cf2-4c6e-b3f7-50795c737976",
+                            "codelabName": "Deploying the pre-trained Gemma model to a Vertex AI Endpoint for prediction",
+                            "codelabDescription": "Description for \"Deploying the pre-trained Gemma model to a Vertex AI Endpoint for prediction\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/deploying-the-pre-trained-gemma-model-to-a-vertex-ai-endpoint-for-prediction"
                         },
                         {
-                            "title": "Understanding LLM Prediction Endpoints and instances",
-                            "type": "Video"
+                            "videoId": "video-78d169ac-2c1e-45a7-b248-8df047ff69e8",
+                            "videoName": "Understanding LLM Prediction Endpoints and instances",
+                            "videoDescription": "Description for \"Understanding LLM Prediction Endpoints and instances\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/understanding-llm-prediction-endpoints-and-instances.mp4"
                         },
                         {
-                            "title": "Using the Vertex AI Client Libraries (Python SDK focus) to interact with deployed models",
-                            "type": "Video"
+                            "videoId": "video-f84f1832-6019-49dd-9ff8-639a0937a898",
+                            "videoName": "Using the Vertex AI Client Libraries (Python SDK focus) to interact with deployed models",
+                            "videoDescription": "Description for \"Using the Vertex AI Client Libraries (Python SDK focus) to interact with deployed models\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/using-the-vertex-ai-client-libraries-python-sdk-focus-to-interact-with-deployed-models.mp4"
                         },
                         {
-                            "title": "Performing Text Generation with Gemma (Understanding input/output formats)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-26938d2f-4886-4e5a-a3a8-6e5455959955",
+                            "codelabName": "Performing Text Generation with Gemma (Understanding input/output formats)",
+                            "codelabDescription": "Description for \"Performing Text Generation with Gemma (Understanding input/output formats)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/performing-text-generation-with-gemma-understanding-inputoutput-formats"
                         },
                         {
-                            "title": "Configuring Generation Parameters (e.g., temperature, max_output_tokens, top_k, top_p)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-9c922ed3-1763-4c91-91a5-86f3763f0d5f",
+                            "codelabName": "Configuring Generation Parameters (e.g., temperature, max_output_tokens, top_k, top_p)",
+                            "codelabDescription": "Description for \"Configuring Generation Parameters (e.g., temperature, max_output_tokens, top_k, top_p)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/configuring-generation-parameters-eg-temperature-max_output_tokens-top_k-top_p"
                         },
                         {
-                            "title": "Using the Chat API for conversational interactions",
-                            "type": "Codelab"
+                            "codelabId": "codelab-62b14647-7591-4d94-9844-48f5a54fd86a",
+                            "codelabName": "Using the Chat API for conversational interactions",
+                            "codelabDescription": "Description for \"Using the Chat API for conversational interactions\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/using-the-chat-api-for-conversational-interactions"
                         },
                         {
-                            "title": "Running code in Vertex AI Workbench notebooks",
-                            "type": "Video"
+                            "videoId": "video-c4e23fc4-e69d-4340-a15f-c07a3c7ef2b7",
+                            "videoName": "Running code in Vertex AI Workbench notebooks",
+                            "videoDescription": "Description for \"Running code in Vertex AI Workbench notebooks\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/running-code-in-vertex-ai-workbench-notebooks.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Fine tuning Gemma models",
+                    "pathwayId": "fine-tuning-gemma-models",
+                    "pathwayName": "Fine tuning Gemma models",
+                    "pathwayDescription": "Pathway covering: Fine tuning Gemma models",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-6-pathway-3/badge.svg",
+                    "pathwayDuration": 90,
                     "resources": [
                         {
-                            "title": "Why Tune Gemma? (Adapting to specific domains, tasks, styles)",
-                            "type": "Video"
+                            "videoId": "video-5867a57a-115f-463d-82b5-e01d894b9015",
+                            "videoName": "Why Tune Gemma? (Adapting to specific domains, tasks, styles)",
+                            "videoDescription": "Description for \"Why Tune Gemma? (Adapting to specific domains, tasks, styles)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/why-tune-gemma-adapting-to-specific-domains-tasks-styles.mp4"
                         },
                         {
-                            "title": "Introduction to Supervised Tuning for LLMs",
-                            "type": "Video"
+                            "videoId": "video-39d48b79-5835-42d3-92f7-e7e221319224",
+                            "videoName": "Introduction to Supervised Tuning for LLMs",
+                            "videoDescription": "Description for \"Introduction to Supervised Tuning for LLMs\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-supervised-tuning-for-llms.mp4"
                         },
                         {
-                            "title": "Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)",
-                            "type": "Video"
+                            "videoId": "video-b0b9a695-090a-4ac6-b6b8-6c8411b4352e",
+                            "videoName": "Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)",
+                            "videoDescription": "Description for \"Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/data-preparation-for-supervised-tuning-inputoutput-pairs-json-lines-format-cloud-storage-requirements.mp4"
                         },
                         {
-                            "title": "Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-10330ec9-d102-4752-9659-3a3f01b0f5b8",
+                            "codelabName": "Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)",
+                            "codelabDescription": "Description for \"Data Preparation for Supervised Tuning (Input/Output pairs, JSON Lines format, Cloud Storage requirements)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/data-preparation-for-supervised-tuning-inputoutput-pairs-json-lines-format-cloud-storage-requirements"
                         },
                         {
-                            "title": "Creating a Supervised Tuning Dataset in Vertex AI",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d8438259-e932-4710-8b17-75e1176b6b7a",
+                            "codelabName": "Creating a Supervised Tuning Dataset in Vertex AI",
+                            "codelabDescription": "Description for \"Creating a Supervised Tuning Dataset in Vertex AI\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/creating-a-supervised-tuning-dataset-in-vertex-ai"
                         },
                         {
-                            "title": "Creating and monitoring a Supervised Tuning job for Gemma via Console or SDK",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c6be952c-bdc0-482a-a035-7ff17094d48d",
+                            "codelabName": "Creating and monitoring a Supervised Tuning job for Gemma via Console or SDK",
+                            "codelabDescription": "Description for \"Creating and monitoring a Supervised Tuning job for Gemma via Console or SDK\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/creating-and-monitoring-a-supervised-tuning-job-for-gemma-via-console-or-sdk"
                         },
                         {
-                            "title": "Evaluating Tuned LLMs (Challenges and approaches)",
-                            "type": "Video"
+                            "videoId": "video-c5112185-1815-467d-9333-e009cf0283bd",
+                            "videoName": "Evaluating Tuned LLMs (Challenges and approaches)",
+                            "videoDescription": "Description for \"Evaluating Tuned LLMs (Challenges and approaches)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/evaluating-tuned-llms-challenges-and-approaches.mp4"
                         },
                         {
-                            "title": "(Optional) Using Vertex AI Evaluation services (if applicable to Gemma tuning)",
-                            "type": "Video"
+                            "videoId": "video-e63d6b0e-d1b4-48ac-a798-2509170e5b88",
+                            "videoName": "(Optional) Using Vertex AI Evaluation services (if applicable to Gemma tuning)",
+                            "videoDescription": "Description for \"(Optional) Using Vertex AI Evaluation services (if applicable to Gemma tuning)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/optional-using-vertex-ai-evaluation-services-if-applicable-to-gemma-tuning.mp4"
                         },
                         {
-                            "title": "Manual Evaluation and Qualitative Assessment",
-                            "type": "Video"
+                            "videoId": "video-24c6de8f-7634-440f-902c-4b68e4c702f3",
+                            "videoName": "Manual Evaluation and Qualitative Assessment",
+                            "videoDescription": "Description for \"Manual Evaluation and Qualitative Assessment\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/manual-evaluation-and-qualitative-assessment.mp4"
                         },
                         {
-                            "title": "Deploying a Tuned Gemma Model to a Vertex AI Endpoint",
-                            "type": "Codelab"
+                            "codelabId": "codelab-376dd65d-59d9-4d32-95f7-87cf73574d6f",
+                            "codelabName": "Deploying a Tuned Gemma Model to a Vertex AI Endpoint",
+                            "codelabDescription": "Description for \"Deploying a Tuned Gemma Model to a Vertex AI Endpoint\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/deploying-a-tuned-gemma-model-to-a-vertex-ai-endpoint"
                         },
                         {
-                            "title": "Comparing performance/cost of Base vs. Tuned model deployments",
-                            "type": "Video"
+                            "videoId": "video-1004a3e8-54c3-4217-a1fd-c46648e58f01",
+                            "videoName": "Comparing performance/cost of Base vs. Tuned model deployments",
+                            "videoDescription": "Description for \"Comparing performance/cost of Base vs. Tuned model deployments\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/comparing-performancecost-of-base-vs-tuned-model-deployments.mp4"
                         },
                         {
-                            "title": "Responsible AI considerations when using and tuning Gemma",
-                            "type": "Video"
+                            "videoId": "video-c8c1e285-b1a1-4354-9430-81f1807d9282",
+                            "videoName": "Responsible AI considerations when using and tuning Gemma",
+                            "videoDescription": "Description for \"Responsible AI considerations when using and tuning Gemma\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/responsible-ai-considerations-when-using-and-tuning-gemma.mp4"
                         }
                     ]
                 },
                 {
-                    "title": "Advanced Vertex AI (optional)",
+                    "pathwayId": "advanced-vertex-ai-optional",
+                    "pathwayName": "Advanced Vertex AI (optional)",
+                    "pathwayDescription": "Pathway covering: Advanced Vertex AI (optional)",
+                    "pathwayBadge": "https://example.com/static/profile/badges/unit-6-pathway-4/badge.svg",
+                    "pathwayDuration": 30,
                     "resources": [
                         {
-                            "title": "(Optional) Introduction to Gemma 2B/7B variants (Instruct, fine-tuned)",
-                            "type": "Video"
+                            "videoId": "video-1865a9ef-9273-41bb-9ab6-2009228801d0",
+                            "videoName": "(Optional) Introduction to Gemma 2B/7B variants (Instruct, fine-tuned)",
+                            "videoDescription": "Description for \"(Optional) Introduction to Gemma 2B/7B variants (Instruct, fine-tuned)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/optional-introduction-to-gemma-2b7b-variants-instruct-fine-tuned.mp4"
                         },
                         {
-                            "title": "(Optional) Generating Embeddings with Vertex AI LLMs (for RAG use cases)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-7eb3e218-c02c-47b8-80f2-e5c707d89047",
+                            "codelabName": "(Optional) Generating Embeddings with Vertex AI LLMs (for RAG use cases)",
+                            "codelabDescription": "Description for \"(Optional) Generating Embeddings with Vertex AI LLMs (for RAG use cases)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/optional-generating-embeddings-with-vertex-ai-llms-for-rag-use-cases"
                         },
                         {
-                            "title": "(Optional) Overview of other LLM capabilities on Vertex AI (e.g., PaLM 2, Gemini - briefly mention difference from open models)",
-                            "type": "Video"
+                            "videoId": "video-6cd6d82e-e3dd-47e1-953e-52f01f2f8152",
+                            "videoName": "(Optional) Overview of other LLM capabilities on Vertex AI (e.g., PaLM 2, Gemini - briefly mention difference from open models)",
+                            "videoDescription": "Description for \"(Optional) Overview of other LLM capabilities on Vertex AI (e.g., PaLM 2, Gemini - briefly mention difference from open models)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/optional-overview-of-other-llm-capabilities-on-vertex-ai-eg-palm-2-gemini-briefly-mention-difference-from-open-models.mp4"
                         },
                         {
-                            "title": "Cost management strategies for LLM endpoints",
-                            "type": "Video"
+                            "videoId": "video-0683a3da-a25e-49b0-8c29-dd82eb4e55e8",
+                            "videoName": "Cost management strategies for LLM endpoints",
+                            "videoDescription": "Description for \"Cost management strategies for LLM endpoints\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/cost-management-strategies-for-llm-endpoints.mp4"
                         },
                         {
-                            "title": "Overview of Vertex AI Pipelines for MLOps automation (including LLM workflows)",
-                            "type": "Video"
+                            "videoId": "video-79354016-5b4d-44cc-bc39-38b8c5e9f168",
+                            "videoName": "Overview of Vertex AI Pipelines for MLOps automation (including LLM workflows)",
+                            "videoDescription": "Description for \"Overview of Vertex AI Pipelines for MLOps automation (including LLM workflows)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/overview-of-vertex-ai-pipelines-for-mlops-automation-including-llm-workflows.mp4"
                         },
                         {
-                            "title": "Course Review, Q&A, and Next Steps in Learning LLMs on Google Cloud",
-                            "type": "Video"
+                            "videoId": "video-0672e35b-11c5-442b-b6d4-8d451295982e",
+                            "videoName": "Course Review, Q&A, and Next Steps in Learning LLMs on Google Cloud",
+                            "videoDescription": "Description for \"Course Review, Q&A, and Next Steps in Learning LLMs on Google Cloud\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/course-review-qa-and-next-steps-in-learning-llms-on-google-cloud.mp4"
                         }
                     ]
                 }

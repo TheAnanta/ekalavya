@@ -1,4 +1,5 @@
 {
+    "courseId": "namasthe-full-stack",
     "courseName": "Namasthe Full-Stack",
     "courseSubtitle": "Learn the fundamentals of web development from HTML to deployment phase.",
     "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications.",
@@ -6,12 +7,12 @@
     "difficulty": "Beginner",
     "price": 0,
     "language": "English",
-    "cover": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Ai-1-banner.original.png",
+    "coverImage": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Ai-1-banner.original.png",
     "campLeaderCardColor": "#e39600",
     "campLeaderCardTextColor": "#FFF",
     "benefitsCardColor": "#fcd200",
     "benefitsCardTextColor": "#000",
-    "campLeader": [
+    "campLeaders": [
         {
             "name": "Varshita Palleti",
             "communityTitle": "Full-Stack Developer",
@@ -60,512 +61,754 @@
     },
     "courseOutline": [
         {
-            "title": "Introduction to the Web",
+            "unitId": "introduction-to-the-web",
+            "unitName": "Introduction to the Web",
+            "unitDescription": "Unit covering: Introduction to the Web",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "What is the Web, a Webpage, and a Website",
+                    "pathwayId": "what-is-the-web,-a-webpage,-and-a-website",
+                    "pathwayName": "What is the Web, a Webpage, and a Website",
+                    "pathwayDescription": "Pathway covering: What is the Web, a Webpage, and a Website",
+                    "pathwayDuration": 30,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is the Internet & the Web?",
-                            "type": "Video"
+                            "videoId": "video-360e48a1-1076-4b3a-881b-d595ad687ebd",
+                            "videoName": "What is the Internet & the Web?",
+                            "videoDescription": "Description for \"What is the Internet & the Web?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-the-internet-&-the-web?.mp4"
                         },
                         {
-                            "title": "What are Web Pages and Websites?",
-                            "type": "Video"
+                            "videoId": "video-f941d69d-bb45-4132-bbf0-02a0d65c72ea",
+                            "videoName": "What are Web Pages and Websites?",
+                            "videoDescription": "Description for \"What are Web Pages and Websites?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-are-web-pages-and-websites?.mp4"
                         },
                         {
-                            "title": "Differences: Webpage vs Website vs Web App",
-                            "type": "Article"
-                        },
-                        {
-                            "title": "Understanding the Web",
-                            "type": "Quiz"
+                            "noteId": "note-ab7c95bb-b6b7-4ac3-936d-56c4b22e50cd",
+                            "noteTopic": "Differences: Webpage vs Website vs Web App",
+                            "url": "https://example.com/note/differences:-webpage-vs-website-vs-web-app.html",
+                            "noteDescription": "Description for \"Differences: Webpage vs Website vs Web App\" (Note).",
+                            "noteDuration": 2
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Vanilla HTML – Structure, Elements, and Tags",
+                    "pathwayId": "vanilla-html-–-structure,-elements,-and-tags",
+                    "pathwayName": "Vanilla HTML – Structure, Elements, and Tags",
+                    "pathwayDescription": "Pathway covering: Vanilla HTML – Structure, Elements, and Tags",
+                    "pathwayDuration": 40,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "HTML Basics: Structure & Tags",
-                            "type": "Video"
+                            "videoId": "video-1a0459fe-a244-4d3f-824f-afaf45324033",
+                            "videoName": "HTML Basics: Structure & Tags",
+                            "videoDescription": "Description for \"HTML Basics: Structure & Tags\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/html-basics:-structure-&-tags.mp4"
                         },
                         {
-                            "title": "Explore HTML",
-                            "type": "Codelab"
+                            "codelabId": "codelab-16ca5c4f-dae1-4354-8702-1050c6329189",
+                            "codelabName": "Explore HTML",
+                            "codelabDescription": "Description for \"Explore HTML\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/explore-html"
                         },
                         {
-                            "title": "Build: My First Webpage (Headings, Paragraphs, Links)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-511624a4-6da7-492a-a209-f245c236a4a9",
+                            "codelabName": "Build: My First Webpage (Headings, Paragraphs, Links)",
+                            "codelabDescription": "Description for \"Build: My First Webpage (Headings, Paragraphs, Links)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build:-my-first-webpage-(headings,-paragraphs,-links)"
                         },
                         {
-                            "title": "What's next? Basic HTML Formatting & Lists",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "HTML Fundamentals",
-                            "type": "Quiz"
+                            "videoId": "video-9b138802-d67a-445e-a46c-a15570a03896",
+                            "videoName": "What's next? Basic HTML Formatting & Lists",
+                            "videoDescription": "Description for \"What's next? Basic HTML Formatting & Lists\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what's-next?-basic-html-formatting-&-lists.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "HTML Semantics and Best Practices",
+                    "pathwayId": "html-semantics-and-best-practices",
+                    "pathwayName": "HTML Semantics and Best Practices",
+                    "pathwayDescription": "Pathway covering: HTML Semantics and Best Practices",
+                    "pathwayDuration": 40,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Semantic HTML: What and Why?",
-                            "type": "Video"
+                            "videoId": "video-ce7b03e3-d0cc-444c-af60-178e39621a93",
+                            "videoName": "Semantic HTML: What and Why?",
+                            "videoDescription": "Description for \"Semantic HTML: What and Why?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/semantic-html:-what-and-why?.mp4"
                         },
                         {
-                            "title": "HTML5 Semantic Tags Overview",
-                            "type": "Article"
+                            "noteId": "note-3b656757-e0c2-4139-b714-ea94935502b2",
+                            "noteTopic": "HTML5 Semantic Tags Overview",
+                            "url": "https://example.com/note/html5-semantic-tags-overview.html",
+                            "noteDescription": "Description for \"HTML5 Semantic Tags Overview\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Build: Personal Bio Page with Semantic Tags",
-                            "type": "Codelab"
+                            "codelabId": "codelab-f0c0d3ec-4a84-41b6-a610-7c197ea916af",
+                            "codelabName": "Build: Personal Bio Page with Semantic Tags",
+                            "codelabDescription": "Description for \"Build: Personal Bio Page with Semantic Tags\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build:-personal-bio-page-with-semantic-tags"
                         },
                         {
-                            "title": "Build: Blog Layout using Header, Section, Footer",
-                            "type": "Codelab"
-                        },
-                        {
-                            "title": "Semantic HTML & Page Structure",
-                            "type": "Quiz"
+                            "codelabId": "codelab-9abc564e-c230-4e94-8a6c-4cb1b32842be",
+                            "codelabName": "Build: Blog Layout using Header, Section, Footer",
+                            "codelabDescription": "Description for \"Build: Blog Layout using Header, Section, Footer\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build:-blog-layout-using-header,-section,-footer"
                         }
-                    ],
-                    "badge": null
+                    ]
                 }
             ]
         },
         {
-            "title": "Styling with CSS and Tailwind CSS",
+            "unitId": "styling-with-css-and-tailwind-css",
+            "unitName": "Styling with CSS and Tailwind CSS",
+            "unitDescription": "Unit covering: Styling with CSS and Tailwind CSS",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Introduction to CSS – Syntax, Selectors, and Properties",
+                    "pathwayId": "introduction-to-css-–-syntax,-selectors,-and-properties",
+                    "pathwayName": "Introduction to CSS – Syntax, Selectors, and Properties",
+                    "pathwayDescription": "Pathway covering: Introduction to CSS – Syntax, Selectors, and Properties",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is CSS?",
-                            "type": "Video"
+                            "videoId": "video-24b9c1a2-5857-4d6c-9741-03ed48b16063",
+                            "videoName": "What is CSS?",
+                            "videoDescription": "Description for \"What is CSS?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-css?.mp4"
                         },
                         {
-                            "title": "How CSS Works With HTML",
-                            "type": "Video"
+                            "videoId": "video-a2b36d34-c014-4899-860d-7eed995b0bc3",
+                            "videoName": "How CSS Works With HTML",
+                            "videoDescription": "Description for \"How CSS Works With HTML\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/how-css-works-with-html.mp4"
                         },
                         {
-                            "title": "Types of Selectors and Properties",
-                            "type": "Article"
+                            "noteId": "note-5b24780e-4023-40aa-8fa2-e2f4a178e4c0",
+                            "noteTopic": "Types of Selectors and Properties",
+                            "url": "https://example.com/note/types-of-selectors-and-properties.html",
+                            "noteDescription": "Description for \"Types of Selectors and Properties\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Style your personal bio page from Week 1",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ba742c43-1e19-49bf-b07e-8b0304e4d3fc",
+                            "codelabName": "Style your personal bio page from Week 1",
+                            "codelabDescription": "Description for \"Style your personal bio page from Week 1\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/style-your-personal-bio-page-from-week-1"
                         },
                         {
-                            "title": "Apply colors, padding, borders using class and ID selectors",
-                            "type": "Codelab"
+                            "codelabId": "codelab-d1fa774a-ec99-4a39-b5d4-1bb33f8d5582",
+                            "codelabName": "Apply colors, padding, borders using class and ID selectors",
+                            "codelabDescription": "Description for \"Apply colors, padding, borders using class and ID selectors\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/apply-colors,-padding,-borders-using-class-and-id-selectors"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "CSS Basics",
-                            "type": "Quiz"
+                            "videoId": "video-b259379b-7dba-49c9-8ba1-541ddf539b2a",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "CSS Layouts – Flexbox, Grid, Positioning",
+                    "pathwayId": "css-layouts-–-flexbox,-grid,-positioning",
+                    "pathwayName": "CSS Layouts – Flexbox, Grid, Positioning",
+                    "pathwayDescription": "Pathway covering: CSS Layouts – Flexbox, Grid, Positioning",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Introduction to the CSS Box Model",
-                            "type": "Video"
+                            "videoId": "video-dff7ee8f-1001-4637-bba7-e07d75169e5f",
+                            "videoName": "Introduction to the CSS Box Model",
+                            "videoDescription": "Description for \"Introduction to the CSS Box Model\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-the-css-box-model.mp4"
                         },
                         {
-                            "title": "Layout with Flexbox and Grid",
-                            "type": "Video"
+                            "videoId": "video-fb2e3a9a-3fbc-45b9-86e2-78ab090c44fa",
+                            "videoName": "Layout with Flexbox and Grid",
+                            "videoDescription": "Description for \"Layout with Flexbox and Grid\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/layout-with-flexbox-and-grid.mp4"
                         },
                         {
-                            "title": "Create a formal profile card using vanilla CSS",
-                            "type": "Codelab"
+                            "codelabId": "codelab-a390181d-f5f7-4ec6-a69c-77f2259f5449",
+                            "codelabName": "Create a formal profile card using vanilla CSS",
+                            "codelabDescription": "Description for \"Create a formal profile card using vanilla CSS\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-a-formal-profile-card-using-vanilla-css"
                         },
                         {
-                            "title": "Add hover effects, box shadows, and visual structure",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ff71f7b4-8a4d-4737-b667-2c8d2756069d",
+                            "codelabName": "Add hover effects, box shadows, and visual structure",
+                            "codelabDescription": "Description for \"Add hover effects, box shadows, and visual structure\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/add-hover-effects,-box-shadows,-and-visual-structure"
                         },
                         {
-                            "title": "Use Flex/Grid to create a two-column layout",
-                            "type": "Codelab"
+                            "codelabId": "codelab-056873c8-4b7b-4342-83f1-9610726da60f",
+                            "codelabName": "Use Flex/Grid to create a two-column layout",
+                            "codelabDescription": "Description for \"Use Flex/Grid to create a two-column layout\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/use-flex/grid-to-create-a-two-column-layout"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "CSS Layouts",
-                            "type": "Quiz"
+                            "videoId": "video-07bc01af-fdd5-469e-9ae2-9029020478ee",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Tailwind CSS – Utility-first approach, setup and usage",
+                    "pathwayId": "tailwind-css-–-utility-first-approach,-setup-and-usage",
+                    "pathwayName": "Tailwind CSS – Utility-first approach, setup and usage",
+                    "pathwayDescription": "Pathway covering: Tailwind CSS – Utility-first approach, setup and usage",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Tailwind CSS?",
-                            "type": "Video"
+                            "videoId": "video-0572d347-7dae-4992-83ee-b8e86e0279b9",
+                            "videoName": "What is Tailwind CSS?",
+                            "videoDescription": "Description for \"What is Tailwind CSS?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-tailwind-css?.mp4"
                         },
                         {
-                            "title": "Setting up Tailwind with CDN and CLI",
-                            "type": "Article + Demo"
+                            "codelabId": "codelab-47204c34-50da-49ed-896c-3c7ae7033f94",
+                            "codelabName": "Setting up Tailwind with CDN and CLI",
+                            "codelabDescription": "Description for \"Setting up Tailwind with CDN and CLI\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/setting-up-tailwind-with-cdn-and-cli"
                         },
                         {
-                            "title": "Tailwind Utility Classes Overview",
-                            "type": "Video"
+                            "videoId": "video-58a8a1df-a3ed-4ce5-975d-7ee47298eed6",
+                            "videoName": "Tailwind Utility Classes Overview",
+                            "videoDescription": "Description for \"Tailwind Utility Classes Overview\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/tailwind-utility-classes-overview.mp4"
                         },
                         {
-                            "title": "Tailwind Playground Exploration (Tailwind Play)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-596a922b-c16f-4c4a-923b-22d2f428f696",
+                            "codelabName": "Tailwind Playground Exploration (Tailwind Play)",
+                            "codelabDescription": "Description for \"Tailwind Playground Exploration (Tailwind Play)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/tailwind-playground-exploration-(tailwind-play)"
                         },
                         {
-                            "title": "Create a responsive navbar using Tailwind CSS",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e87e6f12-9211-41bd-af8f-33f186b459f1",
+                            "codelabName": "Create a responsive navbar using Tailwind CSS",
+                            "codelabDescription": "Description for \"Create a responsive navbar using Tailwind CSS\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/create-a-responsive-navbar-using-tailwind-css"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Tailwind CSS Fundamentals",
-                            "type": "Quiz"
+                            "videoId": "video-a080c4d7-5091-47bb-b9e1-87163dc3acc7",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 }
             ]
         },
         {
-            "title": "JavaScript Fundamentals and Async/Await : Making Pages Interactive",
+            "unitId": "javascript-fundamentals-and-async/await-:-making-pages-interactive",
+            "unitName": "JavaScript Fundamentals and Async/Await : Making Pages Interactive",
+            "unitDescription": "Unit covering: JavaScript Fundamentals and Async/Await : Making Pages Interactive",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Basics of JavaScript – Variables, Functions, Events",
+                    "pathwayId": "basics-of-javascript-–-variables,-functions,-events",
+                    "pathwayName": "Basics of JavaScript – Variables, Functions, Events",
+                    "pathwayDescription": "Pathway covering: Basics of JavaScript – Variables, Functions, Events",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is JavaScript and how does it run in the browser?",
-                            "type": "Video"
+                            "videoId": "video-9e3c0362-1152-44d7-a173-5e9e47210fb0",
+                            "videoName": "What is JavaScript and how does it run in the browser?",
+                            "videoDescription": "Description for \"What is JavaScript and how does it run in the browser?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-javascript-and-how-does-it-run-in-the-browser?.mp4"
                         },
                         {
-                            "title": "Introduction to variables, data types, and functions",
-                            "type": "Video"
+                            "videoId": "video-c7f18574-4724-4d5f-bc14-8088de21d31d",
+                            "videoName": "Introduction to variables, data types, and functions",
+                            "videoDescription": "Description for \"Introduction to variables, data types, and functions\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-variables,-data-types,-and-functions.mp4"
                         },
                         {
-                            "title": "Event listeners and basic interactivity (click, input, etc.)",
-                            "type": "Article + Demo"
+                            "codelabId": "codelab-cdf47d12-8ed1-43dc-8078-fd920d742f44",
+                            "codelabName": "Event listeners and basic interactivity (click, input, etc.)",
+                            "codelabDescription": "Description for \"Event listeners and basic interactivity (click, input, etc.)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/event-listeners-and-basic-interactivity-(click,-input,-etc.)"
                         },
                         {
-                            "title": "Build a calculator using JavaScript",
-                            "type": "Codelab"
+                            "codelabId": "codelab-c1f5055e-2e2f-450d-b3ea-d50e5f270a8c",
+                            "codelabName": "Build a calculator using JavaScript",
+                            "codelabDescription": "Description for \"Build a calculator using JavaScript\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-a-calculator-using-javascript"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "JavaScript Basics",
-                            "type": "Quiz"
+                            "videoId": "video-6853f3e4-d532-4107-ba58-0ccbba876d89",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "DOM Manipulation – Handling User Input",
+                    "pathwayId": "dom-manipulation-–-handling-user-input",
+                    "pathwayName": "DOM Manipulation – Handling User Input",
+                    "pathwayDescription": "Pathway covering: DOM Manipulation – Handling User Input",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is the DOM? How does JavaScript interact with HTML?",
-                            "type": "Video"
+                            "videoId": "video-c257a7fd-6986-4671-93d6-d37b33dbecce",
+                            "videoName": "What is the DOM? How does JavaScript interact with HTML?",
+                            "videoDescription": "Description for \"What is the DOM? How does JavaScript interact with HTML?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-the-dom?-how-does-javascript-interact-with-html?.mp4"
                         },
                         {
-                            "title": "Selecting and modifying elements using getElementById, querySelector",
-                            "type": "Demo"
+                            "codelabId": "codelab-59278896-8f89-4b2a-aa36-79bf2a10e70a",
+                            "codelabName": "Selecting and modifying elements using getElementById, querySelector",
+                            "codelabDescription": "Description for \"Selecting and modifying elements using getElementById, querySelector\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/selecting-and-modifying-elements-using-getelementbyid,-queryselector"
                         },
                         {
-                            "title": "Handling forms and user input",
-                            "type": "Video"
+                            "videoId": "video-a9c14531-03c3-40c6-ad1b-65bd9e68addb",
+                            "videoName": "Handling forms and user input",
+                            "videoDescription": "Description for \"Handling forms and user input\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/handling-forms-and-user-input.mp4"
                         },
                         {
-                            "title": "Form validation and event handling (e.g., sign-up form)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-58bb627c-b62e-48b8-839f-228e0d288ba7",
+                            "codelabName": "Form validation and event handling (e.g., sign-up form)",
+                            "codelabDescription": "Description for \"Form validation and event handling (e.g., sign-up form)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/form-validation-and-event-handling-(e.g.,-sign-up-form)"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "DOM and Events",
-                            "type": "Quiz"
+                            "videoId": "video-2a015464-be73-4444-aefe-09df80954247",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Asynchronous JS – Promises and async/await",
+                    "pathwayId": "asynchronous-js-–-promises-and-async/await",
+                    "pathwayName": "Asynchronous JS – Promises and async/await",
+                    "pathwayDescription": "Pathway covering: Asynchronous JS – Promises and async/await",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Synchronous vs Asynchronous JavaScript",
-                            "type": "Video"
+                            "videoId": "video-5fbdc16d-b134-4da2-ab1d-096a5c851adc",
+                            "videoName": "Synchronous vs Asynchronous JavaScript",
+                            "videoDescription": "Description for \"Synchronous vs Asynchronous JavaScript\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/synchronous-vs-asynchronous-javascript.mp4"
                         },
                         {
-                            "title": "What are Promises?",
-                            "type": "Video"
+                            "videoId": "video-13b2f931-f4a4-472a-a89e-b853aaec546b",
+                            "videoName": "What are Promises?",
+                            "videoDescription": "Description for \"What are Promises?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-are-promises?.mp4"
                         },
                         {
-                            "title": "Using fetch() to get data from an API",
-                            "type": "Demo"
+                            "codelabId": "codelab-4984021c-5fe3-43ca-9011-3a2d2555bdff",
+                            "codelabName": "Using fetch() to get data from an API",
+                            "codelabDescription": "Description for \"Using fetch() to get data from an API\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/using-fetch()-to-get-data-from-an-api"
                         },
                         {
-                            "title": "Fetch data from a public API using fetch() and async/await",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ab773bf1-27a2-4f2f-a77c-c4e47c7cd7fc",
+                            "codelabName": "Fetch data from a public API using fetch() and async/await",
+                            "codelabDescription": "Description for \"Fetch data from a public API using fetch() and async/await\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/fetch-data-from-a-public-api-using-fetch()-and-async/await"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Async and Promises",
-                            "type": "Quiz"
+                            "videoId": "video-ba2b9fa8-e401-4217-ad38-22617367cdda",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 }
             ]
         },
         {
-            "title": "Frameworks and Client-Side Rendering",
+            "unitId": "frameworks-and-client-side-rendering",
+            "unitName": "Frameworks and Client-Side Rendering",
+            "unitDescription": "Unit covering: Frameworks and Client-Side Rendering",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "What is a Framework? Difference Between Vanilla and Frameworks",
+                    "pathwayId": "what-is-a-framework?-difference-between-vanilla-and-frameworks",
+                    "pathwayName": "What is a Framework? Difference Between Vanilla and Frameworks",
+                    "pathwayDescription": "Pathway covering: What is a Framework? Difference Between Vanilla and Frameworks",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is a JavaScript Framework?",
-                            "type": "Video"
+                            "videoId": "video-e621f1c3-9474-476b-a8d5-0eda4b124f19",
+                            "videoName": "What is a JavaScript Framework?",
+                            "videoDescription": "Description for \"What is a JavaScript Framework?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-a-javascript-framework?.mp4"
                         },
                         {
-                            "title": "Difference between Vanilla JS and Frameworks",
-                            "type": "Article"
+                            "noteId": "note-b7fca307-32f8-480c-8f43-caceb3b788da",
+                            "noteTopic": "Difference between Vanilla JS and Frameworks",
+                            "url": "https://example.com/note/difference-between-vanilla-js-and-frameworks.html",
+                            "noteDescription": "Description for \"Difference between Vanilla JS and Frameworks\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Overview of Popular Frameworks: React, Angular, Vue",
-                            "type": "Video"
+                            "videoId": "video-98f6df4b-b5ef-4e82-b0b1-59c0f2472d5d",
+                            "videoName": "Overview of Popular Frameworks: React, Angular, Vue",
+                            "videoDescription": "Description for \"Overview of Popular Frameworks: React, Angular, Vue\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/overview-of-popular-frameworks:-react,-angular,-vue.mp4"
                         },
                         {
-                            "title": "Setting up a simple React or Vue app (Demo)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-e94659db-81b8-44f7-9155-4bd099c7c851",
+                            "codelabName": "Setting up a simple React or Vue app (Demo)",
+                            "codelabDescription": "Description for \"Setting up a simple React or Vue app (Demo)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/setting-up-a-simple-react-or-vue-app-(demo)"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Frameworks Basics",
-                            "type": "Quiz"
+                            "videoId": "video-da6f0a6a-a355-4c70-9c72-8c1c15549450",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Client-Side Rendering and State Management",
+                    "pathwayId": "client-side-rendering-and-state-management",
+                    "pathwayName": "Client-Side Rendering and State Management",
+                    "pathwayDescription": "Pathway covering: Client-Side Rendering and State Management",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Client-Side Rendering (CSR)?",
-                            "type": "Video"
+                            "videoId": "video-afd02051-092d-4dd8-aa32-bd9865782c7c",
+                            "videoName": "What is Client-Side Rendering (CSR)?",
+                            "videoDescription": "Description for \"What is Client-Side Rendering (CSR)?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-client-side-rendering-(csr)?.mp4"
                         },
                         {
-                            "title": "Understanding State and State Management in Web Apps",
-                            "type": "Article"
+                            "noteId": "note-7617bf0d-b5eb-476e-bb86-0e3107c73005",
+                            "noteTopic": "Understanding State and State Management in Web Apps",
+                            "url": "https://example.com/note/understanding-state-and-state-management-in-web-apps.html",
+                            "noteDescription": "Description for \"Understanding State and State Management in Web Apps\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Intro to State Management in React (useState) or Vue (reactive data)",
-                            "type": "Demo"
+                            "codelabId": "codelab-40329859-bfee-4642-8ac5-3ccb5862f3af",
+                            "codelabName": "Intro to State Management in React (useState) or Vue (reactive data)",
+                            "codelabDescription": "Description for \"Intro to State Management in React (useState) or Vue (reactive data)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/intro-to-state-management-in-react-(usestate)-or-vue-(reactive-data)"
                         },
                         {
-                            "title": "Build a simple interactive To-Do list with state management",
-                            "type": "Codelab"
+                            "codelabId": "codelab-ad39d0c3-b0e1-404d-8388-bf60a9643d1b",
+                            "codelabName": "Build a simple interactive To-Do list with state management",
+                            "codelabDescription": "Description for \"Build a simple interactive To-Do list with state management\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/build-a-simple-interactive-to-do-list-with-state-management"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Client-Side Rendering and State",
-                            "type": "Quiz"
+                            "videoId": "video-45b7fdae-06b5-4ea4-99ca-e4edf65293fa",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 }
             ]
         },
         {
-            "title": "Databases and Middleware (Servlets)",
+            "unitId": "databases-and-middleware-(servlets)",
+            "unitName": "Databases and Middleware (Servlets)",
+            "unitDescription": "Unit covering: Databases and Middleware (Servlets)",
+            "unitDuration": 120,
             "pathways": [
                 {
-                    "title": "Introduction to Databases",
+                    "pathwayId": "introduction-to-databases",
+                    "pathwayName": "Introduction to Databases",
+                    "pathwayDescription": "Pathway covering: Introduction to Databases",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is a Database? Types of Databases (SQL vs NoSQL)",
-                            "type": "Video"
+                            "videoId": "video-c520aa78-89f4-40de-b80d-e93d4e1ce06f",
+                            "videoName": "What is a Database? Types of Databases (SQL vs NoSQL)",
+                            "videoDescription": "Description for \"What is a Database? Types of Databases (SQL vs NoSQL)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-a-database?-types-of-databases-(sql-vs-nosql).mp4"
                         },
                         {
-                            "title": "Basic SQL Queries: SELECT, INSERT, UPDATE, DELETE",
-                            "type": "Demo"
+                            "codelabId": "codelab-826afcb0-5e59-44d1-928b-15aa83c4bd86",
+                            "codelabName": "Basic SQL Queries: SELECT, INSERT, UPDATE, DELETE",
+                            "codelabDescription": "Description for \"Basic SQL Queries: SELECT, INSERT, UPDATE, DELETE\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/basic-sql-queries:-select,-insert,-update,-delete"
                         },
                         {
-                            "title": "Setting up a simple database (e.g., SQLite or PostgreSQL)",
-                            "type": "Codelab"
+                            "codelabId": "codelab-33e5d955-3385-4fdf-82c6-f5d5e8ee303f",
+                            "codelabName": "Setting up a simple database (e.g., SQLite or PostgreSQL)",
+                            "codelabDescription": "Description for \"Setting up a simple database (e.g., SQLite or PostgreSQL)\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/setting-up-a-simple-database-(e.g.,-sqlite-or-postgresql)"
                         },
                         {
-                            "title": "Connecting a web app to a database (overview)",
-                            "type": "Video"
+                            "videoId": "video-bf73ecc2-65d2-49e9-a0ab-f1165b9cd5b7",
+                            "videoName": "Connecting a web app to a database (overview)",
+                            "videoDescription": "Description for \"Connecting a web app to a database (overview)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/connecting-a-web-app-to-a-database-(overview).mp4"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Database Fundamentals",
-                            "type": "Quiz"
+                            "videoId": "video-14146121-25b9-4901-87e8-dca63ffcfdd2",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Middleware and Servlets",
+                    "pathwayId": "middleware-and-servlets",
+                    "pathwayName": "Middleware and Servlets",
+                    "pathwayDescription": "Pathway covering: Middleware and Servlets",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Middleware? Role in Web Applications",
-                            "type": "Video"
+                            "videoId": "video-979597ff-d33d-4ab4-9b08-1e1cc94930e9",
+                            "videoName": "What is Middleware? Role in Web Applications",
+                            "videoDescription": "Description for \"What is Middleware? Role in Web Applications\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-middleware?-role-in-web-applications.mp4"
                         },
                         {
-                            "title": "Introduction to Servlets and how they work",
-                            "type": "Video"
+                            "videoId": "video-86d24928-cf02-48b3-a15d-75e2a7b22246",
+                            "videoName": "Introduction to Servlets and how they work",
+                            "videoDescription": "Description for \"Introduction to Servlets and how they work\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/introduction-to-servlets-and-how-they-work.mp4"
                         },
                         {
-                            "title": "Building a basic Servlet to handle requests and responses",
-                            "type": "Codelab"
+                            "codelabId": "codelab-548d4b8e-b334-458e-924b-a1dfb74fa042",
+                            "codelabName": "Building a basic Servlet to handle requests and responses",
+                            "codelabDescription": "Description for \"Building a basic Servlet to handle requests and responses\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/building-a-basic-servlet-to-handle-requests-and-responses"
                         },
                         {
-                            "title": "Middleware in Express.js or Java Servlet Container overview",
-                            "type": "Demo"
+                            "codelabId": "codelab-d7d30723-f86d-47ae-8665-56770aac03d2",
+                            "codelabName": "Middleware in Express.js or Java Servlet Container overview",
+                            "codelabDescription": "Description for \"Middleware in Express.js or Java Servlet Container overview\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/middleware-in-express.js-or-java-servlet-container-overview"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Middleware and Servlets",
-                            "type": "Quiz"
+                            "videoId": "video-9b63ada9-b21a-4352-9022-1b6060bf0b4d",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 }
             ]
         },
         {
-            "title": "Deployment, Tools, and Collaboration",
+            "unitId": "deployment,-tools,-and-collaboration",
+            "unitName": "Deployment, Tools, and Collaboration",
+            "unitDescription": "Unit covering: Deployment, Tools, and Collaboration",
+            "unitDuration": 180,
             "pathways": [
                 {
-                    "title": "Firebase, Vercel, and Postman",
+                    "pathwayId": "firebase,-vercel,-and-postman",
+                    "pathwayName": "Firebase, Vercel, and Postman",
+                    "pathwayDescription": "Pathway covering: Firebase, Vercel, and Postman",
+                    "pathwayDuration": 60,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Firebase? Features and Use Cases",
-                            "type": "Video"
+                            "videoId": "video-13f13b1d-cfbc-4d70-92b9-0523ebf47dbd",
+                            "videoName": "What is Firebase? Features and Use Cases",
+                            "videoDescription": "Description for \"What is Firebase? Features and Use Cases\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-firebase?-features-and-use-cases.mp4"
                         },
                         {
-                            "title": "Set up Firebase Hosting and Deploy a Static Site",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3789ee91-3c2c-4824-a0c6-9a710dd1992e",
+                            "codelabName": "Set up Firebase Hosting and Deploy a Static Site",
+                            "codelabDescription": "Description for \"Set up Firebase Hosting and Deploy a Static Site\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/set-up-firebase-hosting-and-deploy-a-static-site"
                         },
                         {
-                            "title": "What is Vercel? How to deploy with Vercel",
-                            "type": "Video + Codelab"
+                            "codelabId": "codelab-b49f655e-ea5c-4b78-a97b-3b3d96fd5927",
+                            "codelabName": "What is Vercel? How to deploy with Vercel",
+                            "codelabDescription": "Description for \"What is Vercel? How to deploy with Vercel\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/what-is-vercel?-how-to-deploy-with-vercel"
                         },
                         {
-                            "title": "API Testing with Postman – Basics and Use",
-                            "type": "Demo"
+                            "codelabId": "codelab-5ff56fe8-a4d2-447b-b48d-496e1bad9a88",
+                            "codelabName": "API Testing with Postman – Basics and Use",
+                            "codelabDescription": "Description for \"API Testing with Postman – Basics and Use\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/api-testing-with-postman-–-basics-and-use"
                         },
                         {
-                            "title": "Test a public API with Postman and inspect responses",
-                            "type": "Codelab"
+                            "codelabId": "codelab-35746e34-c47f-441a-b639-a772b80aabf7",
+                            "codelabName": "Test a public API with Postman and inspect responses",
+                            "codelabDescription": "Description for \"Test a public API with Postman and inspect responses\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/test-a-public-api-with-postman-and-inspect-responses"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Deployment and API Tools",
-                            "type": "Quiz"
+                            "videoId": "video-591fbaed-c458-4734-bcb5-e180c014ef6e",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Testing (Optional)",
+                    "pathwayId": "testing-(optional)",
+                    "pathwayName": "Testing (Optional)",
+                    "pathwayDescription": "Pathway covering: Testing (Optional)",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "Why Testing Matters in Web Development",
-                            "type": "Video"
+                            "videoId": "video-99bcf943-4eef-40c1-b100-180ea8252395",
+                            "videoName": "Why Testing Matters in Web Development",
+                            "videoDescription": "Description for \"Why Testing Matters in Web Development\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/why-testing-matters-in-web-development.mp4"
                         },
                         {
-                            "title": "Types of Testing: Unit, Integration, UI",
-                            "type": "Article"
+                            "noteId": "note-d493ec0f-8b13-45f5-8d75-652e72bb2683",
+                            "noteTopic": "Types of Testing: Unit, Integration, UI",
+                            "url": "https://example.com/note/types-of-testing:-unit,-integration,-ui.html",
+                            "noteDescription": "Description for \"Types of Testing: Unit, Integration, UI\" (Note).",
+                            "noteDuration": 2
                         },
                         {
-                            "title": "Write a simple JavaScript test using console/assert",
-                            "type": "Codelab"
+                            "codelabId": "codelab-3b8c4edb-501f-4353-b548-a3e65bd7f50c",
+                            "codelabName": "Write a simple JavaScript test using console/assert",
+                            "codelabDescription": "Description for \"Write a simple JavaScript test using console/assert\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/write-a-simple-javascript-test-using-console/assert"
                         },
                         {
-                            "title": "Intro to Testing Libraries (e.g., Jest or Vitest)",
-                            "type": "Video"
+                            "videoId": "video-d5997a07-d72f-427b-b72b-3b79fb3ec114",
+                            "videoName": "Intro to Testing Libraries (e.g., Jest or Vitest)",
+                            "videoDescription": "Description for \"Intro to Testing Libraries (e.g., Jest or Vitest)\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/intro-to-testing-libraries-(e.g.,-jest-or-vitest).mp4"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Basics of Testing",
-                            "type": "Quiz"
+                            "videoId": "video-0007d519-11a2-4147-94ef-6ec14c715e5b",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 },
                 {
-                    "title": "Version Control and GitHub",
+                    "pathwayId": "version-control-and-github",
+                    "pathwayName": "Version Control and GitHub",
+                    "pathwayDescription": "Pathway covering: Version Control and GitHub",
+                    "pathwayDuration": 50,
+                    "pathwayBadge": "https://developers.google.com/static/profile/badges/community/gde/badge.svg",
                     "resources": [
                         {
-                            "title": "What is Version Control? Why use Git?",
-                            "type": "Video"
+                            "videoId": "video-648c4ff0-d26f-4f21-9dd8-61ff447fb087",
+                            "videoName": "What is Version Control? Why use Git?",
+                            "videoDescription": "Description for \"What is Version Control? Why use Git?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what-is-version-control?-why-use-git?.mp4"
                         },
                         {
-                            "title": "Git Basics: init, add, commit, push, pull",
-                            "type": "Codelab"
+                            "codelabId": "codelab-7ab5a4db-d32e-4df0-a469-3bed3b2b15f7",
+                            "codelabName": "Git Basics: init, add, commit, push, pull",
+                            "codelabDescription": "Description for \"Git Basics: init, add, commit, push, pull\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/git-basics:-init,-add,-commit,-push,-pull"
                         },
                         {
-                            "title": "Connect your project to GitHub and push code",
-                            "type": "Codelab"
+                            "codelabId": "codelab-aa00ac52-2ae9-46d3-b6c3-eb6196b0aef2",
+                            "codelabName": "Connect your project to GitHub and push code",
+                            "codelabDescription": "Description for \"Connect your project to GitHub and push code\" (Codelab).",
+                            "codelabDuration": 10,
+                            "codelabUrl": "https://example.com/codelab/connect-your-project-to-github-and-push-code"
                         },
                         {
-                            "title": "Collaborate on GitHub: Forks, Pull Requests, Branches",
-                            "type": "Video"
+                            "videoId": "video-b3c535fe-6c6d-4aac-89c7-931c75cf9d74",
+                            "videoName": "Collaborate on GitHub: Forks, Pull Requests, Branches",
+                            "videoDescription": "Description for \"Collaborate on GitHub: Forks, Pull Requests, Branches\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/collaborate-on-github:-forks,-pull-requests,-branches.mp4"
                         },
                         {
-                            "title": "What’s next?",
-                            "type": "Video"
-                        },
-                        {
-                            "title": "Git and GitHub",
-                            "type": "Quiz"
+                            "videoId": "video-d0b81e36-e123-44a9-aa59-c99744e1c3c5",
+                            "videoName": "What’s next?",
+                            "videoDescription": "Description for \"What’s next?\" (Video).",
+                            "videoDuration": 5,
+                            "videoUrl": "https://example.com/video/what’s-next?.mp4"
                         }
-                    ],
-                    "badge": null
+                    ]
                 }
             ]
         }

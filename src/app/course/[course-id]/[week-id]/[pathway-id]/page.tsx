@@ -2,11 +2,6 @@
 /*eslint-disable @typescript-eslint/no-unused-vars */
 /*eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import composeCourse from "@/data/android-basics-with-compose.json";
-import webCourse from "@/data/full-stack-basics.json";
-import firebaseCourse from "@/data/firebase_get_cloud_ready.json";
-import genkitCourse from "@/data/machine-learning-genai.json";
-import flutterCourse from "@/data/flutter-basics-with-dart.json";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SignInButton from "@/components/sign_in_button";
@@ -17,15 +12,6 @@ export default function PathwaysLayoutPage() {
   const courseId = useParams()["course-id"];
   const weekId = useParams()["week-id"];
   const pathwayId = useParams()["pathway-id"];
-  if (
-    courseId !== "android-basics-compose" &&
-    courseId !== "full-stack-basics" &&
-    courseId !== "firebase-get-cloud-ready" &&
-    courseId !== "machine-learning-genai" &&
-    courseId !== "flutter-basics-dart"
-  ) {
-    return <div>Invalid course ID</div>;
-  }
   const [progressData, setProgressData] = useState<any>({});
   const [loading, setLoading] = useState(true);
   // useEffect(() => {
