@@ -10,6 +10,10 @@
         "language": "English",
         "coverImage": "https://developers.google.com/static/search/blog/images/GoogleSearchCentral_AnnouncementGraphics_Blog1.png",
         "badgeId": 5,
+        "campLeaderCardColor": "#3f83f2",
+        "campLeaderCardTextColor": "#FFF",
+        "benefitsCardColor": "var(--android-primary-color)",
+        "benefitsCardTextColor": "#FFF",
         "campLeaders": [
             "chandan-khamitkar",
             "revanth-peethala",
@@ -25,6 +29,43 @@
         "units": [],
         "createdAt": "2025-06-15T09:44:17.100Z",
         "updatedAt": "2025-06-15T09:44:17.100Z"
+    },
+    {
+        "id": "namasthe-full-stack",
+        "courseName": "Namasthe Full-Stack",
+        "courseSubtitle": "Learn the fundamentals of web development from HTML to deployment phase.",
+        "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications.",
+        "duration": 6,
+        "difficulty": "Beginner",
+        "price": "0",
+        "language": "English",
+        "coverImage": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Ai-1-banner.original.png",
+        "badgeId": 2,
+        "campLeaderCardColor": "#e39600",
+        "campLeaderCardTextColor": "#FFF",
+        "benefitsCardColor": "#fcd200",
+        "benefitsCardTextColor": "#000",
+        "campLeaders": [
+            "kavya-chandana",
+            "varshita-palleti"
+        ],
+        "benefitsText": "This course introduces the core technologies used to build websites and web applications. By the end of the course, you'll be able to create responsive, interactive, and real-world websites and host them live.",
+        "benefitItems": [
+            5,
+            6,
+            7,
+            8
+        ],
+        "units": [
+            "introduction-to-the-web",
+            "styling-with-css-and-tailwind-css",
+            "javascript-fundamentals-and-async/await-:-making-pages-interactive",
+            "frameworks-and-client-side-rendering",
+            "databases-and-middleware-(servlets)",
+            "deployment,-tools,-and-collaboration"
+        ],
+        "createdAt": "2025-06-15T08:47:40.288Z",
+        "updatedAt": "2025-06-15T08:47:40.288Z"
     },
     {
         "id": "android-basics-compose",
@@ -61,39 +102,6 @@
         "updatedAt": "2025-06-15T08:42:06.916Z"
     },
     {
-        "id": "namasthe-full-stack",
-        "courseName": "Namasthe Full-Stack",
-        "courseSubtitle": "Learn the fundamentals of web development from HTML to deployment phase.",
-        "courseDescription": "This beginner-friendly course walks you through the foundations of web development—from structuring pages with HTML to styling with CSS, interactivity with JavaScript, and finally connecting to databases and deploying real-world applications.",
-        "duration": 6,
-        "difficulty": "Beginner",
-        "price": "0",
-        "language": "English",
-        "coverImage": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Ai-1-banner.original.png",
-        "badgeId": 2,
-        "campLeaders": [
-            "kavya-chandana",
-            "varshita-palleti"
-        ],
-        "benefitsText": "This course introduces the core technologies used to build websites and web applications. By the end of the course, you'll be able to create responsive, interactive, and real-world websites and host them live.",
-        "benefitItems": [
-            5,
-            6,
-            7,
-            8
-        ],
-        "units": [
-            "introduction-to-the-web",
-            "styling-with-css-and-tailwind-css",
-            "javascript-fundamentals-and-async/await-:-making-pages-interactive",
-            "frameworks-and-client-side-rendering",
-            "databases-and-middleware-(servlets)",
-            "deployment,-tools,-and-collaboration"
-        ],
-        "createdAt": "2025-06-15T08:47:40.288Z",
-        "updatedAt": "2025-06-15T08:47:40.288Z"
-    },
-    {
         "id": "flutter-basics-dart",
         "courseName": "Flutter Basics with Dart",
         "courseSubtitle": "Master application development with Flutter, Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
@@ -104,6 +112,9 @@
         "language": "English",
         "coverImage": "/courses/covers/flutter-cover.png",
         "badgeId": 3,
+        "campLeaderCardColor": "#a5d4ed",
+        "campLeaderCardTextColor": "#001c3d",
+        "benefitsCardColor": "#013674",
         "campLeaders": [
             "manas-malla"
         ],
@@ -137,6 +148,10 @@
         "language": "English",
         "coverImage": "/courses/images/firebase-summit-2021-feature-image.png",
         "badgeId": 4,
+        "campLeaderCardColor": "#2348ac",
+        "campLeaderCardTextColor": "#FFF",
+        "benefitsCardColor": "#fdb604",
+        "benefitsCardTextColor": "#FFF",
         "campLeaders": [
             "jayadhar-ummadisingu"
         ],

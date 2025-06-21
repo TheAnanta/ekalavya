@@ -1,5 +1,6 @@
 import { AuthContextProvider } from "@/context/AuthContext";
 import "./globals.css";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -43,6 +44,7 @@ export default function RootLayout({
         <AuthContextProvider>
           <>{children}</>
         </AuthContextProvider>
+        {/* <Script src="https://accounts.google.com/gsi/client"></Script> */}
       </body>
     </html>
   );

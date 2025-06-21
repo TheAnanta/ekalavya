@@ -36,8 +36,8 @@ auth.useDeviceLanguage();
   await setPersistence(auth, browserLocalPersistence);
 })();
 
-function signInWithEkalavyaCustomCredential(token, onSuccess, onFailure) {
-  signInWithCustomToken(auth, token)
+async function signInWithEkalavyaCustomToken(token, onSuccess, onFailure) {
+  await signInWithCustomToken(auth, token)
     .then((result) => {
       if (result === null) {
         alert("Error signing in");
@@ -56,34 +56,6 @@ function signInWithEkalavyaCustomCredential(token, onSuccess, onFailure) {
     });
 }
 
-function signInWithGoogleAsPopup(onSuccess, onFailure) {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      if (credential === null) {
-        alert("Error signing in");
-        return;
-      }
-      const token = credential.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      onSuccess(user);
-      // IdP data available using getAdditionalUserInfo(result)
-      // ...
-    })
-    .catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      onFailure(errorMessage);
-      // ...
-    });
-}
 const db = getFirestore(app);
 const storage = getStorage(app);
 
@@ -92,5 +64,5 @@ export {
   auth,
   storage,
   signInWithGoogleAsPopup,
-  signInWithEkalavyaCustomCredential,
+  signInWithEkalavyaCustomToken,
 };

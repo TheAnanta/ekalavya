@@ -16,7 +16,6 @@ import { useAuthContext } from "@/context/AuthContext";
 import MockApiProvider from "@/lib/api_hoster";
 
 export default function CoursePage() {
-  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
   const courseId = useParams()["course-id"];
 
   const user = useAuthContext();
@@ -65,7 +64,7 @@ export default function CoursePage() {
       }
     }
     fetchCourse();
-  }, [courseId, apiHost]);
+  }, [courseId]);
   return (
     <div className="px-6 md:px-12 py-6">
       <nav className="p-4 flex justify-between">

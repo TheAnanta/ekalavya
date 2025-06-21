@@ -4,6 +4,7 @@
 
 import SignInButton from "@/components/sign_in_button";
 import { useAuthContext } from "@/context/AuthContext";
+import MockApiProvider from "@/lib/api_hoster";
 import { auth } from "@/lib/firebase";
 import moment from "moment";
 import Link from "next/link";
@@ -12,19 +13,7 @@ import { useEffect, useState } from "react";
 
 function ProfileCard({ userDetails }: { userDetails: any }) {
   const [showEditor, setShowEditor] = useState(false);
-  // Function to get Tailwind color class for role chip
-  const getRoleChipColor = (role?: string) => {
-    switch (role) {
-      case "Organizer":
-        return "bg-[#ea4335] text-white border-[#ea4335]";
-      case "Volunteer":
-        return "bg-[#4285f4] text-white border-[#4285f4]";
-      case "Speaker":
-        return "bg-[#34a853] text-white border-[#34a853]";
-      default:
-        return "bg-[#f9ab00] text-[#202023] border-[#f9ab00]"; // Attendee or default
-    }
-  };
+
   return (
     <div className="w-full md:w-1/3 max-w-[400px]">
       <h1 className="text-3xl font-bold mb-4">Profile</h1>{" "}
@@ -64,11 +53,7 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
                   {userDetails.displayName}
                 </p>{" "}
               </div>
-              {userDetails.company &&
-                userDetails.company.designation &&
-                userDetails.company.name && (
-                  <p className="text-gray-500">{userDetails.email}</p>
-                )}
+              {<p className="text-gray-500">{userDetails.email}</p>}
               {userDetails.username && (
                 <a
                   href={`https://ekalavya.theananta.in/p/${userDetails.username}`}
@@ -140,6 +125,7 @@ function ProfileCard({ userDetails }: { userDetails: any }) {
 const ProfilePage: React.FC = () => {
   const user = useAuthContext();
   const [userDetails, setUserDetails] = useState<any | null>();
+  const [courses, setCourses] = useState<any[]>([]);
   useEffect(() => {
     user
       ?.getIdTokenResult()
@@ -151,51 +137,30 @@ const ProfilePage: React.FC = () => {
       })
       .then(({ courses, joinedOn }: { courses: string[]; joinedOn: any }) => {
         console.log(joinedOn);
-        const data = JSON.parse(
-          window.localStorage.getItem("userData") || "{}"
-        );
-        if (data && Object.keys(data).length > 0) {
-          setUserDetails({
-            uid: user?.uid || data.uid,
-            email: user?.email || "",
-            displayName: user?.displayName,
-            username: window.localStorage.getItem("username") ?? "john.doe",
-            domainsInterested: [
-              courses.includes("android-basics-compose") ||
-              courses.includes("flutter-basics-dart")
-                ? "Mobile"
-                : courses.includes("firebase-get-cloud-ready")
-                ? "Cloud"
-                : courses.includes("full-stack-basics")
-                ? "Web"
-                : "AI",
-            ],
-            photoURL: user?.photoURL,
-            courses: courses || data.courses || [],
-            joinedOn: joinedOn || data.joinedOn,
-          });
-        } else {
-          setUserDetails({
-            uid: user?.uid,
-            email: user?.email || "",
-            displayName: user?.displayName,
-            username: window.localStorage.getItem("username") || "john.doe",
-            domainsInterested: [
-              courses.includes("android-basics-compose") ||
-              courses.includes("flutter-basics-dart")
-                ? "Mobile"
-                : courses.includes("firebase-get-cloud-ready")
-                ? "Cloud"
-                : courses.includes("full-stack-basics")
-                ? "Web"
-                : "AI",
-            ],
-            photoURL: user?.photoURL,
-            courses: courses || [],
-            joinedOn: joinedOn || new Date().toISOString(),
-          });
-        }
+
+        setUserDetails({
+          uid: user?.uid,
+          email: user?.email || "",
+          displayName: user?.displayName,
+          username: user.uid,
+          domainsInterested: [
+            courses.includes("android-basics-compose") ||
+            courses.includes("flutter-basics-dart")
+              ? "Mobile"
+              : courses.includes("firebase-get-cloud-ready")
+              ? "Cloud"
+              : courses.includes("full-stack-basics")
+              ? "Web"
+              : "AI",
+          ],
+          photoURL: user?.photoURL,
+          courses: courses || [],
+          joinedOn: joinedOn,
+        });
       });
+    MockApiProvider.fetchAllCourses().then((courses) => {
+      setCourses(courses);
+    });
   }, [user]);
 
   const [badgeModalOpen, setBadgeModalOpen] = useState(false);
@@ -217,230 +182,48 @@ const ProfilePage: React.FC = () => {
           <img src="/theananta.png" className="h-8 mr-3" />
         </div>
       </nav>
-      <div className="flex flex-col md:flex-row gap-24 p-4">
+      <div className="flex flex-col md:flex-row gap-20 p-4">
         <ProfileCard userDetails={userDetails} />
         <div className="grow">
           {<h2 className="text-2xl font-bold mb-8">My Courses</h2>}
-          <div className="flex gap-8 overflow-x-scroll no-scrollbar">
-            <div className="shrink-0">
-              <img
-                className="size-32 rounded-full mb-4 border-2 object-cover object-top pt-4 saturate-0"
-                src="/courses/images/charclaqueta-droid-promo_720.png"
-              />
-              <p className="text-xl font-semibold max-w-[12ch]">
-                Android Basics with Compose
-              </p>
-              {userDetails?.courses.includes("android-basics-compose") ? (
-                <p>
-                  Started{" "}
-                  {moment(
-                    userDetails?.joinedOn || user?.metadata.creationTime
-                  ).format("MMM YYYY")}
-                </p>
-              ) : (
-                <p>
-                  <br />
-                </p>
-              )}
-              {userDetails?.courses.includes("android-basics-compose") ? (
-                <a
-                  href={`/course/android-basics-compose`}
-                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
-                >
-                  Continue{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              ) : (
-                <a
-                  href={`/course/android-basics-compose`}
-                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
-                >
-                  Join Now{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              )}
-            </div>
-            <div className="shrink-0">
-              <img
-                className="size-32 rounded-full mb-4 border-2 saturate-0 object-contain object-top pt-8"
-                src="/courses/images/dash-search.png"
-              />
-              <p className="text-xl font-semibold max-w-[12ch]">
-                Flutter Basics with Dart
-              </p>
-              {userDetails?.courses.includes("flutter-basics-dart") ? (
-                <p>
-                  Started{" "}
-                  {moment(
-                    userDetails?.joinedOn || user?.metadata.creationTime
-                  ).format("MMM YYYY")}
-                </p>
-              ) : (
-                <p>
-                  <br />
-                </p>
-              )}
-              {userDetails?.courses.includes("flutter-basics-dart") ? (
-                <a
-                  href={`/course/flutter-basics-dart`}
-                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
-                >
-                  Continue{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              ) : (
-                <a
-                  href={`/course/flutter-basics-dart`}
-                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
-                >
-                  Join Now{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              )}
-              {/* <a className="flex items-center gap-2 w-max text-[#4285F4] font-semibold mt-2">
-                View Certificate{" "}
-                <span className="material-symbols-outlined !text-sm">
-                  arrow_forward
-                </span>
-              </a> */}
-            </div>
-            <div className="shrink-0">
-              <img
-                className="size-32 rounded-full mb-4 border-2 saturate-0 object-cover object-top pt-4"
-                src="/courses/images/sparky-shadow.png"
-              />
-              <p className="text-xl font-semibold max-w-[12ch]">
-                Firebase: Get Cloud-Ready
-              </p>
-              {userDetails?.courses.includes("firebase-get-cloud-ready") ? (
-                <p>
-                  Started{" "}
-                  {moment(
-                    userDetails?.joinedOn || user?.metadata.creationTime
-                  ).format("MMM YYYY")}
-                </p>
-              ) : (
-                <p>
-                  <br />
-                </p>
-              )}
-              {userDetails?.courses.includes("firebase-get-cloud-ready") ? (
-                <a
-                  href={`/course/firebase-get-cloud-ready`}
-                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
-                >
-                  Continue{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              ) : (
-                <a
-                  href={`/course/firebase-get-cloud-ready`}
-                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
-                >
-                  Join Now{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              )}
-            </div>
-            <div className="shrink-0">
-              <img
-                className="size-32 rounded-full mb-4 border-2 saturate-0 object-cover object-right pt-4"
-                src="https://developers.google.com/static/community/images/gdsc-solution-challenge/timeline-hero.webp"
-              />
-              <p className="text-xl font-semibold max-w-[10ch]">
-                Namasthe Full-Stack
-              </p>
-              {userDetails?.courses.includes("full-stack-basics") ? (
-                <p>
-                  Started{" "}
-                  {moment(
-                    userDetails?.joinedOn || user?.metadata.creationTime
-                  ).format("MMM YYYY")}
-                </p>
-              ) : (
-                <p>
-                  <br />
-                </p>
-              )}
-              {userDetails?.courses.includes("full-stack-basics") ? (
-                <a
-                  href={`/course/full-stack-basics`}
-                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
-                >
-                  Continue{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              ) : (
-                <a
-                  href={`/course/full-stack-basics`}
-                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2"
-                >
-                  Join Now{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              )}
-            </div>
-            <div className="shrink-0">
-              <div className="size-32 rounded-full  border-2 saturate-0 object-contain object-bottom flex pb-3 mb-4 overflow-hidden">
-                <img
-                  className="mt-auto scale-[130%]"
-                  src="https://developers.google.com/static/search/images/check-help-community.png?hl=th"
-                />
-              </div>
-              <p className="text-xl font-semibold max-w-[12ch]">
-                Building for <br />
-                the AI Era
-              </p>
-              {userDetails?.courses.includes("machine-learning-genai") ? (
-                <p>
-                  Started{" "}
-                  {moment(
-                    userDetails?.joinedOn || user?.metadata.creationTime
-                  ).format("MMM YYYY")}
-                </p>
-              ) : (
-                <p>
-                  <br />
-                </p>
-              )}
-              {userDetails?.courses.includes("machine-learning-genai") ? (
-                <a
-                  href={`/course/machine-learning-genai`}
-                  className="flex items-center gap-2 w-max text-[var(--android-primary-color)] font-semibold mt-2"
-                >
-                  Continue{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              ) : (
-                <a
-                  href={`/course/machine-learning-genai`}
-                  className="flex items-center gap-2 w-max text-[#FBC005] font-semibold mt-2 cursor-pointer"
-                >
-                  Join Now{" "}
-                  <span className="material-symbols-outlined !text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              )}
-            </div>
+          <div className="grid grid-cols-3 w-max gap-8">
+            {courses.map((course) => {
+              return (
+                userDetails?.courses.includes(course.id) && (
+                  <div className="shrink-0 p-4 rounded-2xl shadow-md bg-white border border-gray-200">
+                    <img
+                      className="h-32 aspect-[2] rounded-lg mb-4 object-cover"
+                      src={course.coverImage}
+                    />
+                    <p className="text-xl font-semibold max-w-[14ch]">
+                      {course.courseName}
+                    </p>
+
+                    <p>
+                      Started{" "}
+                      {moment(
+                        userDetails?.joinedOn || user?.metadata.creationTime
+                      ).format("MMM YYYY")}
+                    </p>
+
+                    <a
+                      href={`/course/${course.id}`}
+                      className="flex items-center gap-2 w-max font-semibold mt-2"
+                      style={{
+                        color:
+                          course.campLeaderCardColor ||
+                          "var(--android-primary-color)",
+                      }}
+                    >
+                      Continue{" "}
+                      <span className="material-symbols-outlined !text-sm">
+                        arrow_forward
+                      </span>
+                    </a>
+                  </div>
+                )
+              );
+            })}
           </div>
           {/* <div className="my-8 mx-24 h-[1px] bg-black/30" /> */}
           <div>{<h2 className="text-2xl font-bold mt-8 mb-8">Badges</h2>}</div>

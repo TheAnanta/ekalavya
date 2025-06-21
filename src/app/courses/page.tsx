@@ -55,12 +55,12 @@ export default function CoursesPage() {
                 key={course.id}
                 className="shadow-md border border-gray-300 p-6 rounded-3xl"
               >
-                <div className="w-full md:aspect-[3.6] shrink-0">
+                <div className="w-full h-full shrink-0 flex flex-col">
                   <img
                     className="aspect-[2] object-cover rounded-2xl w-full object-bottom"
                     src={course.coverImage}
                   />
-                  <h1 className="mt-4 text-3xl font-bold whitespace-pre-wrap leading-[150%]">
+                  <h1 className="mt-4 text-3xl font-bold whitespace-pre-wrap leading-[150%] max-w-[22ch]">
                     {course.courseName}
                   </h1>
                   <div className="mb-4 mt-2 flex flex-wrap gap-2 text-xs font-medium">
@@ -75,7 +75,7 @@ export default function CoursesPage() {
                     {course.courseSubtitle}
                   </h3> */}
                   <p
-                    className="max-w-[48ch]"
+                    className="max-w-[48ch] mb-auto line-clamp-4 overflow-ellipsis"
                     dangerouslySetInnerHTML={{
                       __html: course.courseDescription,
                     }}

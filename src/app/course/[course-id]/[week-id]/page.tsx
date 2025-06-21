@@ -12,7 +12,8 @@ import EnrollInCourseDialog from "@/components/EnrollInCourseDialog";
 import MockApiProvider from "@/lib/api_hoster";
 
 export default function UnitLayoutPage() {
-  const apiHost = "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
+  const apiHost =
+    "https://asia-south1-ekalavya-theananta.cloudfunctions.net/api";
   const courseId = useParams()["course-id"];
   const weekId = useParams()["week-id"];
   const [progressData, setProgressData] = useState<any>({});
@@ -25,6 +26,12 @@ export default function UnitLayoutPage() {
         const data = await MockApiProvider.fetchWeekById(
           courseId as string,
           weekId as string
+        );
+        console.log(
+          "Fetching unit data for courseId:",
+          courseId,
+          "weekId:",
+          weekId
         );
         setGetUnit({
           courseName: data.courseName,
@@ -71,7 +78,15 @@ export default function UnitLayoutPage() {
         );
         user?.getIdToken().then((userIdToken) => {
           console.log(userIdToken);
-          if (courseId && weekId && isEnrolled) {
+          console.log("User is enrolled:", isEnrolled);
+          console.log("Course ID:", courseId);
+          console.log("Week ID:", weekId);
+          if (
+            courseId &&
+            weekId &&
+            (token.claims.courses as string[]).includes(courseId as string)
+          ) {
+            console.log("Fetching unit and progress data...");
             fetchUnit().then(async () => {
               await fetchProgress(userIdToken);
             });

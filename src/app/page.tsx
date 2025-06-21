@@ -75,37 +75,23 @@ export default function Home() {
             problems around you.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-6 max-w-[600px]">
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Android
-            </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+            <p className="py-3 text-sm px-6 border  rounded-full">Android</p>
+            <p className="py-3 text-sm px-6 border  rounded-full">
               Generative AI
             </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Cloud
-            </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
+            <p className="py-3 text-sm px-6 border  rounded-full">Cloud</p>
+            <p className="py-3 text-sm px-6 border  rounded-full">
               Machine Learning
             </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Backend
-            </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Firebase
-            </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Flutter
-            </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Frontend
-            </p>
-            <p className="py-3 text-sm px-6 border border-[var(--android-primary-color)] rounded-full">
-              Vertex AI
-            </p>
+            <p className="py-3 text-sm px-6 border  rounded-full">Backend</p>
+            <p className="py-3 text-sm px-6 border  rounded-full">Firebase</p>
+            <p className="py-3 text-sm px-6 border  rounded-full">Flutter</p>
+            <p className="py-3 text-sm px-6 border  rounded-full">Frontend</p>
+            <p className="py-3 text-sm px-6 border  rounded-full">Vertex AI</p>
           </div>
           <Link
             href="/courses"
-            className="border-2 border-[#073042] bg-[var(--android-primary-color)] py-2 px-6 rounded-full font-medium text-white"
+            className="bg-black py-2 px-6 rounded-full font-medium text-white"
           >
             Enroll Now
           </Link>
