@@ -1,6 +1,6 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
 /*eslint-disable @typescript-eslint/no-unused-vars */
-/*eslint-disable react-hooks/rules-of-hooks */
+ 
 "use client";
 import composeCourse from "@/data/android-basics-with-compose.json";
 import webCourse from "@/data/full-stack-basics.json";

@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useAuthContext } from "@/context/AuthContext";
 import { signInWithEkalavyaCustomToken } from "@/lib/firebase";
 import { User } from "firebase/auth";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface GoogleCredentialResponse {
@@ -14,7 +15,6 @@ export default function SignInButton() {
   const apiHost =
     "https://asia-south1-ekalavya-theananta.cloudfunctions.net/api";
   const user = useAuthContext();
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   // Replace with your Google Cloud Web Client ID

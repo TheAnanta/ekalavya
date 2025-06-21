@@ -6,11 +6,7 @@ import { getAuth, signInWithCustomToken } from "firebase/auth";
 // import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 import { GoogleAuthProvider } from "firebase/auth";
-import {
-  setPersistence,
-  signInWithPopup,
-  browserLocalPersistence,
-} from "firebase/auth";
+import { setPersistence, browserLocalPersistence } from "firebase/auth";
 
 const provider = new GoogleAuthProvider();
 // TODO: Add SDKs for Firebase products that you want to use
@@ -59,10 +55,4 @@ async function signInWithEkalavyaCustomToken(token, onSuccess, onFailure) {
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-export {
-  db,
-  auth,
-  storage,
-  signInWithGoogleAsPopup,
-  signInWithEkalavyaCustomToken,
-};
+export { db, auth, storage, signInWithEkalavyaCustomToken };

@@ -1,11 +1,12 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
 /*eslint-disable @typescript-eslint/no-unused-vars */
-/*eslint-disable react-hooks/rules-of-hooks */
+ 
 "use client";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SignInButton from "@/components/sign_in_button";
 import Link from "next/link";
+import MockApiProvider from "@/lib/api_hoster";
 
 export default function PathwaysLayoutPage() {
   const apiHost =
@@ -35,35 +36,43 @@ export default function PathwaysLayoutPage() {
   //   fetchProgress();
   // }, [apiHost, courseId, weekId, pathwayId]);
 
-  const [courseData, setCourseData] = useState<any>(null);
+  const [pathwayData, setPathwayData] = useState<any>(null);
 
   useEffect(() => {
-    async function fetchUnit() {
+    async function fetchPathway() {
       try {
-        const response = await fetch(
-          `${apiHost}/fetch-pathway/${courseId}/${weekId}/${pathwayId}`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
+        const data = await MockApiProvider.fetchPathwayById(
+          courseId as string,
+          weekId as string,
+          pathwayId as string
         );
-        if (!response.ok) {
-          throw new Error("Failed to fetch unit data");
-        }
-        const data = await response.json();
-        setCourseData(data.data);
-        console.log("Pathway data fetched successfully:", courseData);
+        setPathwayData({
+          ...data,
+          resources: data.resources.map((resource: any) => ({
+            title:
+              Object.entries(resource || {}).find(([key]) =>
+                key.endsWith("Name")
+              )?.[1] || "Unknown Resource",
+            type:
+              (Object.entries(resource || {}) as [string, string][])
+                .find(([key]) => key.endsWith("Id"))?.[1]
+                ?.split("-")[0]
+                .toLowerCase() || "Unknown Type",
+            link:
+              Object.entries(resource || {}).find(([key]) =>
+                key.endsWith("Url")
+              )?.[1] || null,
+          })),
+        });
+        console.log("Pathway data fetched successfully:", data);
       } catch (error) {
-        console.error("Error fetching unit data:", error);
+        console.error("Error fetching pathway data:", error);
       }
     }
     if (courseId && weekId) {
-      fetchUnit();
+      fetchPathway();
     }
   }, [courseId, weekId, apiHost]);
-  const pathwayData = courseData?.pathway;
   const [activeStep, setActiveStep] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
   return (
@@ -75,10 +84,10 @@ export default function PathwaysLayoutPage() {
             <SignInButton />
           </div>
           <div className="flex items-center">
-            <Link href="/" className="absolute right-40">
-              <img src="/badge.png" className="h-16" />
+            <Link href="/">
+              <img src="/badge.png" className="h-16 invert" />
             </Link>
-            <img src="/theananta.png" className="h-8 mr-3" />
+            {/* <img src="/theananta.png" className="h-8 mr-3 dark:invert" /> */}
           </div>
         </div>
       </nav>
@@ -97,7 +106,7 @@ export default function PathwaysLayoutPage() {
                     href={`/course/${courseId}`}
                     className="shrink-0 hover:opacity-70 duration-300"
                   >
-                    {courseData.courseName}
+                    {pathwayData.courseName}
                   </a>{" "}
                   <span className="material-symbols-outlined mx-2 hover:opacity-70 duration-300 cursor-default">
                     chevron_right
@@ -106,14 +115,16 @@ export default function PathwaysLayoutPage() {
                     href={`/course/${courseId}/${weekId}`}
                     className="shrink-0 hover:opacity-70 duration-300"
                   >
-                    {courseData.unitName}
+                    {pathwayData.weekName}
                   </a>
                   <span className="material-symbols-outlined mx-2 hover:opacity-70 duration-300 cursor-default">
                     chevron_right
                   </span>
                   <a href="" className="shrink-0 hover:opacity-70 duration-300">
-                    {(pathwayData as any).navigationTitle ||
-                      (pathwayId as string).split("-").join(" ")}
+                    {decodeURIComponent(
+                      (pathwayData as any).navigationTitle ||
+                        (pathwayId as string).split("-").join(" ")
+                    )}
                   </a>
                 </p>
                 <h3 className="text-4xl font-bold mt-3 mb-4">
@@ -147,6 +158,7 @@ export default function PathwaysLayoutPage() {
             {pathwayData.resources.map((resource: any, index: number) => {
               return resource.type != "Quiz" ? (
                 <div
+                  key={index}
                   className={`p-7 relative`}
                   style={
                     activeStep === index

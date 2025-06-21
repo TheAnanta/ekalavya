@@ -1,8 +1,36 @@
 "use client";
 import SignInButton from "@/components/sign_in_button";
+import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function WowCampaignPage() {
+  const apiHost =
+    // "https://asia-south1-ekalavya-theananta.cloudfunctions.net/api";
+    "http://127.0.0.1:5001/ekalavya-theananta/asia-south1/api";
+  const [leaderboard, setLeaderboard] = useState<
+    | {
+        username: string;
+        displayName: string;
+        score: number;
+        photoUrl: string;
+        position: number;
+      }[]
+    | null
+  >(null);
+  const user = useAuthContext();
+  useEffect(() => {
+    if (user) {
+      fetch(`${apiHost}/fetch-leaderboard?uid=${user.uid}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setLeaderboard(data.data);
+        })
+        .catch((err) => {
+          console.error("Failed to fetch leaderboard", err);
+        });
+    }
+  }, [user]);
   return (
     <div className="px-6 md:px-12 py-6">
       <nav className="p-4 flex justify-between">
@@ -33,25 +61,29 @@ export default function WowCampaignPage() {
             <div className="flex justify-between max-w-[840px]">
               <div className="max-w-[480px]">
                 <p className="text-2xl font-medium mb-2 bg-white w-max">
-                  Tier 1
+                  Diamond League
                 </p>
-                <p className="bg-white">
-                  Get Stylish Sunglasses, Sticker Set, and Enamel Pin by
-                  finishing Unit 1-5 (14 Badges) below and Passed Quiz.
-                </p>
+                <p>Get a </p>
+                <ul className="bg-white list-disc pl-6">
+                  <li>Stylish Sunglasses</li>
+                  <li>Sticker Set</li>
+                  <li>Enamel Pin</li>
+                </ul>
+
                 <img
                   src="https://i.imgur.com/XPSXkjl.png"
                   className="h-48 md:hidden"
                 />
                 <div className="md:h-16" />
                 <p className="mt-8 mb-2 text-2xl font-medium bg-white w-max">
-                  Tier 2
+                  Gold League
                 </p>
-                <p className="bg-white">
-                  Get a free ticket to the GDSC WoW 2025 Hackathon, Sticker
-                  Pack, and Enamel pin by finishing Tier 1 + Unit 6-8 (20
-                  Badges).
-                </p>
+                <p>Get a </p>
+                <ul className="bg-white list-disc pl-6">
+                  <li>free ticket to the GDSC WoW 2025 Hackathon</li>
+                  <li>Sticker Pack</li>
+                  <li>Enamel Pin</li>
+                </ul>
                 <img
                   src="https://i.imgur.com/r9g2KmF.jpg"
                   className="h-48 md:hidden"
@@ -68,13 +100,22 @@ export default function WowCampaignPage() {
                   <br />
                   Participate in the GDSC WoW 2025 Hackathon!
                 </p>
+                <Link
+                  href={"https://wow.vizag.dev"}
+                  className="bg-[var(--android-primary-color)] text-white py-3 px-6 flex w-max  rounded-full mt-4 font-bold"
+                >
+                  Register now
+                </Link>
                 <img
                   src="https://images.tokopedia.net/img/cache/700/OJWluG/2022/6/15/1d389e79-5935-4435-b8bb-bcfd1a95e0f8.jpg"
                   className="h-48 md:hidden"
                 />
               </div>
               <div className="hidden md:flex md:flex-col">
-                <img src="https://i.imgur.com/XPSXkjl.png" className="h-48" />
+                <img
+                  src="https://i.imgur.com/XPSXkjl.png"
+                  className="h-48 -translate-y-8"
+                />
                 <img src="https://i.imgur.com/r9g2KmF.jpg" className="h-48" />
                 <img
                   src="https://images.tokopedia.net/img/cache/700/OJWluG/2022/6/15/1d389e79-5935-4435-b8bb-bcfd1a95e0f8.jpg"
@@ -89,77 +130,39 @@ export default function WowCampaignPage() {
             <h3 className="text-center font-bold google-font text-2xl pb-8 border-b-2 dark:border-gray-700">
               Leaderboard
             </h3>
-            {!true ? (
+            {!leaderboard ? (
               <div>Loading leaderboard...</div>
             ) : (
               <div className="flex flex-col gap-4 mt-8 cursor-default">
-                {[
-                  {
-                    name: "John Doe",
-                    username: "johndoe",
-                    score: 100,
-                    image: "https://i.pravatar.cc/150?img=1",
-                  },
-                  {
-                    name: "Jane Smith",
-                    username: "janesmith",
-                    score: 95,
-                    image: "https://i.pravatar.cc/150?img=2",
-                  },
-                  {
-                    name: "Alice Johnson",
-                    username: "alicej",
-                    score: 90,
-                    image: "https://i.pravatar.cc/150?img=3",
-                  },
-                  {
-                    name: "Bob Brown",
-                    username: "bobbrown",
-                    score: 85,
-                    image: "https://i.pravatar.cc/150?img=4",
-                  },
-                  {
-                    name: "Charlie White",
-                    username: "charliew",
-                    score: 80,
-                    image: "https://i.pravatar.cc/150?img=5",
-                  },
-                  {
-                    name: "David Green",
-                    username: "davidg",
-                    score: 75,
-                    image: "https://i.pravatar.cc/150?img=6",
-                  },
-                  {
-                    name: "Edward John",
-                    username: "edwardj",
-                    score: 70,
-                    image: "https://i.pravatar.cc/150?img=7",
-                  },
-                ]
-                  .sort((a, b) => b.score - a.score)
-                  .map((item, index) => {
+                {leaderboard.map(
+                  (item: {
+                    username: string;
+                    displayName: string;
+                    score: number;
+                    photoUrl: string;
+                    position: number;
+                  }) => {
                     return (
                       <>
                         <div
                           className={`flex justify-between items-center py-1.5`}
                         >
                           <div className="flex items-center gap-4">
-                            <p className="text-2xl">{index + 1}</p>
+                            <p className="text-2xl">{item.position}</p>
                             <img
-                              src={item.image}
+                              src={item.photoUrl}
                               className="size-12 rounded-full ml-6 object-cover"
                             />
                             <div>
                               <p>
                                 <b className="google-font text-xl leading-5">
-                                  {item.name}
+                                  {item.displayName}
                                   <span className="ml-1">
-                                    {index == 0
+                                    {item.position == 1
                                       ? "🥇"
-                                      : index === 1
+                                      : item.position === 2
                                       ? "🥈"
-                                      : index == 2
+                                      : item.position === 3
                                       ? "🥉"
                                       : ""}
                                   </span>
@@ -172,7 +175,7 @@ export default function WowCampaignPage() {
                           </div>
                           <p className="text-2xl font-mono">{item.score}</p>
                         </div>
-                        {index === 4 && (
+                        {item.position === 5 && (
                           <div className="w-full rounded-sm bg-red-100 text-center google-font font-bold my-2 text-red-800 px-4 py-6 flex items-center gap-2 justify-center">
                             <span className="material-symbols-outlined !font-bold">
                               arrow_downward
@@ -185,7 +188,8 @@ export default function WowCampaignPage() {
                         )}
                       </>
                     );
-                  })}
+                  }
+                )}
               </div>
             )}
           </div>

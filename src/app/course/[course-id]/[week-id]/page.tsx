@@ -1,6 +1,6 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
-/*eslint-disable @typescript-eslint/no-unused-vars */
-/*eslint-disable react-hooks/rules-of-hooks */
+ 
+ 
 "use client";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -111,10 +111,10 @@ export default function UnitLayoutPage() {
             <SignInButton />
           </div>
           <div className="flex items-center">
-            <Link href="/" className="absolute right-40">
+            <Link href="/">
               <img src="/badge.png" className="h-16 invert" />
             </Link>
-            <img src="/theananta.png" className="h-8 mr-3" />
+            {/* <img src="/theananta.png" className="h-8 mr-3" /> */}
           </div>
         </div>
       </nav>
@@ -147,7 +147,7 @@ export default function UnitLayoutPage() {
             <div className="pt-16 max-w-[1260px] mx-auto items-center justify-between grid grid-cols-3 gap-6">
               {weekData.pathways.map((pathway: any, index: number) => {
                 return (
-                  <div key={pathway.title} className="p-7 bg-white">
+                  <div key={pathway.pathwayName} className="p-7 bg-white">
                     <p className="text-[11px] bg-stone-100 py-1 px-2 w-max rounded-md font-medium tracking-[0.8px]">
                       PATHWAY {index + 1}
                     </p>
